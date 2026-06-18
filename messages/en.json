@@ -1,0 +1,224 @@
+{
+  "brand": {
+    "name": "My Career Journey",
+    "tagline": "Plan your path after school, one step at a time!"
+  },
+  "lang": {
+    "label": "Language",
+    "english": "English",
+    "hindi": "हिंदी (Hindi)"
+  },
+  "nav": {
+    "home": "Home",
+    "start": "Start my journey",
+    "cvTemplates": "CV Templates",
+    "freeResources": "Free Resources",
+    "interviewPrep": "Interview Prep",
+    "findJobs": "Find Jobs",
+    "planItYourself": "Plan It Yourself"
+  },
+  "common": {
+    "back": "Back",
+    "next": "Next",
+    "skip": "Skip",
+    "finish": "Finish",
+    "continue": "Continue",
+    "typeYourOwn": "Type your own",
+    "officialSite": "Official site",
+    "verifyTag": "Verify on official site",
+    "comingSoon": "Content coming soon",
+    "comingSoonNote": "This page is a placeholder for now — real content will be added here."
+  },
+  "home": {
+    "heroTitle": "What do you want to do after school? 🤔",
+    "heroSubtitle": "Get a step-by-step plan towards the career you want — colleges, exams, costs and timelines, all in one place!",
+    "ctaStart": "Start my journey",
+    "ctaSample": "See a sample journey",
+    "featuresTitle": "",
+    "feature1Title": "A step-by-step timeline",
+    "feature1Body": "Every milestone in order — which class, which exam, which year.",
+    "feature2Title": "Colleges & exams you can filter",
+    "feature2Body": "Compare options and filter them by cost: free, low, mid or high.",
+    "feature3Title": "Always verify-first",
+    "feature3Body": "Check specific links to the official sites to confirm.",
+    "exploreTitle": "Already know what you need?",
+    "exploreBody": "Browse free guides without signing in.",
+    "disclaimer": "Dates, fees and eligibility change every year. Always confirm on official links before acting!"
+  },
+  "intake": {
+    "title": "Let's build your journey!",
+    "progress": "Question {current} of {total}",
+    "questions": {
+      "class": "What class are you in?",
+      "board": "Which board?",
+      "stream": "Which stream have you taken?",
+      "goal": "What do you want to become?",
+      "location": "Where are you?",
+      "language": "Which language for your plan?"
+    },
+    "options": {
+      "class9": "Class 9",
+      "class10": "Class 10",
+      "class11": "Class 11",
+      "class12": "Class 12",
+      "passed12": "Passed 12",
+      "inCollege": "In college",
+      "gapYear": "Gap year / dropped out",
+      "cbse": "CBSE",
+      "icse": "ICSE / ISC",
+      "stateBoard": "State board",
+      "nios": "NIOS / Open",
+      "other": "Other",
+      "sciencePCM": "Science (PCM)",
+      "sciencePCB": "Science (PCB)",
+      "sciencePCMB": "Science (PCMB)",
+      "commerceMaths": "Commerce + Maths",
+      "commerceNoMaths": "Commerce, no Maths",
+      "arts": "Arts / Humanities",
+      "vocational": "Vocational",
+      "notChosen": "Not chosen yet",
+      "cabinCrew": "Cabin crew",
+      "fashionDesign": "Fashion design",
+      "ca": "Chartered Accountant",
+      "nurse": "Nurse",
+      "teacher": "Teacher",
+      "govtJob": "Govt job",
+      "engineer": "Engineer",
+      "doctor": "Doctor",
+      "notSureExplore": "Not sure — help me explore",
+      "rajasthan": "Rajasthan",
+      "maharashtra": "Maharashtra",
+      "delhi": "Delhi",
+      "uttarPradesh": "Uttar Pradesh",
+      "english": "English",
+      "hindi": "Hindi"
+    },
+    "placeholders": {
+      "whichState": "Which state?",
+      "whichCity": "Which city or town?",
+      "typeGoal": "Or type the career you want…"
+    },
+    "done": {
+      "title": "Your journey is ready",
+      "lead": "Here's how we'll shape your plan:",
+      "profileHeading": "What you told us",
+      "view": "View my journey",
+      "restart": "Start over",
+      "sampleNote": "This demo shows a sample journey. Connecting a profile to a live, generated plan comes later."
+    }
+  },
+  "journey": {
+    "forCareer": "Your path to becoming a",
+    "generatedAt": "Guidance generated {date}",
+    "confidence": "Confidence",
+    "confidenceHigh": "high",
+    "confidenceMedium": "medium",
+    "confidenceLow": "low",
+    "overview": "Overview",
+    "dayInLife": "A day in the life",
+    "pay": "Pay range",
+    "payEntry": "Entry",
+    "payExperienced": "Experienced",
+    "demandOutlook": "Demand outlook",
+    "requirements": "Requirements to know",
+    "routes": "Routes to get there",
+    "bestFor": "Best for",
+    "feasibilityLabel": "Fit for you",
+    "feasibilityHigh": "Strong fit",
+    "feasibilityMedium": "Possible fit",
+    "feasibilityLow": "Harder fit",
+    "duration": "Duration",
+    "timeline": "Step-by-step timeline",
+    "exams": "Exams",
+    "colleges": "Colleges",
+    "purpose": "Purpose",
+    "eligibility": "Eligibility",
+    "typicalWindow": "Typical window",
+    "collegeType": "Type",
+    "location": "Location",
+    "approxFees": "Approx. annual fees",
+    "entranceRequired": "Entrance required",
+    "fallbackTitle": "Missed a deadline? You still have options",
+    "prepResources": "Prep resources",
+    "resourceLanguage": "Language",
+    "sources": "Where this came from",
+    "sourceFetched": "checked {date}",
+    "disclaimers": "Important",
+    "filters": {
+      "costHeading": "Filter by cost",
+      "allCosts": "All costs",
+      "free": "Free",
+      "low": "Low",
+      "mid": "Mid",
+      "high": "High",
+      "showColleges": "Colleges",
+      "showExams": "Exams",
+      "showAll": "Show all",
+      "noneMatch": "Nothing matches this cost filter. Try a different bucket."
+    }
+  },
+  "static": {
+    "cvTemplates": {
+      "title": "CV / Resume Templates",
+      "intro": "Fill-in-the-blank CV templates you can copy, complete, and print.",
+      "items": [
+        "Fresher / first-job CV (one page)",
+        "Internship application CV",
+        "Skills-first CV for career switchers"
+      ]
+    },
+    "freeResources": {
+      "title": "Free Resources",
+      "intro": "A curated list of free videos and courses to learn the skills your career needs.",
+      "items": [
+        "Free video lectures for common entrance exams",
+        "Beginner online courses (no fee)",
+        "Official government skilling portals"
+      ]
+    },
+    "interviewPrep": {
+      "title": "Interview Prep",
+      "intro": "Common behavioural questions and simple frameworks for answering them with confidence.",
+      "items": [
+        "\"Tell me about yourself\" — how to structure it",
+        "Strengths and weaknesses without clichés",
+        "Questions to ask the interviewer"
+      ]
+    },
+    "findJobs": {
+      "title": "Find Jobs & Internships",
+      "intro": "Trusted portals to find internships and jobs, plus a step-by-step guide to applying.",
+      "items": [
+        "Where to look for internships",
+        "How to apply on a job portal, step by step",
+        "Spotting and avoiding job scams"
+      ]
+    },
+    "planItYourself": {
+      "title": "Plan It Yourself",
+      "intro": "No login and no ready-made match for you yet? Use this blank plan and the short guide below to research any career on your own!",
+      "templateTitle": "Your blank plan",
+      "templateIntro": "Fill each step in for the career you have in mind.",
+      "templateSteps": [
+        "The career I want:",
+        "The qualification or degree it needs:",
+        "The exam(s) involved and roughly when they happen:",
+        "Two colleges or institutes near me:",
+        "Approximate cost, and where I confirmed it:",
+        "My first action this month:"
+      ],
+      "guideTitle": "How to research any career on your own",
+      "guideSteps": [
+        "Search the career plus \"official\" to find the governing body or institute.",
+        "Find the real website — prefer .gov.in, .org, or the named institute's own domain.",
+        "Look for the \"admissions\" or \"apply\" page; that's where real dates and fees live.",
+        "Sanity-check fees against a second source — if one number looks too low or too high, dig deeper.",
+        "Never pay an \"agent\" for an application you can submit yourself for free."
+      ]
+    }
+  },
+  "footer": {
+    "rights": "A free, public-good tool. Always verify specifics on official sites.",
+    "diy": "Plan it yourself"
+  }
+}

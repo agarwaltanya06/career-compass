@@ -1,0 +1,196 @@
+{
+  "_note": "Hindi translations. Values are intentionally empty for now — the t() helper falls back to English for any empty or missing value. Fill these in (keeping proper nouns like NIFT/ICAI untranslated, per spec §3.5) and then flip `enabled: true` for 'hi' in src/lib/i18n/config.ts.",
+  "brand": {
+    "name": "",
+    "tagline": ""
+  },
+  "lang": {
+    "label": "",
+    "english": "",
+    "hindi": ""
+  },
+  "nav": {
+    "home": "",
+    "start": "",
+    "cvTemplates": "",
+    "freeResources": "",
+    "interviewPrep": "",
+    "findJobs": "",
+    "planItYourself": ""
+  },
+  "common": {
+    "back": "",
+    "next": "",
+    "skip": "",
+    "finish": "",
+    "continue": "",
+    "typeYourOwn": "",
+    "officialSite": "",
+    "verifyTag": "",
+    "comingSoon": "",
+    "comingSoonNote": ""
+  },
+  "home": {
+    "heroTitle": "",
+    "heroSubtitle": "",
+    "ctaStart": "",
+    "ctaSample": "",
+    "featuresTitle": "",
+    "feature1Title": "",
+    "feature1Body": "",
+    "feature2Title": "",
+    "feature2Body": "",
+    "feature3Title": "",
+    "feature3Body": "",
+    "exploreTitle": "",
+    "exploreBody": "",
+    "disclaimer": ""
+  },
+  "intake": {
+    "title": "",
+    "progress": "",
+    "questions": {
+      "class": "",
+      "board": "",
+      "stream": "",
+      "goal": "",
+      "location": "",
+      "language": ""
+    },
+    "options": {
+      "class9": "",
+      "class10": "",
+      "class11": "",
+      "class12": "",
+      "passed12": "",
+      "inCollege": "",
+      "gapYear": "",
+      "cbse": "",
+      "icse": "",
+      "stateBoard": "",
+      "nios": "",
+      "other": "",
+      "sciencePCM": "",
+      "sciencePCB": "",
+      "sciencePCMB": "",
+      "commerceMaths": "",
+      "commerceNoMaths": "",
+      "arts": "",
+      "vocational": "",
+      "notChosen": "",
+      "cabinCrew": "",
+      "fashionDesign": "",
+      "ca": "",
+      "nurse": "",
+      "teacher": "",
+      "govtJob": "",
+      "engineer": "",
+      "doctor": "",
+      "notSureExplore": "",
+      "rajasthan": "",
+      "maharashtra": "",
+      "delhi": "",
+      "uttarPradesh": "",
+      "english": "",
+      "hindi": ""
+    },
+    "placeholders": {
+      "whichState": "",
+      "whichCity": "",
+      "typeGoal": ""
+    },
+    "done": {
+      "title": "",
+      "lead": "",
+      "profileHeading": "",
+      "view": "",
+      "restart": "",
+      "sampleNote": ""
+    }
+  },
+  "journey": {
+    "forCareer": "",
+    "generatedAt": "",
+    "confidence": "",
+    "confidenceHigh": "",
+    "confidenceMedium": "",
+    "confidenceLow": "",
+    "overview": "",
+    "dayInLife": "",
+    "pay": "",
+    "payEntry": "",
+    "payExperienced": "",
+    "demandOutlook": "",
+    "requirements": "",
+    "routes": "",
+    "bestFor": "",
+    "feasibilityLabel": "",
+    "feasibilityHigh": "",
+    "feasibilityMedium": "",
+    "feasibilityLow": "",
+    "duration": "",
+    "timeline": "",
+    "exams": "",
+    "colleges": "",
+    "purpose": "",
+    "eligibility": "",
+    "typicalWindow": "",
+    "collegeType": "",
+    "location": "",
+    "approxFees": "",
+    "entranceRequired": "",
+    "fallbackTitle": "",
+    "prepResources": "",
+    "resourceLanguage": "",
+    "sources": "",
+    "sourceFetched": "",
+    "disclaimers": "",
+    "filters": {
+      "costHeading": "",
+      "allCosts": "",
+      "free": "",
+      "low": "",
+      "mid": "",
+      "high": "",
+      "showColleges": "",
+      "showExams": "",
+      "showAll": "",
+      "noneMatch": ""
+    }
+  },
+  "static": {
+    "cvTemplates": {
+      "title": "",
+      "intro": "",
+      "items": []
+    },
+    "freeResources": {
+      "title": "",
+      "intro": "",
+      "items": []
+    },
+    "interviewPrep": {
+      "title": "",
+      "intro": "",
+      "items": []
+    },
+    "findJobs": {
+      "title": "",
+      "intro": "",
+      "items": []
+    },
+    "planItYourself": {
+      "title": "",
+      "intro": "",
+      "templateTitle": "",
+      "templateIntro": "",
+      "templateSteps": [],
+      "guideTitle": "",
+      "guideSteps": []
+    }
+  },
+  "footer": {
+    "rights": "",
+    "diy": ""
+  }
+}

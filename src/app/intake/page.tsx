@@ -1,0 +1,296 @@
+"use client";
+
+/**
+ * The adaptive intake flow (spec §1): one question at a time, every answer a
+ * tap, with branching. Questions are defined as data in lib/intake.ts; this
+ * component just walks the *visible* subset (branching hides e.g. the stream
+ * question for class 9/10) and collects answers.
+ *
+ * On finish we show a summary + the branch lead, then link to the journey view.
+ * (The journey itself is a hard-coded sample for now — no LLM call yet.)
+ */
+
+import Link from "next/link";
+import { useState } from "react";
+import { useI18n } from "@/lib/i18n/I18nProvider";
+import {
+  visibleQuestions,
+  branchLead,
+  intakeQuestions,
+  type IntakeAnswers,
+  type IntakeOption,
+  type IntakeQuestion,
+} from "@/lib/intake";
+
+export default function IntakePage() {
+  const { t } = useI18n();
+  const [answers, setAnswers] = useState<IntakeAnswers>({});
+  const [step, setStep] = useState(0);
+  const [finished, setFinished] = useState(false);
+
+  // Recomputed every render so branching changes (e.g. skipping stream) are
+  // always reflected in the question order and the progress count.
+  const visible = visibleQuestions(answers);
+  const question = visible[Math.min(step, visible.length - 1)];
+
+  /** Move forward, or finish if this was the last visible question. */
+  function advance(updated: IntakeAnswers) {
+    const nextVisible = visibleQuestions(updated);
+    if (step + 1 >= nextVisible.length) {
+      setFinished(true);
+    } else {
+      setStep(step + 1);
+    }
+  }
+
+  function goBack() {
+    if (finished) {
+      setFinished(false);
+      return;
+    }
+    setStep((s) => Math.max(0, s - 1));
+  }
+
+  /** Tap a tappable option. Plain options advance instantly; ones with a */
+  /* follow-up (or when a custom field exists) wait for the Continue button.  */
+  function selectOption(q: IntakeQuestion, opt: IntakeOption) {
+    const updated: IntakeAnswers = { ...answers, [q.field]: opt.value };
+    // Picking an option clears any free-text the user had typed.
+    if (q.customField) updated[q.customField] = "";
+    setAnswers(updated);
+    if (!opt.followUp) {
+      advance(updated);
+    }
+  }
+
+  function setFollowUp(field: keyof IntakeAnswers, value: string) {
+    setAnswers((a) => ({ ...a, [field]: value }));
+  }
+
+  function setCustom(q: IntakeQuestion, value: string) {
+    if (!q.customField) return;
+    // Typing a custom answer deselects the option chips.
+    setAnswers((a) => ({ ...a, [q.customField!]: value, [q.field]: "" }));
+  }
+
+  function restart() {
+    setAnswers({});
+    setStep(0);
+    setFinished(false);
+  }
+
+  if (finished) {
+    return <IntakeSummary answers={answers} onRestart={restart} onBack={goBack} />;
+  }
+
+  // The option the user has currently selected for this question (if any).
+  const selectedOption = question.options.find(
+    (o) => o.value === answers[question.field]
+  );
+  const followUp = selectedOption?.followUp;
+  const followUpValue = followUp ? (answers[followUp.field] ?? "") : "";
+  const customValue = question.customField
+    ? (answers[question.customField] ?? "")
+    : "";
+
+  // When do we need an explicit Continue button (vs. auto-advance on tap)?
+  const needsContinue = Boolean(followUp) || customValue.length > 0;
+  const canContinue = followUp
+    ? followUpValue.trim().length > 0
+    : customValue.trim().length > 0;
+
+  return (
+    <div className="mx-auto max-w-xl px-4 py-8">
+      {/* Progress */}
+      <div className="mb-6">
+        <div className="flex items-center justify-between text-sm text-slate-500">
+          <span>{t("intake.title")}</span>
+          <span>
+            {t("intake.progress", { current: step + 1, total: visible.length })}
+          </span>
+        </div>
+        <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-slate-200">
+          <div
+            className="h-full rounded-full bg-sky-600 transition-all"
+            style={{ width: `${((step + 1) / visible.length) * 100}%` }}
+          />
+        </div>
+      </div>
+
+      {/* Question */}
+      <h1 className="text-2xl font-bold text-slate-900">
+        {t(question.promptKey)}
+      </h1>
+
+      <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+        {question.options.map((opt) => {
+          const selected = answers[question.field] === opt.value;
+          return (
+            <button
+              key={opt.value}
+              type="button"
+              onClick={() => selectOption(question, opt)}
+              aria-pressed={selected}
+              className={`min-h-12 rounded-xl border px-4 py-3 text-left text-base font-medium transition-colors ${
+                selected
+                  ? "border-sky-600 bg-sky-50 text-sky-800 ring-2 ring-sky-200"
+                  : "border-slate-300 bg-white text-slate-800 hover:bg-slate-100"
+              } ${opt.isExplore ? "sm:col-span-2" : ""}`}
+            >
+              {t(opt.labelKey)}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Follow-up text input revealed by an option (e.g. which state/city). */}
+      {followUp && (
+        <input
+          type="text"
+          autoFocus
+          value={followUpValue}
+          onChange={(e) => setFollowUp(followUp.field, e.target.value)}
+          placeholder={t(followUp.placeholderKey)}
+          className="mt-4 min-h-12 w-full rounded-xl border border-slate-300 px-4 text-base focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-200"
+        />
+      )}
+
+      {/* Free-text "type your own" for questions that allow it (e.g. goal). */}
+      {question.customField && (
+        <div className="mt-4">
+          <div className="mb-2 text-center text-xs uppercase tracking-wide text-slate-400">
+            {t("common.typeYourOwn")}
+          </div>
+          <input
+            type="text"
+            value={customValue}
+            onChange={(e) => setCustom(question, e.target.value)}
+            placeholder={t("intake.placeholders.typeGoal")}
+            className="min-h-12 w-full rounded-xl border border-slate-300 px-4 text-base focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-200"
+          />
+        </div>
+      )}
+
+      {/* Controls */}
+      <div className="mt-8 flex items-center justify-between">
+        <button
+          type="button"
+          onClick={goBack}
+          disabled={step === 0}
+          className="min-h-11 rounded-lg px-4 text-base font-medium text-slate-600 hover:bg-slate-100 disabled:opacity-40"
+        >
+          ← {t("common.back")}
+        </button>
+
+        {needsContinue && (
+          <button
+            type="button"
+            onClick={() => advance(answers)}
+            disabled={!canContinue}
+            className="min-h-11 rounded-xl bg-sky-600 px-6 text-base font-semibold text-white hover:bg-sky-700 disabled:opacity-40"
+          >
+            {t("common.continue")} →
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/** Final screen: how the plan will adapt + a recap of what we collected. */
+function IntakeSummary({
+  answers,
+  onRestart,
+  onBack,
+}: {
+  answers: IntakeAnswers;
+  onRestart: () => void;
+  onBack: () => void;
+}) {
+  const { t } = useI18n();
+
+  // Turn a stored answer value back into a human label by finding the option
+  // that defined it; fall back to the raw value (custom text, city names…).
+  function labelFor(field: keyof IntakeAnswers, value?: string): string | null {
+    if (!value) return null;
+    for (const q of intakeQuestions) {
+      const opt = q.options.find((o) => o.value === value);
+      if (opt) return t(opt.labelKey);
+    }
+    return value;
+  }
+
+  const goalDisplay =
+    answers.goalCustom || labelFor("goal", answers.goal) || null;
+
+  const rows: { label: string; value: string | null }[] = [
+    { label: t("intake.questions.class"), value: labelFor("class", answers.class) },
+    { label: t("intake.questions.board"), value: labelFor("board", answers.board) },
+    { label: t("intake.questions.stream"), value: labelFor("stream", answers.stream) },
+    { label: t("intake.questions.goal"), value: goalDisplay },
+    {
+      label: t("intake.questions.location"),
+      value: [labelFor("state", answers.state), answers.city]
+        .filter(Boolean)
+        .join(", ") || null,
+    },
+    { label: t("intake.questions.language"), value: labelFor("language", answers.language) },
+  ];
+
+  return (
+    <div className="mx-auto max-w-xl px-4 py-10">
+      <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+        <div aria-hidden className="text-4xl">🎉</div>
+        <h1 className="mt-2 text-2xl font-bold text-slate-900">
+          {t("intake.done.title")}
+        </h1>
+
+        {/* Branch lead — explains how the plan adapts to this profile. */}
+        <p className="mt-3 text-slate-600">{t("intake.done.lead")}</p>
+        <p className="mt-2 rounded-xl bg-sky-50 p-4 text-slate-800">
+          {branchLead(answers)}
+        </p>
+
+        {/* Recap */}
+        <h2 className="mt-6 text-sm font-semibold uppercase tracking-wide text-slate-500">
+          {t("intake.done.profileHeading")}
+        </h2>
+        <dl className="mt-2 divide-y divide-slate-100">
+          {rows
+            .filter((r) => r.value)
+            .map((r) => (
+              <div key={r.label} className="flex justify-between gap-4 py-2">
+                <dt className="text-slate-500">{r.label}</dt>
+                <dd className="text-right font-medium text-slate-900">{r.value}</dd>
+              </div>
+            ))}
+        </dl>
+
+        <p className="mt-4 text-xs text-slate-400">{t("intake.done.sampleNote")}</p>
+
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+          <Link
+            href="/journey"
+            className="flex min-h-12 flex-1 items-center justify-center rounded-xl bg-sky-600 px-6 text-base font-semibold text-white hover:bg-sky-700"
+          >
+            {t("intake.done.view")}
+          </Link>
+          <button
+            type="button"
+            onClick={onRestart}
+            className="min-h-12 rounded-xl border border-slate-300 px-6 text-base font-medium text-slate-700 hover:bg-slate-100"
+          >
+            {t("intake.done.restart")}
+          </button>
+        </div>
+        <button
+          type="button"
+          onClick={onBack}
+          className="mt-3 min-h-11 text-sm text-slate-500 hover:underline"
+        >
+          ← {t("common.back")}
+        </button>
+      </div>
+    </div>
+  );
+}
