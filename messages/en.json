@@ -135,6 +135,18 @@
     "feasibilityLow": "Harder fit",
     "duration": "Duration",
     "timeline": "Step-by-step timeline",
+    "season": {
+      "early": "Early {year}",
+      "mid": "Mid {year}",
+      "late": "Late {year}"
+    },
+    "stepOptional": "Optional",
+    "stepEitherOr": "Either / or — pick one",
+    "stepOr": "or",
+    "approxTimingNote": "Approximate timing — a planning horizon, not a fixed date.",
+    "skills": "Skills beyond the degree",
+    "coreSkills": "Core skills to build",
+    "upskilling": "Where to upskill",
     "exams": "Exams",
     "colleges": "Colleges",
     "purpose": "Purpose",

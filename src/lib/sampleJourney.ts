@@ -6,6 +6,12 @@ import type { Journey } from "./types";
  * are illustrative placeholders, exactly as the spec warns — not verified facts.
  * Every high-stakes specific carries `verified: false` so the UI shows the
  * "confirm on official site" tag, which is what we want to demonstrate.
+ *
+ * Note on the timeline: steps carry a relative `offsetMonths` (months from
+ * `meta.studentProfile.currentDate`, here June 2026). The UI computes the coarse
+ * `targetPeriod` ("Mid 2026") from it — see lib/timeline.ts. Some steps are
+ * `optional`, and the post-qualification steps form an either/or fork via
+ * `alternativeTo`.
  */
 export const sampleJourney: Journey = {
   meta: {
@@ -52,49 +58,116 @@ export const sampleJourney: Journey = {
       feasibilityReason:
         "You're already in Commerce + Maths — the ideal starting point for the Foundation route.",
       costBand: "low",
-      duration: "~4.5–5 years",
+      duration: "~4.5–5 years (2026 → 2031)",
       steps: [
         {
+          id: "step-1",
           order: 1,
           type: "education",
           title: "Register for the ICAI CA Foundation",
-          timing: "After Class 12 results",
+          offsetMonths: 1,
           description:
             "Register with ICAI and prepare for the Foundation exam, the entry level of the CA programme.",
         },
         {
+          id: "step-2",
           order: 2,
           type: "exam",
           title: "Clear CA Foundation",
-          timing: "~Within a year of registering",
+          offsetMonths: 8,
           description:
             "Four papers covering accounting, law, maths/stats, and economics. Clearing it unlocks the Intermediate level.",
         },
         {
+          id: "step-3",
           order: 3,
           type: "exam",
           title: "Clear CA Intermediate (both groups)",
-          timing: "After Foundation",
+          offsetMonths: 18,
           description:
             "The middle level. Many students clear one group at a time alongside starting articleship.",
         },
         {
+          id: "step-4",
           order: 4,
           type: "experience",
           title: "Complete 3 years of Articleship",
-          timing: "After clearing Intermediate (one group)",
+          offsetMonths: 24,
           description:
             "Practical training under a practising CA. This is where the real learning happens — audits, tax, and client work.",
         },
         {
+          id: "step-5",
           order: 5,
+          type: "experience",
+          title: "Industrial training stint (in industry, not a firm)",
+          offsetMonths: 40,
+          description:
+            "An optional swap of the last leg of articleship for a paid placement inside a company's finance team — useful if you want a corporate, rather than practice, career.",
+          optional: true,
+        },
+        {
+          id: "step-6",
+          order: 6,
           type: "exam",
           title: "Clear CA Final",
-          timing: "In the last months of / after articleship",
+          offsetMonths: 54,
           description:
             "The final level. Clear it and complete articleship to become a member of ICAI and a qualified CA.",
         },
+        // Post-qualification fork — pick one, not both.
+        {
+          id: "step-7",
+          order: 7,
+          type: "application",
+          title: "Join an established CA firm or company",
+          offsetMonths: 56,
+          description:
+            "Take a salaried role at an audit/tax firm or in a company's finance team — steadier income and structured mentoring while you find your niche.",
+          alternativeTo: "step-7b",
+        },
+        {
+          id: "step-7b",
+          order: 7,
+          type: "application",
+          title: "Set up your own independent practice",
+          offsetMonths: 58,
+          description:
+            "Start your own practice serving small businesses and individuals — more freedom and upside, but income takes time to build.",
+          alternativeTo: "step-7",
+        },
       ],
+      skills: {
+        coreSkills: [
+          "Double-entry accounting and reading financial statements",
+          "Indian direct tax and GST fundamentals",
+          "Spreadsheet fluency (Excel / Google Sheets)",
+          "Clear business writing and client communication",
+        ],
+        upskilling: [
+          {
+            name: "Tally & accounting-software basics (free tutorials)",
+            why: "Almost every Indian firm runs on Tally; knowing it makes you useful from day one of articleship.",
+            costBand: "free",
+            url: "https://www.youtube.com/",
+            verified: false,
+          },
+          {
+            name: "Advanced Excel for finance (online course)",
+            why: "Pivot tables, lookups and basic modelling speed up audit and analysis work.",
+            costBand: "low",
+            url: "https://www.coursera.org/",
+            verified: false,
+          },
+          {
+            name: "GST practitioner certification",
+            why: "A focused credential that opens up indirect-tax advisory work.",
+            costBand: "mid",
+            url: "https://www.icai.org/",
+            verified: false,
+          },
+        ],
+      },
       exams: [
         {
           name: "CA Foundation",
@@ -145,33 +218,91 @@ export const sampleJourney: Journey = {
       feasibilityReason:
         "A solid, lower-risk path — you earn a B.Com degree first, but it adds time before you qualify as a CA.",
       costBand: "mid",
-      duration: "~5–6 years",
+      duration: "~5–6 years (2026 → 2032)",
       steps: [
         {
+          id: "step-1",
           order: 1,
           type: "education",
           title: "Enrol in a B.Com degree",
-          timing: "After Class 12",
+          offsetMonths: 2,
           description:
             "A 3-year commerce degree at a college near you. Gives you a fallback qualification and covers much of the CA syllabus.",
         },
         {
+          id: "step-2",
           order: 2,
+          type: "experience",
+          title: "Summer internship during the degree",
+          offsetMonths: 14,
+          description:
+            "A short internship at an accounting firm or finance team builds real-world skills and a network before you commit to articleship.",
+          optional: true,
+        },
+        {
+          id: "step-3",
+          order: 3,
           type: "education",
           title: "Use the CA direct-entry route",
-          timing: "After / near graduation",
+          offsetMonths: 30,
           description:
             "Graduates with the required marks can skip Foundation and register directly for CA Intermediate.",
         },
         {
-          order: 3,
+          id: "step-4",
+          order: 4,
           type: "experience",
-          title: "Articleship + CA Final",
-          timing: "After Intermediate",
+          title: "Articleship + clear CA Final",
+          offsetMonths: 40,
           description:
             "Same practical training and final exam as the Foundation route.",
         },
+        // Post-qualification fork — pick one, not both.
+        {
+          id: "step-5",
+          order: 5,
+          type: "application",
+          title: "Take a finance or audit job",
+          offsetMonths: 56,
+          description:
+            "Join a firm or company straight after qualifying and start earning while you specialise on the job.",
+          alternativeTo: "step-5b",
+        },
+        {
+          id: "step-5b",
+          order: 5,
+          type: "education",
+          title: "Add a postgraduate degree (M.Com / MBA)",
+          offsetMonths: 56,
+          description:
+            "Stack a master's to move toward leadership or a specialised field like finance or consulting — more time and cost, higher ceiling.",
+          alternativeTo: "step-5",
+        },
       ],
+      skills: {
+        coreSkills: [
+          "Strong commerce fundamentals from your degree",
+          "Indian tax and audit basics",
+          "Data and spreadsheet analysis",
+          "Time management across degree + CA prep",
+        ],
+        upskilling: [
+          {
+            name: "Financial accounting fundamentals (free online course)",
+            why: "Reinforces the core of both your B.Com and the CA syllabus at no cost.",
+            costBand: "free",
+            url: "https://www.coursera.org/",
+            verified: false,
+          },
+          {
+            name: "Business communication & soft skills workshop",
+            why: "Direct-entry students skip Foundation but still need polished client-facing skills.",
+            costBand: "low",
+            url: "https://www.youtube.com/",
+            verified: false,
+          },
+        ],
+      },
       exams: [
         {
           name: "CA Intermediate (direct entry)",

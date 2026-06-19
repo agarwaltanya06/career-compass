@@ -13,7 +13,12 @@
 import { useMemo, useState } from "react";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import { sampleJourney } from "@/lib/sampleJourney";
-import type { CostBand, Journey, JourneyStep } from "@/lib/types";
+import type { CostBand, Journey, JourneyStep, RouteSkills } from "@/lib/types";
+import {
+  buildTimelineRows,
+  computeTargetPeriod,
+  type TargetPeriod,
+} from "@/lib/timeline";
 import {
   ConfidenceBadge,
   CostBadge,
@@ -192,8 +197,14 @@ function JourneyView({ journey }: { journey: Journey }) {
               </div>
               <p className="mt-2 text-sm text-stone-600">{route.feasibilityReason}</p>
 
-              {/* Ordered timeline of steps */}
-              <Timeline steps={route.steps} />
+              {/* Ordered, dated timeline of steps */}
+              <Timeline
+                steps={route.steps}
+                currentDate={journey.meta.studentProfile.currentDate}
+              />
+
+              {/* Skills beyond the degree */}
+              <Skills skills={route.skills} costMatches={costMatches} />
 
               {/* Exam cards */}
               {exams.length > 0 && (
@@ -342,37 +353,234 @@ function FilterChip({
   );
 }
 
-/** Ordered, numbered timeline of a route's steps. */
-function Timeline({ steps }: { steps: JourneyStep[] }) {
+/** Format a computed target period ("Mid 2026") via i18n. */
+function usePeriodFormatter() {
   const { t } = useI18n();
-  const ordered = [...steps].sort((a, b) => a.order - b.order);
+  return (p: TargetPeriod) => t(`journey.season.${p.season}`, { year: p.year });
+}
+
+/**
+ * Dated vertical timeline of a route's steps. Dates are computed in code from
+ * each step's relative `offsetMonths` (spec §2.1) — the model never emits them.
+ * Either/or forks render as a branch and optional steps are visually distinct.
+ */
+function Timeline({
+  steps,
+  currentDate,
+}: {
+  steps: JourneyStep[];
+  currentDate?: string;
+}) {
+  const { t } = useI18n();
+  // Fall back to today's date if a profile somehow lacks an anchor.
+  const anchor = currentDate ?? new Date().toISOString().slice(0, 10);
+  const rows = useMemo(() => buildTimelineRows(steps), [steps]);
+
   return (
     <div className="mt-4">
       <h4 className="text-sm font-semibold uppercase tracking-wide text-stone-500">
         {t("journey.timeline")}
       </h4>
-      <ol className="mt-2">
-        {ordered.map((step, i) => (
-          <li key={step.order} className="flex gap-3">
-            {/* Number + connecting line */}
-            <div className="flex flex-col items-center">
-              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-orange-500 text-sm font-bold text-white">
-                {step.order}
-              </span>
-              {i < ordered.length - 1 && (
-                <span aria-hidden className="my-1 w-px flex-1 bg-stone-200" />
-              )}
-            </div>
-            <div className="pb-5">
-              <p className="font-semibold text-stone-900">{step.title}</p>
+      <p className="mt-1 text-xs text-stone-400">{t("journey.approxTimingNote")}</p>
+      <ol className="mt-3">
+        {rows.map((row, i) => (
+          <TimelineRow
+            key={row[0].id}
+            row={row}
+            anchor={anchor}
+            isLast={i === rows.length - 1}
+          />
+        ))}
+      </ol>
+    </div>
+  );
+}
+
+/** A single timeline row: one step, or an either/or fork of several. */
+function TimelineRow({
+  row,
+  anchor,
+  isLast,
+}: {
+  row: JourneyStep[];
+  anchor: string;
+  isLast: boolean;
+}) {
+  const formatPeriod = usePeriodFormatter();
+  const isFork = row.length > 1;
+  const optional = !isFork && Boolean(row[0].optional);
+
+  // The left-column date = the earliest period among the row's steps.
+  const leadOffset = Math.min(...row.map((s) => s.offsetMonths));
+  const leadPeriod = computeTargetPeriod(anchor, leadOffset);
+
+  return (
+    <li className="flex gap-3">
+      {/* Computed date column */}
+      <div className="w-16 shrink-0 pt-0.5 text-right">
+        <span className="text-xs font-semibold text-stone-700">
+          {formatPeriod(leadPeriod)}
+        </span>
+      </div>
+
+      {/* Node + connecting line */}
+      <div className="flex flex-col items-center">
+        <span aria-hidden className={nodeClass(isFork, optional)} />
+        {!isLast && <span aria-hidden className="my-1 w-px flex-1 bg-stone-200" />}
+      </div>
+
+      {/* Content */}
+      <div className="min-w-0 flex-1 pb-6">
+        {isFork ? (
+          <ForkContent row={row} anchor={anchor} />
+        ) : (
+          <StepContent step={row[0]} />
+        )}
+      </div>
+    </li>
+  );
+}
+
+/** Marker dot styling: solid for required, dashed ring for optional, violet for forks. */
+function nodeClass(isFork: boolean, optional: boolean): string {
+  const base = "mt-0.5 h-4 w-4 shrink-0 rounded-full";
+  if (isFork) return `${base} bg-violet-500 ring-2 ring-violet-200`;
+  if (optional) return `${base} border-2 border-dashed border-orange-400 bg-white`;
+  return `${base} bg-orange-500`;
+}
+
+/** A single, non-fork step. Optional steps are muted + badged. */
+function StepContent({ step }: { step: JourneyStep }) {
+  const { t } = useI18n();
+  return (
+    <>
+      <div className="flex flex-wrap items-center gap-2">
+        <p
+          className={`font-semibold ${
+            step.optional ? "text-stone-600" : "text-stone-900"
+          }`}
+        >
+          {step.title}
+        </p>
+        {step.optional && (
+          <span className="rounded-full bg-stone-100 px-2 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-stone-500">
+            {t("journey.stepOptional")}
+          </span>
+        )}
+      </div>
+      <p className="text-xs font-medium uppercase tracking-wide text-orange-700">
+        {step.type}
+      </p>
+      <p className="mt-1 text-sm text-stone-600">{step.description}</p>
+    </>
+  );
+}
+
+/** An either/or fork: alternatives the student chooses between, not parallel steps. */
+function ForkContent({ row, anchor }: { row: JourneyStep[]; anchor: string }) {
+  const { t } = useI18n();
+  const formatPeriod = usePeriodFormatter();
+  return (
+    <div className="rounded-xl border border-dashed border-violet-300 bg-violet-50/60 p-3">
+      <p className="text-xs font-bold uppercase tracking-wide text-violet-700">
+        {t("journey.stepEitherOr")}
+      </p>
+      <div className="mt-2">
+        {row.map((step, i) => (
+          <div key={step.id}>
+            {i > 0 && (
+              <div className="my-2 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-wide text-violet-400">
+                <span aria-hidden className="h-px flex-1 bg-violet-200" />
+                {t("journey.stepOr")}
+                <span aria-hidden className="h-px flex-1 bg-violet-200" />
+              </div>
+            )}
+            <div className="rounded-lg border border-violet-200 bg-white p-3">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <p className="font-semibold text-stone-900">{step.title}</p>
+                <span className="text-xs font-semibold text-stone-500">
+                  {formatPeriod(computeTargetPeriod(anchor, step.offsetMonths))}
+                </span>
+              </div>
               <p className="text-xs font-medium uppercase tracking-wide text-orange-700">
-                {step.type} · {step.timing}
+                {step.type}
               </p>
               <p className="mt-1 text-sm text-stone-600">{step.description}</p>
             </div>
-          </li>
+          </div>
         ))}
-      </ol>
+      </div>
+    </div>
+  );
+}
+
+/** Skills beyond the degree: core skills + price-banded upskilling options. */
+function Skills({
+  skills,
+  costMatches,
+}: {
+  skills: RouteSkills;
+  costMatches: (band: CostBand) => boolean;
+}) {
+  const { t } = useI18n();
+  const upskilling = skills.upskilling.filter((u) => costMatches(u.costBand));
+  if (skills.coreSkills.length === 0 && upskilling.length === 0) return null;
+
+  return (
+    <div className="mt-5">
+      <h4 className="text-sm font-semibold uppercase tracking-wide text-stone-500">
+        {t("journey.skills")}
+      </h4>
+
+      {skills.coreSkills.length > 0 && (
+        <div className="mt-2">
+          <p className="text-xs font-semibold text-stone-500">
+            {t("journey.coreSkills")}
+          </p>
+          <div className="mt-1.5 flex flex-wrap gap-2">
+            {skills.coreSkills.map((s) => (
+              <span
+                key={s}
+                className="rounded-full bg-stone-100 px-3 py-1 text-sm text-stone-700"
+              >
+                {s}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {upskilling.length > 0 && (
+        <div className="mt-3">
+          <p className="text-xs font-semibold text-stone-500">
+            {t("journey.upskilling")}
+          </p>
+          <ul className="mt-1.5 space-y-2">
+            {upskilling.map((u) => (
+              <li
+                key={u.name}
+                className="rounded-xl border border-stone-200 bg-white p-3"
+              >
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <a
+                    href={u.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-orange-700 underline"
+                  >
+                    {u.name}
+                  </a>
+                  <div className="flex items-center gap-2">
+                    <CostBadge band={u.costBand} />
+                    {!u.verified && <VerifyTag />}
+                  </div>
+                </div>
+                <p className="mt-1 text-sm text-stone-600">{u.why}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }

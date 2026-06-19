@@ -136,6 +136,18 @@
     "feasibilityLow": "",
     "duration": "",
     "timeline": "",
+    "season": {
+      "early": "",
+      "mid": "",
+      "late": ""
+    },
+    "stepOptional": "",
+    "stepEitherOr": "",
+    "stepOr": "",
+    "approxTimingNote": "",
+    "skills": "",
+    "coreSkills": "",
+    "upskilling": "",
     "exams": "",
     "colleges": "",
     "purpose": "",

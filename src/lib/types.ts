@@ -16,7 +16,13 @@ export type Confidence = "high" | "medium" | "low";
 export type Feasibility = "high" | "medium" | "low";
 
 /** What kind of milestone a timeline step represents. */
-export type StepType = "education" | "exam" | "experience" | "skill" | "other";
+export type StepType =
+  | "education"
+  | "exam"
+  | "application"
+  | "experience"
+  | "skill"
+  | "other";
 
 /** College ownership type. */
 export type CollegeType = "government" | "private" | "deemed";
@@ -74,12 +80,31 @@ export interface JourneyOverview {
 }
 
 export interface JourneyStep {
+  /**
+   * Stable identifier for this step, used to wire up `alternativeTo` forks.
+   * e.g. "step-1", "step-6", "step-6b".
+   */
+  id: string;
+  /** Sort position on the timeline. Fork alternatives share the same order. */
   order: number;
   type: StepType;
   title: string;
-  /** Soft timing like "Class 11–12" or "after 12th" — never a hard date. */
-  timing: string;
+  /**
+   * Months from `studentProfile.currentDate`. The MODEL emits this relative
+   * offset only; the UI computes the coarse, human `targetPeriod` ("Mid 2026")
+   * from it in code (see lib/timeline.ts). The model never emits absolute dates,
+   * so calendar arithmetic stays deterministic — spec §2.1 + §3 rule 7.
+   */
+  offsetMonths: number;
   description: string;
+  /** Non-essential milestone (e.g. a summer internship) — rendered as skippable. */
+  optional?: boolean;
+  /**
+   * The `id` of another step this one is an either/or alternative to (e.g. a
+   * post-degree fork: further study vs. a job). Forks render as a branch, not
+   * as two parallel mandatory steps — spec §2.1 + §3 rule 8.
+   */
+  alternativeTo?: string;
 }
 
 /**
@@ -115,6 +140,27 @@ export interface MissedDeadlineFallback {
   options: string[];
 }
 
+/**
+ * A price-banded upskilling option — what to learn beyond the degree and where.
+ * Free options should be listed first (spec §3, rule 8). `verified: false` shows
+ * the "confirm on official site" tag, like other high-stakes specifics.
+ */
+export interface UpskillingOption {
+  name: string;
+  why: string;
+  costBand: CostBand;
+  url: string;
+  verified: boolean;
+}
+
+/** Skills BEYOND the degree for a route: core skills + price-banded upskilling. */
+export interface RouteSkills {
+  /** Skills to build regardless of route, e.g. problem-solving, a language. */
+  coreSkills: string[];
+  /** Concrete courses/resources to upskill, free ones first. */
+  upskilling: UpskillingOption[];
+}
+
 export interface Route {
   id: string;
   name: string;
@@ -124,6 +170,8 @@ export interface Route {
   costBand: CostBand;
   duration: string;
   steps: JourneyStep[];
+  /** Skills beyond the degree: core skills + price-banded upskilling options. */
+  skills: RouteSkills;
   exams: Exam[];
   colleges: College[];
   missedDeadlineFallback: MissedDeadlineFallback;
