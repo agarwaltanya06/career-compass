@@ -26,11 +26,11 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-20 border-b border-stone-200 bg-orange-50/90 backdrop-blur">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3">
         <Link
           href="/"
-          className="flex items-center gap-2 text-lg font-bold text-sky-700"
+          className="flex items-center gap-2 text-lg font-bold text-orange-700"
           onClick={() => setOpen(false)}
         >
           <span aria-hidden className="text-2xl">🧭</span>
@@ -43,7 +43,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-lg px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100"
+              className="rounded-lg px-3 py-2 text-sm font-medium text-stone-700 hover:bg-stone-100"
             >
               {t(item.labelKey)}
             </Link>
@@ -58,7 +58,7 @@ export default function Header() {
             aria-expanded={open}
             aria-label="Menu"
             onClick={() => setOpen((v) => !v)}
-            className="flex min-h-11 min-w-11 items-center justify-center rounded-lg border border-slate-300 text-slate-700 md:hidden"
+            className="flex min-h-11 min-w-11 items-center justify-center rounded-lg border border-stone-300 text-stone-700 md:hidden"
           >
             <span aria-hidden className="text-xl">{open ? "✕" : "☰"}</span>
           </button>
@@ -67,14 +67,14 @@ export default function Header() {
 
       {/* Collapsible nav on < md screens */}
       {open && (
-        <nav className="border-t border-slate-200 bg-white px-4 py-2 md:hidden">
+        <nav className="border-t border-stone-200 bg-orange-50 px-4 py-2 md:hidden">
           <ul className="flex flex-col">
             {NAV_ITEMS.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-lg px-3 py-3 text-base font-medium text-slate-700 hover:bg-slate-100"
+                  className="block rounded-lg px-3 py-3 text-base font-medium text-stone-700 hover:bg-stone-100"
                 >
                   {t(item.labelKey)}
                 </Link>

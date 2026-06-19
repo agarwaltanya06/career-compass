@@ -15,14 +15,14 @@ export default function StaticPage({ prefix }: { prefix: string }) {
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-10">
-      <h1 className="text-3xl font-extrabold text-slate-900">{t(`${prefix}.title`)}</h1>
-      <p className="mt-3 text-lg text-slate-600">{t(`${prefix}.intro`)}</p>
+      <h1 className="text-3xl font-extrabold text-stone-900">{t(`${prefix}.title`)}</h1>
+      <p className="mt-3 text-lg text-stone-600">{t(`${prefix}.intro`)}</p>
 
       <ul className="mt-6 space-y-3">
         {items.map((item) => (
           <li
             key={item}
-            className="rounded-xl border border-slate-200 bg-white p-4 text-slate-800 shadow-sm"
+            className="rounded-xl border border-stone-200 bg-white p-4 text-stone-800 shadow-sm"
           >
             {item}
           </li>
@@ -30,7 +30,7 @@ export default function StaticPage({ prefix }: { prefix: string }) {
       </ul>
 
       {/* Honest placeholder note while real content is still being written. */}
-      <p className="mt-8 rounded-xl bg-slate-100 p-4 text-sm text-slate-500">
+      <p className="mt-8 rounded-xl bg-stone-100 p-4 text-sm text-stone-500">
         {t("common.comingSoonNote")}
       </p>
     </div>

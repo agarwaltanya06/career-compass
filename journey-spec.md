@@ -1,4 +1,4 @@
-# Career Journey — Schema & Intake Spec (v0.1)
+# Career Journey — Schema & Intake Spec (v0.2)
 
 The spine of the app. The chat **collects a profile**, the LLM **returns one `journey` object** (grounded + cited), and the UI **renders that object** as a timeline + filterable cards. This file is meant to hand to Claude Code.
 
@@ -13,11 +13,17 @@ Ask one question at a time. Branch — don't ask stream to a class-9 student. Ke
 | 1 | What class are you in? | Class 9 · 10 · 11 · 12 · Passed 12 · In college · Gap year / dropped out | Always |
 | 2 | Which board? | CBSE · ICSE/ISC · State board (→ which state) · NIOS/Open · Other | Always |
 | 3 | Which stream have you taken? | Science (PCM) · Science (PCB) · Science (PCMB) · Commerce + Maths · Commerce, no Maths · Arts/Humanities · Vocational · Not chosen yet | Only if class ≥ 11 |
-| 4 | What do you want to become? | Common chips (Cabin crew, Fashion design, CA, Nurse, Teacher, Govt job, Engineer, Doctor…) · Type your own · **Not sure — help me explore** | Always |
-| 5 | Where are you? | State (→ city) | Always (for college proximity) |
-| 6 | Which language for your plan? | English · Hindi · (others) | Optional |
+| 4 | What do you want to become? | ~20 common careers, **sorted alphabetically** (see list below) · Type your own · **Not sure — help me explore** | Always |
+| 5 | Which language for your plan? | English · Hindi · (others) | Optional |
 
-> **Cost is not an intake question.** Fetch *all* options across every price band, then let the user filter the rendered results by cost bucket (each `route` and `college` carries `costBand`). This avoids hiding options from a student who'd qualify for aid, and — bonus — dropping budget from the profile shrinks the cache space (fewer unique keys → more cache hits → fewer API calls).
+**Q4 career list** (alphabetical, so ordering is never a judgment call; "Type your own" and "Not sure" sit *outside* the alphabetical block, at the end):
+Architecture · Cabin crew · Chartered Accountant (CA) · Civil services (UPSC) · Defence (NDA/forces) · Design (graphic/UX) · Doctor (MBBS) · Engineer · Fashion design · Government job (SSC/banking) · Hospitality / hotel management · ITI / polytechnic trades · Journalism / media · Law · Merchant navy · Nursing · Paramedical / allied health · Pharmacy · Teaching · Social work
+*(Cabin crew is in the list but not privileged. Tune the exact 20 over time.)*
+
+> **Cost and location are NOT intake questions — they're output filters.**
+> - **Cost:** fetch options across every price band; let the user **sort by approximate fees** or filter by clearly-labelled **cost buckets** (see §2 note on labelling — always show the word "Cost", ideally with an indicative ₹ range).
+> - **Location:** generate a broad, India-wide set of colleges/options, each tagged with state + city, then let the user filter by **state/city from the values actually present** in their result.
+> - Bonus: dropping budget *and* location from the profile shrinks the cache space (fewer unique keys → more cache hits → fewer API calls).
 
 **Branches**
 - **"Not sure"** at Q4 → exploration mode: model suggests 3–5 careers that fit the profile, each with a one-line "why it fits you," then user picks one to expand into a full journey.
@@ -31,16 +37,16 @@ Ask one question at a time. Branch — don't ask stream to a class-9 student. Ke
 ```jsonc
 {
   "meta": {
-    "career": "Chartered Accountant",
-    "careerAliases": ["CA", "सीए"],          // for search + regional matching
+    "career": "Engineer",
+    "careerAliases": ["Engineering", "इंजीनियर"],  // for search + regional matching
     "studentProfile": {
-      "class": "12", "board": "CBSE", "stream": "Commerce + Maths",
-      "state": "Rajasthan", "city": "Jaipur",
-      "englishComfort": "okay", "language": "en"
+      "class": "10", "board": "CBSE", "stream": null,
+      "language": "en",
+      "currentDate": "2026-03-01"             // anchors the dated timeline (see §2.1 + §3)
     },
     "generatedAt": "2026-06-18",
     "confidence": "high|medium|low",          // model's own freshness rating
-    "cacheKey": "ca|cbse|commerce-maths|class12|rajasthan"  // normalized; see §4
+    "cacheKey": "engineer|cbse|none|class10"  // career|board|stream|classBucket — no location/cost/model (see §4)
   },
 
   "overview": {
@@ -54,18 +60,34 @@ Ask one question at a time. Branch — don't ask stream to a class-9 student. Ke
   "routes": [
     {
       "id": "route-1",
-      "name": "ICAI route after Class 12",
-      "bestFor": "Commerce students who want to start right after 12th",
+      "name": "JEE route to a 4-year engineering degree",
+      "bestFor": "Class 10 students willing to take PCM and prep for entrance exams",
       "feasibility": "high",                  // relative to THIS student
-      "feasibilityReason": "You're already in Commerce + Maths, the ideal start",
-      "costBand": "low",
-      "duration": "~4.5–5 years",
+      "feasibilityReason": "You're at the ideal starting point — entering Class 11",
+      "costBand": "mid",                      // UI MUST render as "Cost: Medium (≈ ₹X–Y / yr)", never a bare "mid"
+      "duration": "~6 years to degree (2026 → 2032)",
 
+      // Ordered steps = the downloadable timeline. The MODEL emits a relative
+      // `offsetMonths` (months from studentProfile.currentDate); your CODE computes
+      // the human `targetPeriod` from it. Never let the model do calendar math. See §2.1 + §3.
       "steps": [
-        { "order": 1, "type": "education",     "title": "...", "timing": "Class 11–12", "description": "..." },
-        { "order": 2, "type": "exam",          "title": "...", "timing": "after 12th",  "description": "..." },
-        { "order": 3, "type": "experience",    "title": "...", "timing": "...",         "description": "..." }
+        { "order": 1, "type": "education",  "title": "Take PCM in Class 11",            "offsetMonths": 3,  "targetPeriod": "Mid 2026 (computed)",  "description": "..." },
+        { "order": 2, "type": "exam",        "title": "Board exams + JEE Main/Advanced + private exams (BITSAT/VITEEE)", "offsetMonths": 22, "targetPeriod": "Early 2028 (computed)", "description": "..." },
+        { "order": 3, "type": "application", "title": "JoSAA / JAC / state & DU counselling",  "offsetMonths": 27, "targetPeriod": "Mid 2028 (computed)",   "description": "..." },
+        { "order": 4, "type": "experience",  "title": "Summer internship (end of 3rd year)",   "offsetMonths": 63, "targetPeriod": "Mid 2031 (computed)",   "description": "...", "optional": true },
+        { "order": 5, "type": "education",   "title": "Graduate with B.Tech",            "offsetMonths": 75, "targetPeriod": "Mid 2032 (computed)",   "description": "..." },
+        // Post-completion FORK — alternatives the student chooses between:
+        { "order": 6, "type": "exam",        "title": "GATE → M.Tech to specialise",     "offsetMonths": 70, "targetPeriod": "2031–2032 (computed)",   "description": "...", "alternativeTo": "step-6b" },
+        { "order": "6b", "type": "application", "title": "Apply for engineering jobs",    "offsetMonths": 72, "targetPeriod": "Early 2032 (computed)",  "description": "...", "alternativeTo": "step-6" }
       ],
+
+      // Skills BEYOND the degree — what to build + where to upskill (price-banded).
+      "skills": {
+        "coreSkills": ["...", "..."],         // e.g. problem-solving, a programming language, domain basics
+        "upskilling": [
+          { "name": "...", "why": "...", "costBand": "free", "url": "https://...", "verified": false }
+        ]
+      },
 
       "exams": [
         {
@@ -83,8 +105,10 @@ Ask one question at a time. Branch — don't ask stream to a class-9 student. Ke
         {
           "name": "...",
           "type": "government|private|deemed",
-          "location": "...",
-          "approxAnnualFees": "...",
+          "state": "...",                      // for the location filter
+          "city": "...",                       // for the location filter
+          "approxAnnualFees": "...",           // drives the "sort by fees" control
+          "costBand": "free|low|mid|high",     // render as "Cost: …"
           "feesNote": "approximate — confirm on official site",
           "entranceRequired": "...",
           "officialUrl": "https://...",
@@ -115,6 +139,17 @@ Ask one question at a time. Branch — don't ask stream to a class-9 student. Ke
 
 ---
 
+## 2.1 Timeline & downloads
+
+The ordered `steps` (with `targetPeriod`) **are** the timeline — no separate structure needed. The journey view should render them as a dated vertical timeline, and offer **two downloads** of it:
+
+- **`.ics` calendar file** — key milestones import straight into the phone's calendar app. Works on basic Android, no app install. (Use approximate month-level events with a clear "approximate — verify" note in each event description.)
+- **PDF / printable list** — the same milestones as a plain dated list, zero-friction for anyone who finds calendar import intimidating.
+
+This download capability applies to **every** generated journey, not just `/plan-it-yourself`. **Dates are computed in code, not by the model:** the model emits a relative `offsetMonths` per step, and your code turns that into the coarse `targetPeriod` ("Mid 2026") from the student's current date. This keeps calendar arithmetic deterministic (so even a small/cheap model is reliable here) and makes the timeline trivially re-anchorable. `targetPeriod` values are planning horizons, not commitments. Forks (`alternativeTo`) render as "either/or" branches, not parallel mandatory steps.
+
+---
+
 ## 3. Generation contract (the rule that keeps it safe)
 
 These go in the LLM's system prompt, not just as hopes:
@@ -125,35 +160,52 @@ These go in the LLM's system prompt, not just as hopes:
 4. **Set `confidence` honestly.** Low confidence → UI leans harder on "verify before acting."
 5. **Proper nouns stay untranslated** in any language (exam names, college names, "NIFT", "ICAI").
 6. **Output strict JSON only**, no prose around it, so the UI can parse it directly.
+7. **Emit relative timing, not dates.** For each step output an `offsetMonths` (months from now); your code computes the displayed `targetPeriod`. The model must never output absolute dates — that's deterministic arithmetic done in code.
+8. **Go beyond the degree.** Every route includes a `skills` block: core skills to build *and* price-banded `upskilling` options (free ones first). Include experience milestones — e.g. a summer-internship step around the end of 3rd year — and at least one **post-completion fork** (further study vs. work) via `alternativeTo`.
+9. **Label cost as cost.** Bare bands ("low") are ambiguous. Every `costBand` must be rendered by the UI as "Cost: Low/Medium/High", ideally with an indicative ₹ range; colleges also expose `approxAnnualFees` so users can sort by price.
+10. **Generate India-wide, tag by location.** Don't pre-filter by the student's state; return options across India, each `college` tagged with `state` + `city` so the UI can filter.
 
 ---
 
 ## 4. Caching (turns the LLM into your curated library)
 
-- `cacheKey` = normalized `career | board | stream | classBucket | state`.
+- `cacheKey` = normalized `career | board | stream | classBucket`. No location, cost, **or model/provider** — once verified, a journey is just content, identical regardless of who generated it or on which model.
+- For multilingual: include `language` in the key (or store one file per language), so English and Hindi versions of the same path cache separately.
 - First request for a key → generate, you eyeball it, save it.
 - Later identical profiles → serve the cached, human-verified journey. No API cost, higher trust.
 - A "last verified" date per cached journey tells you when to re-check. Over months the cache *becomes* the verified content library — seeded by the LLM, owned by you.
 
 ---
 
-## 5. Access tiers (cost control)
+## 5. Access tiers, models & cost control
 
-Live LLM generation is the only expensive part, so gate *who can trigger it* — not who can use the app.
+Live generation is the only expensive part, so gate *who can trigger it* and *on whose budget* — not who can use the app.
 
-| Tier | Who | Gets | LLM call? |
-|------|-----|------|-----------|
-| **Anonymous** | No login | Pick parameters from dropdowns → served a matching **cached** journey, + a few basic pre-built journeys | Never |
-| **Registered** | Login (see note) | Full chat intake → can generate **new** combinations not yet cached | Only on a cache *miss* |
-| **Everyone** | — | All static content (§6) | Never |
+| Tier | Who | Gets | Default model | Whose budget |
+|------|-----|------|---------------|--------------|
+| **Anonymous** | No login | Dropdowns → matching **cached** journey + static. On a cache *miss*, optionally a grounded free-tier generation **stamped "unverified — check official links"** | **Gemini free tier** (grounded) | None / free tier |
+| **Registered** | Login | Full chat intake; live generation; can switch model | Gemini free; **Haiku** selectable | Yours (capped) |
+| **Registered + own key** | Login + own API key | Picks any **provider + model** (Haiku/Sonnet/Opus/open) | Their choice | **Theirs** |
+| **Everyone** | — | All static content (§6) | — | None |
 
-**The flywheel + the cost levers:**
-- **Cache-first for everyone, including logged-in users.** A registered user only triggers a generation on a true cache miss; repeats are free.
-- Anonymous dropdowns are **constrained to combinations that exist in the cache**, so nobody hits an empty result.
-- When a registered user generates a new journey, it lands in the cache → instantly available to the free tier too. Motivated users effectively grow the free library.
-- Add a simple **per-user rate limit** on generations as a backstop.
+**The model dropdown** (what you described): a model selector that defaults to **Gemini free tier** for everyone. Haiku, Sonnet, etc. are **shown but disabled** for anonymous users; logging in **enables Haiku** (on your key, rate-limited). **Sonnet/Opus stay gated behind bring-your-own-key** — they cost ~3×+ Haiku, so the expensive models run on the *user's* budget, never silently on yours.
 
-**One honest flag on login.** A login gate controls cost, but email+password signup is a real barrier for exactly this audience — shared phones, no personal email, first-time internet users. Two mitigations: (1) make the free cached tier good enough that most students never *need* to log in, and (2) if you do gate, **phone-OTP beats email/password** for this group in India. The DIY section below is also your equity backstop — it serves anyone who can't or won't sign in.
+**Model/provider design**
+- Build the endpoint behind a **provider abstraction** (provider + model as config), so Gemini / Anthropic / OpenRouter / a user's key are all swappable without a rewrite.
+- **Default = Gemini's free tier**, chosen because it's the one free option with **native search grounding** (most open-weights free tiers have no built-in web search, so they'd invent deadlines). Rate-limited (≈1,500 req/day at time of writing — verify current limits), so keep a paid fallback (your Haiku key) for when limits hit.
+- **Haiku is sufficient** for the research + journey once dates are computed in code (§2.1) and grounding does the factual work — especially since every journey is human-verified before it's cached. **Sonnet** helps mainly on rarer careers and fallback-logic edge cases; offer it as a BYO-key upgrade, not a default.
+- **Stakes-split.** Free/cheap models are fine for low-harm text (overview, "day in the life", exploration suggestions). High-stakes specifics (exams, fees, dates) must stay **grounded + verify-tagged**, or come from the human-verified cache.
+- **Data minimization.** Free no-card tiers are often funded by **training on your prompts**. You're sending student profiles (including minors'). Send the *minimum* needed, never names/contact info, and check each provider's data-use policy before defaulting to it.
+- **Bring-your-own-key**, honestly scoped: shifts cost off you, but (a) your core students won't have keys — it's for mentors/NGO staff/power users, and (b) **never log or expose a user's key**; encrypt at rest or keep it session-only.
+- **You cannot log a user in with their Anthropic/ChatGPT subscription.** Consumer plans expose no API to spend on the user's behalf, their chat UIs can't be embedded (anti-framing headers) or read across origins, and scraping them breaks ToS. "Use your own access" = paste a developer **API key**, full stop.
+
+**The cache flywheel + levers**
+- **Cache-first for everyone**, including logged-in users — repeats are free.
+- Anonymous dropdowns are **constrained to cached combinations**, so nobody hits an empty result.
+- A registered user's new generation lands in the cache → instantly available to the free tier. Motivated users grow the free library.
+- **Per-user rate limit** + hard spend caps as backstops.
+
+**One honest flag on login.** A login gate controls cost, but email+password signup is a real barrier for exactly this audience — shared phones, no personal email, first-time internet users. Mitigations: (1) make the free cached tier good enough that most students never *need* to log in, and (2) prefer **phone-OTP** over email/password in India. `/plan-it-yourself` is also your equity backstop — it serves anyone who can't or won't sign in.
 
 ---
 
@@ -164,7 +216,7 @@ Separate routes, plain content, fast + offline-friendly:
 - `/free-resources` — curated video/course links
 - `/interview-prep` — common behavioural questions + how to answer
 - `/find-jobs` — internship/job portals + step-by-step how-to
-- `/plan-it-yourself` — **the teach-to-fish tier:** a blank timeline/plan template they can fill in themselves, plus a short "how to research any career on your own" guide (what to Google, how to find the official site, how to spot the real application page, how to sanity-check fees). This is what serves students with no login and no cached match.
+- `/plan-it-yourself` — **the teach-to-fish tier:** a blank timeline/plan template they can fill in themselves (offered as a **downloadable `.ics` calendar and a printable list/PDF**, same as §2.1), plus a short "how to research any career on your own" guide (what to Google, how to find the official site, how to spot the real application page, how to sanity-check fees). This is what serves students with no login and no cached match.
 
 ---
 

@@ -11,7 +11,9 @@ import type { CostBand, Confidence, Feasibility } from "@/lib/types";
 /** Map a cost band to its i18n label key + colour. */
 const COST_STYLE: Record<CostBand, { labelKey: string; cls: string }> = {
   free: { labelKey: "journey.filters.free", cls: "bg-emerald-100 text-emerald-800" },
-  low: { labelKey: "journey.filters.low", cls: "bg-sky-100 text-sky-800" },
+  // "low" was the one cold (sky) badge — warmed to a neutral so the brand reads
+  // warm while free/mid/high keep their meaningful green/amber/red progression.
+  low: { labelKey: "journey.filters.low", cls: "bg-stone-100 text-stone-700" },
   mid: { labelKey: "journey.filters.mid", cls: "bg-amber-100 text-amber-800" },
   high: { labelKey: "journey.filters.high", cls: "bg-rose-100 text-rose-800" },
 };
@@ -67,7 +69,7 @@ const CONFIDENCE_LABEL: Record<Confidence, string> = {
 export function ConfidenceBadge({ level }: { level: Confidence }) {
   const { t } = useI18n();
   return (
-    <span className="inline-flex items-center rounded-full border border-slate-300 px-2.5 py-1 text-xs font-medium text-slate-600">
+    <span className="inline-flex items-center rounded-full border border-stone-300 px-2.5 py-1 text-xs font-medium text-stone-600">
       {t("journey.confidence")}: {t(CONFIDENCE_LABEL[level])}
     </span>
   );
@@ -81,7 +83,7 @@ export function OfficialLink({ url }: { url: string }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex min-h-9 items-center gap-1 text-sm font-medium text-sky-700 underline"
+      className="inline-flex min-h-9 items-center gap-1 text-sm font-medium text-orange-700 underline"
     >
       {t("common.officialSite")} ↗
     </a>

@@ -1,10 +1,27 @@
 import type { Metadata, Viewport } from "next";
+import { Nunito, Baloo_2 } from "next/font/google";
 import { cookies } from "next/headers";
 import "./globals.css";
 import { I18nProvider } from "@/lib/i18n/I18nProvider";
 import { LOCALE_COOKIE, normalizeLocale } from "@/lib/i18n/config";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+// Body face: soft, rounded, highly readable. Self-hosted by next/font.
+const nunito = Nunito({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-nunito",
+  display: "swap",
+});
+
+// Heading face: warm, rounded display. Devanagari subset keeps Hindi on-brand.
+const baloo = Baloo_2({
+  subsets: ["latin", "devanagari"],
+  weight: ["500", "600", "700", "800"],
+  variable: "--font-baloo",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "My Career Journey — plan your path after school!",
@@ -29,8 +46,11 @@ export default async function RootLayout({
   const initialLocale = normalizeLocale(cookieStore.get(LOCALE_COOKIE)?.value);
 
   return (
-    <html lang={initialLocale} className="h-full">
-      <body className="min-h-full bg-slate-50 text-slate-900 antialiased">
+    <html
+      lang={initialLocale}
+      className={`${nunito.variable} ${baloo.variable} h-full`}
+    >
+      <body className="min-h-full bg-orange-50 text-stone-900 antialiased">
         <I18nProvider initialLocale={initialLocale}>
           {/* Column layout so the footer sticks to the bottom on short pages. */}
           <div className="flex min-h-screen flex-col">

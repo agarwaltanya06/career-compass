@@ -10,10 +10,10 @@ import { CostBadge, OfficialLink, VerifyTag } from "./badges";
 function Field({ label, value }: { label: string; value: string }) {
   return (
     <div className="mt-2">
-      <dt className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+      <dt className="text-xs font-semibold uppercase tracking-wide text-stone-400">
         {label}
       </dt>
-      <dd className="text-sm text-slate-800">{value}</dd>
+      <dd className="text-sm text-stone-800">{value}</dd>
     </div>
   );
 }
@@ -21,9 +21,9 @@ function Field({ label, value }: { label: string; value: string }) {
 export function ExamCard({ exam }: { exam: Exam }) {
   const { t } = useI18n();
   return (
-    <article className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+    <article className="rounded-2xl border border-stone-200 bg-white p-4 shadow-sm">
       <div className="flex items-start justify-between gap-2">
-        <h4 className="font-bold text-slate-900">{exam.name}</h4>
+        <h4 className="font-bold text-stone-900">{exam.name}</h4>
         <CostBadge band={exam.costBand} />
       </div>
       <dl>
@@ -32,10 +32,10 @@ export function ExamCard({ exam }: { exam: Exam }) {
         {/* typicalWindow is soft language — never a hard date — and unverified, */}
         {/* so it carries the verify tag. */}
         <div className="mt-2">
-          <dt className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+          <dt className="text-xs font-semibold uppercase tracking-wide text-stone-400">
             {t("journey.typicalWindow")}
           </dt>
-          <dd className="flex flex-wrap items-center gap-2 text-sm text-slate-800">
+          <dd className="flex flex-wrap items-center gap-2 text-sm text-stone-800">
             {exam.typicalWindow}
             {!exam.verified && <VerifyTag />}
           </dd>
@@ -51,9 +51,9 @@ export function ExamCard({ exam }: { exam: Exam }) {
 export function CollegeCard({ college }: { college: College }) {
   const { t } = useI18n();
   return (
-    <article className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+    <article className="rounded-2xl border border-stone-200 bg-white p-4 shadow-sm">
       <div className="flex items-start justify-between gap-2">
-        <h4 className="font-bold text-slate-900">{college.name}</h4>
+        <h4 className="font-bold text-stone-900">{college.name}</h4>
         <CostBadge band={college.costBand} />
       </div>
       <dl>
@@ -61,14 +61,14 @@ export function CollegeCard({ college }: { college: College }) {
         <Field label={t("journey.location")} value={college.location} />
         {/* Fees are an unverified specific → show the verify tag + the hedge. */}
         <div className="mt-2">
-          <dt className="text-xs font-semibold uppercase tracking-wide text-slate-400">
+          <dt className="text-xs font-semibold uppercase tracking-wide text-stone-400">
             {t("journey.approxFees")}
           </dt>
-          <dd className="flex flex-wrap items-center gap-2 text-sm text-slate-800">
+          <dd className="flex flex-wrap items-center gap-2 text-sm text-stone-800">
             {college.approxAnnualFees}
             {!college.verified && <VerifyTag />}
           </dd>
-          <p className="mt-0.5 text-xs text-slate-400">{college.feesNote}</p>
+          <p className="mt-0.5 text-xs text-stone-400">{college.feesNote}</p>
         </div>
         <Field label={t("journey.entranceRequired")} value={college.entranceRequired} />
       </dl>

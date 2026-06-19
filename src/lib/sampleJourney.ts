@@ -15,14 +15,13 @@ export const sampleJourney: Journey = {
       class: "12",
       board: "CBSE",
       stream: "Commerce + Maths",
-      state: "Rajasthan",
-      city: "Jaipur",
       englishComfort: "okay",
       language: "en",
+      currentDate: "2026-06-18",
     },
     generatedAt: "2026-06-18",
     confidence: "high",
-    cacheKey: "ca|cbse|commerce-maths|class12|rajasthan",
+    cacheKey: "ca|cbse|commerce-maths|class12",
   },
 
   overview: {

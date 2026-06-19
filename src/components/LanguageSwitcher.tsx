@@ -21,7 +21,7 @@ export default function LanguageSwitcher() {
         value={locale}
         onChange={(e) => setLocale(e.target.value as Locale)}
         // Large tap target + readable on mobile.
-        className="min-h-11 rounded-lg border border-slate-300 bg-white px-3 py-2 text-base text-slate-800 shadow-sm focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-200"
+        className="min-h-11 rounded-lg border border-stone-300 bg-white px-3 py-2 text-base text-stone-800 shadow-sm focus:border-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-200"
       >
         {/*
           English is enabled and selectable today.

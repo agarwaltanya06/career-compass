@@ -103,22 +103,22 @@ export default function IntakePage() {
     <div className="mx-auto max-w-xl px-4 py-8">
       {/* Progress */}
       <div className="mb-6">
-        <div className="flex items-center justify-between text-sm text-slate-500">
+        <div className="flex items-center justify-between text-sm text-stone-500">
           <span>{t("intake.title")}</span>
           <span>
             {t("intake.progress", { current: step + 1, total: visible.length })}
           </span>
         </div>
-        <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-slate-200">
+        <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-stone-200">
           <div
-            className="h-full rounded-full bg-sky-600 transition-all"
+            className="h-full rounded-full bg-orange-500 transition-all"
             style={{ width: `${((step + 1) / visible.length) * 100}%` }}
           />
         </div>
       </div>
 
       {/* Question */}
-      <h1 className="text-2xl font-bold text-slate-900">
+      <h1 className="text-2xl font-bold text-stone-900">
         {t(question.promptKey)}
       </h1>
 
@@ -133,8 +133,8 @@ export default function IntakePage() {
               aria-pressed={selected}
               className={`min-h-12 rounded-xl border px-4 py-3 text-left text-base font-medium transition-colors ${
                 selected
-                  ? "border-sky-600 bg-sky-50 text-sky-800 ring-2 ring-sky-200"
-                  : "border-slate-300 bg-white text-slate-800 hover:bg-slate-100"
+                  ? "border-orange-500 bg-orange-50 text-orange-800 ring-2 ring-orange-200"
+                  : "border-stone-300 bg-white text-stone-800 hover:bg-stone-100"
               } ${opt.isExplore ? "sm:col-span-2" : ""}`}
             >
               {t(opt.labelKey)}
@@ -151,14 +151,14 @@ export default function IntakePage() {
           value={followUpValue}
           onChange={(e) => setFollowUp(followUp.field, e.target.value)}
           placeholder={t(followUp.placeholderKey)}
-          className="mt-4 min-h-12 w-full rounded-xl border border-slate-300 px-4 text-base focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-200"
+          className="mt-4 min-h-12 w-full rounded-xl border border-stone-300 px-4 text-base focus:border-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-200"
         />
       )}
 
       {/* Free-text "type your own" for questions that allow it (e.g. goal). */}
       {question.customField && (
         <div className="mt-4">
-          <div className="mb-2 text-center text-xs uppercase tracking-wide text-slate-400">
+          <div className="mb-2 text-center text-xs uppercase tracking-wide text-stone-400">
             {t("common.typeYourOwn")}
           </div>
           <input
@@ -166,7 +166,7 @@ export default function IntakePage() {
             value={customValue}
             onChange={(e) => setCustom(question, e.target.value)}
             placeholder={t("intake.placeholders.typeGoal")}
-            className="min-h-12 w-full rounded-xl border border-slate-300 px-4 text-base focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-200"
+            className="min-h-12 w-full rounded-xl border border-stone-300 px-4 text-base focus:border-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-200"
           />
         </div>
       )}
@@ -177,7 +177,7 @@ export default function IntakePage() {
           type="button"
           onClick={goBack}
           disabled={step === 0}
-          className="min-h-11 rounded-lg px-4 text-base font-medium text-slate-600 hover:bg-slate-100 disabled:opacity-40"
+          className="min-h-11 rounded-lg px-4 text-base font-medium text-stone-600 hover:bg-stone-100 disabled:opacity-40"
         >
           ← {t("common.back")}
         </button>
@@ -187,7 +187,7 @@ export default function IntakePage() {
             type="button"
             onClick={() => advance(answers)}
             disabled={!canContinue}
-            className="min-h-11 rounded-xl bg-sky-600 px-6 text-base font-semibold text-white hover:bg-sky-700 disabled:opacity-40"
+            className="min-h-11 rounded-xl bg-orange-500 px-6 text-base font-semibold text-white hover:bg-orange-600 disabled:opacity-40"
           >
             {t("common.continue")} →
           </button>
@@ -228,57 +228,51 @@ function IntakeSummary({
     { label: t("intake.questions.board"), value: labelFor("board", answers.board) },
     { label: t("intake.questions.stream"), value: labelFor("stream", answers.stream) },
     { label: t("intake.questions.goal"), value: goalDisplay },
-    {
-      label: t("intake.questions.location"),
-      value: [labelFor("state", answers.state), answers.city]
-        .filter(Boolean)
-        .join(", ") || null,
-    },
     { label: t("intake.questions.language"), value: labelFor("language", answers.language) },
   ];
 
   return (
     <div className="mx-auto max-w-xl px-4 py-10">
-      <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
         <div aria-hidden className="text-4xl">🎉</div>
-        <h1 className="mt-2 text-2xl font-bold text-slate-900">
+        <h1 className="mt-2 text-2xl font-bold text-stone-900">
           {t("intake.done.title")}
         </h1>
 
         {/* Branch lead — explains how the plan adapts to this profile. */}
-        <p className="mt-3 text-slate-600">{t("intake.done.lead")}</p>
-        <p className="mt-2 rounded-xl bg-sky-50 p-4 text-slate-800">
+        <p className="mt-3 text-stone-600">{t("intake.done.lead")}</p>
+        <p className="mt-2 rounded-xl bg-orange-50 p-4 text-stone-800">
           {branchLead(answers)}
         </p>
 
         {/* Recap */}
-        <h2 className="mt-6 text-sm font-semibold uppercase tracking-wide text-slate-500">
+        <h2 className="mt-6 text-sm font-semibold uppercase tracking-wide text-stone-500">
           {t("intake.done.profileHeading")}
         </h2>
-        <dl className="mt-2 divide-y divide-slate-100">
+        <dl className="mt-2 divide-y divide-stone-100">
           {rows
             .filter((r) => r.value)
             .map((r) => (
               <div key={r.label} className="flex justify-between gap-4 py-2">
-                <dt className="text-slate-500">{r.label}</dt>
-                <dd className="text-right font-medium text-slate-900">{r.value}</dd>
+                <dt className="text-stone-500">{r.label}</dt>
+                <dd className="text-right font-medium text-stone-900">{r.value}</dd>
               </div>
             ))}
         </dl>
 
-        <p className="mt-4 text-xs text-slate-400">{t("intake.done.sampleNote")}</p>
+        <p className="mt-4 text-xs text-stone-400">{t("intake.done.sampleNote")}</p>
 
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <Link
             href="/journey"
-            className="flex min-h-12 flex-1 items-center justify-center rounded-xl bg-sky-600 px-6 text-base font-semibold text-white hover:bg-sky-700"
+            className="flex min-h-12 flex-1 items-center justify-center rounded-xl bg-orange-500 px-6 text-base font-semibold text-white hover:bg-orange-600"
           >
             {t("intake.done.view")}
           </Link>
           <button
             type="button"
             onClick={onRestart}
-            className="min-h-12 rounded-xl border border-slate-300 px-6 text-base font-medium text-slate-700 hover:bg-slate-100"
+            className="min-h-12 rounded-xl border border-stone-300 px-6 text-base font-medium text-stone-700 hover:bg-stone-100"
           >
             {t("intake.done.restart")}
           </button>
@@ -286,7 +280,7 @@ function IntakeSummary({
         <button
           type="button"
           onClick={onBack}
-          className="mt-3 min-h-11 text-sm text-slate-500 hover:underline"
+          className="mt-3 min-h-11 text-sm text-stone-500 hover:underline"
         >
           ← {t("common.back")}
         </button>

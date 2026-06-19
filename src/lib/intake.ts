@@ -6,8 +6,9 @@
  * any whose `askWhen` returns false given the answers so far, and applies the
  * branch notes when building the final journey request.
  *
- * Cost is deliberately NOT an intake question — see the spec. We fetch all
- * price bands and let the user filter the rendered results by cost bucket.
+ * Neither cost nor location is an intake question — see the spec. We fetch all
+ * price bands India-wide, then let the user filter the rendered results by cost
+ * bucket and by the states/cities actually present in their results.
  */
 
 /** Keys we collect during intake. Mirrors StudentProfile plus intent fields. */
@@ -21,8 +22,6 @@ export interface IntakeAnswers {
   goal?: string;
   /** Free-text career when the user typed their own. */
   goalCustom?: string;
-  state?: string;
-  city?: string;
   language?: string;
 }
 
@@ -120,59 +119,34 @@ export const intakeQuestions: IntakeQuestion[] = [
     field: "goal",
     promptKey: "intake.questions.goal",
     customField: "goalCustom",
+    // The ~20 common careers, sorted alphabetically so ordering is never a
+    // judgment call (spec §1). "Type your own" (the customField above) and
+    // "Not sure — help me explore" sit *outside* the alphabetical block, at the end.
     options: [
+      { value: "architecture", labelKey: "intake.options.architecture" },
       { value: "cabin-crew", labelKey: "intake.options.cabinCrew" },
-      { value: "fashion-design", labelKey: "intake.options.fashionDesign" },
       { value: "ca", labelKey: "intake.options.ca" },
-      { value: "nurse", labelKey: "intake.options.nurse" },
-      { value: "teacher", labelKey: "intake.options.teacher" },
-      { value: "govt-job", labelKey: "intake.options.govtJob" },
-      { value: "engineer", labelKey: "intake.options.engineer" },
+      { value: "civil-services", labelKey: "intake.options.civilServices" },
+      { value: "defence", labelKey: "intake.options.defence" },
+      { value: "design", labelKey: "intake.options.design" },
       { value: "doctor", labelKey: "intake.options.doctor" },
+      { value: "engineer", labelKey: "intake.options.engineer" },
+      { value: "fashion-design", labelKey: "intake.options.fashionDesign" },
+      { value: "govt-job", labelKey: "intake.options.govtJob" },
+      { value: "hospitality", labelKey: "intake.options.hospitality" },
+      { value: "iti-polytechnic", labelKey: "intake.options.itiPolytechnic" },
+      { value: "journalism", labelKey: "intake.options.journalism" },
+      { value: "law", labelKey: "intake.options.law" },
+      { value: "merchant-navy", labelKey: "intake.options.merchantNavy" },
+      { value: "nursing", labelKey: "intake.options.nursing" },
+      { value: "paramedical", labelKey: "intake.options.paramedical" },
+      { value: "pharmacy", labelKey: "intake.options.pharmacy" },
+      { value: "teaching", labelKey: "intake.options.teaching" },
+      { value: "social-work", labelKey: "intake.options.socialWork" },
       {
         value: EXPLORE_GOAL,
         labelKey: "intake.options.notSureExplore",
         isExplore: true,
-      },
-    ],
-  },
-  {
-    id: "location",
-    field: "state",
-    promptKey: "intake.questions.location",
-    // A state choice with a city follow-up (for college proximity).
-    options: [
-      {
-        value: "rajasthan",
-        labelKey: "intake.options.rajasthan",
-        followUp: {
-          field: "city",
-          placeholderKey: "intake.placeholders.whichCity",
-        },
-      },
-      {
-        value: "maharashtra",
-        labelKey: "intake.options.maharashtra",
-        followUp: {
-          field: "city",
-          placeholderKey: "intake.placeholders.whichCity",
-        },
-      },
-      {
-        value: "delhi",
-        labelKey: "intake.options.delhi",
-        followUp: {
-          field: "city",
-          placeholderKey: "intake.placeholders.whichCity",
-        },
-      },
-      {
-        value: "uttar-pradesh",
-        labelKey: "intake.options.uttarPradesh",
-        followUp: {
-          field: "city",
-          placeholderKey: "intake.placeholders.whichCity",
-        },
       },
     ],
   },

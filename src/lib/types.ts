@@ -33,12 +33,16 @@ export interface StudentProfile {
   board?: string;
   /** Only collected for class >= 11. */
   stream?: string;
-  state?: string;
-  city?: string;
   /** Self-reported comfort with English, used to pick resource language. */
   englishComfort?: "low" | "okay" | "high";
   /** Preferred language for the plan, e.g. "en" | "hi". */
   language?: string;
+  /**
+   * ISO date string anchoring the dated timeline. The model emits relative
+   * `offsetMonths` per step; code computes each `targetPeriod` from this. Location
+   * is no longer collected here — results are filtered by location instead.
+   */
+  currentDate?: string;
 }
 
 export interface JourneyMeta {

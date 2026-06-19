@@ -1,13 +1,21 @@
 @import "tailwindcss";
 
 /*
-  Light, high-contrast theme tuned for a public-good tool that must work on
-  cheap phones and slow connections. We use a system font stack (no web-font
-  download = faster first paint) and rely on Tailwind utilities elsewhere.
+  Warm, friendly, high-contrast theme tuned for a public-good tool that must
+  work on cheap phones and slow connections.
+
+  Fonts are loaded via `next/font/google` in layout.tsx (Nunito for body, Baloo
+  2 for headings) — next/font self-hosts and subsets them, so there is no
+  render-blocking request to Google and no layout shift. Baloo 2 also covers
+  Devanagari, so Hindi headings stay on-brand.
 */
 @theme inline {
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  /* Body copy: soft, rounded, very readable. */
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  /* Headings: warm, rounded display face. */
+  --font-display: var(--font-baloo), var(--font-nunito), ui-sans-serif,
+    system-ui, sans-serif;
 }
 
 html {
@@ -18,4 +26,13 @@ html {
 body {
   font-family: var(--font-sans);
   text-rendering: optimizeLegibility;
+}
+
+/* Headings use the rounded display face everywhere, without having to touch
+   every component. */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
 }
