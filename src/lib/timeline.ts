@@ -35,6 +35,28 @@ export function computeTargetPeriod(
   return { season, year: target.getFullYear() };
 }
 
+/** A concrete year + 0-indexed month, the first of which anchors a calendar event. */
+export interface TargetMonth {
+  year: number;
+  /** 0–11, as returned by Date.getMonth(). */
+  month: number;
+}
+
+/**
+ * Like {@link computeTargetPeriod} but resolved to a concrete month rather than a
+ * third-of-year bucket. Used only for calendar export, where an `.ics` event needs
+ * a real date; we deliberately pin every event to the 1st of the month so the
+ * exported dates stay as coarse as the on-screen "Mid 2026" labels.
+ */
+export function computeTargetMonth(
+  currentDate: string,
+  offsetMonths: number,
+): TargetMonth {
+  const base = new Date(currentDate);
+  const target = new Date(base.getFullYear(), base.getMonth() + offsetMonths, 1);
+  return { year: target.getFullYear(), month: target.getMonth() };
+}
+
 /**
  * One row of the rendered timeline. A normal milestone is a single-step row; an
  * either/or fork (steps linked via `alternativeTo`) becomes one multi-step row

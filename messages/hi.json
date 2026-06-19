@@ -176,6 +176,14 @@
       "noneMatch": ""
     }
   },
+  "download": {
+    "heading": "",
+    "ics": "",
+    "print": "",
+    "approxNote": "",
+    "calendarCappedNote": "",
+    "generatedBy": ""
+  },
   "static": {
     "cvTemplates": {
       "title": "",

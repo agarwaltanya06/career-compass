@@ -26,6 +26,7 @@ import {
   VerifyTag,
 } from "@/components/journey/badges";
 import { CollegeCard, ExamCard } from "@/components/journey/cards";
+import DownloadTimeline from "@/components/journey/DownloadTimeline";
 
 /** Cost filter value: a specific bucket or "all". */
 type CostFilter = CostBand | "all";
@@ -201,6 +202,19 @@ function JourneyView({ journey }: { journey: Journey }) {
               <Timeline
                 steps={route.steps}
                 currentDate={journey.meta.studentProfile.currentDate}
+              />
+
+              {/* Take it offline: calendar + printable exports of this route */}
+              <DownloadTimeline
+                steps={route.steps}
+                anchor={
+                  journey.meta.studentProfile.currentDate ??
+                  new Date().toISOString().slice(0, 10)
+                }
+                career={journey.meta.career}
+                routeName={route.name}
+                routeId={route.id}
+                disclaimers={journey.disclaimers}
               />
 
               {/* Skills beyond the degree */}
