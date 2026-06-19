@@ -130,6 +130,7 @@
     "requirements": "",
     "routes": "",
     "bestFor": "",
+    "costLabel": "",
     "feasibilityLabel": "",
     "feasibilityHigh": "",
     "feasibilityMedium": "",
@@ -173,7 +174,13 @@
       "showColleges": "",
       "showExams": "",
       "showAll": "",
-      "noneMatch": ""
+      "noneMatch": "",
+      "locationHeading": "",
+      "allLocations": "",
+      "sortHeading": "",
+      "sortDefault": "",
+      "sortFeesAsc": "",
+      "sortFeesDesc": ""
     }
   },
   "download": {

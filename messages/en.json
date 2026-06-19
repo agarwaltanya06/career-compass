@@ -129,6 +129,7 @@
     "requirements": "Requirements to know",
     "routes": "Routes to get there",
     "bestFor": "Best for",
+    "costLabel": "Cost",
     "feasibilityLabel": "Fit for you",
     "feasibilityHigh": "Strong fit",
     "feasibilityMedium": "Possible fit",
@@ -167,12 +168,18 @@
       "allCosts": "All costs",
       "free": "Free",
       "low": "Low",
-      "mid": "Mid",
+      "mid": "Medium",
       "high": "High",
       "showColleges": "Colleges",
       "showExams": "Exams",
       "showAll": "Show all",
-      "noneMatch": "Nothing matches this cost filter. Try a different bucket."
+      "noneMatch": "Nothing matches this cost filter. Try a different bucket.",
+      "locationHeading": "Location",
+      "allLocations": "All locations",
+      "sortHeading": "Sort by cost",
+      "sortDefault": "Default",
+      "sortFeesAsc": "Cost: low → high",
+      "sortFeesDesc": "Cost: high → low"
     }
   },
   "download": {

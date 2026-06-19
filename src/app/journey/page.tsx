@@ -13,7 +13,12 @@
 import { useMemo, useState } from "react";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import { sampleJourney } from "@/lib/sampleJourney";
-import type { CostBand, Journey, JourneyStep, RouteSkills } from "@/lib/types";
+import type {
+  CostBand,
+  Journey,
+  JourneyStep,
+  RouteSkills,
+} from "@/lib/types";
 import {
   buildTimelineRows,
   computeTargetPeriod,
@@ -32,6 +37,8 @@ import DownloadTimeline from "@/components/journey/DownloadTimeline";
 type CostFilter = CostBand | "all";
 /** Which card types to show. */
 type CardFilter = "all" | "colleges" | "exams";
+/** How to order each route's college list. */
+type SortOption = "default" | "feesAsc" | "feesDesc";
 
 const COST_OPTIONS: { value: CostFilter; labelKey: string }[] = [
   { value: "all", labelKey: "journey.filters.allCosts" },
@@ -47,6 +54,73 @@ const CARD_OPTIONS: { value: CardFilter; labelKey: string }[] = [
   { value: "exams", labelKey: "journey.filters.showExams" },
 ];
 
+const SORT_OPTIONS: { value: SortOption; labelKey: string }[] = [
+  { value: "default", labelKey: "journey.filters.sortDefault" },
+  { value: "feesAsc", labelKey: "journey.filters.sortFeesAsc" },
+  { value: "feesDesc", labelKey: "journey.filters.sortFeesDesc" },
+];
+
+/** Numeric rank for cost buckets, so exams (which carry only a band, not a fee
+ * string) can be ordered by cost the same way colleges are ordered by fees. */
+const COST_BAND_RANK: Record<CostBand, number> = {
+  free: 0,
+  low: 1,
+  mid: 2,
+  high: 3,
+};
+
+/**
+ * Pull the *highest* ₹ amount out of a freeform fees string — the upper cap of
+ * the estimated cost — so colleges can be sorted deterministically by fees
+ * ("₹8,000–20,000 / year" → 20000, "₹6–8 lakh" → 800000). Handles comma
+ * grouping and lakh/crore units; returns Infinity when no number is present, so
+ * entries with an unknown fee sort to the end (ascending) / treat as unbounded.
+ */
+function feeUpperBound(approxAnnualFees: string): number {
+  const re = /([\d,]+(?:\.\d+)?)\s*(lakhs?|crores?|cr|l)?\b/gi;
+  const matches = [...approxAnnualFees.matchAll(re)];
+  const multFor = (unit: string | undefined) => {
+    const u = (unit ?? "").toLowerCase();
+    return u.startsWith("l") ? 1e5 : u.startsWith("c") ? 1e7 : 1;
+  };
+
+  let max = -Infinity;
+  for (let i = 0; i < matches.length; i++) {
+    const m = matches[i];
+    const n = parseFloat(m[1].replace(/,/g, ""));
+    if (Number.isNaN(n)) continue;
+    let mult = multFor(m[2]);
+    // Shared-unit range like "₹6–8 lakh": a bare number directly followed by a
+    // range separator and a unit-bearing number inherits that unit.
+    const next = matches[i + 1];
+    if (!m[2] && next?.[2]) {
+      const gap = approxAnnualFees.slice(m.index! + m[0].length, next.index!);
+      if (/^[\s\-–—/to]*$/i.test(gap)) mult = multFor(next[2]);
+    }
+    max = Math.max(max, n * mult);
+  }
+  return max === -Infinity ? Infinity : max;
+}
+
+/**
+ * Distinct state/city tokens that actually appear in a journey's college
+ * locations, so the location filter only ever offers real options. Locations
+ * are freeform ("Jaipur, Rajasthan"), so we split on commas and keep the short,
+ * place-name-like parts, dropping prose fragments ("with a regional office in…").
+ */
+function collectLocations(journey: Journey): string[] {
+  const set = new Set<string>();
+  for (const route of journey.routes) {
+    for (const college of route.colleges) {
+      for (const part of college.location.split(",")) {
+        const token = part.trim();
+        if (token && token.split(/\s+/).length <= 3) set.add(token);
+      }
+    }
+  }
+  return [...set].sort((a, b) => a.localeCompare(b));
+}
+
 export default function JourneyPage() {
   // Hard-coded sample for now; later this comes from /api/generate or the cache.
   return <JourneyView journey={sampleJourney} />;
@@ -56,8 +130,38 @@ function JourneyView({ journey }: { journey: Journey }) {
   const { t } = useI18n();
   const [cost, setCost] = useState<CostFilter>("all");
   const [cards, setCards] = useState<CardFilter>("all");
+  const [location, setLocation] = useState<string>("all");
+  const [sort, setSort] = useState<SortOption>("default");
 
   const costMatches = (band: CostBand) => cost === "all" || band === cost;
+  const locationMatches = (loc: string) =>
+    location === "all" || loc.includes(location);
+
+  // Real state/city options drawn from the colleges in this journey, plus
+  // whether there are any colleges at all (gates the colleges-only controls).
+  const locationOptions = useMemo(() => collectLocations(journey), [journey]);
+  const hasColleges = useMemo(
+    () => journey.routes.some((r) => r.colleges.length > 0),
+    [journey.routes]
+  );
+  const hasExams = useMemo(
+    () => journey.routes.some((r) => r.exams.length > 0),
+    [journey.routes]
+  );
+
+  // Generic, deterministic cost sort. `costOf` returns the comparable cost for an
+  // item (fee upper-bound for colleges, band rank for exams). Equal costs return
+  // 0 so unparseable fees (Infinity) never produce a NaN comparator.
+  const sortByCost = <T,>(items: T[], costOf: (item: T) => number): T[] => {
+    if (sort === "default") return items;
+    const dir = sort === "feesAsc" ? 1 : -1;
+    return [...items].sort((a, b) => {
+      const ca = costOf(a);
+      const cb = costOf(b);
+      if (ca === cb) return 0;
+      return (ca - cb) * dir;
+    });
+  };
 
   // Pre-compute, per route, the exams/colleges that survive the active filters,
   // and whether the route should appear at all.
@@ -65,9 +169,21 @@ function JourneyView({ journey }: { journey: Journey }) {
     return journey.routes
       .map((route) => {
         const exams =
-          cards === "colleges" ? [] : route.exams.filter((e) => costMatches(e.costBand));
+          cards === "colleges"
+            ? []
+            : sortByCost(
+                route.exams.filter((e) => costMatches(e.costBand)),
+                (e) => COST_BAND_RANK[e.costBand]
+              );
         const colleges =
-          cards === "exams" ? [] : route.colleges.filter((c) => costMatches(c.costBand));
+          cards === "exams"
+            ? []
+            : sortByCost(
+                route.colleges.filter(
+                  (c) => costMatches(c.costBand) && locationMatches(c.location)
+                ),
+                (c) => feeUpperBound(c.approxAnnualFees)
+              );
         // Keep the route if it (or any surviving card) matches the cost filter.
         const visible =
           costMatches(route.costBand) || exams.length > 0 || colleges.length > 0;
@@ -75,7 +191,7 @@ function JourneyView({ journey }: { journey: Journey }) {
       })
       .filter((r) => r.visible);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [journey.routes, cost, cards]);
+  }, [journey.routes, cost, cards, location, sort]);
 
   const visibleResources = journey.prepResources.filter((r) => costMatches(r.costBand));
   const nothingMatches = filteredRoutes.length === 0;
@@ -165,6 +281,48 @@ function JourneyView({ journey }: { journey: Journey }) {
             </FilterChip>
           ))}
         </div>
+
+        {/* Result controls: location (colleges only) + cost sort (colleges and
+            exams). The sort stays available whenever there's anything to sort. */}
+        {(hasColleges || hasExams) && (
+          <div className="mt-3 flex flex-wrap items-end gap-x-6 gap-y-3">
+            {hasColleges && cards !== "exams" && locationOptions.length > 0 && (
+              <label className="flex flex-col gap-1">
+                <span className="text-xs font-semibold uppercase tracking-wide text-stone-500">
+                  {t("journey.filters.locationHeading")}
+                </span>
+                <select
+                  value={location}
+                  onChange={(e) => setLocation(e.target.value)}
+                  className="min-h-10 rounded-full border border-stone-300 bg-white px-4 text-sm font-medium text-stone-700"
+                >
+                  <option value="all">{t("journey.filters.allLocations")}</option>
+                  {locationOptions.map((loc) => (
+                    <option key={loc} value={loc}>
+                      {loc}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            )}
+            <div className="flex flex-col gap-1">
+              <span className="text-xs font-semibold uppercase tracking-wide text-stone-500">
+                {t("journey.filters.sortHeading")}
+              </span>
+              <div className="flex flex-wrap gap-2">
+                {SORT_OPTIONS.map((o) => (
+                  <FilterChip
+                    key={o.value}
+                    active={sort === o.value}
+                    onClick={() => setSort(o.value)}
+                  >
+                    {t(o.labelKey)}
+                  </FilterChip>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* ---- Routes ---- */}

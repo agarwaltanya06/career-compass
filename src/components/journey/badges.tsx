@@ -8,14 +8,21 @@
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import type { CostBand, Confidence, Feasibility } from "@/lib/types";
 
-/** Map a cost band to its i18n label key + colour. */
-const COST_STYLE: Record<CostBand, { labelKey: string; cls: string }> = {
+/**
+ * Map a cost band to its i18n label key + colour + an indicative ₹ range.
+ * The range is a rough planning hint per band (not a verified figure); `free`
+ * has none, hence the optional field — see CostBadge.
+ */
+const COST_STYLE: Record<
+  CostBand,
+  { labelKey: string; cls: string; range?: string }
+> = {
   free: { labelKey: "journey.filters.free", cls: "bg-emerald-100 text-emerald-800" },
   // "low" was the one cold (sky) badge — warmed to a neutral so the brand reads
   // warm while free/mid/high keep their meaningful green/amber/red progression.
-  low: { labelKey: "journey.filters.low", cls: "bg-stone-100 text-stone-700" },
-  mid: { labelKey: "journey.filters.mid", cls: "bg-amber-100 text-amber-800" },
-  high: { labelKey: "journey.filters.high", cls: "bg-rose-100 text-rose-800" },
+  low: { labelKey: "journey.filters.low", cls: "bg-stone-100 text-stone-700", range: "≤ ₹50k/yr" },
+  mid: { labelKey: "journey.filters.mid", cls: "bg-amber-100 text-amber-800", range: "₹50k–2L/yr" },
+  high: { labelKey: "journey.filters.high", cls: "bg-rose-100 text-rose-800", range: "₹2L+/yr" },
 };
 
 export function CostBadge({ band }: { band: CostBand }) {
@@ -23,9 +30,11 @@ export function CostBadge({ band }: { band: CostBand }) {
   const style = COST_STYLE[band];
   return (
     <span
-      className={`inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold ${style.cls}`}
+      className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold ${style.cls}`}
     >
-      {t(style.labelKey)}
+      {t("journey.costLabel")}: {t(style.labelKey)}
+      {/* Indicative band range — shown only where we have one (not for free). */}
+      {style.range && <span className="font-normal opacity-70">· {style.range}</span>}
     </span>
   );
 }
