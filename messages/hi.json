@@ -110,13 +110,35 @@
       "lead": "",
       "profileHeading": "",
       "view": "",
+      "generate": "",
       "restart": "",
-      "sampleNote": ""
+      "sampleNote": "",
+      "generating": "",
+      "generateError": "",
+      "retry": "",
+      "exploreNote": ""
+    },
+    "generatingChat": {
+      "assistant": "करियर कम्पास AI",
+      "modelPrefix": "द्वारा संचालित",
+      "connecting": "कनेक्ट हो रहा है…",
+      "footnote": "हम आधिकारिक स्रोत जाँचते हैं, इसमें आमतौर पर एक-दो मिनट लगते हैं। आप इसे खुला रख सकते हैं।",
+      "steps": [
+        "ठीक है — मैं आपकी योजना तैयार कर रहा हूँ। 🧭",
+        "कॉलेज और प्रवेश परीक्षाओं की जानकारी जुटाई जा रही है…",
+        "नवीनतम परीक्षा तिथियाँ और समय-सीमाएँ जाँची जा रही हैं…",
+        "आपकी महीने-दर-महीने समय-रेखा बनाई जा रही है…",
+        "लगभग तैयार — अंतिम रूप दिया जा रहा है…"
+      ],
+      "errorTitle": "कुछ गड़बड़ हो गई",
+      "retry": "फिर से कोशिश करें",
+      "startOver": "फिर से शुरू करें"
     }
   },
   "journey": {
     "forCareer": "",
     "generatedAt": "",
+    "candidateBanner": "",
     "confidence": "",
     "confidenceHigh": "",
     "confidenceMedium": "",
@@ -217,6 +239,10 @@
       "intro": "",
       "templateTitle": "",
       "templateIntro": "",
+      "downloadNote": "प्रिंट करें या PDF के रूप में सहेजें — आपकी डाउनलोड की गई योजना में नीचे भरी गई सभी जानकारी शामिल होगी।",
+      "monthlyTitle": "आपके अगले 12 महीने",
+      "monthlyIntro": "हर महीने एक-दो काम तय करें — किसी परीक्षा के लिए पंजीकरण, कोई कौशल सीखना, या किसी से बात करना।",
+      "monthlyPlaceholder": "इस महीने आप क्या करेंगे?",
       "templateSteps": [],
       "guideTitle": "",
       "guideSteps": []

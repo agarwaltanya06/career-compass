@@ -109,13 +109,35 @@
       "lead": "Here's how we'll shape your plan:",
       "profileHeading": "What you told us",
       "view": "View my journey",
+      "generate": "Generate my plan",
       "restart": "Start over",
-      "sampleNote": "This demo shows a sample journey. Connecting a profile to a live, generated plan comes later."
+      "sampleNote": "We'll generate a grounded plan for you and check official links before showing specifics. Specifics stay marked \"verify\" until a human reviews them.",
+      "generating": "Generating your plan — this can take a moment while we check official sources…",
+      "generateError": "Couldn't generate your plan. Please try again.",
+      "retry": "Try again",
+      "exploreNote": "Exploration mode (\"help me explore\") isn't available here yet — go back and pick a specific career to get a full plan, or plan it yourself."
+    },
+    "generatingChat": {
+      "assistant": "Career Compass AI",
+      "modelPrefix": "Powered by",
+      "connecting": "Connecting…",
+      "footnote": "This usually takes a minute or two while we check official sources. You can keep this open.",
+      "steps": [
+        "Got it — let me put your plan together. 🧭",
+        "Researching colleges and entrance exams…",
+        "Checking the latest exam dates and deadlines…",
+        "Building your month-by-month timeline…",
+        "Almost ready — adding the finishing touches…"
+      ],
+      "errorTitle": "Something went wrong",
+      "retry": "Try again",
+      "startOver": "Start over"
     }
   },
   "journey": {
     "forCareer": "Your path to becoming a",
     "generatedAt": "Guidance generated {date}",
+    "candidateBanner": "Freshly generated and not yet reviewed. Treat every specific as \"verify\" and confirm on the official links before acting.",
     "confidence": "Confidence",
     "confidenceHigh": "high",
     "confidenceMedium": "medium",
@@ -232,6 +254,10 @@
       "intro": "No login and no ready-made match for you yet? Use this blank plan and the short guide below to research any career on your own!",
       "templateTitle": "Your blank plan",
       "templateIntro": "Fill each step in for the career you have in mind.",
+      "downloadNote": "Print or Save as PDF — your downloaded plan includes everything you've typed below.",
+      "monthlyTitle": "Your next 12 months",
+      "monthlyIntro": "Block out one or two things to do each month — an exam to register for, a skill to build, someone to talk to.",
+      "monthlyPlaceholder": "What will you do this month?",
       "templateSteps": [
         "The career I want:",
         "The qualification or degree it needs:",

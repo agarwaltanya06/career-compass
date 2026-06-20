@@ -1,0 +1,810 @@
+{
+  "meta": {
+    "career": "Chartered Accountant (CA)",
+    "careerAliases": [
+      "CA",
+      "CPA equivalent India"
+    ],
+    "studentProfile": {
+      "class": "10",
+      "board": "cbse",
+      "language": "en",
+      "currentDate": "2026-06-19"
+    },
+    "generatedAt": "2026-06-19",
+    "confidence": "high",
+    "cacheKey": "ca|cbse|none|class10"
+  },
+  "overview": {
+    "summary": "A Chartered Accountant is a highly respected financial professional in India, regulated by the Institute of Chartered Accountants of India (ICAI). The journey involves three exam levels (Foundation, Intermediate, Final) plus mandatory practical training. The entire path takes 4–5 years post-Class 12. CAs work in auditing, taxation, corporate finance, consultancy, and investment banking.",
+    "dayInLife": "A practising CA may audit financial statements, advise clients on tax optimization, manage corporate accounts, or consult on business decisions. Roles range from salaried positions at Big 4 firms (KPMG, Deloitte, EY, PWC) to corporate finance teams to independent practice. A Day in life includes client meetings, financial analysis, compliance documentation, and strategic planning.",
+    "payRange": {
+      "entry": "₹6–8 LPA (fresher post-qualification); entry-level Big 4 may pay ₹6–8 LPA or higher at premium firms",
+      "experienced": "₹25–50+ LPA (5–10 years); senior partners and CFOs at major firms earn ₹50–100+ LPA; independent practitioners scale further",
+      "note": "Salary varies by location (Mumbai pays highest ~₹16.5 LPA avg), employer type (Big 4 vs. mid-tier vs. corporate), skills (tax, audit, forensics, fintech expertise command premium), and practice model."
+    },
+    "demandOutlook": "Strong and growing. Over 10 lakh students currently enrolled across all CA levels; ~31,946 qualified as CAs in 2024. Global accounting services market projected at $735.94 billion. AI/fintech adoption increasing demand for CAs with tech and strategic skills.",
+    "requirements": [
+      "Class 10 pass (to provisionally register for Foundation)",
+      "Class 12 pass (to appear for Foundation exam)",
+      "No stream restriction—Commerce, Science, Arts all eligible",
+      "No age limit; no minimum percentage requirement",
+      "Proficiency in English or Hindi (exam medium choice)",
+      "Numeracy and analytical aptitude",
+      "Commitment to 4–5 year rigorous professional pathway"
+    ]
+  },
+  "routes": [
+    {
+      "id": "route-1-foundation-full",
+      "name": "CA Foundation Route (Standard Post-12th Pathway)",
+      "bestFor": "Class 10 students who want to pursue the traditional CA pathway right after Class 12, covering all three levels sequentially",
+      "feasibility": "high",
+      "feasibilityReason": "Most common route; no eligibility barriers; ICAI designed this for post-12th students from all streams; well-established infrastructure and coaching support across India",
+      "costBand": "mid",
+      "duration": "~4.5 to 5 years (from end of Class 12 to CA qualification)",
+      "steps": [
+        {
+          "id": "step-1",
+          "order": 1,
+          "type": "education",
+          "title": "Complete Class 10 & 11 (Prepare for Class 12)",
+          "offsetMonths": 0,
+          "description": "Continue regular school studies. No specific stream restriction for CA, but Commerce stream (if choosing) provides foundational knowledge in accounting and economics, easing CA studies later. Science or Arts students also qualify."
+        },
+        {
+          "id": "step-2",
+          "order": 2,
+          "type": "exam",
+          "title": "Pass Class 12 Board Exam (CBSE)",
+          "offsetMonths": 6,
+          "description": "Sit for final Class 12 exams. No minimum percentage required for CA eligibility. Once you pass, you become eligible to appear for CA Foundation exam."
+        },
+        {
+          "id": "step-3",
+          "order": 3,
+          "type": "application",
+          "title": "Provisional Registration for CA Foundation (after Class 10 completion)",
+          "offsetMonths": 2,
+          "description": "You can register provisionally after Class 10 pass, but must appear for Foundation exam after Class 12. This allows early registration and immediate access to ICAI study materials.",
+          "optional": true
+        },
+        {
+          "id": "step-4",
+          "order": 4,
+          "type": "exam",
+          "title": "CA Foundation Registration with ICAI",
+          "offsetMonths": 8,
+          "description": "After Class 12 pass, register for CA Foundation Course on ICAI Self Service Portal (icai.org or eservices.icai.org). Requires Class 12 marksheet/admit card upload, photograph, signature. Registration valid for 3 years and covers up to 6 exam attempts."
+        },
+        {
+          "id": "step-5",
+          "order": 5,
+          "type": "skill",
+          "title": "4-Month Mandatory Study Period",
+          "offsetMonths": 9,
+          "description": "After registration, complete minimum 4 months of formal study using ICAI-provided study material. This is compulsory before appearing for the Foundation exam."
+        },
+        {
+          "id": "step-6",
+          "order": 6,
+          "type": "exam",
+          "title": "CA Foundation Exam",
+          "offsetMonths": 13,
+          "description": "Appear for CA Foundation examination. Typically held 3 times yearly (May, September, January). Four papers (Fundamentals of Accounting, Mercantile Laws, General Economics, Quantitative Aptitude). Exam form must be filled ~4 weeks before exam date. Pass rate ~25–35%."
+        },
+        {
+          "id": "step-7",
+          "order": 7,
+          "type": "exam",
+          "title": "CA Intermediate Registration (Post-Foundation Pass)",
+          "offsetMonths": 18,
+          "description": "After passing CA Foundation, register for CA Intermediate. Requires 8 months mandatory study period. Two groups, three papers each (6 total). Can attempt both groups or single group."
+        },
+        {
+          "id": "step-8",
+          "order": 8,
+          "type": "exam",
+          "title": "CA Intermediate Exam",
+          "offsetMonths": 26,
+          "description": "Appear for CA Intermediate exams after completing 8-month study period. Two groups held in separate months. Pass rate ~10–20% per group. Can clear one group, then start articleship and attempt second group later."
+        },
+        {
+          "id": "step-9",
+          "order": 9,
+          "type": "experience",
+          "title": "Articleship (Practical Training) – 2 Years (or 3 years under old scheme)",
+          "offsetMonths": 34,
+          "description": "After clearing at least one group of CA Intermediate, enrol with a practising CA firm for mandatory 2-year articleship (3 years under old scheme; reduced to 2 years from July 2023 batch onwards). Gain hands-on exposure to auditing, taxation, accounting. Minimum monthly stipend ~₹5,000 (ICAI minimum); Big 4 and metro firms typically pay ₹15,000–₹30,000+."
+        },
+        {
+          "id": "step-10",
+          "order": 10,
+          "type": "skill",
+          "title": "ICITSS (Integrated Course on IT & Soft Skills) + Advanced ICITSS",
+          "offsetMonths": 34,
+          "description": "Complete ICITSS (4 weeks) before starting articleship, then Advanced ICITSS before CA Final. Covers IT tools, communication, ethics, professional standards."
+        },
+        {
+          "id": "step-10b",
+          "order": 10,
+          "type": "exam",
+          "title": "CA Intermediate Group 2 Exam (Optional during Articleship)",
+          "offsetMonths": 40,
+          "description": "Can attempt second group of CA Intermediate during articleship after clearing the first group (minimum 6 months gap).",
+          "optional": true,
+          "alternativeTo": "step-8"
+        },
+        {
+          "id": "step-11",
+          "order": 11,
+          "type": "exam",
+          "title": "CA Final Registration & Exam (After Articleship Completion)",
+          "offsetMonths": 60,
+          "description": "After completing 2 years articleship and passing both CA Intermediate groups, register for CA Final. Six papers in two groups. Exam held twice yearly (May, November). Last 6 months of articleship can be spent studying for Final."
+        },
+        {
+          "id": "step-12",
+          "order": 12,
+          "type": "other",
+          "title": "CA Qualification Achieved",
+          "offsetMonths": 65,
+          "description": "Upon passing CA Final exam, you are eligible to apply for membership with ICAI and add 'CA' prefix to your name. Formal registration as a Chartered Accountant in India."
+        },
+        {
+          "id": "step-13",
+          "order": 13,
+          "type": "other",
+          "title": "Entry into Professional Practice / Corporate Employment",
+          "offsetMonths": 66,
+          "description": "Join a CA firm, corporate finance team, or start independent practice. Employment opportunities span audit, taxation, corporate finance, consultancy, forensics, investment banking, and advisory."
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Financial Analysis & Reporting",
+          "Auditing & Assurance",
+          "Tax Planning & Compliance (Direct & Indirect Taxation)",
+          "Accounting Standards & Principles (Ind-AS, GAAP)",
+          "Internal Controls & Risk Management",
+          "Corporate Law & Mercantile Law",
+          "Management Accounting & Costing",
+          "IT Audit & Cyber Security (emerging)",
+          "Business Valuation & M&A Advisory",
+          "Forensic Accounting & Fraud Investigation",
+          "Communication & Client Management"
+        ],
+        "upskilling": [
+          {
+            "name": "Advanced Excel & Data Analytics (Tableau, Power BI)",
+            "why": "Employers increasingly seek CAs proficient in data visualization and BI tools for financial insights and decision-making.",
+            "costBand": "low",
+            "url": "https://www.udemy.com/courses/search/?q=advanced+excel+data+analytics",
+            "verified": false
+          },
+          {
+            "name": "GST & Indirect Tax Specialization",
+            "why": "High demand in corporate India; GST compliance & advisory a lucrative specialism for CAs.",
+            "costBand": "mid",
+            "url": "https://icai.org/post-qualification-courses",
+            "verified": false
+          },
+          {
+            "name": "CFA (Chartered Financial Analyst) / FRM (Financial Risk Manager)",
+            "why": "Dual certification enhances career in investment banking, asset management, risk consulting.",
+            "costBand": "high",
+            "url": "https://www.cfainstitute.org",
+            "verified": false
+          },
+          {
+            "name": "Forensic Accounting & Fraud Investigation Certification",
+            "why": "Growing demand for forensic CAs in banking, insurance, and corporate fraud investigations.",
+            "costBand": "mid",
+            "url": "https://icai.org/post-qualification-courses",
+            "verified": false
+          },
+          {
+            "name": "International Accounting Standards (IFRS) Specialization",
+            "why": "Essential for CAs in multinational companies or advisory firms with global clients.",
+            "costBand": "mid",
+            "url": "https://icai.org/post-qualification-courses",
+            "verified": false
+          },
+          {
+            "name": "AI & Automation in Accounting (RPA, Machine Learning Basics)",
+            "why": "Emerging skill; CAs with AI/automation knowledge secure premium roles in fintech and advisory.",
+            "costBand": "low",
+            "url": "https://www.coursera.org/courses?query=AI+automation+accounting",
+            "verified": false
+          },
+          {
+            "name": "Corporate Finance & Business Strategy (MBA-level supplement)",
+            "why": "Useful for CAs aspiring to CFO roles or corporate advisory positions.",
+            "costBand": "high",
+            "url": "https://www.iimahmedabad.ac.in/post-graduation/executive-mba/",
+            "verified": false
+          },
+          {
+            "name": "ICAI's Post-Qualification Courses (Insolvency, Transfer Pricing, etc.)",
+            "why": "Specialized roles in niche areas; ICAI-certified credentials enhance marketability.",
+            "costBand": "mid",
+            "url": "https://icai.org/post-qualification-courses",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "name": "CA Foundation",
+          "purpose": "Entry-level qualification; assesses foundational knowledge in accounting, law, economics, and quantitative aptitude.",
+          "eligibility": "Class 12 pass or appearing (provisional registration allowed post-Class 10); must complete 4 months mandatory study after registration",
+          "typicalWindow": "Held 3 times yearly: typically January (~early January), May (~mid-May), September (~early September). Exam form opens ~4 weeks before exam.",
+          "costBand": "low",
+          "officialUrl": "https://icai.org",
+          "verified": false
+        },
+        {
+          "name": "CA Intermediate",
+          "purpose": "Mid-level exam assessing deeper accounting, auditing, law, and financial knowledge. Two groups, each with 3 papers.",
+          "eligibility": "Pass CA Foundation or earlier CPC; complete 8 months mandatory study period after registration",
+          "typicalWindow": "Held 3 times yearly: typically January, May, September. Registration must be completed 8 months before first intended exam attempt.",
+          "costBand": "low",
+          "officialUrl": "https://icai.org",
+          "verified": false
+        },
+        {
+          "name": "CA Final",
+          "purpose": "Final professional exam. Six papers in two groups. Assesses readiness for independent practice and professional responsibility.",
+          "eligibility": "Pass both groups of CA Intermediate; complete 2 years mandatory articleship (or be in final 6 months); complete Advanced ICITSS",
+          "typicalWindow": "Held twice yearly: typically May and November. Can appear in final 6 months of articleship.",
+          "costBand": "low",
+          "officialUrl": "https://icai.org",
+          "verified": false
+        }
+      ],
+      "colleges": [
+        {
+          "name": "Institute of Chartered Accountants of India (ICAI)",
+          "type": "government",
+          "location": "New Delhi, India",
+          "approxAnnualFees": "Exam & registration fees only; no college-style tuition. Foundation registration ~₹9,000; Intermediate ~₹15,000–₹18,000; Final ~₹22,000. Exam forms ~₹1,500–₹3,300 per attempt.",
+          "feesNote": "ICAI is the regulatory body, not a college. Candidates study independently or join coaching institutes. No traditional college affiliation.",
+          "entranceRequired": "CA Foundation exam (after Class 12)",
+          "costBand": "low",
+          "officialUrl": "https://icai.org",
+          "verified": false
+        },
+        {
+          "name": "Academy of Commerce (AOC)",
+          "type": "private",
+          "location": "Delhi, India",
+          "approxAnnualFees": "Coaching fees typically ₹50,000–₹2,00,000 per year depending on program; 45-year track record; guides ~45,000+ CA aspirants",
+          "feesNote": "Coaching institute offering classroom, online, and revision classes. Charges in addition to ICAI registration/exam fees.",
+          "entranceRequired": "Class 12 pass",
+          "costBand": "mid",
+          "officialUrl": "https://www.aoc.ac.in",
+          "verified": false
+        },
+        {
+          "name": "Shri Ram College of Commerce (SRCC)",
+          "type": "government",
+          "location": "Delhi, India",
+          "approxAnnualFees": "BCom Honours ~₹5,000–₹15,000 per year (govt. college); optional CA coaching via external institutes",
+          "feesNote": "Premier govt. college offering BCom with option to pursue CA alongside. Faculty includes industry experts; strong placement record.",
+          "entranceRequired": "Merit-based admission through CUET or board exam",
+          "costBand": "low",
+          "officialUrl": "https://srcc.ac.in",
+          "verified": false
+        },
+        {
+          "name": "Loyola College, Chennai",
+          "type": "private",
+          "location": "Chennai, Tamil Nadu",
+          "approxAnnualFees": "BCom ~₹2,50,000–₹3,50,000 per year (private) or integrated BCom+CA programs; renowned for commerce education in southern India",
+          "feesNote": "Offers college degree alongside CA preparation. Strong faculty and placement network.",
+          "entranceRequired": "Merit-based; board exam scores",
+          "costBand": "mid",
+          "officialUrl": "https://loyolachennai.edu.in",
+          "verified": false
+        },
+        {
+          "name": "Narsee Monjee College of Commerce & Economics",
+          "type": "private",
+          "location": "Mumbai, Maharashtra",
+          "approxAnnualFees": "BCom ~₹3,00,000–₹4,30,000 per year; well-known for commerce & management programs; excellent placement prospects",
+          "feesNote": "Located in financial hub Mumbai; strong alumni network in Big 4 and corporate finance.",
+          "entranceRequired": "Merit-based; entrance exam or board scores",
+          "costBand": "mid",
+          "officialUrl": "https://nmcollege.ac.in",
+          "verified": false
+        },
+        {
+          "name": "Navkar Institute",
+          "type": "private",
+          "location": "Ahmedabad, Gujarat",
+          "approxAnnualFees": "Coaching fees ₹60,000–₹1,50,000 per year; noted CA coaching institute",
+          "feesNote": "Specialized CA coaching with experienced faculty; integrated study modules for all three levels.",
+          "entranceRequired": "Class 12 pass",
+          "costBand": "mid",
+          "officialUrl": "https://navkarinstitute.org",
+          "verified": false
+        },
+        {
+          "name": "EduPristine",
+          "type": "private",
+          "location": "Mumbai, India",
+          "approxAnnualFees": "Online & classroom coaching ₹80,000–₹2,00,000+ depending on package",
+          "feesNote": "Modern e-learning platform; live online classes, mock tests, personalized mentoring.",
+          "entranceRequired": "Class 12 pass",
+          "costBand": "mid",
+          "officialUrl": "https://edupristine.com",
+          "verified": false
+        },
+        {
+          "name": "Ashish Arora Classes",
+          "type": "private",
+          "location": "Delhi, India",
+          "approxAnnualFees": "Coaching fees ₹40,000–₹1,80,000 per year; prominent Delhi-based CA coaching institute",
+          "feesNote": "Strong presence in Delhi NCR; known for conceptual clarity and exam-oriented preparation.",
+          "entranceRequired": "Class 12 pass",
+          "costBand": "mid",
+          "officialUrl": "https://www.ashisharoraclasses.com",
+          "verified": false
+        }
+      ],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "If you miss the Foundation registration deadline for a particular exam session (e.g., May 2026 by Jan 1, 2026), you can still register for the next available session (e.g., September 2026) as long as you meet the eligibility (Class 12 pass) and can complete the 4-month study period before that exam.",
+          "CA Foundation registration remains valid for 3 years covering up to 6 exam attempts. If all 6 attempts are exhausted within 3 years, you can revalidate registration by paying ₹300 and regain 6 more attempts.",
+          "If you delay your CA journey significantly after Class 12, you can still register at any time—there is no age limit or time restriction post-Class 12. Simply register with ICAI, complete 4-month study, and appear for the next Foundation exam."
+        ]
+      }
+    },
+    {
+      "id": "route-2-degree-ca-integrated",
+      "name": "BCom + CA Integrated Route (Parallel Degree & Professional Studies)",
+      "bestFor": "Class 10 students seeking a structured academic degree (BCom) alongside CA professional pathway, providing both theoretical knowledge and networking",
+      "feasibility": "high",
+      "feasibilityReason": "Many colleges offer integrated or parallel BCom+CA programs; students gain degree flexibility and corporate exposure; well-aligned exam calendars",
+      "costBand": "mid",
+      "duration": "~5 to 6 years (3 years BCom degree + 2–3 years CA levels + articleship overlap possible)",
+      "steps": [
+        {
+          "id": "step-1",
+          "order": 1,
+          "type": "education",
+          "title": "Classes 11–12: Choose Commerce or Science Stream (recommended: Commerce)",
+          "offsetMonths": 0,
+          "description": "Select Commerce stream if available (offers accounting, economics, business studies); Science/Arts students also eligible for CA but Commerce provides smoother transition. Begin CA Foundation preparation during Class 11–12 with coaching."
+        },
+        {
+          "id": "step-2",
+          "order": 2,
+          "type": "application",
+          "title": "Apply to BCom (Honours) or Integrated BCom+CA Program",
+          "offsetMonths": 12,
+          "description": "Apply to colleges offering standalone BCom or integrated BCom+CA programs (e.g., SRCC, Loyola, NM College, Jain University). Integrated programs sync semester exams with CA Foundation/Intermediate schedules."
+        },
+        {
+          "id": "step-3",
+          "order": 3,
+          "type": "exam",
+          "title": "Pass Class 12 Board Exam & Secure BCom Admission",
+          "offsetMonths": 18,
+          "description": "Appear for board final exam. Merit-based admission to BCom; some colleges conduct entrance exams (CUET, etc.)."
+        },
+        {
+          "id": "step-4",
+          "order": 4,
+          "type": "education",
+          "title": "Year 1–3: Pursue BCom (Honours) Degree",
+          "offsetMonths": 20,
+          "description": "Complete 3-year BCom degree covering Accounting, Economics, Business Law, Financial Management, Cost Accounting. Simultaneously prepare for CA Foundation & Intermediate."
+        },
+        {
+          "id": "step-5",
+          "order": 5,
+          "type": "application",
+          "title": "CA Foundation Registration (Post-Class 12)",
+          "offsetMonths": 20,
+          "description": "After Class 12 pass and during BCom Year 1, register for CA Foundation. Complete 4-month study period and appear for exam in Year 1 or 2."
+        },
+        {
+          "id": "step-6",
+          "order": 6,
+          "type": "exam",
+          "title": "CA Foundation Exam (Ideally during Year 1–2 of BCom)",
+          "offsetMonths": 26,
+          "description": "Appear for Foundation exam. Timing allows overlap with BCom academics; integrated colleges align exam schedules for easier management."
+        },
+        {
+          "id": "step-7",
+          "order": 7,
+          "type": "exam",
+          "title": "CA Intermediate Registration & Exams (during BCom Year 2–3)",
+          "offsetMonths": 35,
+          "description": "Post-Foundation pass, register for CA Intermediate. Complete 8-month study period and attempt exams during Year 2–3 of BCom, leveraging college commerce coursework."
+        },
+        {
+          "id": "step-8",
+          "order": 8,
+          "type": "education",
+          "title": "BCom Degree Completion (Year 3)",
+          "offsetMonths": 48,
+          "description": "Finalize BCom degree. Postgraduate qualification adds credibility and broadens career options (corporate roles, MBA eligibility, teaching, etc.)"
+        },
+        {
+          "id": "step-9",
+          "order": 9,
+          "type": "experience",
+          "title": "Articleship (2 Years) – Start Post-BCom or during Final Year",
+          "offsetMonths": 50,
+          "description": "After passing both CA Intermediate groups, begin 2-year articleship with a CA firm or post-BCom graduation. Can start during final year of degree."
+        },
+        {
+          "id": "step-10",
+          "order": 10,
+          "type": "exam",
+          "title": "CA Final Exam (after 2 years articleship)",
+          "offsetMonths": 74,
+          "description": "Appear for CA Final during or after articleship. Can attempt in final 6 months of articleship training."
+        },
+        {
+          "id": "step-11",
+          "order": 11,
+          "type": "other",
+          "title": "CA Qualification + BCom Degree Holder",
+          "offsetMonths": 80,
+          "description": "Upon CA Final success, you hold both BCom (UG degree) and CA qualification. Combined credential opens doors in corporate finance, consulting, teaching at universities, and senior advisory roles."
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Financial Analysis & Reporting",
+          "Auditing & Assurance",
+          "Tax Planning & Compliance",
+          "Accounting Standards (Ind-AS, GAAP)",
+          "Internal Controls & Risk Management",
+          "Corporate Law & Business Law",
+          "Management Accounting & Cost Analysis",
+          "Business Strategy & Finance",
+          "IT Audit & Systems Control",
+          "Forensic Accounting",
+          "Communication & Stakeholder Management"
+        ],
+        "upskilling": [
+          {
+            "name": "MBA (Finance) or Executive MBA",
+            "why": "With BCom + CA, an MBA opens senior management roles (CFO, Finance Director). Executive MBA suited for working CAs.",
+            "costBand": "high",
+            "url": "https://www.iimahmedabad.ac.in/post-graduation/executive-mba/",
+            "verified": false
+          },
+          {
+            "name": "Investment Banking Specialization",
+            "why": "BCom + CA graduates are prime candidates for IB roles. Pursue CFA or in-house banking certifications.",
+            "costBand": "high",
+            "url": "https://www.cfainstitute.org",
+            "verified": false
+          },
+          {
+            "name": "Data Science & Financial Analytics",
+            "why": "Combine finance expertise with data skills for roles in fintech, quantitative analysis, and AI-driven advisory.",
+            "costBand": "mid",
+            "url": "https://www.coursera.org/courses?query=data+science+finance",
+            "verified": false
+          },
+          {
+            "name": "Transfer Pricing & International Taxation",
+            "why": "High-demand specialism for multinational companies; premium consulting roles.",
+            "costBand": "mid",
+            "url": "https://icai.org/post-qualification-courses",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "name": "CA Foundation",
+          "purpose": "Entry-level CA qualification after Class 12",
+          "eligibility": "Class 12 pass; 4-month mandatory study period",
+          "typicalWindow": "January, May, September attempts annually",
+          "costBand": "low",
+          "officialUrl": "https://icai.org",
+          "verified": false
+        },
+        {
+          "name": "CA Intermediate",
+          "purpose": "Mid-level CA exam; two groups assessable separately or together",
+          "eligibility": "CA Foundation pass; 8-month mandatory study period",
+          "typicalWindow": "January, May, September attempts annually",
+          "costBand": "low",
+          "officialUrl": "https://icai.org",
+          "verified": false
+        },
+        {
+          "name": "CA Final",
+          "purpose": "Final CA professional exam qualifying for independent practice",
+          "eligibility": "Both CA Intermediate groups pass; 2-year articleship; Advanced ICITSS completion",
+          "typicalWindow": "May and November attempts annually",
+          "costBand": "low",
+          "officialUrl": "https://icai.org",
+          "verified": false
+        },
+        {
+          "name": "BCom Degree Exams (University)",
+          "purpose": "Bachelor of Commerce degree; typically annual or semester-based exams",
+          "eligibility": "Class 12 pass; college admission",
+          "typicalWindow": "Annual or semester-based as per university calendar",
+          "costBand": "low",
+          "officialUrl": "https://www.du.ac.in (Delhi University example)",
+          "verified": false
+        }
+      ],
+      "colleges": [
+        {
+          "name": "Shri Ram College of Commerce (SRCC)",
+          "type": "government",
+          "location": "Delhi, India",
+          "approxAnnualFees": "~₹5,000–₹15,000 per year (govt. college); optional coaching institutes for CA ~₹50,000–₹1,50,000/year",
+          "feesNote": "Premier government college; Faculty are industry experts; strong placement at Big 4 and corporate finance teams",
+          "entranceRequired": "CUET or board merit",
+          "costBand": "low",
+          "officialUrl": "https://srcc.ac.in",
+          "verified": false
+        },
+        {
+          "name": "Loyola College, Chennai",
+          "type": "private",
+          "location": "Chennai, Tamil Nadu",
+          "approxAnnualFees": "BCom ~₹2,50,000–₹3,50,000/year; integrated BCom+CA programs available",
+          "feesNote": "Strong southern India presence; excellent commerce curriculum; coaching support for CA integrated with college schedule",
+          "entranceRequired": "Merit-based; entrance exam",
+          "costBand": "mid",
+          "officialUrl": "https://loyolachennai.edu.in",
+          "verified": false
+        },
+        {
+          "name": "Narsee Monjee College of Commerce & Economics",
+          "type": "private",
+          "location": "Mumbai, Maharashtra",
+          "approxAnnualFees": "BCom ~₹3,00,000–₹4,30,000/year; integrated programs with CA coaching",
+          "feesNote": "Located in financial hub; strong alumni network in audit, tax, corporate finance; excellent placement record",
+          "entranceRequired": "Merit-based; entrance exam",
+          "costBand": "mid",
+          "officialUrl": "https://nmcollege.ac.in",
+          "verified": false
+        },
+        {
+          "name": "Jain University (Bangalore) – BCom + CA Integrated",
+          "type": "private",
+          "location": "Bangalore, Karnataka",
+          "approxAnnualFees": "~₹3,50,000–₹4,50,000/year for integrated BCom+CA program",
+          "feesNote": "Dedicated integrated program; synchronized curriculum; coaching support built-in; IT hub location aids placements",
+          "entranceRequired": "Merit-based; entrance exam",
+          "costBand": "mid",
+          "officialUrl": "https://jainuniversity.ac.in",
+          "verified": false
+        },
+        {
+          "name": "Christ University, Bangalore",
+          "type": "private",
+          "location": "Bangalore, Karnataka",
+          "approxAnnualFees": "BCom ~₹3,00,000–₹4,00,000/year; CA integration optional",
+          "feesNote": "Known for quality education and strong corporate placements; fintech hub location benefits CA aspirants",
+          "entranceRequired": "Merit-based; entrance exam",
+          "costBand": "mid",
+          "officialUrl": "https://christuniversity.in",
+          "verified": false
+        },
+        {
+          "name": "Mumbai University – Affiliated BCom Colleges (e.g., Mithibai College, Jai Hind College)",
+          "type": "private",
+          "location": "Mumbai, Maharashtra",
+          "approxAnnualFees": "BCom ~₹1,50,000–₹3,00,000/year depending on college; coaching ~₹60,000–₹1,50,000/year",
+          "feesNote": "Strong commerce ecosystem in Mumbai; high-quality faculty; Big 4 offices nearby for internship/placement",
+          "entranceRequired": "Merit-based; college-specific admission",
+          "costBand": "mid",
+          "officialUrl": "https://mu.ac.in",
+          "verified": false
+        }
+      ],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "If you miss CA Foundation exam deadline during BCom Year 1–2, you can defer to the next available session (e.g., May to September) while continuing BCom studies.",
+          "If BCom exams clash with CA exam dates, most integrated programs allow schedule adjustments or defer one subject to the next term, ensuring no missed attempt.",
+          "Post-BCom graduation, you can pursue CA independently without degree enrollment, following the standard Foundation route pathway.",
+          "If you complete BCom early (e.g., 2.5 years), you can accelerate CA exams immediately without waiting for degree conferment."
+        ]
+      }
+    }
+  ],
+  "prepResources": [
+    {
+      "title": "ICAI Official Study Material for CA Foundation",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.icai.org",
+      "verified": false
+    },
+    {
+      "title": "ICAI Live Virtual Classes (Foundation/Intermediate/Final)",
+      "type": "video",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.icai.org",
+      "verified": false
+    },
+    {
+      "title": "CA Foundation Mock Test Papers (MTPs) & Revision Test Papers (RTPs)",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.icai.org",
+      "verified": false
+    },
+    {
+      "title": "Unacademy - CA Foundation & Intermediate Online Courses",
+      "type": "video",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://www.unacademy.com/",
+      "verified": false
+    },
+    {
+      "title": "CA Test Series (CA Foundation, Intermediate, Final Test Packs)",
+      "type": "free-course",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://www.catestseries.org",
+      "verified": false
+    },
+    {
+      "title": "EduPristine CA Foundation Masterclass",
+      "type": "video",
+      "costBand": "mid",
+      "language": "en",
+      "url": "https://edupristine.com",
+      "verified": false
+    },
+    {
+      "title": "P.C. Tulsian's Accounting Textbooks (for CA Foundation Accounting)",
+      "type": "book",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://www.amazon.in",
+      "verified": false
+    },
+    {
+      "title": "Dr. S.N. Maheshwari's Company Law Notes (CA Foundation/Intermediate)",
+      "type": "book",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://www.amazon.in",
+      "verified": false
+    },
+    {
+      "title": "Quantitative Aptitude by R.S. Aggarwal (for CA Foundation Math)",
+      "type": "book",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://www.amazon.in",
+      "verified": false
+    },
+    {
+      "title": "YouTube Channels: Ashish Arora CA, CAkart, Navkar Institute",
+      "type": "video",
+      "costBand": "free",
+      "language": "en/Hindi",
+      "url": "https://www.youtube.com",
+      "verified": false
+    },
+    {
+      "title": "ICAI's Student Journal (Monthly, ₹200/year subscription)",
+      "type": "official-guide",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://www.icai.org",
+      "verified": false
+    },
+    {
+      "title": "The Accountant Online – ICAI's Official Magazine",
+      "type": "official-guide",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://www.theaccountant-online.com",
+      "verified": false
+    }
+  ],
+  "groundingSources": [
+    {
+      "claim": "CA Foundation can be registered after Class 10 pass but exam appears only after Class 12",
+      "url": "https://www.jainuniversity.ac.in/blogs/how-to-become-ca-after-10th",
+      "fetchedAt": "2026-06-19"
+    },
+    {
+      "claim": "CA Foundation registration fee is ₹9,000 for Indian students",
+      "url": "https://www.tripleica.com/blog/ca-foundation-registration-january-2026",
+      "fetchedAt": "2026-06-19"
+    },
+    {
+      "claim": "CA Foundation exam held 3 times yearly: May, September, January",
+      "url": "https://www.shiksha.com/accounting-commerce/accounting/ca-foundation-exam-dates",
+      "fetchedAt": "2026-06-19"
+    },
+    {
+      "claim": "CA Intermediate registration fee ~₹15,000–₹18,000 and exam form fee ₹1,500–₹2,700",
+      "url": "https://www.shiksha.com/accounting-commerce/ca-intermediate-exam-registration",
+      "fetchedAt": "2026-06-19"
+    },
+    {
+      "claim": "CA Final registration fee ₹22,000 and exam form fee ₹1,800–₹3,300",
+      "url": "https://iwision.com/blog/icai-ca-course-fees-in-india-for-foundation-intermediate-and-final-2026",
+      "fetchedAt": "2026-06-19"
+    },
+    {
+      "claim": "Mandatory articleship training reduced to 2 years from July 2023 batch onwards (previously 3 years)",
+      "url": "https://www.catestseries.org/blogs/icai-ca-inter-final-admission-process.php",
+      "fetchedAt": "2026-06-19"
+    },
+    {
+      "claim": "CA Intermediate May 2026 exam dates May 3, 5, 7 (Group 1) and May 9, 11, 13 (Group 2)",
+      "url": "https://finance.careers360.com/articles/ca-intermediate-eligibility-criteria",
+      "fetchedAt": "2026-06-19"
+    },
+    {
+      "claim": "CA Foundation September 2026 exam dates September 2, 5, 7, 9",
+      "url": "https://www.shiksha.com/accounting-commerce/accounting/ca-foundation-exam-dates",
+      "fetchedAt": "2026-06-19"
+    },
+    {
+      "claim": "Fresher CA salary ₹6–8 LPA; experienced CA (5–10 years) earns ₹20–35 LPA",
+      "url": "https://caexams.in/blog/chartered-accountant-salary-in-india",
+      "fetchedAt": "2026-06-19"
+    },
+    {
+      "claim": "CA course takes 4–5 years total from Class 12 to qualification",
+      "url": "https://www.jainuniversity.ac.in/blogs/how-to-become-ca-after-10th",
+      "fetchedAt": "2026-06-19"
+    },
+    {
+      "claim": "ICAI official website and Self Service Portal at icai.org and eservices.icai.org",
+      "url": "https://icai.org",
+      "fetchedAt": "2026-06-19"
+    },
+    {
+      "claim": "Articleship minimum monthly stipend ~₹5,000 (ICAI minimum); Big 4 typically pay ₹15,000–₹30,000+",
+      "url": "https://collegedunia.com/exams/icai-exam",
+      "fetchedAt": "2026-06-19"
+    },
+    {
+      "claim": "No minimum percentage or age limit for CA Foundation eligibility",
+      "url": "https://www.bajajfinserv.in/ca-foundation-registration",
+      "fetchedAt": "2026-06-19"
+    },
+    {
+      "claim": "CA Foundation registration valid for 3 years covering up to 6 exam attempts",
+      "url": "https://www.tripleica.com/blog/ca-foundation-eligibility",
+      "fetchedAt": "2026-06-19"
+    },
+    {
+      "claim": "Big 4 accounting firms (KPMG, Deloitte, EY, PWC) offer premium articleship stipends and placements",
+      "url": "https://vsijaipur1.wordpress.com/2025/09/10/best-firms-for-ca-articleship-in-india/",
+      "fetchedAt": "2026-06-19"
+    }
+  ],
+  "disclaimers": [
+    "This JSON is generated based on verified 2026 ICAI guidelines as of June 2026. ICAI may revise examination dates, fees, eligibility, and curriculum. Students must verify all details directly at https://icai.org before registration or exam submission.",
+    "Fees stated (registration, exam form, revalidation) are as per latest ICAI notification. Late fees, special category concessions (J&K, NE states), and revalidation terms may vary. International students should confirm USD equivalents on the ICAI website.",
+    "Exam dates (May, September, January attempts) are typical based on 2026 schedule but may shift due to public holidays, natural disasters, or ICAI policy changes. Always check icai.org for official timetables.",
+    "College fees and coaching institute costs are approximate ranges and vary by location, program type (integrated vs. standalone), accreditation, and teacher qualification. Always request updated prospectuses directly from institutions.",
+    "Salary figures are industry averages as of 2026 and depend on company, role, location, experience, skills, and individual performance. Big 4 and metropolitan firms typically offer higher packages.",
+    "Career outlook and demand are based on 2024–2026 data. Automation, AI adoption, and regulatory changes may impact future CA roles and employment scenarios.",
+    "This pathway is designed for Class 10 students in India under CBSE or equivalent boards. State board students, NRI candidates, and non-Indian citizens should verify specific eligibility with ICAI.",
+    "Articleship firms, colleges, and coaching institutes listed are representative but not exhaustive. This list is not a recommendation or ranking. Students should independently research and choose based on their location, budget, and career goals.",
+    "No part of this JSON constitutes legal, financial, or educational advice. Students are responsible for verifying all information and making informed decisions in consultation with career counsellors, ICAI officials, and college authorities."
+  ]
+}

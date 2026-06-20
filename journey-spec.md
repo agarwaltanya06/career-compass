@@ -164,6 +164,7 @@ These go in the LLM's system prompt, not just as hopes:
 8. **Go beyond the degree.** Every route includes a `skills` block: core skills to build *and* price-banded `upskilling` options (free ones first). Include experience milestones — e.g. a summer-internship step around the end of 3rd year — and at least one **post-completion fork** (further study vs. work) via `alternativeTo`.
 9. **Label cost as cost.** Bare bands ("low") are ambiguous. Every `costBand` must be rendered by the UI as "Cost: Low/Medium/High", ideally with an indicative ₹ range; colleges also expose `approxAnnualFees` so users can sort by price.
 10. **Generate India-wide, tag by location.** Don't pre-filter by the student's state; return options across India, each `college` tagged with `state` + `city` so the UI can filter.
+11. **Be concise.** Short step descriptions, one-line "why it fits", and cap lists (e.g. top ~5 colleges, not 20). Concise output is faster, cheaper, easier to verify, and far more readable for a low-literacy audience — and it reads better in Hindi too. **Tighten via these instructions, not a low `max_tokens`** — keep the token ceiling high enough to finish valid JSON, or a mid-structure cutoff will fail to parse.
 
 ---
 
@@ -171,9 +172,20 @@ These go in the LLM's system prompt, not just as hopes:
 
 - `cacheKey` = normalized `career | board | stream | classBucket`. No location, cost, **or model/provider** — once verified, a journey is just content, identical regardless of who generated it or on which model.
 - For multilingual: include `language` in the key (or store one file per language), so English and Hindi versions of the same path cache separately.
-- First request for a key → generate, you eyeball it, save it.
-- Later identical profiles → serve the cached, human-verified journey. No API cost, higher trust.
-- A "last verified" date per cached journey tells you when to re-check. Over months the cache *becomes* the verified content library — seeded by the LLM, owned by you.
+
+**Two states per journey — this is the trust invariant:**
+- **`verified`** — human-reviewed. This is the *default* served to anonymous/dropdown users. Carries a "last verified" date.
+- **`unverified` (candidate)** — a fresh machine generation, not yet reviewed. Shown only to the user who triggered it, with the "unverified — check official links" stamp, and added to *your review queue*.
+
+**How journeys get created or refreshed:**
+1. **Cache miss** → generate → store as an **unverified candidate** → show to the requester (stamped) → queue for your review.
+2. **Force-regenerate** (registered user, see §5) on an *already-cached* journey → generate fresh → store as a **new candidate alongside** the existing verified version → show to that user → queue for review. **Never auto-overwrites the verified default.**
+3. **You review a candidate** → approve (it becomes/updates the `verified` default for everyone) or discard.
+4. **Staleness** → any `verified` journey past its re-check date surfaces in your queue automatically, so freshness doesn't depend on user clicks.
+
+Over months the verified layer *becomes* your curated content library — seeded by the LLM, gated by you.
+
+**Pre-seeding (do this on day one).** Don't wait for organic traffic to fill the cache. Run a one-off **seed script** over a defined list of ~40–50 common combinations (your top careers × CBSE/State boards × main streams), review them, and store as **verified + pinned** defaults. "Pinned" = never live-regenerated and exempt from staleness auto-churn; only an explicit force-regenerate (§5) creates a fresh candidate. Serving is already cache-first, so these never hit the LLM. This gives the free/anonymous tier real content from launch.
 
 ---
 
@@ -202,10 +214,12 @@ Live generation is the only expensive part, so gate *who can trigger it* and *on
 **The cache flywheel + levers**
 - **Cache-first for everyone**, including logged-in users — repeats are free.
 - Anonymous dropdowns are **constrained to cached combinations**, so nobody hits an empty result.
-- A registered user's new generation lands in the cache → instantly available to the free tier. Motivated users grow the free library.
+- A registered user's new generation lands as an **unverified candidate** in your review queue → becomes a free-tier default once you approve it. Motivated users grow the library; you stay the gate.
 - **Per-user rate limit** + hard spend caps as backstops.
 
 **One honest flag on login.** A login gate controls cost, but email+password signup is a real barrier for exactly this audience — shared phones, no personal email, first-time internet users. Mitigations: (1) make the free cached tier good enough that most students never *need* to log in, and (2) prefer **phone-OTP** over email/password in India. `/plan-it-yourself` is also your equity backstop — it serves anyone who can't or won't sign in.
+
+**Regenerate / force-refresh.** Registered users get a **"Regenerate (fresh, unverified)"** action on any journey — whether it was a cache miss or an existing cached default. It runs a live generation (Haiku on your key, rate-limited; or Sonnet/Opus via their own key) and returns a candidate per §4 — shown to them immediately, queued for your review, **never overwriting the verified default**. Label it as *fresh*, not *better* (a stronger model isn't guaranteed more accurate). Serve the last candidate on repeat clicks unless they explicitly request another run, so the button isn't a money tap.
 
 ---
 

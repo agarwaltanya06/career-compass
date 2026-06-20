@@ -11,6 +11,7 @@
  */
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import {
@@ -21,6 +22,14 @@ import {
   type IntakeOption,
   type IntakeQuestion,
 } from "@/lib/intake";
+import {
+  isExplore,
+  profileFromAnswers,
+  requestJourneyStream,
+  storeJourney,
+} from "@/lib/generate/client";
+import { modelDisplayName } from "@/lib/generate/modelLabel";
+import GeneratingChat from "@/components/intake/GeneratingChat";
 
 export default function IntakePage() {
   const { t } = useI18n();
@@ -207,7 +216,48 @@ function IntakeSummary({
   onRestart: () => void;
   onBack: () => void;
 }) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
+  const router = useRouter();
+  // `generating` swaps the summary for the chat screen; `genError` is shown
+  // inside that screen (with retry), while `error` covers the pre-generation
+  // explore case shown on the summary itself.
+  const [generating, setGenerating] = useState(false);
+  const [genError, setGenError] = useState<string | null>(null);
+  const [modelLabel, setModelLabel] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  // Bumped on each attempt so the chat screen remounts fresh (resets its
+  // elapsed timer and status sequence) on a retry.
+  const [attempt, setAttempt] = useState(0);
+
+  const explore = isExplore(answers);
+
+  // Kick off live generation, then hand the result to the journey page via
+  // sessionStorage (spec §7 phase 6: intake "finish" calls /api/generate, not
+  // the sample data). Streams progress so the chat screen can show the real
+  // model and honest phases during the long grounded call.
+  async function generate() {
+    const currentDate = new Date().toISOString().slice(0, 10);
+    const profile = profileFromAnswers(answers, locale, currentDate);
+    if (!profile) {
+      setError(t("intake.done.exploreNote"));
+      return;
+    }
+    setError(null);
+    setGenError(null);
+    setModelLabel(null);
+    setGenerating(true);
+    setAttempt((n) => n + 1);
+    try {
+      const payload = await requestJourneyStream(profile, (event) => {
+        if (event.model) setModelLabel(modelDisplayName(event.provider, event.model));
+      });
+      storeJourney(payload);
+      router.push("/journey");
+    } catch (err) {
+      // Stay on the chat screen so the friendly error + retry live there.
+      setGenError(err instanceof Error ? err.message : t("intake.done.generateError"));
+    }
+  }
 
   // Turn a stored answer value back into a human label by finding the option
   // that defined it; fall back to the raw value (custom text, city names…).
@@ -222,6 +272,30 @@ function IntakeSummary({
 
   const goalDisplay =
     answers.goalCustom || labelFor("goal", answers.goal) || null;
+
+  // The student's key picks, shown as chips on the loading screen so they can
+  // see what's being worked on (e.g. "Class 9", "CBSE", "Architecture").
+  const profileChips = [
+    labelFor("class", answers.class),
+    labelFor("board", answers.board),
+    labelFor("stream", answers.stream),
+    goalDisplay,
+  ].filter((v): v is string => Boolean(v));
+
+  // Live generation (and its error state) takes over the whole screen as a
+  // chatbot-style progress view.
+  if (generating) {
+    return (
+      <GeneratingChat
+        key={attempt}
+        modelLabel={modelLabel}
+        profile={profileChips}
+        error={genError}
+        onRetry={generate}
+        onStartOver={onRestart}
+      />
+    );
+  }
 
   const rows: { label: string; value: string | null }[] = [
     { label: t("intake.questions.class"), value: labelFor("class", answers.class) },
@@ -262,13 +336,33 @@ function IntakeSummary({
 
         <p className="mt-4 text-xs text-stone-400">{t("intake.done.sampleNote")}</p>
 
+        {/* Exploration mode has no single journey to generate yet. */}
+        {explore && (
+          <p className="mt-4 rounded-xl bg-amber-50 p-4 text-sm text-amber-800">
+            {t("intake.done.exploreNote")}{" "}
+            <Link href="/plan-it-yourself" className="font-semibold underline">
+              {t("footer.diy")}
+            </Link>
+          </p>
+        )}
+
+        {/* Generation error (server message or a generic fallback). */}
+        {error && (
+          <p className="mt-4 rounded-xl bg-rose-50 p-4 text-sm text-rose-800" role="alert">
+            {error}
+          </p>
+        )}
+
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-          <Link
-            href="/journey"
-            className="flex min-h-12 flex-1 items-center justify-center rounded-xl bg-orange-500 px-6 text-base font-semibold text-white hover:bg-orange-600"
-          >
-            {t("intake.done.view")}
-          </Link>
+          {!explore && (
+            <button
+              type="button"
+              onClick={generate}
+              className="flex min-h-12 flex-1 items-center justify-center rounded-xl bg-orange-500 px-6 text-base font-semibold text-white hover:bg-orange-600"
+            >
+              {error ? t("intake.done.retry") : t("intake.done.generate")}
+            </button>
+          )}
           <button
             type="button"
             onClick={onRestart}

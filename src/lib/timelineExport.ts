@@ -356,6 +356,12 @@ export interface PrintPlanSection {
   intro?: string;
   /** Each becomes a labelled blank line to write on. */
   blanks?: string[];
+  /**
+   * Labelled entries that carry whatever the user typed: a filled value is
+   * printed as text; an empty one falls back to a blank line to write on. This
+   * is how the download/print reflects the values already entered on the page.
+   */
+  fields?: { label: string; value: string }[];
   /** Each becomes a plain numbered list item (the research guide). */
   items?: string[];
 }
@@ -371,7 +377,20 @@ export function buildPlanPrintHtml(
     .map((sec) => {
       const introHtml = sec.intro ? `<p class="note">${htmlEscape(sec.intro)}</p>` : "";
       let listHtml = "";
-      if (sec.blanks) {
+      if (sec.fields) {
+        // A typed value prints as text; an empty field becomes a blank line.
+        listHtml = `<ol class="steps">${sec.fields
+          .map((f) => {
+            const value = f.value.trim();
+            const filled = value
+              ? `<p class="desc">${htmlEscape(value)}</p>`
+              : `<span class="line"></span>`;
+            return `<li><div class="body"><div class="title">${htmlEscape(
+              f.label,
+            )}</div>${filled}</div></li>`;
+          })
+          .join("")}</ol>`;
+      } else if (sec.blanks) {
         listHtml = `<ol class="steps">${sec.blanks
           .map(
             (b) =>
