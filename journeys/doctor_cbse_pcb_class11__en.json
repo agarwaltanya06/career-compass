@@ -1,0 +1,407 @@
+{
+  "meta": {
+    "career": "Doctor (MBBS)",
+    "careerAliases": [
+      "Physician",
+      "Medical Practitioner"
+    ],
+    "studentProfile": {
+      "class": "11",
+      "board": "cbse",
+      "stream": "pcb",
+      "language": "en",
+      "currentDate": "2026-06-20"
+    },
+    "generatedAt": "2026-06-20",
+    "confidence": "high",
+    "cacheKey": "doctor|cbse|pcb|class11"
+  },
+  "overview": {
+    "summary": "Becoming a doctor involves rigorous academic study and practical training to diagnose, treat, and prevent illnesses. It is a highly respected profession focused on patient care and public health.",
+    "dayInLife": "A doctor's day can vary significantly by specialization and setting. It may involve consulting patients in clinics, performing rounds in hospitals, conducting surgeries, interpreting diagnostic tests, collaborating with other healthcare professionals, and continuously updating medical knowledge.",
+    "payRange": {
+      "entry": "₹40,000 - ₹70,000 per month",
+      "experienced": "₹15,00,000 - ₹25,00,000+ per annum (for specialists)",
+      "note": "Salaries vary widely based on specialization, experience, location, and type of hospital (government vs. private). Super-specialists can earn significantly more."
+    },
+    "demandOutlook": "The demand for doctors in India is high and is projected to surge, potentially doubling by 2030, driven by population growth, increasing health awareness, and a persistent doctor-to-patient ratio gap.",
+    "requirements": [
+      "Strong foundation in Physics, Chemistry, and Biology",
+      "Qualifying NEET UG exam",
+      "Completion of MBBS degree (5.5 years including internship)",
+      "Registration with the Medical Council",
+      "Continuous learning and professional development"
+    ]
+  },
+  "routes": [
+    {
+      "id": "mbbs-after-12th",
+      "name": "Direct MBBS after Class 12",
+      "bestFor": "Students dedicated to pursuing a career in Allopathic medicine directly after completing their 10+2 education with Science (PCB).",
+      "feasibility": "high",
+      "feasibilityReason": "This is the standard and most direct path for medical aspirants in India.",
+      "costBand": "low",
+      "duration": "Approximately 10-12 years (5.5 years MBBS + 3 years PG + initial practice)",
+      "steps": [
+        {
+          "id": "step-1",
+          "order": 1,
+          "type": "education",
+          "title": "Class 11 Science (PCB) Studies",
+          "offsetMonths": 0,
+          "description": "Focus on building strong foundational knowledge in Physics, Chemistry, and Biology as these subjects are crucial for NEET UG."
+        },
+        {
+          "id": "step-2",
+          "order": 2,
+          "type": "education",
+          "title": "Class 12 Science (PCB) Studies & Board Exams",
+          "offsetMonths": 10,
+          "description": "Complete Class 12 with Physics, Chemistry, and Biology, aiming for high scores as minimum percentages are required for NEET UG eligibility."
+        },
+        {
+          "id": "step-3",
+          "order": 3,
+          "type": "skill",
+          "title": "NEET UG Preparation",
+          "offsetMonths": 10,
+          "description": "Intensive preparation for the NEET UG entrance exam, covering the Class 11 and 12 CBSE syllabus for Physics, Chemistry, and Biology."
+        },
+        {
+          "id": "step-4",
+          "order": 4,
+          "type": "application",
+          "title": "NEET UG Application",
+          "offsetMonths": 18,
+          "description": "Apply for the NEET UG exam online. Applications typically open around December and close by February for the exam held in May."
+        },
+        {
+          "id": "step-5",
+          "order": 5,
+          "type": "exam",
+          "title": "Appear for NEET UG Exam",
+          "offsetMonths": 23,
+          "description": "Take the National Eligibility cum Entrance Test (Undergraduate) to qualify for MBBS admissions across India."
+        },
+        {
+          "id": "step-6",
+          "order": 6,
+          "type": "application",
+          "title": "MBBS College Application & Admission",
+          "offsetMonths": 25,
+          "description": "Participate in NEET UG counselling (All India Quota and State Quota) based on your rank to secure admission to an MBBS program."
+        },
+        {
+          "id": "step-7",
+          "order": 7,
+          "type": "education",
+          "title": "MBBS Degree (4.5 years academic + 1 year internship)",
+          "offsetMonths": 27,
+          "description": "Complete the Bachelor of Medicine, Bachelor of Surgery (MBBS) degree, which includes 4.5 years of academic study and a mandatory 1-year rotating internship."
+        },
+        {
+          "id": "step-8",
+          "order": 8,
+          "type": "experience",
+          "title": "Optional: Clinical Electives/Research Projects",
+          "offsetMonths": 50,
+          "description": "Engage in clinical electives or research projects during your MBBS course to gain additional exposure and build your profile.",
+          "optional": true
+        },
+        {
+          "id": "step-9",
+          "order": 9,
+          "type": "experience",
+          "title": "Compulsory Rotating Residential Internship",
+          "offsetMonths": 81,
+          "description": "Undertake the mandatory one-year internship as part of the MBBS curriculum to gain hands-on clinical experience across various departments. Rules may change by then — verify when you get there."
+        },
+        {
+          "id": "step-10a",
+          "order": 10,
+          "type": "skill",
+          "title": "NEET PG/NExT Preparation (Fork: Specialization)",
+          "offsetMonths": 93,
+          "description": "Prepare for the NEET PG exam or the upcoming NExT exam for admission to postgraduate medical courses (MD/MS). Rules for NExT may change, re-verify when you get there.",
+          "alternativeTo": "step-10b"
+        },
+        {
+          "id": "step-11a",
+          "order": 11,
+          "type": "exam",
+          "title": "Appear for NEET PG/NExT Exam (Fork: Specialization)",
+          "offsetMonths": 96,
+          "description": "Take the NEET PG exam (or NExT, depending on implementation) to qualify for postgraduate medical specialization. Rules for NExT may change, re-verify when you get there.",
+          "alternativeTo": "step-11b"
+        },
+        {
+          "id": "step-12a",
+          "order": 12,
+          "type": "application",
+          "title": "MD/MS Application & Admission (Fork: Specialization)",
+          "offsetMonths": 98,
+          "description": "Apply for MD (Doctor of Medicine) or MS (Master of Surgery) programs based on your NEET PG/NExT rank. Rules for NExT may change, re-verify when you get there.",
+          "alternativeTo": "step-12b"
+        },
+        {
+          "id": "step-13a",
+          "order": 13,
+          "type": "education",
+          "title": "MD/MS Degree (3 years) (Fork: Specialization)",
+          "offsetMonths": 100,
+          "description": "Complete a 3-year postgraduate specialization degree (MD/MS) in your chosen field. Rules/fees may change, re-verify when you get there.",
+          "alternativeTo": "step-13b"
+        },
+        {
+          "id": "step-10b",
+          "order": 10,
+          "type": "application",
+          "title": "Medical Council Registration (Fork: General Practice)",
+          "offsetMonths": 93,
+          "description": "Register with the State Medical Council to obtain your license to practice medicine as a general practitioner. Rules may change by then — verify when you get there.",
+          "alternativeTo": "step-10a"
+        },
+        {
+          "id": "step-11b",
+          "order": 11,
+          "type": "experience",
+          "title": "Start General Practice / Junior Doctor Role (Fork: General Practice)",
+          "offsetMonths": 95,
+          "description": "Begin working as a general practitioner or a junior doctor in a hospital or clinic. Rules/fees may change, re-verify when you get there.",
+          "alternativeTo": "step-11a"
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Anatomy & Physiology",
+          "Pathology & Pharmacology",
+          "Clinical Diagnosis",
+          "Patient Communication",
+          "Problem-Solving",
+          "Critical Thinking",
+          "Decision Making",
+          "Empathy",
+          "Teamwork",
+          "Stress Management"
+        ],
+        "upskilling": [
+          {
+            "name": "Basic Life Support (BLS) & Advanced Cardiovascular Life Support (ACLS)",
+            "why": "Essential certifications for emergency medical care, highly valued in clinical settings.",
+            "costBand": "mid",
+            "url": "https://www.nhp.gov.in/bls-acls-training_pg",
+            "verified": false
+          },
+          {
+            "name": "Medical Ethics and Professionalism Courses",
+            "why": "Crucial for understanding legal and ethical aspects of medical practice.",
+            "costBand": "low",
+            "url": "https://www.nmc.org.in/",
+            "verified": false
+          },
+          {
+            "name": "Research Methodology and Biostatistics",
+            "why": "Important for understanding medical literature and conducting clinical research.",
+            "costBand": "low",
+            "url": "https://nptel.ac.in/courses/102106067",
+            "verified": false
+          },
+          {
+            "name": "Digital Health and Telemedicine Certifications",
+            "why": "Gain skills in using technology for remote patient care, a growing area in healthcare.",
+            "costBand": "low",
+            "url": "https://www.mohfw.gov.in/newshighlights/telemedicine-practice-guidelines.html",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "id": "neet-ug",
+          "name": "NEET UG",
+          "purpose": "Mandatory entrance exam for admission to MBBS/BDS courses in India.",
+          "eligibility": "Passed 10+2 with Physics, Chemistry, Biology/Biotechnology and English; minimum 50% aggregate (40% for reserved categories); minimum age 17 by Dec 31 of the admission year.",
+          "typicalWindow": "Applications usually open ~Dec–Feb; exam typically held ~May.",
+          "costBand": "low",
+          "officialUrl": "https://neet.nta.nic.in/",
+          "verified": true
+        },
+        {
+          "id": "neet-pg",
+          "name": "NEET PG",
+          "purpose": "Entrance exam for admission to MD/MS and PG Diploma courses after MBBS.",
+          "eligibility": "MBBS degree from a recognized institution and completion of the compulsory rotating internship.",
+          "typicalWindow": "Applications historically open ~Apr–May; exam ~Aug.",
+          "costBand": "low",
+          "officialUrl": "https://natboard.edu.in/",
+          "verified": true,
+          "supersededByName": "NExT (National Exit Test)"
+        },
+        {
+          "id": "next",
+          "name": "NExT",
+          "purpose": "Proposed licentiate exam set to replace NEET PG and FMGE — a final MBBS/licensing exam and the gateway to postgraduate medical admission.",
+          "eligibility": "All MBBS students from NMC-approved colleges.",
+          "typicalWindow": "Expected for batches graduating 2028–29 or later; windows to be announced by the conducting body.",
+          "costBand": "low",
+          "officialUrl": "https://www.nmc.org.in/",
+          "verified": true
+        }
+      ],
+      "colleges": [
+        {
+          "id": "aiims-delhi",
+          "name": "All India Institute of Medical Sciences (AIIMS), New Delhi",
+          "type": "government",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "₹1,628 - ₹10,000",
+          "feesNote": "approximate — confirm on official site",
+          "entranceRequired": "NEET UG",
+          "costBand": "low",
+          "officialUrl": "https://www.aiims.edu/",
+          "verified": true
+        },
+        {
+          "id": "mamc-delhi",
+          "name": "Maulana Azad Medical College (MAMC), New Delhi",
+          "type": "government",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "₹10,000 - ₹50,000",
+          "feesNote": "approximate — confirm on official site",
+          "entranceRequired": "NEET UG",
+          "costBand": "low",
+          "officialUrl": "https://www.mamc.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "jipmer-puducherry",
+          "name": "Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER), Puducherry",
+          "type": "government",
+          "location": "Puducherry, Puducherry",
+          "approxAnnualFees": "₹1,000 - ₹20,000",
+          "feesNote": "approximate — confirm on official site",
+          "entranceRequired": "NEET UG",
+          "costBand": "low",
+          "officialUrl": "https://jipmer.edu.in/",
+          "verified": true
+        },
+        {
+          "id": "cmc-vellore",
+          "name": "Christian Medical College (CMC), Vellore",
+          "type": "private",
+          "location": "Vellore, Tamil Nadu",
+          "approxAnnualFees": "₹25,000 - ₹1,00,000",
+          "feesNote": "approximate — confirm on official site",
+          "entranceRequired": "NEET UG (+ institutional counselling)",
+          "costBand": "mid",
+          "officialUrl": "https://www.cmcvellore.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "kgmu-lucknow",
+          "name": "King George's Medical University (KGMU), Lucknow",
+          "type": "government",
+          "location": "Lucknow, Uttar Pradesh",
+          "approxAnnualFees": "₹18,000 - ₹1,00,000",
+          "feesNote": "approximate — confirm on official site",
+          "entranceRequired": "NEET UG",
+          "costBand": "mid",
+          "officialUrl": "https://www.kgmu.org/",
+          "verified": true
+        },
+        {
+          "id": "grant-jj-mumbai",
+          "name": "Grant Government Medical College and Sir J.J. Group of Hospitals, Mumbai",
+          "type": "government",
+          "location": "Mumbai, Maharashtra",
+          "approxAnnualFees": "₹70,000 - ₹1,50,000",
+          "feesNote": "approximate — confirm on official site",
+          "entranceRequired": "NEET UG",
+          "costBand": "mid",
+          "officialUrl": "https://gmcjjh.edu.in/",
+          "verified": true
+        },
+        {
+          "id": "afmc-pune",
+          "name": "Armed Forces Medical College (AFMC), Pune",
+          "type": "government",
+          "location": "Pune, Maharashtra",
+          "approxAnnualFees": "₹10,000 - ₹1,50,000",
+          "feesNote": "approximate — confirm on official site",
+          "entranceRequired": "NEET UG + ToELR & Interview",
+          "costBand": "mid",
+          "officialUrl": "https://www.afmc.nic.in/",
+          "verified": true
+        },
+        {
+          "id": "st-johns-bengaluru",
+          "name": "St. John's Medical College, Bengaluru",
+          "type": "private",
+          "location": "Bengaluru, Karnataka",
+          "approxAnnualFees": "₹7,00,000 - ₹10,00,000",
+          "feesNote": "approximate — confirm on official site",
+          "entranceRequired": "NEET UG",
+          "costBand": "high",
+          "officialUrl": "https://www.stjohns.in/medicalcollege/",
+          "verified": true
+        }
+      ],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "Take a gap year to prepare more rigorously for NEET UG.",
+          "Explore alternative health science courses like BDS (Dentistry), BAMS (Ayurveda), BHMS (Homeopathy), or B.Sc. Nursing.",
+          "Consider allied health professions like physiotherapy, medical laboratory technology, or optometry."
+        ]
+      }
+    }
+  ],
+  "prepResources": [
+    {
+      "title": "NCERT Textbooks (Class 11 & 12 PCB)",
+      "type": "official-guide",
+      "costBand": "low",
+      "language": "English",
+      "url": "https://ncert.nic.in/textbook.php",
+      "verified": false
+    },
+    {
+      "title": "Previous Year NEET UG Question Papers",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "English",
+      "url": "https://nta.ac.in/Downloads",
+      "verified": false
+    },
+    {
+      "title": "Online NEET UG Coaching Platforms (e.g., Unacademy, Byju's, Vedantu)",
+      "type": "free-course",
+      "costBand": "mid",
+      "language": "English",
+      "url": "https://unacademy.com/goal/neet-ug/YJLCQ",
+      "verified": false
+    },
+    {
+      "title": "Biology by Trueman's Elementary Biology (Vol. 1 & 2)",
+      "type": "book",
+      "costBand": "low",
+      "language": "English",
+      "url": "https://www.amazon.in/Truemans-Elementary-Biology-Vol-1/dp/8178673729",
+      "verified": false
+    },
+    {
+      "title": "Objective Physics by D.C. Pandey",
+      "type": "book",
+      "costBand": "low",
+      "language": "English",
+      "url": "https://www.arihantbooks.com/books/objective-physics-for-neet-vol-1-2",
+      "verified": false
+    }
+  ],
+  "groundingSources": [],
+  "disclaimers": [
+    "The information provided is for general guidance only and may not be exhaustive. Students should always consult official college websites, examination bodies, and career counselors for the most accurate and up-to-date information.",
+    "Fees, application windows, and eligibility criteria are subject to change by the respective institutions and regulatory bodies. It is crucial to verify all details directly from official sources.",
+    "Career paths and salary ranges can vary based on individual performance, economic conditions, and policy changes."
+  ]
+}
