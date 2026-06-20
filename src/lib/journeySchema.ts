@@ -51,6 +51,39 @@ function arr(v: unknown): unknown[] {
   return Array.isArray(v) ? v : [];
 }
 
+/**
+ * True for a search-grounding REDIRECT/tracking URL that must never be shown as a
+ * user-facing "verify" link (spec §3 rule 12). Gemini's `google_search` grounding
+ * returns opaque redirects like
+ * `https://vertexaisearch.cloud.google.com/grounding-api-redirect/AbC…` — these
+ * don't resolve to a stable official page, leak a tracking token, and rot fast.
+ * We only ever surface a real `officialUrl`, so any of these is stripped on the
+ * way in (here) and on the way out (stored files are re-validated on read).
+ */
+export function isSearchRedirectUrl(url: string): boolean {
+  const u = url.toLowerCase();
+  return (
+    u.includes("vertexaisearch.cloud.google.com") ||
+    u.includes("grounding-api-redirect") ||
+    /\bgoogle\.[a-z.]+\/url\?/.test(u) || // www.google.com/url?q=… redirector
+    u.includes("googleusercontent.com/grounding")
+  );
+}
+
+/**
+ * Normalize a user-facing URL: trim it, then BLANK it if it's not a real http(s)
+ * link the student can verify — i.e. a search-redirect (above) or a non-http
+ * scheme. Returning "" (rather than dropping the field) keeps the object shape
+ * stable; the UI already hides empty links.
+ */
+function cleanUrl(v: unknown): string {
+  const url = str(v).trim();
+  if (!url) return "";
+  if (!/^https?:\/\//i.test(url)) return "";
+  if (isSearchRedirectUrl(url)) return "";
+  return url;
+}
+
 const COST_BANDS: CostBand[] = ["free", "low", "mid", "high"];
 function costBand(v: unknown): CostBand {
   return COST_BANDS.includes(v as CostBand) ? (v as CostBand) : "mid";
@@ -69,10 +102,15 @@ const STEP_TYPES: StepType[] = [
   "application",
   "experience",
   "skill",
-  "other",
 ];
+/**
+ * Coerce a step type to the closed enum (spec §3 rule 12). `"other"` is forbidden,
+ * so an unknown/forbidden value falls back to "education" — a real, neutral type
+ * — rather than passing `"other"` through. The fallback is rare in practice: the
+ * system prompt instructs the model to pick a real type for every step.
+ */
 function stepType(v: unknown): StepType {
-  return STEP_TYPES.includes(v as StepType) ? (v as StepType) : "other";
+  return STEP_TYPES.includes(v as StepType) ? (v as StepType) : "education";
 }
 const COLLEGE_TYPES: CollegeType[] = ["government", "private", "deemed"];
 function collegeType(v: unknown): CollegeType {
@@ -124,7 +162,7 @@ function parseUpskilling(v: unknown): UpskillingOption | null {
     name,
     why: str(v.why),
     costBand: costBand(v.costBand),
-    url: str(v.url),
+    url: cleanUrl(v.url),
     verified: bool(v.verified),
   };
 }
@@ -143,14 +181,18 @@ function parseExam(v: unknown): Exam | null {
   if (!isObj(v)) return null;
   const name = str(v.name);
   if (!name) return null;
+  const id = str(v.id);
+  const supersededByName = str(v.supersededByName);
   return {
+    ...(id ? { id } : {}),
     name,
     purpose: str(v.purpose),
     eligibility: str(v.eligibility),
     typicalWindow: str(v.typicalWindow),
     costBand: costBand(v.costBand),
-    officialUrl: str(v.officialUrl),
+    officialUrl: cleanUrl(v.officialUrl),
     verified: bool(v.verified),
+    ...(supersededByName ? { supersededByName } : {}),
   };
 }
 
@@ -163,7 +205,9 @@ function parseCollege(v: unknown): College | null {
   const location =
     str(v.location) ||
     [str(v.city), str(v.state)].filter(Boolean).join(", ");
+  const id = str(v.id);
   return {
+    ...(id ? { id } : {}),
     name,
     type: collegeType(v.type),
     location,
@@ -171,7 +215,7 @@ function parseCollege(v: unknown): College | null {
     feesNote: str(v.feesNote),
     entranceRequired: str(v.entranceRequired),
     costBand: costBand(v.costBand),
-    officialUrl: str(v.officialUrl),
+    officialUrl: cleanUrl(v.officialUrl),
     verified: bool(v.verified),
   };
 }
@@ -211,14 +255,17 @@ function parsePrepResource(v: unknown): PrepResource | null {
     type: resourceType(v.type),
     costBand: costBand(v.costBand),
     language: str(v.language, "en"),
-    url: str(v.url),
+    url: cleanUrl(v.url),
     verified: bool(v.verified),
   };
 }
 
 function parseGroundingSource(v: unknown): GroundingSource | null {
   if (!isObj(v)) return null;
-  const url = str(v.url);
+  // A grounding source whose only URL is a search-redirect is useless as a
+  // citation (it doesn't resolve to a stable page), so drop the whole entry
+  // rather than surface a dead/tracking link — spec §3 rule 12.
+  const url = cleanUrl(v.url);
   if (!url) return null;
   return { claim: str(v.claim), url, fetchedAt: str(v.fetchedAt) };
 }

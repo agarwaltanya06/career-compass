@@ -1,0 +1,162 @@
+[
+  {
+    "id": "aiims-delhi",
+    "name": "All India Institute of Medical Sciences (AIIMS), New Delhi",
+    "type": "government",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "approxAnnualFees": "₹1,628 - ₹10,000",
+    "costBand": "low",
+    "entranceRequired": "NEET UG",
+    "officialUrl": "https://www.aiims.edu/",
+    "careers": [
+      "doctor"
+    ],
+    "lastVerified": "2026-06-21",
+    "verified": true
+  },
+  {
+    "id": "mamc-delhi",
+    "name": "Maulana Azad Medical College (MAMC), New Delhi",
+    "type": "government",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "approxAnnualFees": "₹10,000 - ₹50,000",
+    "costBand": "low",
+    "entranceRequired": "NEET UG",
+    "officialUrl": "https://www.mamc.ac.in/",
+    "careers": [
+      "doctor"
+    ],
+    "lastVerified": "2026-06-21",
+    "verified": true
+  },
+  {
+    "id": "jipmer-puducherry",
+    "name": "Jawaharlal Institute of Postgraduate Medical Education and Research (JIPMER), Puducherry",
+    "type": "government",
+    "state": "Puducherry",
+    "city": "Puducherry",
+    "approxAnnualFees": "₹1,000 - ₹20,000",
+    "costBand": "low",
+    "entranceRequired": "NEET UG",
+    "officialUrl": "https://jipmer.edu.in/",
+    "careers": [
+      "doctor"
+    ],
+    "lastVerified": "2026-06-21",
+    "verified": true
+  },
+  {
+    "id": "cmc-vellore",
+    "name": "Christian Medical College (CMC), Vellore",
+    "type": "private",
+    "state": "Tamil Nadu",
+    "city": "Vellore",
+    "approxAnnualFees": "₹25,000 - ₹1,00,000",
+    "costBand": "mid",
+    "entranceRequired": "NEET UG (+ institutional counselling)",
+    "officialUrl": "https://www.cmcvellore.ac.in/",
+    "careers": [
+      "doctor"
+    ],
+    "lastVerified": "2026-06-21",
+    "verified": true
+  },
+  {
+    "id": "kgmu-lucknow",
+    "name": "King George's Medical University (KGMU), Lucknow",
+    "type": "government",
+    "state": "Uttar Pradesh",
+    "city": "Lucknow",
+    "approxAnnualFees": "₹18,000 - ₹1,00,000",
+    "costBand": "mid",
+    "entranceRequired": "NEET UG",
+    "officialUrl": "https://www.kgmu.org/",
+    "careers": [
+      "doctor"
+    ],
+    "lastVerified": "2026-06-21",
+    "verified": true
+  },
+  {
+    "id": "grant-jj-mumbai",
+    "name": "Grant Government Medical College and Sir J.J. Group of Hospitals, Mumbai",
+    "type": "government",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "approxAnnualFees": "₹70,000 - ₹1,50,000",
+    "costBand": "mid",
+    "entranceRequired": "NEET UG",
+    "officialUrl": "https://gmcjjh.edu.in/",
+    "careers": [
+      "doctor"
+    ],
+    "lastVerified": "2026-06-21",
+    "verified": true
+  },
+  {
+    "id": "seth-gs-kem-mumbai",
+    "name": "Seth G.S. Medical College & KEM Hospital, Mumbai",
+    "type": "government",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "approxAnnualFees": "₹70,000 - ₹1,50,000",
+    "costBand": "mid",
+    "entranceRequired": "NEET UG",
+    "officialUrl": "https://www.kem.edu/",
+    "careers": [
+      "doctor"
+    ],
+    "lastVerified": "2026-06-21",
+    "verified": true
+  },
+  {
+    "id": "afmc-pune",
+    "name": "Armed Forces Medical College (AFMC), Pune",
+    "type": "government",
+    "state": "Maharashtra",
+    "city": "Pune",
+    "approxAnnualFees": "₹10,000 - ₹1,50,000",
+    "costBand": "mid",
+    "entranceRequired": "NEET UG + ToELR & Interview",
+    "officialUrl": "https://www.afmc.nic.in/",
+    "careers": [
+      "doctor"
+    ],
+    "lastVerified": "2026-06-21",
+    "verified": true
+  },
+  {
+    "id": "kmc-manipal",
+    "name": "Kasturba Medical College (KMC), Manipal",
+    "type": "deemed",
+    "state": "Karnataka",
+    "city": "Manipal",
+    "approxAnnualFees": "₹15,00,000 - ₹20,00,000",
+    "costBand": "high",
+    "entranceRequired": "NEET UG",
+    "officialUrl": "https://manipal.edu/kmc-manipal.html",
+    "careers": [
+      "doctor"
+    ],
+    "lastVerified": "2026-06-21",
+    "verified": true
+  },
+  {
+    "id": "st-johns-bengaluru",
+    "name": "St. John's Medical College, Bengaluru",
+    "type": "private",
+    "state": "Karnataka",
+    "city": "Bengaluru",
+    "approxAnnualFees": "₹7,00,000 - ₹10,00,000",
+    "costBand": "high",
+    "entranceRequired": "NEET UG",
+    "officialUrl": "https://www.stjohns.in/medicalcollege/",
+    "careers": [
+      "doctor"
+    ],
+    "lastVerified": "2026-06-21",
+    "verified": true
+  }
+]

@@ -36,3 +36,32 @@ h3,
 h4 {
   font-family: var(--font-display);
 }
+
+/*
+  Print / Save-as-PDF (spec §save-as-pdf). The "Download as PDF" button expands
+  every route and calls window.print(); these rules turn the on-screen app into a
+  clean printable document. Header/nav/footer, the filter bar, and all action
+  buttons opt out via Tailwind's `print:hidden`. We keep the full timeline, every
+  college/exam detail, the "verify on official site" tags, official links, and the
+  disclaimers — nothing material is dropped from the exported plan.
+*/
+@media print {
+  /* Print the warm badge/tag colours instead of stripping them to save ink. */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  /* Drop the sticky filter bar's offset so content isn't clipped, and let the
+     plan use the full page width. */
+  .sticky {
+    position: static !important;
+  }
+  /* Avoid splitting a route card or a card grid awkwardly across pages. */
+  article {
+    break-inside: avoid;
+  }
+  /* Make official links readable on paper (they're tap targets on screen). */
+  a[href^="http"] {
+    text-decoration: underline;
+  }
+}

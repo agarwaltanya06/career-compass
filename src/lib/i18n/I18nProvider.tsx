@@ -34,7 +34,7 @@ type Messages = typeof en;
 const dictionaries: Record<Locale, Messages> = {
   en,
   // hi is intentionally sparse; missing/empty values fall back to English.
-  hi: hi as Messages,
+  hi: hi as unknown as Messages,
 };
 
 /** Read a dot-path (e.g. "intake.questions.class") out of a dictionary. */

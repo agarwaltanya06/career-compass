@@ -49,3 +49,47 @@ export function cacheFileName(cacheKey: string, locale: string): string {
   const lang = (locale || "en").toLowerCase().replace(/[^a-z0-9-]/g, "") || "en";
   return `${safe}__${lang}.json`;
 }
+
+/**
+ * The shareable, NON-PERSONAL URL slug for a journey (spec §bookmarkable). It is
+ * exactly the cache key with its `|` separators turned into `_` — i.e. the same
+ * `career_board_stream_class` token the file cache already uses. Keeping the slug
+ * identical to the on-disk key (rather than re-hyphenating) means the lookup is a
+ * trivial, unambiguous round-trip: career/stream codes carry their own hyphens
+ * (e.g. "civil-services", "commerce-maths"), and none of the four parts ever
+ * contains `_`, so the slug stays reversible by splitting on `_`.
+ */
+export function cacheKeyToSlug(cacheKey: string): string {
+  return cacheKey.replace(/\|/g, "_");
+}
+
+/** Inverse of {@link cacheKeyToSlug}: a URL slug back to a pipe-delimited key. */
+export function slugToCacheKey(slug: string): string {
+  return slug.replace(/_/g, "|");
+}
+
+/** A slug is well-formed only if it has the four `career_board_stream_class` parts. */
+export function isValidSlug(slug: string): boolean {
+  if (!/^[a-z0-9_-]+$/i.test(slug)) return false;
+  return slug.split("_").length === 4;
+}
+
+/**
+ * The minimal profile fields recoverable from a slug — enough to RE-GENERATE a
+ * journey when its cached copy is gone (spec §bookmarkable fallback). Reverses
+ * {@link classBucket} (`class12` → `12`) and drops the `none` sentinels. Returns
+ * null for a malformed slug.
+ */
+export function profilePartsFromSlug(
+  slug: string,
+): { career: string; board?: string; stream?: string; class: string } | null {
+  if (!isValidSlug(slug)) return null;
+  const [career, board, stream, bucket] = slug.split("_");
+  const m = /^class(9|10|11|12)$/.exec(bucket);
+  return {
+    career,
+    board: board === "none" ? undefined : board,
+    stream: stream === "none" ? undefined : stream,
+    class: m ? m[1] : bucket,
+  };
+}

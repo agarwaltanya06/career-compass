@@ -1,0 +1,53 @@
+[
+  {
+    "id": "neet-ug",
+    "name": "NEET UG",
+    "fullName": "National Eligibility cum Entrance Test (Undergraduate)",
+    "conductingBody": "NTA",
+    "purpose": "Mandatory entrance exam for admission to MBBS/BDS courses in India.",
+    "typicalWindow": "Applications usually open ~Dec–Feb; exam typically held ~May.",
+    "eligibility": "Passed 10+2 with Physics, Chemistry, Biology/Biotechnology and English; minimum 50% aggregate (40% for reserved categories); minimum age 17 by Dec 31 of the admission year.",
+    "costBand": "low",
+    "officialUrl": "https://neet.nta.nic.in/",
+    "careers": [
+      "doctor",
+      "nursing",
+      "paramedical"
+    ],
+    "lastVerified": "2026-06-21",
+    "verified": true
+  },
+  {
+    "id": "neet-pg",
+    "name": "NEET PG",
+    "fullName": "National Eligibility cum Entrance Test (Postgraduate)",
+    "conductingBody": "NBEMS (National Board of Examinations in Medical Sciences)",
+    "purpose": "Entrance exam for admission to MD/MS and PG Diploma courses after MBBS.",
+    "typicalWindow": "Applications historically open ~Apr–May; exam ~Aug.",
+    "eligibility": "MBBS degree from a recognized institution and completion of the compulsory rotating internship.",
+    "costBand": "low",
+    "officialUrl": "https://natboard.edu.in/",
+    "careers": [
+      "doctor"
+    ],
+    "supersededBy": "next",
+    "lastVerified": "2026-06-21",
+    "verified": true
+  },
+  {
+    "id": "next",
+    "name": "NExT",
+    "fullName": "National Exit Test",
+    "conductingBody": "NMC / AIIMS Delhi",
+    "purpose": "Proposed licentiate exam set to replace NEET PG and FMGE — a final MBBS/licensing exam and the gateway to postgraduate medical admission.",
+    "typicalWindow": "Expected for batches graduating 2028–29 or later; windows to be announced by the conducting body.",
+    "eligibility": "All MBBS students from NMC-approved colleges.",
+    "costBand": "low",
+    "officialUrl": "https://www.nmc.org.in/",
+    "careers": [
+      "doctor"
+    ],
+    "lastVerified": "2026-06-21",
+    "verified": true
+  }
+]

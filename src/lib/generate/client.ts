@@ -8,6 +8,7 @@
  */
 
 import { EXPLORE_GOAL, type IntakeAnswers } from "@/lib/intake";
+import { cacheKeyToSlug, profilePartsFromSlug } from "@/lib/generate/cacheKey";
 import type {
   GenerateResponseBody,
   GenerateStatusEvent,
@@ -16,6 +17,48 @@ import type {
 
 /** sessionStorage key holding the most recent generated/served journey. */
 export const JOURNEY_STORAGE_KEY = "career-compass:journey";
+
+/**
+ * The shareable, bookmarkable path for a journey, derived from its non-personal
+ * cache key (spec §bookmarkable). The plan's language rides in `?lang=` so a
+ * shared link reopens in the same language whatever the visitor's cookie says.
+ */
+export function journeyPath(cacheKey: string, language: string): string {
+  const slug = cacheKeyToSlug(cacheKey);
+  const lang = (language || "en").toLowerCase();
+  return lang === "en" ? `/journey/${slug}` : `/journey/${slug}?lang=${lang}`;
+}
+
+/** Fetch a cached journey by its slug. Returns null on a 404 / network error. */
+export async function fetchJourneyBySlug(
+  slug: string,
+  locale: string,
+): Promise<GenerateResponseBody | null> {
+  try {
+    const res = await fetch(
+      `/api/journey/${encodeURIComponent(slug)}?lang=${encodeURIComponent(locale)}`,
+    );
+    if (!res.ok) return null;
+    return (await res.json()) as GenerateResponseBody;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Rebuild the minimal generation profile from a slug, so a bookmarked-but-evicted
+ * plan can be regenerated (spec §bookmarkable fallback). Returns null for a
+ * malformed slug.
+ */
+export function profileFromSlug(
+  slug: string,
+  locale: string,
+  currentDate: string,
+): GenerationProfile | null {
+  const parts = profilePartsFromSlug(slug);
+  if (!parts) return null;
+  return { ...parts, locale, currentDate };
+}
 
 /** Whether the chosen goal is the "help me explore" branch (no single journey). */
 export function isExplore(answers: IntakeAnswers): boolean {

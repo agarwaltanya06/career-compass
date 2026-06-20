@@ -9,6 +9,13 @@
  */
 
 import type { GenerationProfile } from "./types";
+import type { RefCollege, RefExam } from "@/lib/referenceTables";
+
+/** The reference-table entities a career is allowed to draw on (spec §4.1). */
+export interface AllowedEntities {
+  colleges: RefCollege[];
+  exams: RefExam[];
+}
 
 // Human-readable expansions for the internal intake codes, so the model gets
 // clean context without us shipping any extra data. Unknown values pass through.
@@ -79,11 +86,17 @@ OUTPUT RULES (these are safety rules, not preferences):
 4. "groundingSources" is mandatory for any exam/college/fee claim: list the claim, the URL, and the date you checked. If you could not ground something, keep it general guidance rather than a specific.
 5. Set "confidence" honestly: "low" when you are unsure or could not search; "high" only when well grounded.
 6. Proper nouns stay UNTRANSLATED in any language — exam names, institute names, "NIFT", "ICAI", "JEE", college names.
-7. TIMING IS RELATIVE, NOT DATED. For each step emit "offsetMonths": a whole number of months from now (0 = this month). NEVER emit an absolute date, year, month name, or a "targetPeriod" — calendar math is done in code. Order steps with "order"; include at least one optional experience step (e.g. an internship near the end of 3rd year, "optional": true) and at least one post-completion FORK (further study vs. work) where two steps share an "order" and reference each other via "alternativeTo" (e.g. "step-6" and "step-6b").
+7. TIMING IS RELATIVE, NOT DATED. For each step emit "offsetMonths": a whole number of months from now (0 = this month). NEVER emit an absolute date, year, month name, or a "targetPeriod" — calendar math is done in code. Order steps with "order", and keep "offsetMonths" NON-DECREASING as "order" increases (a later step never happens earlier than an earlier one; fork alternatives that share an "order" may differ). Include at least one optional experience step (e.g. an internship near the end of 3rd year, "optional": true) and at least one post-completion FORK (further study vs. work) where two steps share an "order" and reference each other via "alternativeTo" (e.g. "step-6" and "step-6b").
+7a. STEP "type" IS A CLOSED ENUM: exactly one of "education" | "exam" | "application" | "experience" | "skill". "skill" is for building a capability beyond coursework (a programming language, a certification). NEVER use "other" or invent a type — every step must be categorized as one of those five.
 8. Go beyond the degree: every route needs a "skills" block with "coreSkills" and price-banded "upskilling" (free options first).
-9. Label cost with "costBand" of "free" | "low" | "mid" | "high" everywhere it appears. Colleges also carry "approxAnnualFees" text so users can sort by price.
+9. Label cost with "costBand" of "free" | "low" | "mid" | "high" everywhere it appears, using this ₹-per-year rubric (do NOT guess loosely): "free" = genuinely ₹0 only (no tuition at all); "low" = up to ~₹50,000/yr; "mid" = ~₹50,000–₹3,00,000/yr; "high" = above ~₹3,00,000/yr. A subsidised government college (e.g. AIIMS) is "low", NEVER "free" — it still charges a small fee. Colleges also carry "approxAnnualFees" text so users can sort by price; make the band consistent with that figure.
 10. Generate India-wide. Do NOT pre-filter by the student's state. Return colleges from across India, each with a "location" string formatted "City, State" so the UI can filter.
 11. Adapt the lead route to the profile: Class 9/10 → lead with the stream to pick in Class 11 and why; passed-12 / gap-year → lead with the nearest entry exam or fallback route. Give 1–3 routes.
+12. BE BRIEF so the JSON stays complete. Keep each step "description" to about one short sentence, and each upskilling "why" (why it fits) to a single line. Cap each route's lists: at most ~10 colleges, ~5 exams, and ~5 upskilling links. Brevity must NOT drop any verify links (officialUrl/url), "verified": false flags, groundingSources, or disclaimers — keep those complete.
+13. SYNTHESIZE IN YOUR OWN WORDS. Paraphrase everything; do NOT copy sentences or phrases verbatim from search results or any source page. Only short proper nouns (exam/college/institute names like "NEET", "ICAI") and official URLs are reproduced exactly — all prose must be your own summary. Echoing source text verbatim is a safety failure: our verify-by-link approach is what lets users check the original, so the writing here must be original.
+14. REAL OFFICIAL URLs ONLY — never a search-grounding redirect. Every "officialUrl"/"url" must be the actual official homepage or page (e.g. "https://nta.ac.in", "https://www.aiims.edu"). NEVER output a search-redirect or tracking link such as a "vertexaisearch.cloud.google.com/grounding-api-redirect/…" or "google.com/url?q=…" URL — those don't resolve to a stable page and will be stripped. If you can't recall a real official URL, leave the field as an empty string "" rather than inventing or pasting a redirect.
+15. HEDGE THE FAR FUTURE. For any step more than ~5 years out (offsetMonths greater than 60), end its "description" with a short caution, in the journey's language, that rules/exams/fees may change by then and the student should re-verify when they get there. (Exam-specific transition notes — e.g. NEET PG → NExT — are added automatically from the reference table; do not write them yourself.)
+16. COLLEGES & EXAMS COME FROM A FIXED LIST — NEVER INVENT THEM. If the user message provides "ALLOWED COLLEGES" / "ALLOWED EXAMS" lists, you MUST select from them ONLY by id. For each route, output "collegeIds" and "examIds": arrays of ids drawn EXCLUSIVELY from those lists, in the order you recommend, including only the ones that fit this student (a sensible subset — you need not use all). In that mode, DO NOT output "colleges" or "exams" objects, and do NOT invent an id, college, exam, fee, official URL, or application window — our code fills the verified facts in from the list. You still write all prose (route names, bestFor, steps, skills, advice) and may name these colleges/exams in it. If NO allowed list is provided (a career without a reference table yet), FALL BACK to emitting full "colleges"/"exams" objects that you ground yourself per rules 2–4 and 14.
 
 JSON SHAPE (use these exact keys; omit nothing required):
 {
@@ -93,8 +106,11 @@ JSON SHAPE (use these exact keys; omit nothing required):
     "id": string, "name": string, "bestFor": string,
     "feasibility": "high"|"medium"|"low", "feasibilityReason": string,
     "costBand": "free"|"low"|"mid"|"high", "duration": string,
-    "steps": [ { "id": string, "order": number, "type": "education"|"exam"|"application"|"experience"|"skill"|"other", "title": string, "offsetMonths": number, "description": string, "optional"?: boolean, "alternativeTo"?: string } ],
+    "steps": [ { "id": string, "order": number, "type": "education"|"exam"|"application"|"experience"|"skill", "title": string, "offsetMonths": number, "description": string, "optional"?: boolean, "alternativeTo"?: string } ],
     "skills": { "coreSkills": string[], "upskilling": [ { "name": string, "why": string, "costBand": "free"|"low"|"mid"|"high", "url": string, "verified": false } ] },
+    // PREFERRED (rule 16) — when ALLOWED lists are provided, use these id arrays and OMIT "exams"/"colleges":
+    "examIds": string[], "collegeIds": string[],
+    // FALLBACK ONLY — when no ALLOWED list is provided, emit full objects you ground yourself instead of the id arrays:
     "exams": [ { "name": string, "purpose": string, "eligibility": string, "typicalWindow": string, "costBand": "free"|"low"|"mid"|"high", "officialUrl": string, "verified": false } ],
     "colleges": [ { "name": string, "type": "government"|"private"|"deemed", "location": "City, State", "approxAnnualFees": string, "feesNote": string, "entranceRequired": string, "costBand": "free"|"low"|"mid"|"high", "officialUrl": string, "verified": false } ],
     "missedDeadlineFallback": { "applies": boolean, "options": string[] }
@@ -110,12 +126,51 @@ function labelFor(map: Record<string, string>, value: string | undefined): strin
   return map[value] ?? value;
 }
 
+/** One compact, single-line descriptor of a college the model may select by id. */
+function collegeLine(c: RefCollege): string {
+  const where = [c.city, c.state].filter(Boolean).join(", ");
+  return `- id: ${c.id} | ${c.name} | ${c.type}, ${where} | fees ${c.approxAnnualFees} | entrance: ${c.entranceRequired}`;
+}
+
+/** One compact, single-line descriptor of an exam the model may select by id. */
+function examLine(e: RefExam): string {
+  const sup = e.supersededBy ? ` | transitioning to: ${e.supersededBy}` : "";
+  return `- id: ${e.id} | ${e.name} (${e.fullName}), by ${e.conductingBody} | ${e.purpose} | window: ${e.typicalWindow} | eligibility: ${e.eligibility}${sup}`;
+}
+
+/**
+ * The ALLOWED-options block (spec §4.1): the only colleges/exams the model may
+ * use, for it to select + order BY ID. Returns "" when there's no table for this
+ * career, which signals the model to fall back to grounding them itself (rule 16).
+ */
+function allowedBlock(allowed: AllowedEntities | undefined): string {
+  if (!allowed || (allowed.colleges.length === 0 && allowed.exams.length === 0)) {
+    return "";
+  }
+  const parts = [
+    ``,
+    `ALLOWED COLLEGES — choose for each route via "collegeIds", using ONLY these ids (a fitting subset, ordered by your recommendation). Do not invent any college, fee, or URL:`,
+    ...allowed.colleges.map(collegeLine),
+    ``,
+    `ALLOWED EXAMS — choose for each route via "examIds", using ONLY these ids. Do not invent any exam, window, or URL:`,
+    ...allowed.exams.map(examLine),
+    ``,
+    `Emit "collegeIds"/"examIds" per route and OMIT the "colleges"/"exams" objects — our code fills the verified facts from the lists above.`,
+  ];
+  return parts.join("\n");
+}
+
 /**
  * Build the per-request user prompt from the MINIMAL profile only (spec §5 data
  * minimization). Carries the language instruction and the current date that
- * anchors the relative offsets — but never asks the model to do date math.
+ * anchors the relative offsets — but never asks the model to do date math. When
+ * `allowed` is provided (a career with a reference table, spec §4.1), the model
+ * is constrained to select colleges/exams from it by id.
  */
-export function buildUserPrompt(profile: GenerationProfile): string {
+export function buildUserPrompt(
+  profile: GenerationProfile,
+  allowed?: AllowedEntities,
+): string {
   const langName = LANGUAGE_NAMES[profile.locale] ?? profile.locale;
   const career = labelFor(CAREER_LABELS, profile.career) ?? profile.career;
   const board = labelFor(BOARD_LABELS, profile.board);
@@ -131,6 +186,7 @@ export function buildUserPrompt(profile: GenerationProfile): string {
     board ? `- Board: ${board}.` : null,
     stream ? `- Stream: ${stream}.` : null,
     `- Wants to become: ${career}.`,
+    allowedBlock(allowed) || null,
     ``,
     `Set meta.studentProfile.currentDate to "${profile.currentDate}" and meta.studentProfile.language to "${profile.locale}". Return STRICT JSON only.`,
   ].filter((l): l is string => l !== null);

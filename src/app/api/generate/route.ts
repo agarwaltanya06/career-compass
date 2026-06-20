@@ -21,25 +21,12 @@
  */
 
 import { NextResponse } from "next/server";
-import type { Journey } from "@/lib/types";
-import { parseJourney } from "@/lib/journeySchema";
-import { buildCacheKey, cacheFileName, slugifyCareer } from "@/lib/generate/cacheKey";
-import { SYSTEM_PROMPT, buildUserPrompt } from "@/lib/generate/prompt";
-import { readVerified, writeCandidate } from "@/lib/generate/store";
-import {
-  DEFAULT_CHOICE,
-  FALLBACK_CHOICE,
-  makeProvider,
-} from "@/lib/generate/providers";
-import {
-  FreeTierLimitError,
-  ProviderUnavailableError,
-  type GenerateRequestBody,
-  type GenerateResponseBody,
-  type GenerateStatusEvent,
-  type GenerationProfile,
-  type ModelProvider,
-  type ProviderChoice,
+import { slugifyCareer } from "@/lib/generate/cacheKey";
+import { runGeneration, GenerateError } from "@/lib/generate/run";
+import type {
+  GenerateRequestBody,
+  GenerationProfile,
+  ProviderChoice,
 } from "@/lib/generate/types";
 
 // fs access requires the Node runtime; this route is always dynamic.
@@ -55,45 +42,6 @@ const EXPLORE_GOAL = "__explore__";
 
 function jsonError(message: string, status: number) {
   return NextResponse.json({ error: message }, { status });
-}
-
-/** A friendly, user-facing failure with the HTTP status the JSON path should use. */
-class GenerateError extends Error {
-  readonly status: number;
-  constructor(message: string, status: number) {
-    super(message);
-    this.status = status;
-    this.name = "GenerateError";
-  }
-}
-
-/** Sink for live progress events; a no-op on the non-streaming JSON path. */
-type Emit = (event: GenerateStatusEvent) => void;
-
-/**
- * Pull the JSON object out of raw model text. Strict-JSON is requested, but a
- * model may still wrap it in ``` fences or add a stray sentence — slice from the
- * first "{" to the last "}".
- */
-function extractJson(text: string): unknown {
-  const start = text.indexOf("{");
-  const end = text.lastIndexOf("}");
-  if (start === -1 || end === -1 || end < start) return null;
-  try {
-    return JSON.parse(text.slice(start, end + 1));
-  } catch {
-    return null;
-  }
-}
-
-/** Run one provider and validate; null on a parse failure (so we can retry). */
-async function attempt(
-  provider: ModelProvider,
-  systemPrompt: string,
-  userPrompt: string,
-): Promise<Journey | null> {
-  const result = await provider.generate({ systemPrompt, userPrompt });
-  return parseJourney(extractJson(result.text));
 }
 
 /** Read the minimal, name-free profile out of an arbitrary request body. */
@@ -128,125 +76,6 @@ function readChoice(raw: unknown): ProviderChoice | undefined {
     };
   }
   return undefined;
-}
-
-/**
- * The full generation pipeline (cache-first → model → validate → store), with an
- * `emit` sink for live progress. Returns the response body or throws a
- * GenerateError. Shared by both the streaming and the plain-JSON paths so the
- * logic lives in exactly one place.
- */
-async function runGeneration(
-  profile: GenerationProfile,
-  override: ProviderChoice | undefined,
-  userKey: string | undefined,
-  emit: Emit,
-): Promise<GenerateResponseBody> {
-  // ---- Cache-first (§4): serve a verified default if we have one. ----
-  const cacheKey = buildCacheKey(profile);
-  const fileName = cacheFileName(cacheKey, profile.locale);
-  emit({ type: "status", phase: "checking" });
-  const verified = await readVerified(fileName);
-  if (verified) {
-    return { journey: verified, status: "verified", cacheKey };
-  }
-
-  // ---- Miss → generate behind the provider abstraction. ----
-  const userPrompt = buildUserPrompt(profile);
-
-  // Build the primary provider (override if given, else the Gemini free-tier
-  // default) and a fallback (the user's chosen one can't fall back to your key).
-  let primary: ModelProvider;
-  let fallback: ModelProvider | null = null;
-  try {
-    if (override) {
-      primary = makeProvider(override, userKey);
-    } else {
-      primary = makeProvider(DEFAULT_CHOICE);
-      try {
-        fallback = makeProvider(FALLBACK_CHOICE);
-      } catch {
-        fallback = null; // No fallback key configured — primary must carry it.
-      }
-    }
-  } catch {
-    // Default provider has no key: try the fallback as the primary instead.
-    try {
-      primary = makeProvider(FALLBACK_CHOICE);
-    } catch {
-      throw new GenerateError(
-        "Live generation isn't configured yet. Please try a cached journey.",
-        503,
-      );
-    }
-  }
-
-  // Announce the real backend now in use, before the long grounded call.
-  emit({ type: "status", phase: "generating", provider: primary.id, model: primary.model });
-
-  let journey: Journey | null = null;
-  let used: ModelProvider = primary;
-  try {
-    // Validate; retry once on a parse failure (§3 phase 3).
-    journey = await attempt(primary, SYSTEM_PROMPT, userPrompt);
-    if (!journey) journey = await attempt(primary, SYSTEM_PROMPT, userPrompt);
-  } catch (err) {
-    // Free-tier exhausted / unavailable → fall back to your Haiku key (§5).
-    if (
-      fallback &&
-      (err instanceof FreeTierLimitError || err instanceof ProviderUnavailableError)
-    ) {
-      used = fallback;
-      emit({
-        type: "status",
-        phase: "falling-back",
-        provider: fallback.id,
-        model: fallback.model,
-      });
-      try {
-        journey = await attempt(fallback, SYSTEM_PROMPT, userPrompt);
-        if (!journey) journey = await attempt(fallback, SYSTEM_PROMPT, userPrompt);
-      } catch {
-        throw new GenerateError("Couldn't generate a plan right now. Please try again.", 502);
-      }
-    } else {
-      throw new GenerateError("Couldn't generate a plan right now. Please try again.", 502);
-    }
-  }
-
-  if (!journey) {
-    throw new GenerateError(
-      "The plan came back in an unexpected format. Please try again.",
-      502,
-    );
-  }
-
-  // ---- Normalize meta deterministically (don't trust the model for these). ----
-  journey.meta.cacheKey = cacheKey;
-  journey.meta.generatedAt = profile.currentDate;
-  journey.meta.studentProfile = {
-    class: profile.class,
-    board: profile.board,
-    stream: profile.stream,
-    language: profile.locale,
-    currentDate: profile.currentDate,
-  };
-
-  // ---- Store as an unverified candidate for review (§4); never overwrite a
-  // verified default. A write failure shouldn't block the user's result. ----
-  try {
-    await writeCandidate(fileName, journey);
-  } catch {
-    // Best-effort: read-only filesystems (e.g. some serverless hosts) still serve
-    // the journey; the candidate just isn't queued. No keys are involved.
-  }
-
-  return {
-    journey,
-    status: "candidate",
-    cacheKey,
-    generatedBy: { provider: used.id, model: used.model },
-  };
 }
 
 export async function POST(request: Request) {

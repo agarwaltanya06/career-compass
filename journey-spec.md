@@ -148,6 +148,8 @@ The ordered `steps` (with `targetPeriod`) **are** the timeline — no separate s
 
 This download capability applies to **every** generated journey, not just `/plan-it-yourself`. **Dates are computed in code, not by the model:** the model emits a relative `offsetMonths` per step, and your code turns that into the coarse `targetPeriod` ("Mid 2026") from the student's current date. This keeps calendar arithmetic deterministic (so even a small/cheap model is reliable here) and makes the timeline trivially re-anchorable. `targetPeriod` values are planning horizons, not commitments. Forks (`alternativeTo`) render as "either/or" branches, not parallel mandatory steps.
 
+**Exports must stay safe.** Any download — calendar, list, *or* full-page PDF — must retain the verify tags, official links, and disclaimers. A saved file is exactly where stale info would mislead someone months later, offline. In the **PDF specifically, print the full URL** (`https://...`) for every official link, not just clickable link text — a printed hyperlink is dead, so the reader needs the actual address to type. Use **non-personal** slugs for shareable URLs (`career-board-stream-class`), never names or contact data.
+
 ---
 
 ## 3. Generation contract (the rule that keeps it safe)
@@ -165,6 +167,8 @@ These go in the LLM's system prompt, not just as hopes:
 9. **Label cost as cost.** Bare bands ("low") are ambiguous. Every `costBand` must be rendered by the UI as "Cost: Low/Medium/High", ideally with an indicative ₹ range; colleges also expose `approxAnnualFees` so users can sort by price.
 10. **Generate India-wide, tag by location.** Don't pre-filter by the student's state; return options across India, each `college` tagged with `state` + `city` so the UI can filter.
 11. **Be concise.** Short step descriptions, one-line "why it fits", and cap lists (e.g. top ~5 colleges, not 20). Concise output is faster, cheaper, easier to verify, and far more readable for a low-literacy audience — and it reads better in Hindi too. **Tighten via these instructions, not a low `max_tokens`** — keep the token ceiling high enough to finish valid JSON, or a mid-structure cutoff will fail to parse.
+12. **Facts come from a reference table, not the model.** Colleges and exams (names, fees, official URLs, windows) must be drawn from canonical `data/colleges.json` / `data/exams.json` — verified once, reused everywhere — and referenced by name. The model writes the *pathway and advice*; it must not invent or re-research fee/window facts per journey. This guarantees cross-journey consistency (AIIMS costs the same in every plan), collapses your verification work (verify each entity once, not per journey), cuts cost, and reduces RECITATION. Validate `offsetMonths` is non-decreasing along `order`. Restrict step `type` to the allowed enum (add `skill` deliberately if used; never `other`). Strip/resolve search-redirect URLs (e.g. `vertexaisearch…`) — surface only real `officialUrl`s to users.
+13. **Hedge far-future steps.** For steps more than ~5 years out, add a "rules may change — verify when you get there" note. Specifically for medicine, flag that NEET PG is transitioning to NExT and the student should confirm which applies to their batch.
 
 ---
 
@@ -189,7 +193,46 @@ Over months the verified layer *becomes* your curated content library — seeded
 
 ---
 
-## 5. Access tiers, models & cost control
+## 4.1 Reference tables (facts live here, not in the model)
+
+Colleges and exams are **canonical data**, verified once and reused everywhere — never re-invented per journey. This is what guarantees consistency (AIIMS costs the same in every plan), correctness (you set each fee once), no hallucinated colleges, and trivial verification.
+
+**`data/exams.json`** — one entry per exam:
+```jsonc
+{
+  "id": "neet-ug",
+  "name": "NEET UG",
+  "fullName": "National Eligibility cum Entrance Test (Undergraduate)",
+  "conductingBody": "NTA",
+  "purpose": "Sole entrance exam for MBBS/BDS admission in India",
+  "typicalWindow": "Applications ~Feb–Mar; exam ~May",
+  "eligibility": "10+2 with PCB, min 50% (40% reserved)…",
+  "officialUrl": "https://neet.nta.nic.in/",
+  "careers": ["doctor", "nursing"],
+  "supersededBy": "next",        // optional — auto-drives the transition note
+  "lastVerified": "2026-06-20",
+  "verified": true
+}
+```
+
+**`data/colleges.json`** — one entry per college:
+```jsonc
+{
+  "id": "aiims-delhi",
+  "name": "All India Institute of Medical Sciences (AIIMS), New Delhi",
+  "type": "government",
+  "state": "Delhi", "city": "New Delhi",
+  "approxAnnualFees": "₹1,628",
+  "costBand": "low",             // set once, correctly, per the §3 rubric
+  "entranceRequired": "NEET UG",
+  "officialUrl": "https://www.aiims.edu/",
+  "careers": ["doctor"],
+  "lastVerified": "2026-06-20",
+  "verified": true
+}
+```
+
+**Generator flow:** before calling the model, look up the colleges/exams whose `careers` includes this career and pass that set into the prompt as the **only** allowed options. The model selects, orders, and writes the pathway from them — it never invents a college, fee, or window. The journey references entities by `id`; verified facts come from the table. New colleges/exams the model wants to suggest go into a review queue as unverified table candidates, never straight into a journey.
 
 Live generation is the only expensive part, so gate *who can trigger it* and *on whose budget* — not who can use the app.
 
@@ -205,6 +248,7 @@ Live generation is the only expensive part, so gate *who can trigger it* and *on
 **Model/provider design**
 - Build the endpoint behind a **provider abstraction** (provider + model as config), so Gemini / Anthropic / OpenRouter / a user's key are all swappable without a rewrite.
 - **Default = Gemini's free tier**, chosen because it's the one free option with **native search grounding** (most open-weights free tiers have no built-in web search, so they'd invent deadlines). Rate-limited (≈1,500 req/day at time of writing — verify current limits), so keep a paid fallback (your Haiku key) for when limits hit.
+- **Graceful fallback on provider failure.** Free models fail in non-obvious ways — Gemini returns empty with `finishReason: RECITATION` on fact-dense content, or oversized/truncated JSON. Treat RECITATION/empty/parse-failure as failures (not successes), retry, and only then fall back to paid Haiku for that profile. Instruct the model to **paraphrase, never echo sources verbatim** — that's the root cause of RECITATION and it matches our verify-by-link posture. Cache the result regardless of which model produced it.
 - **Haiku is sufficient** for the research + journey once dates are computed in code (§2.1) and grounding does the factual work — especially since every journey is human-verified before it's cached. **Sonnet** helps mainly on rarer careers and fallback-logic edge cases; offer it as a BYO-key upgrade, not a default.
 - **Stakes-split.** Free/cheap models are fine for low-harm text (overview, "day in the life", exploration suggestions). High-stakes specifics (exams, fees, dates) must stay **grounded + verify-tagged**, or come from the human-verified cache.
 - **Data minimization.** Free no-card tiers are often funded by **training on your prompts**. You're sending student profiles (including minors'). Send the *minimum* needed, never names/contact info, and check each provider's data-use policy before defaulting to it.

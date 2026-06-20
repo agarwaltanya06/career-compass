@@ -15,14 +15,18 @@ export type Confidence = "high" | "medium" | "low";
 /** Relative feasibility of a route *for this particular student*. */
 export type Feasibility = "high" | "medium" | "low";
 
-/** What kind of milestone a timeline step represents. */
+/**
+ * What kind of milestone a timeline step represents. The enum is deliberately
+ * closed and `"other"` is NOT a member: the model must categorize every step as
+ * a real type (spec §3 rule 12 — "never `other`"). The validator coerces an
+ * unknown/forbidden value to a real type rather than letting `"other"` through.
+ */
 export type StepType =
   | "education"
   | "exam"
   | "application"
   | "experience"
-  | "skill"
-  | "other";
+  | "skill";
 
 /** College ownership type. */
 export type CollegeType = "government" | "private" | "deemed";
@@ -112,6 +116,12 @@ export interface JourneyStep {
  * UI must show a "confirm on official site" tag — see section 3, rule 2.
  */
 export interface Exam {
+  /**
+   * Canonical id of the source row in `data/exams.json` when this exam came from
+   * the reference table (spec §4.1). Present on table-sourced exams; absent on a
+   * legacy model-grounded one. Lets the UI/verification link back to the entity.
+   */
+  id?: string;
   name: string;
   purpose: string;
   eligibility: string;
@@ -120,9 +130,19 @@ export interface Exam {
   costBand: CostBand;
   officialUrl: string;
   verified: boolean;
+  /**
+   * Proper-noun name of the exam that is replacing this one, resolved
+   * deterministically from the reference table's `supersededBy` field at
+   * hydration (spec §4.1). Drives the UI's "transitioning to X — confirm which
+   * applies to your batch" note, so the transition is data-driven, not prose the
+   * model has to remember (e.g. NEET PG → "NExT (National Exit Test)").
+   */
+  supersededByName?: string;
 }
 
 export interface College {
+  /** Canonical id of the source row in `data/colleges.json` (spec §4.1). */
+  id?: string;
   name: string;
   type: CollegeType;
   location: string;

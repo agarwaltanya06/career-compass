@@ -176,6 +176,7 @@
     "purpose": "",
     "eligibility": "",
     "typicalWindow": "",
+    "examTransition": "{exam} को {name} से बदला जा रहा है — तैयारी से पहले पुष्टि करें कि आपके बैच पर कौन-सी परीक्षा लागू होती है।",
     "collegeType": "",
     "location": "",
     "approxFees": "",

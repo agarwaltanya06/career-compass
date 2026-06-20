@@ -52,11 +52,17 @@ export default async function RootLayout({
     >
       <body className="min-h-full bg-orange-50 text-stone-900 antialiased">
         <I18nProvider initialLocale={initialLocale}>
-          {/* Column layout so the footer sticks to the bottom on short pages. */}
+          {/* Column layout so the footer sticks to the bottom on short pages.
+              Header/footer are dropped from print (Save-as-PDF) so the exported
+              plan is just the content. */}
           <div className="flex min-h-screen flex-col">
-            <Header />
+            <div className="print:hidden">
+              <Header />
+            </div>
             <main className="flex-1">{children}</main>
-            <Footer />
+            <div className="print:hidden">
+              <Footer />
+            </div>
           </div>
         </I18nProvider>
       </body>

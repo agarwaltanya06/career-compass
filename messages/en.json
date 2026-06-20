@@ -151,6 +151,23 @@
     "requirements": "Requirements to know",
     "routes": "Routes to get there",
     "bestFor": "Best for",
+    "learnMore": "Learn more",
+    "showLess": "Show less",
+    "actions": {
+      "copyLink": "Copy link",
+      "copied": "Link copied!",
+      "copyManual": "Copy this link to bookmark or share your plan:",
+      "downloadPdf": "Download as PDF"
+    },
+    "notFound": {
+      "title": "This plan is being refreshed",
+      "body": "We couldn't find a saved copy of this plan just now. You can generate a fresh one — it keeps the same shareable link.",
+      "regenerate": "Generate a fresh plan",
+      "startOver": "Start a new plan",
+      "loading": "Loading your saved plan…",
+      "badLink": "This plan link looks incomplete. Try starting a new plan.",
+      "error": "Couldn't generate a plan right now. Please try again."
+    },
     "costLabel": "Cost",
     "feasibilityLabel": "Fit for you",
     "feasibilityHigh": "Strong fit",
@@ -175,6 +192,7 @@
     "purpose": "Purpose",
     "eligibility": "Eligibility",
     "typicalWindow": "Typical window",
+    "examTransition": "{exam} is transitioning to {name} — confirm which exam applies to your batch before you prepare.",
     "collegeType": "Type",
     "location": "Location",
     "approxFees": "Approx. annual fees",

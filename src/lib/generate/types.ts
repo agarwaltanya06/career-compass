@@ -111,6 +111,13 @@ export interface GenerateResponseBody {
   cacheKey: string;
   /** Provenance for candidates; omitted for cache hits. */
   generatedBy?: { provider: ProviderId; model: string };
+  /**
+   * Review flags raised by the post-generation audit (spec §3 rules 12–13:
+   * offset-order violations, missing far-future / NExT hedges). Present only on
+   * fresh candidates that tripped a check; absent for verified cache hits. These
+   * tell the reviewer what to double-check — they don't block serving.
+   */
+  warnings?: string[];
 }
 
 export interface GenerateErrorBody {
