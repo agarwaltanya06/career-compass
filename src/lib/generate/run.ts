@@ -21,7 +21,7 @@ import {
   toCollegeShape,
   toExamShape,
 } from "@/lib/referenceTables";
-import { auditJourney } from "./audit";
+import { auditJourney, type AuditResult } from "./audit";
 import { buildCacheKey, cacheFileName } from "./cacheKey";
 import { SYSTEM_PROMPT, buildUserPrompt, type AllowedEntities } from "./prompt";
 import { readVerified, writeCandidate } from "./store";
@@ -220,6 +220,70 @@ async function attempt(
 }
 
 /**
+ * How many times to REGENERATE when the audit flags a structural violation
+ * (offset-order break or duplicate/artifact route) — those are mechanical model
+ * slips a fresh draft almost always fixes. 2 retries = up to 3 audited drafts.
+ */
+const MAX_STRUCTURAL_RETRIES = 2;
+
+/**
+ * Produce ONE validated journey: try `primary` (validating, with a single
+ * parse-failure retry — §3 phase 3); on a free-tier/unavailable error fall back
+ * to `fallback` (same parse retry) when one is configured. Returns the journey
+ * and which provider actually produced it, or throws a GenerateError. This is the
+ * unit the structural-audit retry loop calls repeatedly.
+ */
+async function generateOnce(
+  primary: ModelProvider,
+  fallback: ModelProvider | null,
+  systemPrompt: string,
+  userPrompt: string,
+  tableArg: AllowedEntities | null,
+  emit: Emit,
+): Promise<{ journey: Journey; used: ModelProvider }> {
+  let journey: Journey | null = null;
+  let used: ModelProvider = primary;
+  try {
+    journey = await attempt(primary, systemPrompt, userPrompt, tableArg);
+    if (!journey) journey = await attempt(primary, systemPrompt, userPrompt, tableArg);
+  } catch (err) {
+    // Free-tier exhausted / unavailable → fall back to your Haiku key (§5).
+    if (
+      fallback &&
+      (err instanceof FreeTierLimitError || err instanceof ProviderUnavailableError)
+    ) {
+      used = fallback;
+      emit({
+        type: "status",
+        phase: "falling-back",
+        provider: fallback.id,
+        model: fallback.model,
+      });
+      try {
+        journey = await attempt(fallback, systemPrompt, userPrompt, tableArg);
+        if (!journey) journey = await attempt(fallback, systemPrompt, userPrompt, tableArg);
+      } catch {
+        throw new GenerateError("Couldn't generate a plan right now. Please try again.", 502);
+      }
+    } else {
+      // No fallback (e.g. an explicit provider override): surface the cause so a
+      // caller can react — the seed script backs off on `rateLimited`.
+      throw new GenerateError("Couldn't generate a plan right now. Please try again.", 502, {
+        rateLimited: err instanceof FreeTierLimitError,
+        cause: err,
+      });
+    }
+  }
+  if (!journey) {
+    throw new GenerateError(
+      "The plan came back in an unexpected format. Please try again.",
+      502,
+    );
+  }
+  return { journey, used };
+}
+
+/**
  * The full generation pipeline (cache-first → model → validate → store), with an
  * `emit` sink for live progress. Returns the response body or throws a
  * GenerateError.
@@ -286,41 +350,42 @@ export async function runGeneration(
   // Announce the real backend now in use, before the long grounded call.
   emit({ type: "status", phase: "generating", provider: primary.id, model: primary.model });
 
+  // Generate, then AUDIT: if the draft has a structural violation (offset-order
+  // break or a duplicate/artifact route), regenerate up to MAX_STRUCTURAL_RETRIES
+  // times before accepting it — those are mechanical model slips a fresh draft
+  // almost always fixes. Soft review flags never trigger a retry. If retries are
+  // exhausted (or a retry call throws), keep the last good draft and let it
+  // through to the candidate queue, still flagged — the audit never hard-blocks.
   let journey: Journey | null = null;
   let used: ModelProvider = primary;
-  try {
-    // Validate; retry once on a parse failure (§3 phase 3).
-    journey = await attempt(primary, SYSTEM_PROMPT, userPrompt, tableArg);
-    if (!journey) journey = await attempt(primary, SYSTEM_PROMPT, userPrompt, tableArg);
-  } catch (err) {
-    // Free-tier exhausted / unavailable → fall back to your Haiku key (§5).
-    if (
-      fallback &&
-      (err instanceof FreeTierLimitError || err instanceof ProviderUnavailableError)
-    ) {
-      used = fallback;
-      emit({
-        type: "status",
-        phase: "falling-back",
-        provider: fallback.id,
-        model: fallback.model,
-      });
-      try {
-        journey = await attempt(fallback, SYSTEM_PROMPT, userPrompt, tableArg);
-        if (!journey) journey = await attempt(fallback, SYSTEM_PROMPT, userPrompt, tableArg);
-      } catch {
-        throw new GenerateError("Couldn't generate a plan right now. Please try again.", 502);
-      }
-    } else {
-      // No fallback (e.g. an explicit provider override): surface the cause so a
-      // caller can react — the seed script backs off on `rateLimited`.
-      throw new GenerateError("Couldn't generate a plan right now. Please try again.", 502, {
-        rateLimited: err instanceof FreeTierLimitError,
-        cause: err,
-      });
+  let audit: AuditResult = { structural: [], review: [] };
+  for (let attemptNo = 0; ; attemptNo++) {
+    let draft: { journey: Journey; used: ModelProvider };
+    try {
+      draft = await generateOnce(primary, fallback, SYSTEM_PROMPT, userPrompt, tableArg, emit);
+    } catch (err) {
+      // A regeneration failed: keep the earlier (structurally-flawed) draft if we
+      // have one — a flagged candidate beats failing the request. The first
+      // attempt has nothing to fall back on, so its error propagates.
+      if (journey) break;
+      throw err;
     }
+
+    journey = draft.journey;
+    used = draft.used;
+    audit = auditJourney(journey);
+
+    if (audit.structural.length === 0 || attemptNo >= MAX_STRUCTURAL_RETRIES) break;
+
+    console.warn(
+      `[generate] candidate "${cacheKey}" has structural violation(s); regenerating ` +
+        `(retry ${attemptNo + 1}/${MAX_STRUCTURAL_RETRIES}):\n- ${audit.structural.join("\n- ")}`,
+    );
+    emit({ type: "status", phase: "generating", provider: primary.id, model: primary.model });
   }
 
+  // The loop always assigns `journey` before any break (a first-attempt failure
+  // throws instead), so this is just a type guard for the null-init above.
   if (!journey) {
     throw new GenerateError(
       "The plan came back in an unexpected format. Please try again.",
@@ -339,10 +404,11 @@ export async function runGeneration(
     currentDate: profile.currentDate,
   };
 
-  // ---- Audit for review (§3 rules 12–13): flag offset-order violations and
-  // missing far-future / NExT hedges. This never edits or blocks the journey —
-  // it just surfaces what the human reviewer should double-check. ----
-  const warnings = auditJourney(journey);
+  // ---- Surface remaining audit flags for review (§3 rules 12–13). Structural
+  // violations only land here if retries were exhausted; review flags are
+  // heuristic. Neither edits or blocks the journey — they tell the human reviewer
+  // what to double-check. ----
+  const warnings = [...audit.structural, ...audit.review];
   if (warnings.length > 0) {
     // The seed run's stdout and the serverless logs are the review surface; no
     // secrets are involved (cacheKey + plain text only).

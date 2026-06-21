@@ -112,10 +112,13 @@ export interface GenerateResponseBody {
   /** Provenance for candidates; omitted for cache hits. */
   generatedBy?: { provider: ProviderId; model: string };
   /**
-   * Review flags raised by the post-generation audit (spec §3 rules 12–13:
-   * offset-order violations, missing far-future / NExT hedges). Present only on
-   * fresh candidates that tripped a check; absent for verified cache hits. These
-   * tell the reviewer what to double-check — they don't block serving.
+   * Review flags raised by the post-generation audit (spec §3 rules 12–13).
+   * Structural violations (offset-order breaks, duplicate/artifact routes) trigger
+   * a regeneration first and only appear here if those retries are exhausted; soft
+   * flags (missing far-future / NExT hedge, ungrounded specifics) always appear.
+   * Present only on fresh candidates that tripped a check; absent for verified
+   * cache hits. These tell the reviewer what to double-check — they don't block
+   * serving.
    */
   warnings?: string[];
 }

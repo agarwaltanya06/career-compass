@@ -8,9 +8,10 @@
  * as an UNVERIFIED candidate (§4) — you review them, then `npm run promote` the
  * good ones to verified + pinned.
  *
- *   npm run seed                 # whole list, 10s between calls
- *   npm run seed -- --limit 3    # just the first 3 misses (small test batch)
- *   npm run seed -- --delay 15   # 15s between calls
+ *   npm run seed                   # whole list, 10s between calls
+ *   npm run seed -- --limit 3      # just the first 3 misses (small test batch)
+ *   npm run seed -- --delay 15     # 15s between calls
+ *   npm run seed -- --career ca    # only this career's class 10/11/12
  *
  * Behaviour:
  *   - SEQUENTIAL only, never parallel — one call at a time with `--delay`
@@ -49,12 +50,18 @@ const DEFAULT_DELAY_MS = 10_000;
 interface Options {
   limit: number;
   delayMs: number;
+  /** When set, seed only this career's profiles (intake code, case-insensitive). */
+  career?: string;
 }
 
-/** Parse `--limit N` / `--limit=N` and `--delay SECONDS` / `--delay=SECONDS`. */
+/**
+ * Parse `--limit N` / `--limit=N`, `--delay SECONDS` / `--delay=SECONDS`, and
+ * `--career NAME` / `--career=NAME` (the career's intake code, e.g. `ca`).
+ */
 function parseArgs(argv: string[]): Options {
   let limit = Infinity;
   let delayMs = DEFAULT_DELAY_MS;
+  let career: string | undefined;
   for (let i = 0; i < argv.length; i++) {
     const arg = argv[i];
     const value = (inline: string): string =>
@@ -65,9 +72,12 @@ function parseArgs(argv: string[]): Options {
     } else if (arg === "--delay" || arg.startsWith("--delay=")) {
       const s = parseFloat(value(""));
       if (Number.isFinite(s) && s >= 0) delayMs = Math.round(s * 1000);
+    } else if (arg === "--career" || arg.startsWith("--career=")) {
+      const c = value("").trim().toLowerCase();
+      if (c) career = c;
     }
   }
-  return { limit, delayMs };
+  return { limit, delayMs, career };
 }
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -124,7 +134,20 @@ async function generateProfile(profile: GenerationProfile): Promise<string> {
 }
 
 async function main() {
-  const { limit, delayMs } = parseArgs(process.argv.slice(2));
+  const { limit, delayMs, career } = parseArgs(process.argv.slice(2));
+
+  // ---- Career filter (--career): seed only that career's class 10/11/12. With
+  // no flag, seed everything. Match the intake code case-insensitively. ----
+  const profiles = career
+    ? seedProfiles.filter((p) => p.career.toLowerCase() === career)
+    : seedProfiles;
+  if (career && profiles.length === 0) {
+    const known = [...new Set(seedProfiles.map((p) => p.career))].sort().join(", ");
+    console.error(
+      `✗ --career "${career}" matched no seed profiles. Known careers: ${known}.`,
+    );
+    process.exit(1);
+  }
 
   // Fail fast if the primary (Gemini) isn't configured. Mirrors makeProvider's key lookup.
   if (!process.env.GEMINI_API_KEY && !process.env.GOOGLE_API_KEY) {
@@ -142,9 +165,11 @@ async function main() {
   }
 
   const today = new Date().toISOString().slice(0, 10);
-  const total = seedProfiles.length;
+  const total = profiles.length;
   console.log(
-    `Seeding from ${total} profile(s) — Gemini free tier, ${delayMs / 1000}s between calls` +
+    `Seeding from ${total} profile(s)` +
+      (career ? ` for career "${career}"` : "") +
+      ` — Gemini free tier, ${delayMs / 1000}s between calls` +
       (Number.isFinite(limit) ? `, limit ${limit}` : "") +
       ".\n",
   );
@@ -154,8 +179,8 @@ async function main() {
   let failed = 0;
   let attempts = 0; // generations actually started (the thing --limit caps)
 
-  for (let i = 0; i < seedProfiles.length; i++) {
-    const seed = seedProfiles[i];
+  for (let i = 0; i < profiles.length; i++) {
+    const seed = profiles[i];
     const profile = toProfile(seed, today);
     const cacheKey = buildCacheKey(profile);
     const fileName = cacheFileName(cacheKey, profile.locale);
