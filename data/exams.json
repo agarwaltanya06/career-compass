@@ -49,5 +49,77 @@
     ],
     "lastVerified": "2026-06-21",
     "verified": true
+  },
+  {
+    "id": "jee-main",
+    "name": "JEE Main",
+    "fullName": "Joint Entrance Examination (Main)",
+    "conductingBody": "NTA",
+    "purpose": "National entrance exam for B.Tech/B.E. admission to NITs, IIITs and other CFTIs via JoSAA, and the qualifying exam for JEE Advanced (the IIT gateway). Held in two sessions; the better score counts.",
+    "typicalWindow": "Two sessions: Session 1 applications ~Oct–Nov (exam ~Jan); Session 2 applications ~Feb (exam ~Apr).",
+    "eligibility": "Passed or appearing in 10+2 with Physics, Chemistry and Mathematics. No minimum or maximum age. Candidates may attempt in three consecutive years from the year of passing Class 12.",
+    "costBand": "low",
+    "feesNote": "Application fee for one session (India): approx ₹1,000 General male, ₹800 female, ₹900 OBC/EWS male, ₹500 SC/ST/PwD — concessional for women and reserved categories.",
+    "officialUrl": "https://jeemain.nta.nic.in/",
+    "sourceUrl": "https://jeemain.nta.nic.in/",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": null,
+    "verified": true
+  },
+  {
+    "id": "jee-advanced",
+    "name": "JEE Advanced",
+    "fullName": "Joint Entrance Examination (Advanced)",
+    "conductingBody": "IITs (rotating zonal IIT, under the Joint Admission Board)",
+    "purpose": "Sole entrance exam for admission to the IITs. Taken only after qualifying through JEE Main.",
+    "typicalWindow": "Registration ~late Apr–early May; exam ~mid-to-late May (single day, two papers).",
+    "eligibility": "Must be among the top ~2.5 lakh JEE Main qualifiers. Limited to two attempts in consecutive years. Age and first-attempt-at-Class-12 conditions apply (e.g. born on/after 1 Oct 2001 for General, with a 5-year relaxation for SC/ST/PwD) — confirm the current year's cutoff.",
+    "costBand": "low",
+    "feesNote": "Registration fee (India): approx ₹3,200 for General; ₹1,600 for female, SC, ST and PwD candidates — concessional for women and reserved categories.",
+    "officialUrl": "https://jeeadv.ac.in/",
+    "sourceUrl": "https://jeeadv.ac.in/eligibility.html",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": null,
+    "verified": true
+  },
+  {
+    "id": "bitsat",
+    "name": "BITSAT",
+    "fullName": "Birla Institute of Technology and Science Admission Test",
+    "conductingBody": "BITS Pilani",
+    "purpose": "Sole entrance exam for admission to B.E./B.Pharm. programmes at the BITS Pilani, Goa and Hyderabad campuses.",
+    "typicalWindow": "Applications ~Jan–Mar for Session 1 (reopen ~Apr–May for Session-2-only candidates); computer-based exams ~late May (Session 1) and ~late June (Session 2).",
+    "eligibility": "Passed or appearing in 10+2 with Physics, Chemistry and Mathematics (Biology for B.Pharm.) plus English. Minimum 75% aggregate in PCM/PCB and 60% in each subject.",
+    "costBand": "low",
+    "feesNote": "Application fee (India, single session): approx ₹3,600 male, ₹3,100 female; higher for both sessions. Female candidates pay a concessional fee.",
+    "officialUrl": "https://www.bitsadmission.com/",
+    "sourceUrl": "https://admissions.bits-pilani.ac.in/BITSAT_LP/index.html",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": null,
+    "verified": true
+  },
+  {
+    "id": "mht-cet",
+    "name": "MHT-CET",
+    "fullName": "Maharashtra Common Entrance Test (PCM group)",
+    "conductingBody": "State CET Cell, Government of Maharashtra",
+    "purpose": "State-level entrance exam for engineering degree admissions in Maharashtra. Shown as an example of a state CET — most states run their own (e.g. WBJEE in West Bengal, KCET in Karnataka, AP/TS EAPCET); eligibility, fees and windows vary by state.",
+    "typicalWindow": "Applications ~Jan–Feb; PCM-group exam ~Apr–May. Dates are set by the Maharashtra CET Cell each year (other states' CETs run on their own calendars).",
+    "eligibility": "Passed or appearing in 10+2 with Physics and Mathematics plus one of Chemistry/Biology/Vocational. Minimum 45% aggregate (40% for reserved categories). No age limit. Other states' CETs set their own criteria.",
+    "costBand": "low",
+    "feesNote": "Application fee (Maharashtra): approx ₹1,000 General, ₹800 reserved categories, ₹600 PwD. Other state CETs charge their own fees.",
+    "officialUrl": "https://cetcell.mahacet.org/",
+    "sourceUrl": "https://cetcell.mahacet.org/",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": null,
+    "verified": true
   }
 ]

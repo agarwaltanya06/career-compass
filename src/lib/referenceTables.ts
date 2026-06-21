@@ -29,8 +29,12 @@ export interface RefCollege {
   city: string;
   approxAnnualFees: string;
   costBand: CostBand | "";
+  /** Per-row fees note (e.g. income-based waivers); falls back to a generic note when absent. */
+  feesNote?: string;
   entranceRequired: string;
   officialUrl: string;
+  /** Where the fee/window/eligibility facts were sourced, for human sign-off. */
+  sourceUrl?: string;
   careers: string[];
   lastVerified: string | null;
   verified: boolean;
@@ -46,7 +50,11 @@ export interface RefExam {
   typicalWindow: string;
   eligibility: string;
   costBand: CostBand | "";
+  /** Per-row fees note (e.g. application fee, category concessions). */
+  feesNote?: string;
   officialUrl: string;
+  /** Where the fee/window/eligibility facts were sourced, for human sign-off. */
+  sourceUrl?: string;
   careers: string[];
   /** Optional id of the exam that replaces this one (e.g. neet-pg → next). */
   supersededBy?: string;
@@ -99,7 +107,7 @@ export function toCollegeShape(ref: RefCollege): College {
     type: ref.type,
     location: [ref.city, ref.state].filter(Boolean).join(", "),
     approxAnnualFees: ref.approxAnnualFees,
-    feesNote: FEES_NOTE,
+    feesNote: ref.feesNote?.trim() ? ref.feesNote : FEES_NOTE,
     entranceRequired: ref.entranceRequired,
     // "" is not a valid CostBand; parseJourney coerces it. Cast keeps the shape.
     costBand: ref.costBand as CostBand,

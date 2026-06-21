@@ -1,0 +1,398 @@
+{
+  "meta": {
+    "career": "Engineer",
+    "careerAliases": [
+      "Engineering Professional",
+      "B.Tech Graduate",
+      "Software Developer",
+      "Mechanical Engineer",
+      "Civil Engineer"
+    ],
+    "studentProfile": {
+      "class": "11",
+      "board": "cbse",
+      "stream": "pcm",
+      "language": "en",
+      "currentDate": "2026-06-21"
+    },
+    "generatedAt": "2026-06-21",
+    "confidence": "high",
+    "cacheKey": "engineer|cbse|pcm|class11"
+  },
+  "overview": {
+    "summary": "Engineering is a diverse and in-demand field in India, offering opportunities across various specializations like software, mechanical, civil, and electrical engineering. It involves applying scientific and mathematical principles to design, build, and maintain structures, machines, systems, and processes. The career path typically begins with a Bachelor of Technology (B.Tech) or Bachelor of Engineering (B.E.) degree, followed by employment in industry or further specialization through postgraduate studies.",
+    "dayInLife": "An engineer's day often involves problem-solving, designing solutions, coding (for software engineers), conducting tests, collaborating with interdisciplinary teams, and documenting progress. The specific tasks vary significantly based on the engineering discipline and the industry. For instance, a software engineer might spend their day coding, debugging, and participating in agile stand-ups, while a civil engineer might be on-site overseeing construction or designing infrastructure.",
+    "payRange": {
+      "entry": "₹3,00,000 - ₹6,00,000 per year",
+      "experienced": "₹10,00,000 - ₹30,00,000+ per year",
+      "note": "Salaries vary widely based on college, specialization, company, location, and experience. Top-tier institutions and niche skills often command higher packages."
+    },
+    "demandOutlook": "The demand for engineers in India remains strong, particularly in emerging fields like AI, Data Science, Machine Learning, Cybersecurity, Electric Vehicles, and Renewable Energy. While the tech sector has seen some fluctuations, core engineering and IT services continue to drive significant employment. Government initiatives like Digital India and Make in India also contribute to sustained demand.",
+    "requirements": [
+      "Strong foundation in Physics, Chemistry, and Mathematics (PCM)",
+      "Analytical and problem-solving skills",
+      "Logical reasoning and critical thinking",
+      "Good communication and teamwork abilities",
+      "Adaptability to new technologies and continuous learning"
+    ]
+  },
+  "routes": [
+    {
+      "id": "btech-jee-main-advanced",
+      "name": "B.Tech/B.E. via JEE Main & Advanced (IITs/NITs/IIITs)",
+      "bestFor": "Students aiming for admission to top engineering colleges like IITs, NITs, and IIITs, which are highly competitive and offer excellent academic and career prospects.",
+      "feasibility": "high",
+      "feasibilityReason": "The student is currently in Class 11 Science (PCM), which is the ideal stream for this pathway. Consistent preparation will be key.",
+      "costBand": "mid",
+      "duration": "4 years (after Class 12)",
+      "steps": [
+        {
+          "id": "step-1",
+          "order": 1,
+          "type": "education",
+          "title": "Complete Class 11 Science (PCM)",
+          "offsetMonths": 0,
+          "description": "Focus on building strong foundational concepts in Physics, Chemistry, and Mathematics, which are crucial for Class 12 and entrance exams."
+        },
+        {
+          "id": "step-2",
+          "order": 2,
+          "type": "education",
+          "title": "Complete Class 12 Science (PCM) & Board Exams",
+          "offsetMonths": 10,
+          "description": "Continue rigorous study of PCM subjects, prepare for CBSE Class 12 board examinations, and simultaneously focus on competitive exam preparation."
+        },
+        {
+          "id": "step-3",
+          "order": 3,
+          "type": "exam",
+          "title": "JEE Main Session 1 Exam",
+          "offsetMonths": 19,
+          "description": "Appear for the first session of JEE Main, which serves as a qualifying exam for JEE Advanced and for admission to NITs, IIITs, and other CFTIs. Use this attempt to gauge preparation and gain experience."
+        },
+        {
+          "id": "step-4",
+          "order": 4,
+          "type": "exam",
+          "title": "JEE Main Session 2 Exam",
+          "offsetMonths": 22,
+          "description": "Attempt the second session of JEE Main to improve your score. The better of the two scores will be considered for ranking and admissions."
+        },
+        {
+          "id": "step-5",
+          "order": 5,
+          "type": "exam",
+          "title": "JEE Advanced Exam",
+          "offsetMonths": 23,
+          "description": "If qualified through JEE Main, appear for JEE Advanced, the sole entrance exam for admission to the prestigious Indian Institutes of Technology (IITs)."
+        },
+        {
+          "id": "step-6",
+          "order": 6,
+          "type": "application",
+          "title": "JoSAA Counselling & Admissions",
+          "offsetMonths": 24,
+          "description": "Participate in the Joint Seat Allocation Authority (JoSAA) counselling process based on your JEE Main/Advanced ranks to secure admission to IITs, NITs, IIITs, or other GFTIs."
+        },
+        {
+          "id": "step-7",
+          "order": 7,
+          "type": "education",
+          "title": "Pursue B.Tech/B.E. Degree (4 years)",
+          "offsetMonths": 26,
+          "description": "Enroll in a 4-year Bachelor of Technology or Bachelor of Engineering program in your chosen specialization. Focus on academic excellence, practical skills, and industry exposure. Rules, exams, and fees may change by then, so re-verify closer to the time."
+        },
+        {
+          "id": "step-8",
+          "order": 8,
+          "type": "experience",
+          "title": "Optional: Internships & Projects",
+          "offsetMonths": 50,
+          "description": "Gain practical experience through internships during summer breaks and work on academic or personal projects to build a strong portfolio. Rules, exams, and fees may change by then, so re-verify closer to the time.",
+          "optional": true
+        },
+        {
+          "id": "step-9",
+          "order": 9,
+          "type": "application",
+          "title": "Placement/Job Search",
+          "offsetMonths": 74,
+          "description": "Seek entry-level engineering positions through campus placements or off-campus applications. Prepare for interviews and technical assessments. Rules, exams, and fees may change by then, so re-verify closer to the time."
+        },
+        {
+          "id": "step-9b",
+          "order": 9,
+          "type": "education",
+          "title": "Pursue M.Tech/MBA (Post-Graduation)",
+          "offsetMonths": 74,
+          "description": "Consider pursuing a Master of Technology (M.Tech) for specialization or an MBA for management roles, either immediately after B.Tech or after gaining some work experience. Rules, exams, and fees may change by then, so re-verify closer to the time.",
+          "alternativeTo": "step-9"
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Problem Solving",
+          "Analytical Thinking",
+          "Programming (e.g., C++, Python, Java)",
+          "Data Structures & Algorithms",
+          "Engineering Design Principles",
+          "Project Management Basics",
+          "Communication Skills",
+          "Teamwork"
+        ],
+        "upskilling": [
+          {
+            "name": "NPTEL Online Courses (IITs/IISc)",
+            "why": "Provides free online courses from IITs and IISc faculty, covering various engineering disciplines, excellent for foundational and advanced learning.",
+            "costBand": "free",
+            "url": "https://nptel.ac.in/",
+            "verified": false
+          },
+          {
+            "name": "Coursera/edX (Audit/Financial Aid)",
+            "why": "Access courses from top universities worldwide on specific engineering topics, often with free audit options or financial aid.",
+            "costBand": "low",
+            "url": "https://www.coursera.org/",
+            "verified": false
+          },
+          {
+            "name": "HackerRank/LeetCode",
+            "why": "Practice coding and problem-solving skills essential for technical interviews and competitive programming.",
+            "costBand": "free",
+            "url": "https://www.hackerrank.com/",
+            "verified": false
+          },
+          {
+            "name": "Udemy/Coursera Specializations",
+            "why": "Deep dive into specific areas like AI/ML, Data Science, Web Development, or Cloud Computing with structured learning paths.",
+            "costBand": "mid",
+            "url": "https://www.udemy.com/",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "id": "jee-main",
+          "name": "JEE Main",
+          "purpose": "National entrance exam for B.Tech/B.E. admission to NITs, IIITs and other CFTIs via JoSAA, and the qualifying exam for JEE Advanced (the IIT gateway). Held in two sessions; the better score counts.",
+          "eligibility": "Passed or appearing in 10+2 with Physics, Chemistry and Mathematics. No minimum or maximum age. Candidates may attempt in three consecutive years from the year of passing Class 12.",
+          "typicalWindow": "Two sessions: Session 1 applications ~Oct–Nov (exam ~Jan); Session 2 applications ~Feb (exam ~Apr).",
+          "costBand": "low",
+          "officialUrl": "https://jeemain.nta.nic.in/",
+          "verified": true
+        },
+        {
+          "id": "jee-advanced",
+          "name": "JEE Advanced",
+          "purpose": "Sole entrance exam for admission to the IITs. Taken only after qualifying through JEE Main.",
+          "eligibility": "Must be among the top ~2.5 lakh JEE Main qualifiers. Limited to two attempts in consecutive years. Age and first-attempt-at-Class-12 conditions apply (e.g. born on/after 1 Oct 2001 for General, with a 5-year relaxation for SC/ST/PwD) — confirm the current year's cutoff.",
+          "typicalWindow": "Registration ~late Apr–early May; exam ~mid-to-late May (single day, two papers).",
+          "costBand": "low",
+          "officialUrl": "https://jeeadv.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "bitsat",
+          "name": "BITSAT",
+          "purpose": "Sole entrance exam for admission to B.E./B.Pharm. programmes at the BITS Pilani, Goa and Hyderabad campuses.",
+          "eligibility": "Passed or appearing in 10+2 with Physics, Chemistry and Mathematics (Biology for B.Pharm.) plus English. Minimum 75% aggregate in PCM/PCB and 60% in each subject.",
+          "typicalWindow": "Applications ~Jan–Mar for Session 1 (reopen ~Apr–May for Session-2-only candidates); computer-based exams ~late May (Session 1) and ~late June (Session 2).",
+          "costBand": "low",
+          "officialUrl": "https://www.bitsadmission.com/",
+          "verified": true
+        },
+        {
+          "id": "mht-cet",
+          "name": "MHT-CET",
+          "purpose": "State-level entrance exam for engineering degree admissions in Maharashtra. Shown as an example of a state CET — most states run their own (e.g. WBJEE in West Bengal, KCET in Karnataka, AP/TS EAPCET); eligibility, fees and windows vary by state.",
+          "eligibility": "Passed or appearing in 10+2 with Physics and Mathematics plus one of Chemistry/Biology/Vocational. Minimum 45% aggregate (40% for reserved categories). No age limit. Other states' CETs set their own criteria.",
+          "typicalWindow": "Applications ~Jan–Feb; PCM-group exam ~Apr–May. Dates are set by the Maharashtra CET Cell each year (other states' CETs run on their own calendars).",
+          "costBand": "low",
+          "officialUrl": "https://cetcell.mahacet.org/",
+          "verified": true
+        }
+      ],
+      "colleges": [
+        {
+          "id": "iit-bombay",
+          "name": "Indian Institute of Technology Bombay (IIT Bombay)",
+          "type": "government",
+          "location": "Mumbai, Maharashtra",
+          "approxAnnualFees": "₹2,00,000 - ₹2,50,000",
+          "feesNote": "Tuition is ~₹1 lakh/semester for General/OBC. Income-based remission applies: families with annual income below ₹1 lakh pay no tuition (full waiver); ₹1–5 lakh income gets a two-thirds tuition waiver; SC/ST/PwD students get full tuition exemption. The waiver is not automatic — claim it at JoSAA counselling and re-submit an income certificate each year.",
+          "entranceRequired": "JEE Advanced (via JEE Main)",
+          "costBand": "mid",
+          "officialUrl": "https://www.iitb.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "iit-delhi",
+          "name": "Indian Institute of Technology Delhi (IIT Delhi)",
+          "type": "government",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "₹2,00,000 - ₹2,50,000",
+          "feesNote": "Tuition is ~₹1 lakh/semester for General/OBC. Income-based remission applies: families with annual income below ₹1 lakh pay no tuition (full waiver); ₹1–5 lakh income gets a two-thirds tuition waiver; SC/ST/PwD students get full tuition exemption. The waiver is not automatic — claim it at JoSAA counselling and re-submit an income certificate each year.",
+          "entranceRequired": "JEE Advanced (via JEE Main)",
+          "costBand": "mid",
+          "officialUrl": "https://home.iitd.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "iit-madras",
+          "name": "Indian Institute of Technology Madras (IIT Madras)",
+          "type": "government",
+          "location": "Chennai, Tamil Nadu",
+          "approxAnnualFees": "₹2,00,000 - ₹2,50,000",
+          "feesNote": "Tuition is ~₹1 lakh/semester for General/OBC. Income-based remission applies: families with annual income below ₹1 lakh pay no tuition (full waiver); ₹1–5 lakh income gets a two-thirds tuition waiver; SC/ST/PwD students get full tuition exemption. The waiver is not automatic — claim it at JoSAA counselling and re-submit an income certificate each year.",
+          "entranceRequired": "JEE Advanced (via JEE Main)",
+          "costBand": "mid",
+          "officialUrl": "https://www.iitm.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "nit-trichy",
+          "name": "National Institute of Technology Tiruchirappalli (NIT Trichy)",
+          "type": "government",
+          "location": "Tiruchirappalli, Tamil Nadu",
+          "approxAnnualFees": "₹1,25,000 - ₹1,75,000",
+          "feesNote": "Tuition is ~₹62,500/semester (~₹1.25 lakh/year) for General/OBC. Income-based remission for Open/EWS/OBC-NCL students: family income below ₹1 lakh gets full tuition waiver; ₹1–5 lakh gets a two-thirds tuition waiver. SC/ST/PwD students are exempt from tuition. A fresh family income certificate must be submitted each year.",
+          "entranceRequired": "JEE Main (JoSAA counselling)",
+          "costBand": "mid",
+          "officialUrl": "https://www.nitt.edu/",
+          "verified": true
+        },
+        {
+          "id": "nit-surathkal",
+          "name": "National Institute of Technology Karnataka, Surathkal (NITK Surathkal)",
+          "type": "government",
+          "location": "Surathkal (Mangaluru), Karnataka",
+          "approxAnnualFees": "₹1,25,000 - ₹1,75,000",
+          "feesNote": "Tuition is ~₹62,500/semester (~₹1.25 lakh/year) for General/OBC. Income-based remission for Open/EWS/OBC-NCL students: family income below ₹1 lakh gets full tuition waiver; ₹1–5 lakh gets a two-thirds tuition waiver. SC/ST/PwD students are exempt from tuition. A fresh family income certificate must be submitted each year.",
+          "entranceRequired": "JEE Main (JoSAA counselling)",
+          "costBand": "mid",
+          "officialUrl": "https://www.nitk.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "iiit-hyderabad",
+          "name": "International Institute of Information Technology, Hyderabad (IIIT Hyderabad)",
+          "type": "deemed",
+          "location": "Hyderabad, Telangana",
+          "approxAnnualFees": "₹4,50,000",
+          "feesNote": "Tuition ~₹4.5 lakh/year (rising ~₹5,000 each year; hostel & mess ~₹1 lakh/year extra). No central income-based government tuition waiver, but the alumni-funded IIITH Special Financial Assistance Scheme (ISFAS) gives guaranteed full tuition support to admitted students with family income below ~₹8 lakh/year, backed by a guaranteed SBI Scholar education loan. Confirm current details on the official admissions site.",
+          "entranceRequired": "JEE Main / IIIT-H UGEE (institute's own entrance channels)",
+          "costBand": "high",
+          "officialUrl": "https://www.iiit.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "dtu-delhi",
+          "name": "Delhi Technological University (DTU)",
+          "type": "government",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "₹1,90,000 - ₹2,00,000",
+          "feesNote": "Annual fee ~₹1.9–2 lakh (base tuition ~₹61,300 plus welfare/facilities charges; hostel billed separately). A Delhi state-government university, so well below private rates. Check for EWS/SC/ST fee concessions and Delhi-government scholarships on the official site.",
+          "entranceRequired": "JEE Main (JAC Delhi counselling)",
+          "costBand": "mid",
+          "officialUrl": "https://dtu.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "bits-pilani",
+          "name": "Birla Institute of Technology and Science, Pilani (BITS Pilani)",
+          "type": "deemed",
+          "location": "Pilani, Rajasthan",
+          "approxAnnualFees": "₹5,50,000 - ₹5,85,000",
+          "feesNote": "High-cost private (deemed) university — tuition ~₹2.75–2.92 lakh/semester (~₹5.5–5.85 lakh/year), rising ~5% annually; hostel & mess extra. No income-based government waiver applies, but BITS offers Merit and Merit-cum-Need (MCN) scholarships covering 10–100% of tuition for a sizeable share of admitted students.",
+          "entranceRequired": "BITSAT",
+          "costBand": "high",
+          "officialUrl": "https://www.bits-pilani.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "coep-pune",
+          "name": "COEP Technological University (College of Engineering, Pune)",
+          "type": "government",
+          "location": "Pune, Maharashtra",
+          "approxAnnualFees": "₹1,42,000 - ₹1,63,000",
+          "feesNote": "Open-category fee ~₹1.42–1.63 lakh/year. As a state institution, reserved-category fees are far lower — OBC ~₹45,000–50,000/year and SC/ST ~₹3,500–4,000/year. Maharashtra EBC and TFWS (tuition-fee-waiver) schemes can further reduce fees for low-income families; verify eligibility on the official site.",
+          "entranceRequired": "MHT-CET (also accepts JEE Main)",
+          "costBand": "mid",
+          "officialUrl": "https://www.coeptech.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "jadavpur-university",
+          "name": "Jadavpur University, Kolkata",
+          "type": "government",
+          "location": "Kolkata, West Bengal",
+          "approxAnnualFees": "₹2,400 - ₹30,000",
+          "feesNote": "Among the most affordable engineering programmes in India, as it is a West Bengal state-government university. Non-IT B.E. branches cost only a few thousand rupees a year (~₹2,400–3,000/year; ~₹10,000–12,000 for the full course), while IT/CSE is higher at ~₹29,900/year (~₹1.2 lakh for four years). Merit-cum-means aid (e.g. Swami Vivekananda scholarship) and fee concessions are available for low-income students.",
+          "entranceRequired": "WBJEE (also admits via JEE Main)",
+          "costBand": "low",
+          "officialUrl": "https://www.jadavpuruniversity.in/",
+          "verified": true
+        }
+      ],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "Reattempt JEE Main/Advanced next year (if eligible) after a gap year for dedicated preparation.",
+          "Explore state-level engineering entrance exams (e.g., MHT-CET, WBJEE, KCET, AP/TS EAPCET) for admission to state government or private colleges.",
+          "Consider direct admission to private universities based on Class 12 marks or their own entrance tests.",
+          "Explore diploma courses in engineering followed by lateral entry to a B.Tech program."
+        ]
+      }
+    }
+  ],
+  "prepResources": [
+    {
+      "title": "NCERT Textbooks (Physics, Chemistry, Maths)",
+      "type": "official-guide",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://ncert.nic.in/textbook.php",
+      "verified": false
+    },
+    {
+      "title": "JEE Main & Advanced Previous Year Papers",
+      "type": "official-guide",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://jeemain.nta.ac.in/past-question-papers/",
+      "verified": false
+    },
+    {
+      "title": "Khan Academy (Physics, Chemistry, Maths)",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.khanacademy.org/",
+      "verified": false
+    },
+    {
+      "title": "BYJU'S JEE Prep (Videos & Study Material)",
+      "type": "video",
+      "costBand": "mid",
+      "language": "en",
+      "url": "https://byjus.com/jee/",
+      "verified": false
+    },
+    {
+      "title": "Unacademy JEE (Live Classes & Practice)",
+      "type": "video",
+      "costBand": "mid",
+      "language": "en",
+      "url": "https://unacademy.com/goal/jee-and-neet-ug/TMUVD",
+      "verified": false
+    }
+  ],
+  "groundingSources": [],
+  "disclaimers": [
+    "The information provided is for general guidance only and should not be considered professional advice. Students must verify all details, including exam dates, application windows, eligibility criteria, fees, and college information, from official sources.",
+    "Exam patterns, syllabi, and admission procedures can change. Always refer to the latest official notifications from the respective examination bodies and institutions.",
+    "Fees mentioned are approximate and subject to change based on government policies, institutional revisions, and other factors. Students are advised to check the official college websites for the most current fee structures.",
+    "Career outlook and salary ranges are indicative and can be influenced by various market dynamics, individual skills, and economic conditions."
+  ]
+}

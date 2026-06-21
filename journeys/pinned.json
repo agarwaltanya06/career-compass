@@ -13,5 +13,20 @@
     "slug": "doctor_cbse_pcb_class12",
     "language": "en",
     "verifiedAt": "2026-06-20"
+  },
+  {
+    "slug": "engineer_cbse_none_class10",
+    "language": "en",
+    "verifiedAt": "2026-06-21"
+  },
+  {
+    "slug": "engineer_cbse_pcm_class11",
+    "language": "en",
+    "verifiedAt": "2026-06-21"
+  },
+  {
+    "slug": "engineer_cbse_pcm_class12",
+    "language": "en",
+    "verifiedAt": "2026-06-21"
   }
 ]

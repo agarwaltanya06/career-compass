@@ -158,5 +158,239 @@
     ],
     "lastVerified": "2026-06-21",
     "verified": true
+  },
+  {
+    "id": "iit-bombay",
+    "name": "Indian Institute of Technology Bombay (IIT Bombay)",
+    "type": "government",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "approxAnnualFees": "₹2,00,000 - ₹2,50,000",
+    "costBand": "mid",
+    "feesNote": "Tuition is ~₹1 lakh/semester for General/OBC. Income-based remission applies: families with annual income below ₹1 lakh pay no tuition (full waiver); ₹1–5 lakh income gets a two-thirds tuition waiver; SC/ST/PwD students get full tuition exemption. The waiver is not automatic — claim it at JoSAA counselling and re-submit an income certificate each year.",
+    "entranceRequired": "JEE Advanced (via JEE Main)",
+    "officialUrl": "https://www.iitb.ac.in/",
+    "sourceUrl": "https://acad.iitb.ac.in/ug-new-entrants-fees",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": "2026-06-21",
+    "verified": true
+  },
+  {
+    "id": "iit-delhi",
+    "name": "Indian Institute of Technology Delhi (IIT Delhi)",
+    "type": "government",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "approxAnnualFees": "₹2,00,000 - ₹2,50,000",
+    "costBand": "mid",
+    "feesNote": "Tuition is ~₹1 lakh/semester for General/OBC. Income-based remission applies: families with annual income below ₹1 lakh pay no tuition (full waiver); ₹1–5 lakh income gets a two-thirds tuition waiver; SC/ST/PwD students get full tuition exemption. The waiver is not automatic — claim it at JoSAA counselling and re-submit an income certificate each year.",
+    "entranceRequired": "JEE Advanced (via JEE Main)",
+    "officialUrl": "https://home.iitd.ac.in/",
+    "sourceUrl": "https://academics.iitd.ac.in/wp-content/uploads/2025/11/Fee-Structure_2025-26_UG-Entry-Students-revised.pdf",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": "2026-06-21",
+    "verified": true
+  },
+  {
+    "id": "iit-madras",
+    "name": "Indian Institute of Technology Madras (IIT Madras)",
+    "type": "government",
+    "state": "Tamil Nadu",
+    "city": "Chennai",
+    "approxAnnualFees": "₹2,00,000 - ₹2,50,000",
+    "costBand": "mid",
+    "feesNote": "Tuition is ~₹1 lakh/semester for General/OBC. Income-based remission applies: families with annual income below ₹1 lakh pay no tuition (full waiver); ₹1–5 lakh income gets a two-thirds tuition waiver; SC/ST/PwD students get full tuition exemption. The waiver is not automatic — claim it at JoSAA counselling and re-submit an income certificate each year.",
+    "entranceRequired": "JEE Advanced (via JEE Main)",
+    "officialUrl": "https://www.iitm.ac.in/",
+    "sourceUrl": "https://www.iitm.ac.in/academics/academic-services/fees",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": "2026-06-21",
+    "verified": true
+  },
+  {
+    "id": "iit-kanpur",
+    "name": "Indian Institute of Technology Kanpur (IIT Kanpur)",
+    "type": "government",
+    "state": "Uttar Pradesh",
+    "city": "Kanpur",
+    "approxAnnualFees": "₹2,00,000 - ₹2,50,000",
+    "costBand": "mid",
+    "feesNote": "Tuition is ~₹1 lakh/semester for General/OBC. Income-based remission applies: families with annual income below ₹1 lakh pay no tuition (full waiver); ₹1–5 lakh income gets a two-thirds tuition waiver; SC/ST/PwD students get full tuition exemption. The waiver is not automatic — claim it at JoSAA counselling and re-submit an income certificate each year.",
+    "entranceRequired": "JEE Advanced (via JEE Main)",
+    "officialUrl": "https://www.iitk.ac.in/",
+    "sourceUrl": "https://www.iitk.ac.in/dosa/fees-matters",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": null,
+    "verified": true
+  },
+  {
+    "id": "iit-kharagpur",
+    "name": "Indian Institute of Technology Kharagpur (IIT Kharagpur)",
+    "type": "government",
+    "state": "West Bengal",
+    "city": "Kharagpur",
+    "approxAnnualFees": "₹2,00,000 - ₹2,50,000",
+    "costBand": "mid",
+    "feesNote": "Tuition is ~₹1 lakh/semester for General/OBC. Income-based remission applies: families with annual income below ₹1 lakh pay no tuition (full waiver); ₹1–5 lakh income gets a two-thirds tuition waiver; SC/ST/PwD students get full tuition exemption. The waiver is not automatic — claim it at JoSAA counselling and re-submit an income certificate each year.",
+    "entranceRequired": "JEE Advanced (via JEE Main)",
+    "officialUrl": "https://www.iitkgp.ac.in/",
+    "sourceUrl": "https://erp.iitkgp.ac.in/UGAdmManual.pdf",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": "2026-06-21",
+    "verified": true
+  },
+  {
+    "id": "nit-trichy",
+    "name": "National Institute of Technology Tiruchirappalli (NIT Trichy)",
+    "type": "government",
+    "state": "Tamil Nadu",
+    "city": "Tiruchirappalli",
+    "approxAnnualFees": "₹1,25,000 - ₹1,75,000",
+    "costBand": "mid",
+    "feesNote": "Tuition is ~₹62,500/semester (~₹1.25 lakh/year) for General/OBC. Income-based remission for Open/EWS/OBC-NCL students: family income below ₹1 lakh gets full tuition waiver; ₹1–5 lakh gets a two-thirds tuition waiver. SC/ST/PwD students are exempt from tuition. A fresh family income certificate must be submitted each year.",
+    "entranceRequired": "JEE Main (JoSAA counselling)",
+    "officialUrl": "https://www.nitt.edu/",
+    "sourceUrl": "https://www.nitt.edu/home/academics/fees_section/ug_courses_fee_structure/B.Tech%202025.pdf",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": null,
+    "verified": true
+  },
+  {
+    "id": "nit-surathkal",
+    "name": "National Institute of Technology Karnataka, Surathkal (NITK Surathkal)",
+    "type": "government",
+    "state": "Karnataka",
+    "city": "Surathkal (Mangaluru)",
+    "approxAnnualFees": "₹1,25,000 - ₹1,75,000",
+    "costBand": "mid",
+    "feesNote": "Tuition is ~₹62,500/semester (~₹1.25 lakh/year) for General/OBC. Income-based remission for Open/EWS/OBC-NCL students: family income below ₹1 lakh gets full tuition waiver; ₹1–5 lakh gets a two-thirds tuition waiver. SC/ST/PwD students are exempt from tuition. A fresh family income certificate must be submitted each year.",
+    "entranceRequired": "JEE Main (JoSAA counselling)",
+    "officialUrl": "https://www.nitk.ac.in/",
+    "sourceUrl": "https://www.nitk.ac.in/fee-structure",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": "2026-06-21",
+    "verified": true
+  },
+  {
+    "id": "nit-warangal",
+    "name": "National Institute of Technology Warangal (NIT Warangal)",
+    "type": "government",
+    "state": "Telangana",
+    "city": "Warangal",
+    "approxAnnualFees": "₹1,25,000 - ₹1,75,000",
+    "costBand": "mid",
+    "feesNote": "Tuition is ~₹62,500/semester (~₹1.25 lakh/year) for General/OBC. Income-based remission for Open/EWS/OBC-NCL students: family income below ₹1 lakh gets full tuition waiver; ₹1–5 lakh gets a two-thirds tuition waiver. SC/ST/PwD students are exempt from tuition. A fresh family income certificate must be submitted each year.",
+    "entranceRequired": "JEE Main (JoSAA counselling)",
+    "officialUrl": "https://www.nitw.ac.in/",
+    "sourceUrl": "https://www.nitw.ac.in/page/?url=/FeeStructure/FS",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": "2026-06-21",
+    "verified": true
+  },
+  {
+    "id": "iiit-hyderabad",
+    "name": "International Institute of Information Technology, Hyderabad (IIIT Hyderabad)",
+    "type": "deemed",
+    "state": "Telangana",
+    "city": "Hyderabad",
+    "approxAnnualFees": "₹4,50,000",
+    "costBand": "high",
+    "feesNote": "Tuition ~₹4.5 lakh/year (rising ~₹5,000 each year; hostel & mess ~₹1 lakh/year extra). No central income-based government tuition waiver, but the alumni-funded IIITH Special Financial Assistance Scheme (ISFAS) gives guaranteed full tuition support to admitted students with family income below ~₹8 lakh/year, backed by a guaranteed SBI Scholar education loan. Confirm current details on the official admissions site.",
+    "entranceRequired": "JEE Main / IIIT-H UGEE (institute's own entrance channels)",
+    "officialUrl": "https://www.iiit.ac.in/",
+    "sourceUrl": "https://ugadmissions.iiit.ac.in/",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": "2026-06-21",
+    "verified": true
+  },
+  {
+    "id": "dtu-delhi",
+    "name": "Delhi Technological University (DTU)",
+    "type": "government",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "approxAnnualFees": "₹1,90,000 - ₹2,00,000",
+    "costBand": "mid",
+    "feesNote": "Annual fee ~₹1.9–2 lakh (base tuition ~₹61,300 plus welfare/facilities charges; hostel billed separately). A Delhi state-government university, so well below private rates. Check for EWS/SC/ST fee concessions and Delhi-government scholarships on the official site.",
+    "entranceRequired": "JEE Main (JAC Delhi counselling)",
+    "officialUrl": "https://dtu.ac.in/",
+    "sourceUrl": "https://dtu.ac.in/Web/Admission/brochure/2025/revisedfee.pdf",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": null,
+    "verified": true
+  },
+  {
+    "id": "coep-pune",
+    "name": "COEP Technological University (College of Engineering, Pune)",
+    "type": "government",
+    "state": "Maharashtra",
+    "city": "Pune",
+    "approxAnnualFees": "₹1,42,000 - ₹1,63,000",
+    "costBand": "mid",
+    "feesNote": "Open-category fee ~₹1.42–1.63 lakh/year. As a state institution, reserved-category fees are far lower — OBC ~₹45,000–50,000/year and SC/ST ~₹3,500–4,000/year. Maharashtra EBC and TFWS (tuition-fee-waiver) schemes can further reduce fees for low-income families; verify eligibility on the official site.",
+    "entranceRequired": "MHT-CET (also accepts JEE Main)",
+    "officialUrl": "https://www.coeptech.ac.in/",
+    "sourceUrl": "https://www.coeptech.ac.in/useful-links/university-sections/ac-section/fees-structure/",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": null,
+    "verified": true
+  },
+  {
+    "id": "jadavpur-university",
+    "name": "Jadavpur University, Kolkata",
+    "type": "government",
+    "state": "West Bengal",
+    "city": "Kolkata",
+    "approxAnnualFees": "₹2,400 - ₹30,000",
+    "costBand": "low",
+    "feesNote": "Among the most affordable engineering programmes in India, as it is a West Bengal state-government university. Non-IT B.E. branches cost only a few thousand rupees a year (~₹2,400–3,000/year; ~₹10,000–12,000 for the full course), while IT/CSE is higher at ~₹29,900/year (~₹1.2 lakh for four years). Merit-cum-means aid (e.g. Swami Vivekananda scholarship) and fee concessions are available for low-income students.",
+    "entranceRequired": "WBJEE (also admits via JEE Main)",
+    "officialUrl": "https://www.jadavpuruniversity.in/",
+    "sourceUrl": "https://jadavpuruniversity.in/storage/2024/04/MD-4-FEE-1.pdf",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": "2026-06-21",
+    "verified": true
+  },
+  {
+    "id": "bits-pilani",
+    "name": "Birla Institute of Technology and Science, Pilani (BITS Pilani)",
+    "type": "deemed",
+    "state": "Rajasthan",
+    "city": "Pilani",
+    "approxAnnualFees": "₹5,50,000 - ₹5,85,000",
+    "costBand": "high",
+    "feesNote": "High-cost private (deemed) university — tuition ~₹2.75–2.92 lakh/semester (~₹5.5–5.85 lakh/year), rising ~5% annually; hostel & mess extra. No income-based government waiver applies, but BITS offers Merit and Merit-cum-Need (MCN) scholarships covering 10–100% of tuition for a sizeable share of admitted students.",
+    "entranceRequired": "BITSAT",
+    "officialUrl": "https://www.bits-pilani.ac.in/",
+    "sourceUrl": "https://admissions.bits-pilani.ac.in/FD/FD_fee.html",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": null,
+    "verified": true
   }
 ]
