@@ -1,0 +1,384 @@
+{
+  "meta": {
+    "career": "Government Job (SSC / Banking Officer)",
+    "careerAliases": [
+      "Central Government Officer",
+      "Public Sector Bank Officer",
+      "SSC Combined Graduate Level",
+      "IBPS PO/Clerk"
+    ],
+    "studentProfile": {
+      "class": "11",
+      "board": "cbse",
+      "stream": "commerce-maths",
+      "language": "en",
+      "currentDate": "2026-06-21"
+    },
+    "generatedAt": "2026-06-21",
+    "confidence": "high",
+    "cacheKey": "govt-job|cbse|commerce-maths|class11"
+  },
+  "overview": {
+    "summary": "Government jobs via SSC CGL (central ministries) and IBPS banking exams are among India's most prestigious and stable career paths. Your Commerce + Maths background is perfectly suited: maths is a key subject in both pathways, and commerce concepts help in banking roles. Both streams offer excellent job security, fixed work hours, pension, and competitive entry-level salaries of ₹40,000–₹75,000 per month depending on the post.",
+    "dayInLife": "As an SSC CGL Income Tax Inspector or IBPS PO, a typical day involves desk-based compliance work, audit investigations, or branch operations—handling government affairs or customer accounts with clearly defined responsibilities, fixed office hours, and predictable promotions based on merit and seniority.",
+    "payRange": {
+      "entry": "₹40,000–₹75,000 per month (gross + allowances, SSC & IBPS combined range)",
+      "experienced": "₹1,00,000–₹2,50,000+ per month after 10–15 years and promotions",
+      "note": "SSC CGL salaries are higher for elite posts like AAO (Assistant Audit Officer, Level 8: ₹47,600–₹1,51,100 basic). IBPS PO entry ranges ₹52,000–₹58,000. Exact figures depend on city posting (X/Y/Z classification), department, and allowances (HRA, DA, TA)."
+    },
+    "demandOutlook": "Very high demand. SSC conducts CGL annually with 12,000+ vacancies across central government. IBPS conducts multiple exams yearly with thousands of banking vacancies. Both attract 20–30 lakh candidates annually due to prestige, security, and salary. Competitive but merit-based with no interview bias.",
+    "requirements": [
+      "Bachelor's degree in any discipline (required for SSC CGL; IBPS PO also requires this before registration).",
+      "Age 18–32 for SSC CGL (most posts); 20–30 for IBPS PO/Clerk (exact limits vary by post).",
+      "Indian citizenship or specified nationality conditions.",
+      "Strong command of quantitative aptitude, reasoning, English, and general awareness.",
+      "Computer proficiency (mandatory for banking exams; essential for government roles).",
+      "Clear medical and physical fitness tests for some posts (e.g., SSC CGL Sub-Inspector)."
+    ]
+  },
+  "routes": [
+    {
+      "id": "ssc-banking-dual",
+      "name": "SSC CGL + IBPS Banking (Dual Pathway)",
+      "bestFor": "Commerce + Maths students wanting maximum opportunities—apply for both SSC CGL (central govt) and IBPS PO/Clerk (banking) exams in the same window. Syllabi overlap significantly (Quant, Reasoning, English, GA), so one preparation strategy covers both. Whichever clears first becomes your entry point; the other remains a backup.",
+      "feasibility": "high",
+      "feasibilityReason": "Your Commerce + Maths background perfectly fits both exams. SSC CGL application window (typically May–June) and IBPS notification (typically June–July) allow parallel preparation. Both exams favour graduates with strong fundamentals in maths and logical reasoning.",
+      "costBand": "low",
+      "duration": "~3 years (Class 11–12 + graduation + 1–2 years intense exam prep post-degree)",
+      "steps": [
+        {
+          "id": "step-1",
+          "order": 0,
+          "type": "education",
+          "title": "Complete Class 11 & 12 (Commerce with Maths, CBSE)",
+          "offsetMonths": 0,
+          "description": "Strengthen foundation in maths, economics, and reasoning. Build habits of daily practice and mock tests. Score 70%+ in Class 12 to unlock higher education and professional competitive exams."
+        },
+        {
+          "id": "step-2",
+          "order": 1,
+          "type": "education",
+          "title": "Pursue Bachelor's Degree (B.Com or BA with Economics/Maths)",
+          "offsetMonths": 24,
+          "description": "Enroll in any 3-year degree program. Commerce graduates have an edge for SSC CGL posts like AAO (Assistant Audit Officer) and Tax-related roles. Economics or statistics honours strengthen candidacy for junior statistical officer posts."
+        },
+        {
+          "id": "step-3",
+          "order": 2,
+          "type": "skill",
+          "title": "Build Quantitative Aptitude & Reasoning",
+          "offsetMonths": 24,
+          "description": "Start formal preparation alongside final-year degree. Focus on number systems, algebra, geometry, profit–loss, time–work, permutation–combination, and verbal/non-verbal reasoning. Practise mock tests weekly."
+        },
+        {
+          "id": "step-4",
+          "order": 3,
+          "type": "skill",
+          "title": "Master English Language & General Awareness",
+          "offsetMonths": 30,
+          "description": "Build reading comprehension, grammar, and vocabulary. Track current affairs, Indian polity, economics, history, and geography. Both SSC CGL Tier 2 and IBPS Mains are knowledge-heavy in this section."
+        },
+        {
+          "id": "step-5",
+          "order": 4,
+          "type": "exam",
+          "title": "SSC CGL Tier 1 Exam (Online MCQ)",
+          "offsetMonths": 38,
+          "description": "Preliminary stage testing Reasoning, Quantitative Aptitude, English, and General Awareness. Typically held August–September after graduation. Lasts ~1 hour, 100 questions, 200 marks. Merit-based with no interview."
+        },
+        {
+          "id": "step-6",
+          "order": 5,
+          "type": "exam",
+          "title": "IBPS PO Prelims (Optional parallel attempt)",
+          "offsetMonths": 38,
+          "description": "Held August–September. Covers Reasoning, Quantitative Aptitude, and English. 100 questions, 100 marks, 1 hour. If pursuing both pathways, take both exams in the same window using overlapping preparation.",
+          "optional": true
+        },
+        {
+          "id": "step-7",
+          "order": 6,
+          "type": "exam",
+          "title": "SSC CGL Tier 2 (Main Exam – Advanced)",
+          "offsetMonths": 42,
+          "description": "Held December. 2-part exam: Paper 1 (Quantitative Aptitude + English, 200 marks, 2 hours) tests advanced concepts. Candidates shortlisted from Tier 1 only appear here. Merit-based final selection—no interview in SSC CGL."
+        },
+        {
+          "id": "step-8",
+          "order": 6,
+          "type": "exam",
+          "title": "IBPS PO Mains (Optional parallel attempt)",
+          "offsetMonths": 46,
+          "description": "Held early October. 200 marks, 3 hours. Tests Reasoning, Quantitative Aptitude, English, and General Awareness at advanced level. If qualified from Prelims, take this to remain in the running for banking posts.",
+          "optional": true,
+          "alternativeTo": "step-9"
+        },
+        {
+          "id": "step-9",
+          "order": 7,
+          "type": "application",
+          "title": "SSC CGL Post Preference & Document Verification",
+          "offsetMonths": 48,
+          "description": "After Tier 2 results, you rank your post preferences (Income Tax Inspector, Assistant Section Officer, Auditor, etc.). Merits list is prepared, and top scorers enter document verification. Final selection by March next year."
+        },
+        {
+          "id": "step-10",
+          "order": 7,
+          "type": "application",
+          "title": "IBPS PO Interview & Personality Test (Optional)",
+          "offsetMonths": 48,
+          "description": "If shortlisted after Mains, attend personality test and interview conducted by participating banks. Final merit list prepared; selected candidates offered probationary officer roles across 11 public sector banks.",
+          "optional": true,
+          "alternativeTo": "step-9"
+        },
+        {
+          "id": "step-11",
+          "order": 8,
+          "type": "experience",
+          "title": "Join as Probationary Officer / Trainee Officer",
+          "offsetMonths": 54,
+          "description": "Once selected (via SSC CGL or IBPS), join either central government ministry or bank. Initial 3–6 months of training in policy, procedures, and compliance. Post allotment finalized; you begin regular duties."
+        },
+        {
+          "id": "step-12-a",
+          "order": 9,
+          "type": "education",
+          "title": "Government Job Track: Stay in Service + Departmental Exams (fork)",
+          "offsetMonths": 60,
+          "description": "Build expertise in your department's domain. After 5–7 years, appear for departmental promotion exams (e.g., Senior Selection Test for SSC CGL officers) to accelerate promotion to higher pay levels (e.g., Level 8, Under Secretary). Your Commerce + Maths background aids analytical roles.",
+          "optional": true,
+          "alternativeTo": "step-12-b"
+        },
+        {
+          "id": "step-12-b",
+          "order": 9,
+          "type": "education",
+          "title": "Banking Track: Promotions within Bank + Optional MBA (fork)",
+          "offsetMonths": 60,
+          "description": "IBPS PO rises from Scale I → Manager (Scale II) → Senior Manager (Scale III) over 8–10 years. Some banks sponsor in-service MBA. Commercial and financial knowledge compounds—management positions yield ₹1.5–2+ lakhs/month after 10 years.",
+          "optional": true,
+          "alternativeTo": "step-12-a"
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Quantitative Aptitude (arithmetic, algebra, geometry, data interpretation)",
+          "Logical Reasoning (syllogism, analogy, puzzles, sequences, coding–decoding)",
+          "English Proficiency (reading comprehension, grammar, vocabulary, error detection)",
+          "General Awareness & Current Affairs (Indian polity, history, economics, geography, science)",
+          "Computer Literacy (MS Office, email, basic data entry, digital forms)",
+          "Analytical & Problem-Solving Mindset",
+          "Time Management & Mock-Test Practice"
+        ],
+        "upskilling": [
+          {
+            "name": "SSC CGL Free Mock Tests & Previous Year Papers",
+            "why": "Familiarizes you with exact exam pattern, time limits, and difficulty level. Identify weak sections early.",
+            "costBand": "free",
+            "url": "https://ssc.gov.in/",
+            "verified": false
+          },
+          {
+            "name": "IBPS Mock Test Series (Free Platform)",
+            "why": "Banking exam patterns differ slightly from SSC; IBPS mocks teach puzzle-solving speed and reasoning efficiency.",
+            "costBand": "free",
+            "url": "https://www.ibps.in/",
+            "verified": false
+          },
+          {
+            "name": "Quantitative Aptitude Preparation (Khan Academy, YouTube)",
+            "why": "Strengthen number systems, fractions, percentages, profit–loss, time–work. Build speed and accuracy.",
+            "costBand": "free",
+            "url": "https://www.khanacademy.org/",
+            "verified": false
+          },
+          {
+            "name": "English Language & Comprehension (Grammarly, Oxford Learner's Dictionaries)",
+            "why": "Boost reading speed, grammar accuracy, and vocabulary. Both exams reward strong English command.",
+            "costBand": "free",
+            "url": "https://www.grammarly.com/",
+            "verified": false
+          },
+          {
+            "name": "Current Affairs (Newspaper Daily, PIB India, Budget 2026 Summary)",
+            "why": "Keep abreast of national and international news, government schemes, and economic policy. GA section heavily tests this.",
+            "costBand": "free",
+            "url": "https://pib.gov.in/",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "name": "SSC CGL Tier 1 & Tier 2 (Combined Graduate Level Examination)",
+          "purpose": "Recruit graduates for Group B and Group C posts (Income Tax Inspector, Assistant Section Officer, Auditor, Accounts Officer, etc.) across central government ministries and departments.",
+          "eligibility": "Bachelor's degree from a recognized university, aged 18–32 (most posts; some posts have lower/higher limits), Indian citizen.",
+          "typicalWindow": "Notification typically released May; applications open May–June; Tier 1 held August–September; Tier 2 held December.",
+          "costBand": "low",
+          "officialUrl": "https://ssc.gov.in/",
+          "verified": false
+        },
+        {
+          "name": "IBPS PO (Probationary Officer) CRP XVI",
+          "purpose": "Recruit graduates as Probationary Officers in 11 participating public sector banks for management-track careers.",
+          "eligibility": "Bachelor's degree in any discipline, aged 20–30, Indian citizen, computer literate.",
+          "typicalWindow": "Notification typically released June; applications July–August; Prelims August–September; Mains October; Interview November.",
+          "costBand": "low",
+          "officialUrl": "https://www.ibps.in/",
+          "verified": false
+        },
+        {
+          "name": "IBPS Clerk CRP-XVI (Customer Service Associate)",
+          "purpose": "Recruit graduates as clerical staff in public sector banks—entry-level but faster progression than traditional clerk roles. Alternative to PO for those preferring ground-level banking operations.",
+          "eligibility": "Bachelor's degree, aged 20–28, computer knowledge mandatory.",
+          "typicalWindow": "Notification typically released August; applications September–October; Prelims October; Mains November; no interview required.",
+          "costBand": "low",
+          "officialUrl": "https://www.ibps.in/",
+          "verified": false
+        },
+        {
+          "name": "SSC CHSL (10+2 Level Exam) – Alternative Entry Point (if you miss CGL)",
+          "purpose": "Lower-level central government posts (Lower Divisional Clerk, Postal Assistant, etc.) for 12th-pass candidates. Not preferred if CGL is pursued, but a safety net.",
+          "eligibility": "12th pass (Class 12), aged 18–27, Indian citizen.",
+          "typicalWindow": "Typically held July–September annually.",
+          "costBand": "low",
+          "officialUrl": "https://ssc.gov.in/",
+          "verified": false
+        }
+      ],
+      "colleges": [],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "If you miss SSC CGL application (June deadline), apply for IBPS PO in the same year—prelims typically still open July–August.",
+          "If you clear neither in 2026–27, prepare again and apply in 2027–28 cycle. Both exams are held annually with no upper limit on attempts.",
+          "Fallback: Apply for SSC CHSL (if holding only 12th pass temporarily) or RRB NTPC (Railway exam with similar salary but different career path).",
+          "Consider state-level civil service exams (UPSC, state PSC) if central govt exams remain uncertain after 2–3 attempts."
+        ]
+      }
+    }
+  ],
+  "prepResources": [
+    {
+      "title": "SSC CGL 2026 Official Notification & Syllabus",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://ssc.gov.in/",
+      "verified": false
+    },
+    {
+      "title": "IBPS Official Calendar & Notification 2026",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.ibps.in/",
+      "verified": false
+    },
+    {
+      "title": "Quantitative Aptitude for Competitive Exams – RS Aggarwal",
+      "type": "book",
+      "costBand": "low",
+      "language": "en",
+      "url": "",
+      "verified": false
+    },
+    {
+      "title": "Fast-Track Objective Arithmetic – Arihant Publications",
+      "type": "book",
+      "costBand": "low",
+      "language": "en",
+      "url": "",
+      "verified": false
+    },
+    {
+      "title": "English Language & Comprehension YouTube Channel (By Expert Teachers)",
+      "type": "video",
+      "costBand": "free",
+      "language": "en",
+      "url": "",
+      "verified": false
+    },
+    {
+      "title": "Current Affairs Monthly Digest & PIB Press Releases",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://pib.gov.in/",
+      "verified": false
+    },
+    {
+      "title": "Mock Test Series for SSC CGL & IBPS (Free Platforms: PW, Adda247)",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "en",
+      "url": "",
+      "verified": false
+    }
+  ],
+  "groundingSources": [
+    {
+      "claim": "SSC CGL 2026 notification released May 21 with 12,256 vacancies; applications open until June 22, 2026.",
+      "url": "https://ssc.gov.in/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "SSC CGL Tier 1 scheduled August–September 2026; Tier 2 scheduled December 2026.",
+      "url": "https://ssc.gov.in/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "SSC CGL application fee ₹100 for General/OBC; exempted for SC/ST/Women/PwD/ESM.",
+      "url": "https://ssc.gov.in/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "SSC CGL eligibility: Bachelor's degree from recognized university, age 18–32 (varies by post), Indian citizen.",
+      "url": "https://ssc.gov.in/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "SSC CGL salary ranges from ₹25,500 to ₹1,51,100+ depending on post and pay level.",
+      "url": "https://www.adda247.com/ssc-cgl/salary",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "IBPS PO notification typically released June; Prelims August 22–23, 2026; Mains October 4, 2026.",
+      "url": "https://www.ibps.in/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "IBPS PO application fee ₹850 for General/OBC; ₹175 for SC/ST/PwD.",
+      "url": "https://www.ibps.in/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "IBPS PO eligibility: Bachelor's degree, age 20–30, computer literate, Indian citizen.",
+      "url": "https://www.ibps.in/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "IBPS PO in-hand salary approximately ₹52,000–₹58,000 per month at entry level.",
+      "url": "https://rank1st.in/bank-po-vs-ssc-cgl-salary/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "IBPS Clerk Prelims October 10–11, 2026; Mains held later; no interview; 20–28 years age limit.",
+      "url": "https://www.ibps.in/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "Both SSC CGL and IBPS exams are merit-based with no interview bias; Commerce + Maths background suits both pathways.",
+      "url": "https://ssc.gov.in/",
+      "fetchedAt": "2026-06-21"
+    }
+  ],
+  "disclaimers": [
+    "This journey is grounded in 2026 exam windows and fee structures as of the knowledge cutoff date (June 2026). Exam dates, fees, and eligibility criteria may change. Always verify the latest details on official SSC (https://ssc.gov.in/) and IBPS (https://www.ibps.in/) websites before applying.",
+    "Salary figures are approximate and vary by city classification (X/Y/Z), department, and allowances (HRA, DA, TA). Actual in-hand salary after deductions (NPS, PF, CGHS) may differ.",
+    "The timeline assumes a standard 3-year bachelor's degree + 1–2 years post-degree preparation. Acceleration or delay depends on your course load, exam attempts, and personal pace.",
+    "Commerce + Maths stream is well-suited to both pathways, but Math's utility is higher in SSC CGL's advanced Tier 2 quantitative section. Ensure strong fundamentals.",
+    "Mock tests and prep resources listed are illustrative and free/low-cost; verify current availability and reviews before enrolling.",
+    "Promotion timelines (5–15 years for higher pay grades) are based on historical trends. Future modifications in pay structure or promotion rules may alter the trajectory."
+  ]
+}

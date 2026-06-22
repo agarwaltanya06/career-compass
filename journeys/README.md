@@ -18,8 +18,13 @@ miss volume gets high.
 
 ## Lifecycle
 
-1. **Cache miss** → generate → write an unverified candidate → return it to the
-   requester stamped "unverified — check official links".
+1. **Cache miss** →
+   - If a candidate is already queued for this key, serve the **newest** one,
+     stamped "unverified — check official links" (no model call). This is what
+     lets the seeded candidates back the full career catalogue at launch.
+   - Otherwise generate → write a new unverified candidate → return it stamped.
+   (The seed script always regenerates instead of serving an existing candidate,
+   so re-seeding refreshes the queue rather than no-op'ing.)
 2. **You review a candidate** → if good, move it up to the top-level verified
    filename (dropping the timestamp). It's now the default for everyone. If not,
    delete it.

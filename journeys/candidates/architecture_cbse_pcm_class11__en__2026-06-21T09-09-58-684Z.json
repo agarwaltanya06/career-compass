@@ -1,0 +1,788 @@
+{
+  "meta": {
+    "career": "Architecture (B.Arch)",
+    "careerAliases": [
+      "Architect",
+      "Building Designer",
+      "Architectural Practitioner"
+    ],
+    "studentProfile": {
+      "class": "11",
+      "board": "cbse",
+      "stream": "pcm",
+      "language": "en",
+      "currentDate": "2026-06-21"
+    },
+    "generatedAt": "2026-06-21",
+    "confidence": "high",
+    "cacheKey": "architecture|cbse|pcm|class11"
+  },
+  "overview": {
+    "summary": "Architecture is a 5-year undergraduate degree that combines art, design, and technical knowledge to create buildings and spaces. In India, becoming an architect requires passing either NATA or JEE Main Paper 2, followed by degree completion and Council of Architecture registration.",
+    "dayInLife": "Architects spend their days designing buildings, consulting with clients, creating detailed drawings and 3D models using software like Revit and AutoCAD, managing construction sites, and solving complex spatial and structural problems. Work blends creative design with technical precision and often involves collaborating with engineers, contractors, and stakeholders.",
+    "payRange": {
+      "entry": "₹3–5 LPA (junior roles; ₹10K–15K/month starting salary in some firms)",
+      "experienced": "₹8–18 LPA after 5–10 years; senior roles and principals earn ₹20–40+ LPA",
+      "note": "Entry-level architects in India typically start with internships or junior positions; salaries improve significantly with BIM expertise, specialisation (urban design, sustainable architecture, commercial projects), and years of experience. Metro cities (Delhi, Mumbai, Bangalore, Pune) offer better prospects."
+    },
+    "demandOutlook": "Strong and growing. India's infrastructure expansion (smart cities, metro rail, airport development), luxury residential and commercial real estate growth, and increased adoption of BIM technology are driving demand for skilled architects. Global firms (AECOM, Arup, Jacobs, Morphogenesis) operating in India actively recruit graduates from top colleges (IIT, SPA, CEPT).",
+    "requirements": [
+      "Class 12 with Physics, Chemistry, Mathematics (PCM), minimum 50% aggregate",
+      "Qualify NATA (National Aptitude Test in Architecture) or JEE Main Paper 2 (Architecture Aptitude Test for IITs)",
+      "5-year B.Arch degree from Council of Architecture (CoA) approved college",
+      "Complete internship hours and practical experience during degree",
+      "Register with Council of Architecture to practise as a licensed architect",
+      "Strong drawing, visual reasoning, 3D visualisation, and design sensibility",
+      "Proficiency in design software (AutoCAD, Revit, SketchUp) for career advancement"
+    ]
+  },
+  "routes": [
+    {
+      "id": "route-nata-barch",
+      "name": "NATA → B.Arch (Primary Route for Most Students)",
+      "bestFor": "Students aiming for government, state, and private architecture colleges; more flexible and accessible than the JEE route.",
+      "feasibility": "high",
+      "feasibilityReason": "NATA is the primary entrance exam; Phase 1 offers multiple sessions (April–June 2026), Phase 2 in August. Eligibility is straightforward (Class 12 PCM with 50% aggregate). NATA accepts a broader talent pool based on design aptitude, drawing, and spatial reasoning rather than pure mathematics. Over 365 colleges accept NATA scores.",
+      "costBand": "low",
+      "duration": "5 years B.Arch + 1–2 years internship/apprenticeship (optional) before independent practice",
+      "steps": [
+        {
+          "id": "step-1",
+          "order": 0,
+          "type": "education",
+          "title": "Complete Class 12 (Ongoing)",
+          "offsetMonths": 0,
+          "description": "Continue studies in CBSE Class 11 and complete Class 12 with PCM, aiming for 50%+ aggregate to meet eligibility and strengthen competitive standing."
+        },
+        {
+          "id": "step-2",
+          "order": 1,
+          "type": "skill",
+          "title": "Begin Drawing & Spatial Reasoning Practice",
+          "offsetMonths": 0,
+          "description": "Start weekly sketching, perspective drawing, 2D/3D visualisation, and composition exercises now. Build a portfolio of freehand sketches and design concepts to prepare for NATA drawing sections."
+        },
+        {
+          "id": "step-3",
+          "order": 2,
+          "type": "exam",
+          "title": "NATA (National Aptitude Test in Architecture)",
+          "offsetMonths": 10,
+          "description": "Appear for NATA in Phase 1 (typically April–June 2027 for next session, or later depending on your Class 12 board result date). NATA assesses drawing ability, 3D visualisation, logical reasoning, and design aptitude via Part A (freehand drawing, 80 marks) and Part B (PCM-based MCQ, 120 marks, 200 total). Aim for 120+ score for competitive colleges; top colleges prefer 140+."
+        },
+        {
+          "id": "step-4",
+          "order": 3,
+          "type": "application",
+          "title": "B.Arch College Applications via NATA",
+          "offsetMonths": 12,
+          "description": "Post-NATA, apply directly to individual colleges (no centralised counselling for NATA). Research and shortlist from ~365 CoA-approved colleges across India. Each state manages its own counselling; private colleges and deemed institutions have their own merit-based admission windows."
+        },
+        {
+          "id": "step-5",
+          "order": 4,
+          "type": "education",
+          "title": "B.Arch Degree (5 years)",
+          "offsetMonths": 14,
+          "description": "Enrol in 5-year B.Arch programme covering design studios, construction technology, history of architecture, building services, CAD/BIM, and project-based learning. Ten semesters of coursework, internships, and practical design projects."
+        },
+        {
+          "id": "step-6",
+          "order": 5,
+          "type": "experience",
+          "title": "Internship During 3rd/4th Year",
+          "offsetMonths": 38,
+          "description": "Secure a 2–3 month internship at an architecture firm or design studio during summer or semester break (typically after Year 2 or 3). Build portfolio, learn industry workflows, and network.",
+          "optional": true
+        },
+        {
+          "id": "step-7",
+          "order": 6,
+          "type": "skill",
+          "title": "Develop BIM & Advanced CAD Skills",
+          "offsetMonths": 42,
+          "description": "Learn Revit, SketchUp, and BIM workflows during degree or post-graduation. BIM proficiency significantly increases starting salary and career prospects, especially with international firms.",
+          "optional": true
+        },
+        {
+          "id": "step-8",
+          "order": 7,
+          "type": "education",
+          "title": "B.Arch Degree Completion & CoA Registration",
+          "offsetMonths": 60,
+          "description": "Complete all 10 semesters, submit final project (thesis/design project), and graduate. Register with the Council of Architecture to legally practise as an architect."
+        },
+        {
+          "id": "step-9",
+          "order": 8,
+          "type": "experience",
+          "title": "Entry-Level Architect Role (Work)",
+          "offsetMonths": 62,
+          "description": "Begin career as junior architect, design assistant, or architectural technician at a firm. Gain 2–3 years of experience before independent practice.",
+          "alternativeTo": "step-9b"
+        },
+        {
+          "id": "step-9b",
+          "order": 8,
+          "type": "education",
+          "title": "M.Arch Specialisation (Further Study)",
+          "offsetMonths": 62,
+          "description": "Pursue 2-year M.Arch in specialisations (urban design, sustainable architecture, heritage conservation, landscape architecture) at IIT, SPA, CEPT, or internationally. Enhances career prospects and earning potential.",
+          "alternativeTo": "step-9"
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Freehand drawing and sketching (perspective, composition, proportion)",
+          "2D and 3D spatial visualisation",
+          "Design thinking and problem-solving",
+          "Building materials and construction technology",
+          "AutoCAD and computer-aided design",
+          "Technical drawing and architectural documentation",
+          "Understanding of building codes and regulations",
+          "Project planning and site management",
+          "Presentation and communication skills",
+          "Colour theory and design aesthetics"
+        ],
+        "upskilling": [
+          {
+            "name": "Revit BIM Fundamentals (Autodesk Official Course)",
+            "why": "BIM adoption is the fastest-growing skill; Revit-trained architects earn 30–50% more than non-BIM architects. Paid preparation available; free trial access to Revit during degree.",
+            "costBand": "free",
+            "url": "https://www.autodesk.com/learn/ondemand/course/revit-architectural-design-cert-prep",
+            "verified": false
+          },
+          {
+            "name": "SketchUp for Architects (Udemy/Coursera)",
+            "why": "Faster for concept design and client presentations than Revit; easier entry point for beginners. Highly affordable and widely taught.",
+            "costBand": "low",
+            "url": "https://www.coursera.org/courses?query=revit",
+            "verified": false
+          },
+          {
+            "name": "AutoCAD for Architecture (Udemy)",
+            "why": "Industry-standard for 2D technical drawing and construction documentation. Core tool taught during B.Arch degree but early practice accelerates skill.",
+            "costBand": "low",
+            "url": "https://www.udemy.com/courses/search/?q=autocad+architecture",
+            "verified": false
+          },
+          {
+            "name": "Design Fundamentals & Sketching (YouTube: BIMscape, Udemy)",
+            "why": "Reinforces drawing technique and design principles essential for NATA success and studio work. Free and paid options available.",
+            "costBand": "free",
+            "url": "https://www.youtube.com/c/BIMscape",
+            "verified": false
+          },
+          {
+            "name": "LEED & Sustainable Architecture Certification",
+            "why": "Green building credentials (LEED, IGBC, GRIHA) open doors to high-paying roles in real estate and corporate sustainability projects. Pursue during or post-degree.",
+            "costBand": "mid",
+            "url": "https://www.usgbc.org/leed",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "name": "NATA (National Aptitude Test in Architecture)",
+          "purpose": "Mandatory entrance exam for CoA-approved B.Arch programmes. Assesses design aptitude, drawing, 3D visualisation, and logical reasoning.",
+          "eligibility": "Class 12 passed/appearing with PCM (Physics, Chemistry, Mathematics) as compulsory subjects with 45%+ aggregate; or 10+3 diploma with Mathematics and 45%+ aggregate. Minimum age 17 as of July 31 of exam year.",
+          "typicalWindow": "Phase 1: April–June (Fridays and Saturdays, multiple sessions). Phase 2: August (for candidates who did not attempt Phase 1). Registration usually opens ~March. Candidates may attempt Phase 1 up to 2 times; best score considered.",
+          "costBand": "low",
+          "officialUrl": "https://www.nata.in/",
+          "verified": false
+        },
+        {
+          "name": "JEE Main Paper 2 (B.Arch Alternative)",
+          "purpose": "Alternative entrance exam leading to B.Arch at NITs, SPAs (Delhi, Bhopal, Vijayawada), and other institutions. Combines architecture aptitude test with PCM-based MCQs.",
+          "eligibility": "Class 12 with PCM (50%+ aggregate, 45%+ for reserved categories). No age limit; can attempt up to three consecutive years.",
+          "typicalWindow": "Typically January and April sessions annually. Applications open ~November. Announcement of exam dates usually in October.",
+          "costBand": "low",
+          "officialUrl": "https://jeemain.nta.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "AAT (Architecture Aptitude Test, for IITs)",
+          "purpose": "Required ONLY if you qualify JEE Advanced (for B.Arch at IIT Roorkee, IIT Kharagpur, IIT BHU Varanasi). Assessed on JEE Advanced rank, not AAT score; AAT clearance is mandatory for seat allotment.",
+          "eligibility": "Must qualify JEE Advanced (top ~250,000 JEE Main qualifiers). Class 12 with 75% (65% for SC/ST/PwD) or category-wise top 20 percentile.",
+          "typicalWindow": "Announcement after JEE Advanced result (~June). Registration and exam typically held July–August.",
+          "costBand": "low",
+          "officialUrl": "https://www.jeeadv.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "State-Level & Private College CET (e.g., MHT CET in Maharashtra, KCET in Karnataka)",
+          "purpose": "State and private colleges in some states conduct their own entrance exams. Required in addition to NATA for state counselling or direct admission to private institutions.",
+          "eligibility": "Class 12 PCM with state-specific minimum (typically 50%+). Rules vary by state and college.",
+          "typicalWindow": "Varies by state; typically March–July. Check respective state's official website for exact dates.",
+          "costBand": "low",
+          "officialUrl": "https://example.com/state-cet",
+          "verified": false
+        }
+      ],
+      "colleges": [
+        {
+          "name": "IIT Roorkee (Department of Architecture and Planning)",
+          "type": "government",
+          "location": "Roorkee, Uttarakhand",
+          "approxAnnualFees": "~₹2–2.2 lakh/year (≈₹10 lakh total for 5 years); includes tuition, hostel, and miscellaneous",
+          "feesNote": "Scholarships and fee waivers available for economically weaker sections (family income <₹1 lakh/year: full waiver; ₹1–5 lakh/year: 2/3 waiver). Tuition ~₹50K/term.",
+          "entranceRequired": "JEE Advanced + AAT",
+          "costBand": "low",
+          "officialUrl": "https://www.iitr.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "School of Planning and Architecture (SPA), Delhi",
+          "type": "government",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "~₹1.5–2 lakh/year (≈₹7.5–10 lakh total); includes tuition and hostel",
+          "feesNote": "Scholarships for reserved categories and merit-based aid available. Among India's top public architecture schools.",
+          "entranceRequired": "JEE Main Paper 2 (or NATA in some cases for specific quotas)",
+          "costBand": "low",
+          "officialUrl": "https://www.spa.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "CEPT University",
+          "type": "deemed",
+          "location": "Ahmedabad, Gujarat",
+          "approxAnnualFees": "~₹2–2.5 lakh/year (≈₹10–12.5 lakh total); among mid-tier private institutions",
+          "feesNote": "Strong design-focused curriculum; industry-relevant exposure. Private deemed university with competitive fees.",
+          "entranceRequired": "NATA or institutional entrance exam",
+          "costBand": "mid",
+          "officialUrl": "https://www.cept.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "Sir J.J. College of Architecture, Mumbai",
+          "type": "government",
+          "location": "Mumbai, Maharashtra",
+          "approxAnnualFees": "~₹1.5–2 lakh/year (≈₹7.5–10 lakh total); government-aided, very affordable",
+          "feesNote": "Among India's oldest and most prestigious architecture colleges; highly competitive admission via state counselling (NATA + board cutoff).",
+          "entranceRequired": "NATA + Maharashtra state counselling",
+          "costBand": "low",
+          "officialUrl": "https://www.jjaa.edu.in/",
+          "verified": false
+        },
+        {
+          "name": "NIT Trichy (National Institute of Technology Tiruchirappalli)",
+          "type": "government",
+          "location": "Tiruchirappalli, Tamil Nadu",
+          "approxAnnualFees": "~₹1–1.2 lakh/year (≈₹5–6 lakh total); very affordable government institution",
+          "feesNote": "Ranked 9th in NIRF Architecture 2023. Strong placements and industry network.",
+          "entranceRequired": "JEE Main Paper 2",
+          "costBand": "low",
+          "officialUrl": "https://www.nitt.edu/",
+          "verified": false
+        },
+        {
+          "name": "NIT Calicut",
+          "type": "government",
+          "location": "Calicut (Kozhikode), Kerala",
+          "approxAnnualFees": "~₹1–1.2 lakh/year (≈₹5–6 lakh total)",
+          "feesNote": "Good reputation; strong in design-focused architecture education. Affordable government NIT.",
+          "entranceRequired": "JEE Main Paper 2",
+          "costBand": "low",
+          "officialUrl": "https://www.nitc.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "Manipal Institute of Technology (MIT), Manipal",
+          "type": "private",
+          "location": "Manipal, Karnataka",
+          "approxAnnualFees": "~₹2.5–3.5 lakh/year (≈₹12.5–17.5 lakh total); mid-tier private college",
+          "feesNote": "Strong infrastructure, good placements, balanced academics and design focus. NATA-based admissions also available.",
+          "entranceRequired": "NATA or institutional merit",
+          "costBand": "mid",
+          "officialUrl": "https://www.manipal.edu/",
+          "verified": false
+        },
+        {
+          "name": "BMS College of Architecture, Bangalore",
+          "type": "private",
+          "location": "Bangalore, Karnataka",
+          "approxAnnualFees": "~₹2–3 lakh/year (≈₹10–15 lakh total); mid-tier private college",
+          "feesNote": "Located in tech hub Bangalore; good industry connections and internship opportunities. NATA-based admission.",
+          "entranceRequired": "NATA",
+          "costBand": "mid",
+          "officialUrl": "https://www.bmsit.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "Chandigarh College of Architecture",
+          "type": "private",
+          "location": "Chandigarh, Union Territory",
+          "approxAnnualFees": "~₹2–2.5 lakh/year (≈₹10–12.5 lakh total)",
+          "feesNote": "Reputable private college; strong design pedagogy and internship culture.",
+          "entranceRequired": "NATA",
+          "costBand": "mid",
+          "officialUrl": "https://cca.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "Rachana Sansad School of Architecture, Mumbai",
+          "type": "private",
+          "location": "Mumbai, Maharashtra",
+          "approxAnnualFees": "~₹2.5–3 lakh/year (≈₹12.5–15 lakh total); mid-tier private college",
+          "feesNote": "Strong alumni network in Mumbai's architecture scene. NATA-based admission + state counselling.",
+          "entranceRequired": "NATA + Maharashtra state counselling",
+          "costBand": "mid",
+          "officialUrl": "https://www.rachanasansad.edu.in/",
+          "verified": false
+        }
+      ],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "Retake NATA in Phase 2 (August) of same year if you missed Phase 1.",
+          "Attempt JEE Main Paper 2 in next session (January or April) as alternative entrance if NATA scores are unsatisfactory.",
+          "Apply to colleges with direct admission / management quota (higher fee; ₹4–6 lakh/year private), though degree recognition remains valid if college is CoA-approved.",
+          "Take a gap year, use the time to strengthen drawing portfolio and design aptitude, and retake NATA next cycle with better preparation.",
+          "Consider B.Des (Bachelor of Design, 4 years) at NIFTALSO or similar design schools as alternative if architecture does not work out; some allow lateral entry into M.Arch later."
+        ]
+      }
+    },
+    {
+      "id": "route-jee-barch",
+      "name": "JEE Main Paper 2 → B.Arch (IITs, NITs, SPAs – Harder but Prestigious Route)",
+      "bestFor": "Students with strong mathematics and comprehensive science preparation; aiming for IIT or top NITs for architecture; willing to compete across engineering and architecture applicants.",
+      "feasibility": "medium",
+      "feasibilityReason": "JEE Main Paper 2 is significantly more competitive than NATA—you compete against engineering aspirants as well. Requires strong PCM foundation beyond Class 12 syllabus. However, IIT and SPA degrees carry strong prestige, higher starting salaries (₹15–22 LPA at IITs), and global recognition. IIT Roorkee and IIT Kharagpur are ranked #1 and #3 in NIRF Architecture 2023.",
+      "costBand": "low",
+      "duration": "5 years B.Arch + 1–2 years internship/apprenticeship (optional) before independent practice",
+      "steps": [
+        {
+          "id": "step-1-jee",
+          "order": 0,
+          "type": "education",
+          "title": "Complete Class 12 & Intensive JEE Preparation",
+          "offsetMonths": 0,
+          "description": "Finish Class 12 with strong PCM scores (aim 75%+ aggregate, 65%+ for SC/ST/PwD to qualify JEE Advanced cutoff for Class 12 marks). Begin or intensify JEE Main coaching covering 11th and 12th syllabus in depth—algebra, geometry, calculus, physics, chemistry."
+        },
+        {
+          "id": "step-2-jee",
+          "order": 1,
+          "type": "exam",
+          "title": "JEE Main Paper 2 (B.Arch)",
+          "offsetMonths": 10,
+          "description": "Attempt JEE Main Paper 2 for B.Arch (typically January and April sessions). Exam consists of PCM-based MCQs (120 marks) and drawing/visual test (80 marks, 200 total). Aim for score above 87 to qualify for B.Arch without NATA at some NITs/SPAs. Top rank (~top 250,000) needed to qualify JEE Advanced for IITs."
+        },
+        {
+          "id": "step-3-jee",
+          "order": 2,
+          "type": "exam",
+          "title": "JEE Advanced (Optional, for IITs)",
+          "offsetMonths": 11,
+          "description": "If targeting IIT Roorkee, IIT Kharagpur, or IIT BHU B.Arch, qualify JEE Main and appear for JEE Advanced (held May–June). Top ~2,50,000 JEE Main qualifiers are eligible. Extremely competitive; requires advanced problem-solving and stamina.",
+          "optional": true
+        },
+        {
+          "id": "step-4-jee",
+          "order": 3,
+          "type": "exam",
+          "title": "AAT (Architecture Aptitude Test, for IITs only)",
+          "offsetMonths": 12,
+          "description": "If you qualify JEE Advanced, register for AAT (held July–August). AAT score does not determine admission rank; instead, your JEE Advanced rank is used. However, passing AAT is mandatory for seat allotment in B.Arch. AAT tests drawing and design aptitude.",
+          "optional": true
+        },
+        {
+          "id": "step-5-jee",
+          "order": 4,
+          "type": "application",
+          "title": "JoSAA Counselling (IITs, NITs) or SPA Direct Counselling",
+          "offsetMonths": 13,
+          "description": "After results, register in JoSAA (Joint Seat Allocation Authority) if you qualified JEE Advanced. Fill college and course preferences in order. SPA Delhi/Bhopal/Vijayawada conduct separate counselling using JEE Main Paper 2 rank. Private colleges may conduct their own merit rounds."
+        },
+        {
+          "id": "step-6-jee",
+          "order": 5,
+          "type": "education",
+          "title": "B.Arch Degree at IIT/NIT/SPA (5 years)",
+          "offsetMonths": 15,
+          "description": "Enrol in 5-year B.Arch. Curriculum includes studios, building technology, history of architecture, CAD/BIM, sustainable design, and project-based learning. Access to world-class labs, libraries, and faculty."
+        },
+        {
+          "id": "step-7-jee",
+          "order": 6,
+          "type": "experience",
+          "title": "Internship During 3rd/4th Year",
+          "offsetMonths": 38,
+          "description": "Secure internship at top architecture firms or consultancies (often on-campus recruitment at IITs/NITs). Build portfolio and professional network.",
+          "optional": true
+        },
+        {
+          "id": "step-8-jee",
+          "order": 7,
+          "type": "skill",
+          "title": "Specialise in BIM & Advanced Design Software",
+          "offsetMonths": 42,
+          "description": "Develop expertise in Revit, BIM workflows, and computational design. IIT campuses often have BIM labs and industry partnerships.",
+          "optional": true
+        },
+        {
+          "id": "step-9-jee",
+          "order": 8,
+          "type": "education",
+          "title": "B.Arch Degree Completion & CoA Registration",
+          "offsetMonths": 60,
+          "description": "Complete degree with final project/thesis, graduate, and register with Council of Architecture."
+        },
+        {
+          "id": "step-10-jee",
+          "order": 9,
+          "type": "experience",
+          "title": "Entry-Level Architect at Top Firm or Startup (Work)",
+          "offsetMonths": 62,
+          "description": "IIT/NIT/SPA graduates typically join top design firms (Morphogenesis, UNStudio India, Perkins and Will), consultancies (Arup, AECOM), or real estate firms at ₹8–15 LPA. Strong campus placements and alumni networks.",
+          "alternativeTo": "step-10b-jee"
+        },
+        {
+          "id": "step-10b-jee",
+          "order": 9,
+          "type": "education",
+          "title": "M.Arch or M.Plan Specialisation",
+          "offsetMonths": 62,
+          "description": "Pursue postgraduate degree at IIT, SPA, CEPT, or internationally (AA London, ETH Zurich, Harvard GSD). Specialise in urban design, sustainable architecture, or heritage conservation.",
+          "alternativeTo": "step-10-jee"
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Advanced mathematics and 3D geometry",
+          "Strong physics and chemistry fundamentals",
+          "Freehand drawing and 3D visualisation",
+          "Design thinking and spatial reasoning",
+          "AutoCAD and architectural design software",
+          "Building construction and materials science",
+          "Project management and technical documentation",
+          "Presentation and communication",
+          "Collaboration and teamwork",
+          "Problem-solving in complex design briefs"
+        ],
+        "upskilling": [
+          {
+            "name": "Advanced Revit & BIM Management (VDCI or Autodesk Certified Course)",
+            "why": "IIT/NIT graduates pursuing BIM specialisation can command 30–50% salary premium and access to global firms. Pursue during or post-degree.",
+            "costBand": "mid",
+            "url": "https://vdci.edu/courses/bim-certification-course",
+            "verified": false
+          },
+          {
+            "name": "Computational Design & Parametric Modelling (Grasshopper, Dynamo)",
+            "why": "Emerging skillset for advanced design practices; positions you for roles in research-driven and innovative firms.",
+            "costBand": "low",
+            "url": "https://www.udemy.com/courses/search/?q=grasshopper+architecture",
+            "verified": false
+          },
+          {
+            "name": "Urban Design & Planning (M.Plan coursework or certification)",
+            "why": "Urban design is a high-paying specialisation; many IIT/SPA graduates pursue M.Plan or certification.",
+            "costBand": "mid",
+            "url": "https://www.cept.ac.in/",
+            "verified": false
+          },
+          {
+            "name": "LEED & Sustainable Building Certification",
+            "why": "Green building expertise opens doors to premium roles in corporate real estate and infrastructure projects.",
+            "costBand": "mid",
+            "url": "https://www.usgbc.org/leed",
+            "verified": false
+          },
+          {
+            "name": "3D Rendering & Visualisation (Lumion, V-Ray, 3ds Max)",
+            "why": "High-quality rendering is critical for client presentations and competition entries. Skill differentiates you in competitive practices.",
+            "costBand": "low",
+            "url": "https://www.udemy.com/courses/search/?q=architectural+rendering",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "name": "JEE Main Paper 2 (B.Arch Component)",
+          "purpose": "National-level entrance exam for B.Arch admission at NITs, SPAs, and other institutions. Combines PCM-based MCQs with drawing aptitude test.",
+          "eligibility": "Class 12 passed with PCM (50%+ aggregate; 45%+ for SC/ST/OBC/PwD). No age limit. Can attempt up to three consecutive years.",
+          "typicalWindow": "Typically held in January and April each year. Applications open ~November for January session. Exam announced by NTA ~December.",
+          "costBand": "low",
+          "officialUrl": "https://jeemain.nta.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "JEE Advanced (For IIT B.Arch Only)",
+          "purpose": "Qualification required to attempt B.Arch at IIT Roorkee, IIT Kharagpur, IIT BHU Varanasi. Only top ~2,50,000 JEE Main qualifiers are eligible.",
+          "eligibility": "Must qualify JEE Main Paper 1 or Paper 2. Class 12 minimum 75% aggregate (65% for SC/ST/PwD) or category-wise top 20 percentile.",
+          "typicalWindow": "Typically held May–June. Announcement usually in April.",
+          "costBand": "low",
+          "officialUrl": "https://www.jeeadv.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "AAT (Architecture Aptitude Test, Mandatory for IIT B.Arch)",
+          "purpose": "Must be passed to qualify for B.Arch seat allotment at IITs; score does not determine admission, but clearance is compulsory.",
+          "eligibility": "Must have qualified JEE Advanced.",
+          "typicalWindow": "Announced post-JEE Advanced result (~June). Registration and exam typically July–August.",
+          "costBand": "low",
+          "officialUrl": "https://www.jeeadv.ac.in/",
+          "verified": false
+        }
+      ],
+      "colleges": [
+        {
+          "name": "IIT Roorkee (Department of Architecture and Planning)",
+          "type": "government",
+          "location": "Roorkee, Uttarakhand",
+          "approxAnnualFees": "~₹2–2.2 lakh/year (≈₹10 lakh total for 5 years including hostel)",
+          "feesNote": "Ranked #1 in NIRF Architecture 2023. Average placement package ₹18.34 LPA (B.Arch). Fee waivers for EWS and SC/ST.",
+          "entranceRequired": "JEE Advanced + AAT",
+          "costBand": "low",
+          "officialUrl": "https://www.iitr.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "IIT Kharagpur (Department of Architecture and Regional Planning)",
+          "type": "government",
+          "location": "Kharagpur, West Bengal",
+          "approxAnnualFees": "~₹2–2.2 lakh/year (≈₹10 lakh total for 5 years)",
+          "feesNote": "Ranked #3 in NIRF 2023. Average package ₹16 LPA (B.Arch). World-class facilities; strong alumni network.",
+          "entranceRequired": "JEE Advanced + AAT",
+          "costBand": "low",
+          "officialUrl": "https://www.iitkgp.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "School of Planning and Architecture (SPA), Delhi",
+          "type": "government",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "~₹1.5–2 lakh/year (≈₹7.5–10 lakh total)",
+          "feesNote": "Ranked #5 in NIRF 2023 (though some sources rank it higher on India Today). Average package ₹7.2 LPA. Among India's finest public architecture schools; highly prestigious.",
+          "entranceRequired": "JEE Main Paper 2",
+          "costBand": "low",
+          "officialUrl": "https://www.spa.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "School of Planning and Architecture (SPA), Bhopal",
+          "type": "government",
+          "location": "Bhopal, Madhya Pradesh",
+          "approxAnnualFees": "~₹1.5–2 lakh/year (≈₹7.5–10 lakh total)",
+          "feesNote": "Autonomous institution; follows SPA Delhi's academic rigour. Very affordable; good placements and internship culture.",
+          "entranceRequired": "JEE Main Paper 2",
+          "costBand": "low",
+          "officialUrl": "https://www.spabhopal.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "School of Planning and Architecture (SPA), Vijayawada",
+          "type": "government",
+          "location": "Vijayawada, Andhra Pradesh",
+          "approxAnnualFees": "~₹1.5–2 lakh/year (≈₹7.5–10 lakh total)",
+          "feesNote": "Part of SPA network; follows rigorous design-focused curriculum. Affordable government institution.",
+          "entranceRequired": "JEE Main Paper 2",
+          "costBand": "low",
+          "officialUrl": "https://www.spavijayawada.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "NIT Trichy (National Institute of Technology Tiruchirappalli)",
+          "type": "government",
+          "location": "Tiruchirappalli, Tamil Nadu",
+          "approxAnnualFees": "~₹1–1.2 lakh/year (≈₹5–6 lakh total)",
+          "feesNote": "Ranked #9 in NIRF Architecture 2023. Strong placements; affordable government NIT.",
+          "entranceRequired": "JEE Main Paper 2",
+          "costBand": "low",
+          "officialUrl": "https://www.nitt.edu/",
+          "verified": false
+        },
+        {
+          "name": "NIT Rourkela",
+          "type": "government",
+          "location": "Rourkela, Odisha",
+          "approxAnnualFees": "~₹1–1.2 lakh/year (≈₹5–6 lakh total)",
+          "feesNote": "Good infrastructure and placements. Very affordable government NIT.",
+          "entranceRequired": "JEE Main Paper 2",
+          "costBand": "low",
+          "officialUrl": "https://www.nit.rourkela.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "NIT Calicut",
+          "type": "government",
+          "location": "Calicut (Kozhikode), Kerala",
+          "approxAnnualFees": "~₹1–1.2 lakh/year (≈₹5–6 lakh total)",
+          "feesNote": "Reputable for architecture education; strong design focus. Affordable.",
+          "entranceRequired": "JEE Main Paper 2",
+          "costBand": "low",
+          "officialUrl": "https://www.nitc.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "IIT BHU Varanasi (Institute of Technology, Banaras Hindu University)",
+          "type": "government",
+          "location": "Varanasi, Uttar Pradesh",
+          "approxAnnualFees": "~₹2–2.2 lakh/year (≈₹10 lakh total for 5 years)",
+          "feesNote": "Less well-known for architecture than IIT Roorkee/KGP, but good facilities and affordability.",
+          "entranceRequired": "JEE Advanced + AAT",
+          "costBand": "low",
+          "officialUrl": "https://www.iitbhu.ac.in/",
+          "verified": false
+        }
+      ],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "Retake JEE Main (January or April next session) and aim for better rank to secure B.Arch seat at NIT or SPA.",
+          "Shift strategy to NATA route: take NATA in current or next cycle and apply to NATA-accepting colleges (more colleges, potentially easier entry).",
+          "If JEE Advanced rank is very high but AAT not cleared, retake AAT next cycle (if eligible for JEE Main repeat).",
+          "Consider B.Tech Civil Engineering at IIT/NIT as fallback, then pursue architecture specialisation in postgraduate studies (M.Arch).",
+          "Take gap year and reappear JEE Main/Advanced with intensive coaching to improve PCM fundamentals and ranking."
+        ]
+      }
+    }
+  ],
+  "prepResources": [
+    {
+      "title": "NATA Official Information Brochure & Exam Pattern",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.nata.in/",
+      "verified": false
+    },
+    {
+      "title": "JEE Main Paper 2 Official Website (NTA)",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://jeemain.nta.ac.in/",
+      "verified": false
+    },
+    {
+      "title": "Council of Architecture (CoA) Official Website - NATA & B.Arch Guidelines",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://coa.gov.in/",
+      "verified": false
+    },
+    {
+      "title": "NATA Drawing & Aptitude Preparation (YouTube: BIMscape, Architecture Visualized)",
+      "type": "video",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.youtube.com/c/BIMscape",
+      "verified": false
+    },
+    {
+      "title": "AutoCAD Fundamentals for Architecture (Udemy, typically ₹300–500 sale price)",
+      "type": "free-course",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://www.udemy.com/courses/search/?q=autocad+architecture",
+      "verified": false
+    },
+    {
+      "title": "Revit for Beginners - Autodesk Free Official Course",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.autodesk.com/learn/ondemand/course/revit-architectural-design-cert-prep",
+      "verified": false
+    },
+    {
+      "title": "SketchUp Free (Online 3D Modelling for Beginners)",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.sketchup.com/",
+      "verified": false
+    },
+    {
+      "title": "NATA Mock Tests & Practice Papers (Udemy, Physics Wallah, Shiksha, TopRankers)",
+      "type": "free-course",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://www.pw.live/design-architecture/exams/nata-exam-2026",
+      "verified": false
+    },
+    {
+      "title": "JEE Main Paper 2 Practice (Official NTA portal + Vedantu, Physics Wallah, Unacademy)",
+      "type": "video",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://jeemain.nta.ac.in/",
+      "verified": false
+    },
+    {
+      "title": "Architecture Career & College Guidance (FindUrCollege, FindurcollBruce, Careers360)",
+      "type": "book",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://findurcollege.com/architecture-colleges-india",
+      "verified": false
+    }
+  ],
+  "groundingSources": [
+    {
+      "claim": "NATA 2026 Phase 1 exam dates: April 4 to June 13, 2026 (Fridays & Saturdays); Phase 2: August 7–8, 2026.",
+      "url": "https://www.pw.live/design-architecture/exams/nata-exam-2026",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "NATA eligibility: Class 12 with Physics, Chemistry, Mathematics as compulsory subjects, 45% aggregate minimum (50% for general).",
+      "url": "https://www.indiavidyakhazana.com/2026/03/nata-architecture-entrance-exam-2026.html",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "IIT Roorkee B.Arch fees: ₹10 lakhs total tuition (₹14.13 lakhs with hostel) for 5-year course; ranked #1 in NIRF Architecture 2023.",
+      "url": "https://collegedunia.com/college-compare/spa-delhi-vs-iit-roorkee-5653-5653",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "SPA Delhi B.Arch fees: ~₹1.5–2 lakh/year (~₹7.5–10 lakh total); ranked #5 in NIRF 2023 Architecture.",
+      "url": "https://findurcollege.com/architecture-colleges-india",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "Entry-level architect salary in India: ₹3.5–5 LPA; experienced architects (8+ years): ₹8–18 LPA; senior roles: ₹20–40+ LPA.",
+      "url": "https://www.pw.live/design-architecture/exams/architecture-salary",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "NATA assesses drawing ability, 3D visualisation, logical reasoning, and design aptitude: Part A (80 marks, drawing/composition) + Part B (120 marks, PCM + aptitude), 200 total.",
+      "url": "https://findurcollege.com/architecture-colleges-india",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "B.Arch is a 5-year COA-approved degree; Class 12 PCM with 50%+ aggregate required.",
+      "url": "https://www.pw.live/design-architecture/exams/architecture-course-eligibility",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "India has 500+ CoA-approved B.Arch programmes across IITs, NITs, SPAs, government and private colleges; 365+ colleges accept NATA scores.",
+      "url": "https://findurcollege.com/architecture-colleges-india",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "BIM proficiency (Revit, SketchUp) commands 30–50% salary premium and access to international firms in India.",
+      "url": "https://archgyan.com/architecture-salary-guide-india-earnings-career-stages/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "NIT Trichy B.Arch ranked #9 in NIRF 2023; NIT Calicut, MIT Pune, BMS Bangalore also strong government and private options.",
+      "url": "https://findurcollege.com/architecture-colleges-india",
+      "fetchedAt": "2026-06-21"
+    }
+  ],
+  "disclaimers": [
+    "This journey is a grounded guide based on current (June 2026) examination schedules, fee structures, and college rankings. Exam dates, eligibility criteria, fees, and college policies change annually—always verify with official websites (nata.in, jeemain.nta.ac.in, coa.gov.in, college websites) before making decisions.",
+    "Fees listed are approximate annual figures and may vary by year, hostel type, or state. Additional costs (books, materials, transport, hostel, meals) are not included in the stated fees. Check college brochures for exact fee breakups.",
+    "Salary figures (entry-level and experienced) are based on industry surveys and placement statistics from 2026 and may vary by location, firm size, specialisation, and individual negotiation. Government architect roles are stable but typically pay less than private firms initially.",
+    "College rankings (NIRF, India Today) change annually. Always verify the latest rankings and placement data from college official websites and recent graduate reviews.",
+    "NATA and JEE Main Paper 2 both require strong aptitude in drawing and design; success depends on consistent practice, quality coaching, and self-study. Online free resources are available but personalised mentoring improves outcomes.",
+    "Council of Architecture (CoA) registration is mandatory to practise as a licensed architect in India. Degrees from non-CoA-approved colleges are not valid for professional practice, even if the college is otherwise reputable.",
+    "For steps occurring more than 5 years from now (e.g., postgraduate study options at 60+ months), rules, exams, and fee structures may have changed significantly—re-verify with official sources when you reach that stage.",
+    "This journey assumes a standard direct entry route. Students with gaps, deferred admission, lateral entry from diploma, or other special circumstances should consult college admission offices and CoA directly.",
+    "The upskilling recommendations (Revit, BIM, design software) are complementary to the degree and not mandatory for admission, but they significantly enhance career prospects and starting salary."
+  ]
+}

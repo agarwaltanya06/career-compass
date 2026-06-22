@@ -282,6 +282,13 @@ function printShell(title: string, bodyHtml: string): string {
   .line { display: block; border-bottom: 1px solid #d6d3d1; height: 26px; margin-top: 4px; }
   .disclaimer { background: #fefce8; border-radius: 10px; padding: 12px 14px; margin-top: 24px; font-size: 12px; color: #713f12; }
   .disclaimer ul { margin: 6px 0 0; padding-left: 18px; }
+  /* AI-generated/unverified banner — deliberately prominent (thick amber border,
+     bold title, printed in colour) so it can't read as a footnote. */
+  .unverified { background: #fffbeb; border: 2px solid #f59e0b; border-radius: 10px;
+    padding: 12px 14px; margin: 0 0 18px; color: #7c2d12;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .unverified .uv-title { font-weight: 700; font-size: 14px; }
+  .unverified .uv-body { font-size: 13px; margin-top: 2px; }
   footer { margin-top: 28px; color: #a8a29e; font-size: 11px; border-top: 1px solid #e7e5e4; padding-top: 10px; }
   @media print { body { padding: 0; } @page { margin: 16mm; } }
 </style>
@@ -313,6 +320,8 @@ export function buildTimelinePrintHtml(
   labels: ExportLabels,
   disclaimers: string[],
   headings: { forCareer: string; timeline: string; important: string },
+  /** When set, a prominent AI-generated/unverified banner is printed at the top. */
+  unverifiedBanner?: { title: string; body: string },
 ): string {
   const stepsHtml = printSteps
     .map((s) => {
@@ -338,7 +347,12 @@ export function buildTimelinePrintHtml(
          <ul>${disclaimers.map((d) => `<li>${htmlEscape(d)}</li>`).join("")}</ul></div>`
       : "";
 
+  const bannerHtml = unverifiedBanner
+    ? `<div class="unverified"><div class="uv-title">⚠️ ${htmlEscape(unverifiedBanner.title)}</div><div class="uv-body">${htmlEscape(unverifiedBanner.body)}</div></div>`
+    : "";
+
   const body = `
+  ${bannerHtml}
   <p class="sub">${htmlEscape(headings.forCareer)}</p>
   <h1>${htmlEscape(ctx.career)}</h1>
   <h2>${htmlEscape(ctx.routeName)} — ${htmlEscape(headings.timeline)}</h2>

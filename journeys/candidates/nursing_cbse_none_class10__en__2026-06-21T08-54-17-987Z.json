@@ -1,0 +1,239 @@
+{
+  "meta": {
+    "career": "Nursing",
+    "careerAliases": [
+      "Registered Nurse",
+      "Staff Nurse",
+      "Clinical Nurse"
+    ],
+    "studentProfile": {
+      "class": "10",
+      "board": "cbse",
+      "language": "en",
+      "currentDate": "2026-06-21"
+    },
+    "generatedAt": "2026-06-21",
+    "confidence": "high",
+    "cacheKey": "nursing|cbse|none|class10"
+  },
+  "overview": {
+    "summary": "Nursing is a vital healthcare profession focused on providing holistic care to individuals, families, and communities. Nurses work alongside doctors and other healthcare professionals to promote health, prevent illness, and care for the sick, disabled, and dying. It's a dynamic and rewarding career with significant impact on patient well-being.",
+    "dayInLife": "A nurse's day typically involves assessing patient conditions, administering medications and treatments, performing medical procedures like wound dressing, monitoring vital signs, maintaining accurate patient records, and educating patients and their families about health conditions and care plans. They also collaborate closely with doctors and other healthcare team members to ensure coordinated and effective patient care.",
+    "payRange": {
+      "entry": "₹2.5 Lakhs - ₹4 Lakhs per year",
+      "experienced": "₹6 Lakhs - ₹10 Lakhs+ per year",
+      "note": "Entry-level salaries for fresh graduates typically range from ₹25,000 to ₹35,000 per month. With 5-9 years of experience, salaries can rise to ₹50,000 - ₹80,000 per month, and specialized roles or positions in metropolitan cities and private hospitals can command higher pay."
+    },
+    "demandOutlook": "The demand for skilled nurses in India is high and continues to grow due to expanding healthcare infrastructure and a current shortage (approximately 1.7 nurses per 1,000 individuals against a requirement of 3 per 1,000). Globally, there's a projected shortage of about 4 million nurses by 2030, leading to significant opportunities for Indian nurses to work abroad.",
+    "requirements": [
+      "Completion of 10+2 with Science stream (Physics, Chemistry, Biology/Biotechnology and English)",
+      "Strong academic foundation in science subjects",
+      "Minimum age of 17 years by December 31st of the admission year",
+      "Excellent communication and interpersonal skills",
+      "Empathy, compassion, and patience",
+      "Critical thinking and problem-solving abilities",
+      "Technical competence in medical procedures and equipment",
+      "Ability to work effectively in a team"
+    ]
+  },
+  "routes": [
+    {
+      "id": "bsc-nursing-route",
+      "name": "B.Sc. Nursing after 10+2 Science",
+      "bestFor": "Students committed to a professional healthcare career, seeking a comprehensive undergraduate degree that opens doors to diverse nursing roles and further specialization.",
+      "feasibility": "high",
+      "feasibilityReason": "This is the most direct and recognized pathway to becoming a Registered Nurse in India, with numerous government and private institutions offering the program.",
+      "costBand": "low",
+      "duration": "4 years (after 10+2)",
+      "steps": [
+        {
+          "id": "step-1",
+          "order": 1,
+          "type": "education",
+          "title": "Choose Science Stream in Class 11 & 12",
+          "offsetMonths": 12,
+          "description": "Enroll in Class 11 with the Science stream, specifically choosing Physics, Chemistry, and Biology (PCB) or Physics, Chemistry, Biology/Biotechnology, and English, as these are mandatory subjects for B.Sc. Nursing eligibility."
+        },
+        {
+          "id": "step-2",
+          "order": 2,
+          "type": "education",
+          "title": "Complete Class 12 with PCB",
+          "offsetMonths": 24,
+          "description": "Focus on scoring well in your Class 12 board examinations, particularly in Physics, Chemistry, and Biology, as many nursing colleges require a minimum aggregate percentage (typically 45-50%) in these subjects."
+        },
+        {
+          "id": "step-3",
+          "order": 3,
+          "type": "skill",
+          "title": "Prepare for NEET UG and Nursing Entrance Exams",
+          "offsetMonths": 28,
+          "description": "Begin intensive preparation for the NEET UG exam. While some top nursing colleges conduct their own entrance exams (e.g., AIIMS, PGIMER, JIPMER), the syllabus is largely aligned with NEET UG (Physics, Chemistry, Biology of 11th and 12th grade), making NEET preparation highly beneficial."
+        },
+        {
+          "id": "step-4",
+          "order": 4,
+          "type": "exam",
+          "title": "Appear for NEET UG",
+          "offsetMonths": 35,
+          "description": "Take the NEET UG examination. A good score in NEET UG is accepted by several B.Sc. Nursing colleges, including some prestigious institutions like CMC Vellore and AFMC."
+        },
+        {
+          "id": "step-5",
+          "order": 5,
+          "type": "application",
+          "title": "Apply to B.Sc. Nursing Programs",
+          "offsetMonths": 37,
+          "description": "Based on your NEET UG score and/or performance in specific college entrance exams, apply to B.Sc. Nursing programs at your preferred institutions. Ensure you meet the age criteria (minimum 17 years by December 31st of the admission year)."
+        },
+        {
+          "id": "step-6",
+          "order": 6,
+          "type": "education",
+          "title": "Complete B.Sc. Nursing Degree (4 years)",
+          "offsetMonths": 38,
+          "description": "Pursue a 4-year Bachelor of Science in Nursing (B.Sc. Nursing) program. This comprehensive program includes theoretical knowledge and extensive practical clinical training."
+        },
+        {
+          "id": "step-7",
+          "order": 7,
+          "type": "experience",
+          "title": "Mandatory Internship/Clinical Training",
+          "offsetMonths": 80,
+          "description": "Engage in mandatory clinical training or internship during your degree, gaining hands-on experience in various hospital departments like medical, surgical, pediatric, and obstetric care. This is crucial for practical skill development."
+        },
+        {
+          "id": "step-8",
+          "order": 8,
+          "type": "skill",
+          "title": "Obtain Nursing Registration",
+          "offsetMonths": 86,
+          "description": "After graduation, register with the Indian Nursing Council (INC) and your respective State Nursing Council to become a Registered Nurse (RN), which is essential for practicing legally. (Rules/exams/fees may change by then, re-verify.)"
+        },
+        {
+          "id": "step-9",
+          "order": 9,
+          "type": "experience",
+          "title": "Begin Professional Practice as a Staff Nurse",
+          "offsetMonths": 87,
+          "description": "Start your career as a Staff Nurse in hospitals, clinics, community health centers, or other healthcare settings. This is where you apply your learned skills and gain valuable experience. (Rules/exams/fees may change by then, re-verify.)"
+        },
+        {
+          "id": "step-9b",
+          "order": 9,
+          "type": "education",
+          "title": "Pursue Post-Basic B.Sc. Nursing or M.Sc. Nursing",
+          "offsetMonths": 87,
+          "description": "Alternatively, after gaining some experience (often 1 year for M.Sc. Nursing), you can pursue higher education like Post-Basic B.Sc. Nursing (for diploma holders) or M.Sc. Nursing for specialization and career advancement. (Rules/exams/fees may change by then, re-verify.)",
+          "optional": true,
+          "alternativeTo": "step-9"
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Patient Assessment & Monitoring",
+          "Medication Administration",
+          "Wound Care & Infection Control",
+          "Basic Life Support (BLS)",
+          "Critical Thinking & Decision Making",
+          "Effective Communication (Patient, Family, Team)",
+          "Empathy & Compassion",
+          "Time Management & Organization",
+          "Digital Literacy (EHR, Telemedicine)",
+          "Teamwork & Collaboration"
+        ],
+        "upskilling": [
+          {
+            "name": "Critical Care Nursing Certification",
+            "why": "Specializes in intensive care, highly valued in hospitals.",
+            "costBand": "mid",
+            "url": "https://www.indiannursingcouncil.org/",
+            "verified": false
+          },
+          {
+            "name": "Advanced Cardiac Life Support (ACLS) Certification",
+            "why": "Essential for managing cardiovascular emergencies.",
+            "costBand": "low",
+            "url": "https://www.indiannursingcouncil.org/",
+            "verified": false
+          },
+          {
+            "name": "M.Sc. Nursing (Specializations like Pediatric, Oncology, Psychiatric Nursing)",
+            "why": "Allows for advanced practice, teaching, and leadership roles.",
+            "costBand": "mid",
+            "url": "https://www.indiannursingcouncil.org/",
+            "verified": false
+          },
+          {
+            "name": "Foreign Language Courses (e.g., German, French)",
+            "why": "Enhances opportunities for international nursing careers.",
+            "costBand": "low",
+            "url": "https://www.goethe.de/ins/in/en/index.html",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "id": "neet-ug",
+          "name": "NEET UG",
+          "purpose": "Mandatory entrance exam for admission to MBBS/BDS courses in India.",
+          "eligibility": "Passed 10+2 with Physics, Chemistry, Biology/Biotechnology and English; minimum 50% aggregate (40% for reserved categories); minimum age 17 by Dec 31 of the admission year.",
+          "typicalWindow": "Applications usually open ~Dec–Feb; exam typically held ~May.",
+          "costBand": "low",
+          "officialUrl": "https://neet.nta.nic.in/",
+          "verified": true
+        }
+      ],
+      "colleges": [],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "Re-attempt NEET UG the following year to improve score or apply to colleges with later application windows.",
+          "Explore state-level B.Sc. Nursing entrance exams if available and if their application cycles are different.",
+          "Consider diploma courses like GNM (General Nursing and Midwifery) or ANM (Auxiliary Nurse Midwife) as alternative entry points, followed by a bridge course to B.Sc. Nursing if desired."
+        ]
+      }
+    }
+  ],
+  "prepResources": [
+    {
+      "title": "NCERT Textbooks for Physics, Chemistry, Biology (Class 11 & 12)",
+      "type": "official-guide",
+      "costBand": "low",
+      "language": "English",
+      "url": "https://ncert.nic.in/textbook.php",
+      "verified": false
+    },
+    {
+      "title": "NEET UG Study Material and Previous Year Papers",
+      "type": "book",
+      "costBand": "low",
+      "language": "English",
+      "url": "https://www.aakash.ac.in/neet-study-material",
+      "verified": false
+    },
+    {
+      "title": "Online NEET Preparation Platforms (e.g., Unacademy, Byju's)",
+      "type": "free-course",
+      "costBand": "mid",
+      "language": "English",
+      "url": "https://unacademy.com/goal/neet-ug/YJLCY",
+      "verified": false
+    },
+    {
+      "title": "Biology by Campbell Biology (Standard Reference Book)",
+      "type": "book",
+      "costBand": "mid",
+      "language": "English",
+      "url": "https://www.pearson.com/en-in/higher-education/program/Campbell-Campbell-Biology-12th-Edition/PGM224823.html",
+      "verified": false
+    }
+  ],
+  "groundingSources": [],
+  "disclaimers": [
+    "Fees, application windows, and eligibility criteria for exams and colleges are subject to change. Always verify the latest information on the official websites.",
+    "The career path described is a general guide; individual experiences may vary based on performance, personal choices, and market conditions.",
+    "The 'verified: false' flag indicates that while the information is grounded in search results, it requires human verification for complete accuracy and timeliness."
+  ]
+}

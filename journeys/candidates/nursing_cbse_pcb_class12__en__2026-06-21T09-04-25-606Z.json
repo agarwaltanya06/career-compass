@@ -1,0 +1,414 @@
+{
+  "meta": {
+    "career": "BSc Nursing (Bachelor of Science in Nursing)",
+    "careerAliases": [
+      "Professional Nurse",
+      "Staff Nurse",
+      "Registered Nurse (RN)",
+      "Clinical Nurse"
+    ],
+    "studentProfile": {
+      "class": "12",
+      "board": "cbse",
+      "stream": "pcb",
+      "language": "en",
+      "currentDate": "2026-06-21"
+    },
+    "generatedAt": "2026-06-21",
+    "confidence": "high",
+    "cacheKey": "nursing|cbse|pcb|class12"
+  },
+  "overview": {
+    "summary": "A four-year professional undergraduate degree that equips students with clinical nursing skills, patient care knowledge, and healthcare management expertise. Graduates work as Staff Nurses or Clinical Nurses in hospitals, clinics, and international healthcare settings, with strong job demand and career progression opportunities.",
+    "dayInLife": "A nurse typically begins rounds at a hospital or clinic, assessing patient vitals and medical status, administering medications and treatments, documenting care in patient records, coordinating with doctors and medical teams, responding to emergencies, providing emotional support to patients and families, and managing equipment and supplies. Roles vary by specialization (ICU, OT, pediatrics, community health).",
+    "payRange": {
+      "entry": "₹20,000–₹40,000 per month",
+      "experienced": "₹60,000–₹1,00,000+ per month (varies by sector, location, and specialization)",
+      "note": "Government roles offer higher stability and benefits; private sector and international positions (USA, UK, Canada) offer significantly higher salaries (₹40–80 lakhs annually abroad)."
+    },
+    "demandOutlook": "Very strong. India faces a shortage of over 2 million nurses; healthcare sector expansion, aging population, and international demand create excellent job security and growth prospects in government hospitals, private chains, clinics, NGOs, and abroad.",
+    "requirements": [
+      "Passed Class 12 with Physics, Chemistry, Biology, and English (minimum 45–50% aggregate, typically 55% for general category in entrance exams)",
+      "Age: minimum 17 years by 31 December of the admission year",
+      "Medically fit per nursing council standards",
+      "Indian citizenship",
+      "Qualifying entrance exam score (AIIMS BSc Nursing, JIPMER, state exams, or institutional entrance)",
+      "Good communication, empathy, and ability to work under pressure"
+    ]
+  },
+  "routes": [
+    {
+      "id": "route-1-aiims-nursing",
+      "name": "AIIMS BSc (Hons) Nursing – National Excellence Path",
+      "bestFor": "High-achieving students aiming for top-tier government nursing education, prestige, excellent placement, and government job security. AIIMS is India's most respected nursing institution with strong international recognition.",
+      "feasibility": "high",
+      "feasibilityReason": "You meet all eligibility criteria (CBSE PCB stream, Class 12 passed). AIIMS exam is held every year; focus on strong biology preparation (highest weightage). Competition is high but merit-based selection is transparent.",
+      "costBand": "low",
+      "duration": "4 years (including 6-month mandatory internship in final year)",
+      "steps": [
+        {
+          "id": "step-1-exam-prep",
+          "order": 0,
+          "type": "skill",
+          "title": "Intensive AIIMS BSc Nursing Entrance Exam Preparation",
+          "offsetMonths": 0,
+          "description": "Begin focused preparation in biology, chemistry, physics, and English aligned to CBSE Class 11–12 syllabus. Use NCERT textbooks (especially biology) and solve AIIMS PYPs."
+        },
+        {
+          "id": "step-2-aiims-exam",
+          "order": 1,
+          "type": "exam",
+          "title": "AIIMS BSc (Hons) Nursing Entrance Exam",
+          "offsetMonths": 0,
+          "description": "Online CBT exam; 100 MCQs, 2 hours, covering Physics, Chemistry, Biology, Mathematics, and English. Exam already held on 27 June 2026; if missed, plan for next cycle (typically May–June annually)."
+        },
+        {
+          "id": "step-3-application",
+          "order": 2,
+          "type": "application",
+          "title": "AIIMS BSc Nursing Application & Counselling",
+          "offsetMonths": 1,
+          "description": "Register for counselling based on entrance exam rank. AIIMS conducts online merit-based seat allocation across 19 AIIMS campuses. Selection includes document verification and medical fitness test."
+        },
+        {
+          "id": "step-4-bsc-hons-nursing",
+          "order": 3,
+          "type": "education",
+          "title": "BSc (Hons) Nursing – 4-Year Degree",
+          "offsetMonths": 3,
+          "description": "Full-time undergraduate degree with theoretical coursework and intensive clinical rotations in hospital departments (Medical-Surgical Nursing, Pediatrics, Obstetrics, Psychiatry, Community Health). Final year includes 6-month paid internship in hospital settings."
+        },
+        {
+          "id": "step-5-registration",
+          "order": 4,
+          "type": "application",
+          "title": "Indian Nursing Council (INC) Registration & Licensing",
+          "offsetMonths": 50,
+          "description": "After degree completion, register as a Registered Nurse (RN) with the INC and your state nursing council. Mandatory for employment and legal practice as a nurse in India."
+        },
+        {
+          "id": "step-6-work",
+          "order": 5,
+          "type": "experience",
+          "title": "Entry-Level Nursing Employment (Staff Nurse / Clinical Nurse)",
+          "offsetMonths": 51,
+          "description": "Secure position as a Staff Nurse in government/private hospitals, clinics, nursing homes, or community health centers. Build clinical experience and specialization credentials."
+        },
+        {
+          "id": "step-6b-higher-study",
+          "order": 5,
+          "type": "education",
+          "title": "MSc Nursing or Advanced Specialization (Alternative Path)",
+          "offsetMonths": 51,
+          "description": "Pursue postgraduate studies in specializations (Critical Care, Oncology, Cardiology, Midwifery) or management roles. MSc Nursing opens doors to teaching, research, and senior clinical positions.",
+          "optional": true,
+          "alternativeTo": "step-6"
+        },
+        {
+          "id": "step-7-international",
+          "order": 60,
+          "type": "skill",
+          "title": "International Licensing & Career (Optional Path)",
+          "offsetMonths": 60,
+          "description": "Pursue licensing exams (NCLEX for USA/Canada, OET for UK/Australia) and secure work visas. International nurses earn significantly more (₹40–80 lakhs+ annually). Requires language proficiency and immigration compliance. Re-verify immigration rules closer to the time."
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Patient assessment and vital monitoring",
+          "Medication administration and IV therapy",
+          "Infection control and sterile technique",
+          "Clinical documentation and electronic health records (EHR)",
+          "Emergency response and critical thinking",
+          "Communication and patient education",
+          "Teamwork and interdisciplinary collaboration",
+          "Medical-surgical, obstetric, pediatric, and psychiatric nursing",
+          "Community health and health promotion"
+        ],
+        "upskilling": [
+          {
+            "name": "NCERT Biology (Class 11–12) – Comprehensive Review",
+            "why": "Highest weightage in AIIMS exam; focus on human anatomy, physiology, cell biology, and microbiology.",
+            "costBand": "free",
+            "url": "https://ncert.nic.in",
+            "verified": false
+          },
+          {
+            "name": "AIIMS BSc Nursing Previous Year Papers (PYP) – Practice",
+            "why": "Understand exam pattern, difficulty level, and frequently repeated topics. Solve full-length tests under timed conditions.",
+            "costBand": "free",
+            "url": "https://aiimsexams.ac.in",
+            "verified": false
+          },
+          {
+            "name": "Online Nursing Fundamentals Course (Khan Academy or OpenStax)",
+            "why": "Build foundational nursing concepts (patient care, hygiene, safety, communication) before formal training.",
+            "costBand": "free",
+            "url": "https://www.khanacademy.org",
+            "verified": false
+          },
+          {
+            "name": "Clinical Communication & Soft Skills Workshop",
+            "why": "Develop empathy, patient interaction, and crisis management—essential for nursing practice.",
+            "costBand": "low",
+            "url": "",
+            "verified": false
+          },
+          {
+            "name": "Indian Nursing Council (INC) Syllabus Reference",
+            "why": "Aligns your preparation with INC-regulated BSc Nursing curriculum and registration standards.",
+            "costBand": "free",
+            "url": "https://indiannursingcouncil.org",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [],
+      "colleges": [],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "Reappear for AIIMS BSc Nursing exam in next cycle (typically May–June of following year). Strengthen weak areas based on previous performance.",
+          "Switch to JIPMER Nursing or state-level nursing exams as backup options; these run on different schedules.",
+          "Consider private college admission through management quota or direct merit-based admission while preparing for next government entrance cycle.",
+          "Pursue GNM (General Nursing and Midwifery – 3-year diploma) immediately, then lateral entry into BSc Nursing (Post-Basic) after gaining experience.",
+          "Explore nursing opportunities abroad (UK, Canada, USA) with Indian credentials and obtain licensure; higher earning potential offsets delayed start."
+        ]
+      }
+    },
+    {
+      "id": "route-2-private-college",
+      "name": "Private/Deemed University BSc Nursing – Direct Entry Path",
+      "bestFor": "Students seeking admission faster, who prefer modern infrastructure, international exposure, and flexibility. Suitable if AIIMS/government exam scores fall short or to avoid long waitlists. Higher fees balanced by strong placements and contemporary nursing practice.",
+      "feasibility": "high",
+      "feasibilityReason": "Private colleges often have merit-based or direct admission; some accept board exam scores (10+2 marks) without separate entrance. More seats available than government colleges, reducing competition intensity.",
+      "costBand": "mid",
+      "duration": "4 years (including 6-month internship or clinical rotations)",
+      "steps": [
+        {
+          "id": "step-1-research",
+          "order": 0,
+          "type": "skill",
+          "title": "Research & College Shortlisting",
+          "offsetMonths": 0,
+          "description": "Identify private/deemed BSc Nursing colleges based on NIRF ranking, accreditation (INC approval), fees, location, and placement records. Compare fees, hostel facilities, and clinical exposure."
+        },
+        {
+          "id": "step-2-entrance",
+          "order": 1,
+          "type": "exam",
+          "title": "Private/Deemed College Entrance Exam or Merit-Based Application",
+          "offsetMonths": 0,
+          "description": "<cite index=\"25-27\">Some institutions conduct their own entrance exams (SET at Symbiosis, SRMCEE at SRM, AME at Amrita), while others admit based on NEET scores or Class 12 merit</cite>. Check individual college requirements."
+        },
+        {
+          "id": "step-3-application",
+          "order": 2,
+          "type": "application",
+          "title": "College Application & Admission Process",
+          "offsetMonths": 1,
+          "description": "Submit application online, upload documents (Class 12 marksheet, entrance exam score if required). Attend counselling or merit list announcement. Confirm admission by paying seat deposit and submitting originals."
+        },
+        {
+          "id": "step-4-bsc-nursing-pvt",
+          "order": 3,
+          "type": "education",
+          "title": "BSc Nursing – 4-Year Degree at Private/Deemed Institution",
+          "offsetMonths": 3,
+          "description": "Classroom and lab-based theoretical learning combined with clinical postings. Modern infrastructure, smaller class sizes, and international partnerships. Final year includes internship or clinical rotation with stipend (varies by college)."
+        },
+        {
+          "id": "step-5-registration-pvt",
+          "order": 4,
+          "type": "application",
+          "title": "INC Registration & State Nursing Council License",
+          "offsetMonths": 50,
+          "description": "Post-graduation, register with Indian Nursing Council and your state nursing council to obtain RN (Registered Nurse) status. Mandatory for legal practice."
+        },
+        {
+          "id": "step-6-employment-pvt",
+          "order": 5,
+          "type": "experience",
+          "title": "Employment – Corporate Hospital / Private Clinic / NGO",
+          "offsetMonths": 51,
+          "description": "Secure nursing position in private corporate hospitals (Apollo, Fortis, Max, Manipal), clinics, nursing homes, or NGOs. Build specialization and climb to senior nursing roles."
+        },
+        {
+          "id": "step-6b-msc-pvt",
+          "order": 5,
+          "type": "education",
+          "title": "MSc Nursing or Advanced Certification",
+          "offsetMonths": 51,
+          "description": "Pursue postgraduate nursing studies (MSc, Critical Care Nursing, Oncology Nursing) or professional certifications for career growth and higher remuneration.",
+          "optional": true,
+          "alternativeTo": "step-6-employment-pvt"
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Patient assessment and holistic care planning",
+          "Medication administration and IV therapy",
+          "Infection prevention and safety protocols",
+          "Electronic health records (EHR) and digital documentation",
+          "Emergency and critical care response",
+          "Patient and family communication",
+          "Interdisciplinary teamwork",
+          "Specialized nursing (medical-surgical, OB-GYN, pediatrics, psychiatry, community)",
+          "Quality assurance and continuous learning"
+        ],
+        "upskilling": [
+          {
+            "name": "NEET UG Preparation (if required by college)",
+            "why": "Several private colleges still prefer NEET scores for merit-based ranking and national-level credibility.",
+            "costBand": "low",
+            "url": "https://nta.ac.in",
+            "verified": false
+          },
+          {
+            "name": "Online Nursing Courses – Udemy / Coursera (Fundamentals of Nursing)",
+            "why": "Bridge knowledge gaps before formal coursework; accessible to all learners.",
+            "costBand": "low",
+            "url": "https://www.udemy.com",
+            "verified": false
+          },
+          {
+            "name": "Hospital Shadowing or Volunteer Program (Pre-Admission)",
+            "why": "Gain real-world exposure to nursing practice, patient care, and team dynamics before enrollment.",
+            "costBand": "free",
+            "url": "",
+            "verified": false
+          },
+          {
+            "name": "Soft Skills & Professional Communication Workshop",
+            "why": "Private colleges often emphasize interpersonal skills; early training enhances readiness.",
+            "costBand": "low",
+            "url": "",
+            "verified": false
+          },
+          {
+            "name": "College-Specific Orientation & Mentorship Program",
+            "why": "Most private institutions provide pre-admission and early-semester support to ease transition.",
+            "costBand": "free",
+            "url": "",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [],
+      "colleges": [],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "Apply to private colleges with rolling admissions (many accept applications until seats fill; no rigid deadline).",
+          "Enroll in distance-learning BSc Nursing or online nursing programs accredited by INC (if eligible and preferred).",
+          "Pursue GNM (3-year diploma nursing) immediately; transition to BSc Nursing (Post-Basic) after 6–12 months experience.",
+          "Consider nursing abroad: UK, Canada, Australia accept Indian BSc Nursing graduates with licensing; enroll in pathway programs.",
+          "Take a gap year to strengthen academics and prepare for government entrance exams in the next cycle while working or volunteering in healthcare."
+        ]
+      }
+    }
+  ],
+  "prepResources": [
+    {
+      "title": "NCERT Class 11 & 12 Biology Textbooks",
+      "type": "book",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://ncert.nic.in",
+      "verified": false
+    },
+    {
+      "title": "AIIMS BSc Nursing Previous Year Question Papers (2019–2026)",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://aiimsexams.ac.in",
+      "verified": false
+    },
+    {
+      "title": "Khan Academy – Biology Fundamentals (Human Anatomy & Physiology)",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.khanacademy.org",
+      "verified": false
+    },
+    {
+      "title": "OpenStax Nursing Fundamentals – Open-Access Textbook",
+      "type": "book",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://openstax.org",
+      "verified": false
+    },
+    {
+      "title": "Indian Nursing Council (INC) – Official Regulations & Curriculum",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://indiannursingcouncil.org",
+      "verified": false
+    }
+  ],
+  "groundingSources": [
+    {
+      "claim": "AIIMS BSc Nursing exam typically held in May–June each year; 2026 exam conducted on 27 June",
+      "url": "https://aiimsexams.ac.in",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "AIIMS Delhi BSc Nursing fees ₹6,640 total for 4 years (₹1,735 first-year tuition + ₹100 caution + ₹4,140 other fees)",
+      "url": "https://collegedunia.com/university/25446-all-india-institute-of-medical-sciences-aiims-new-delhi/bachelor-of-science-bsc-hons-nursing-2978",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "Class 12 eligibility for AIIMS BSc (Hons) Nursing: Physics, Chemistry, Mathematics/Biology, English; 55% general, 50% SC/ST",
+      "url": "https://www.promilo.com/blog/courses/aiims-bsc-nursing-2026-registration-exam-dates-eligibility-syllabus-pattern-1",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "NEET scores accepted for BSc Nursing admissions at several top colleges across India",
+      "url": "https://www.collegedekho.com/articles/list-of-nursing-entrance-exams-in-india/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "BSc Nursing entry-level salary ₹20,000–₹40,000/month; experienced nurses ₹60,000–₹80,000+/month (government); private sector varies",
+      "url": "https://www.vedantu.com/neet/nurse-salary-in-india-government-hospital-vs-private",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "CMC Vellore known for international reputation and extensive research facilities in nursing",
+      "url": "https://www.careermarg.com/article/top-nursing-colleges-in-india-best-private-government-colleges-for-bsc-nursing-fees-rankings-",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "Manipal College of Nursing renowned for state-of-the-art infrastructure and dedicated faculty",
+      "url": "https://www.careermarg.com/article/top-nursing-colleges-in-india-best-private-government-colleges-for-bsc-nursing-fees-rankings-",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "SRM College of Nursing offers holistic approach to nursing education with modern clinical exposure",
+      "url": "https://www.careermarg.com/article/top-nursing-colleges-in-india-best-private-government-colleges-for-bsc-nursing-fees-rankings-",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "PGIMER, JIPMER ranked among top government nursing institutions for value and prestige",
+      "url": "https://careerplanb.co/best-bsc-nursing-colleges-india/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "Some private colleges admit based on merit without specific entrance exam, while others require NEET or institutional tests",
+      "url": "https://www.boostmytalent.com/blog/top-bsc-nursing-colleges-in-india",
+      "fetchedAt": "2026-06-21"
+    }
+  ],
+  "disclaimers": [
+    "Exam dates, fees, application windows, and eligibility criteria may change by the time you apply. Always verify official sources (AIIMS: https://aiimsexams.ac.in, JIPMER: https://www.jipmer.edu.in, state boards) before submitting applications.",
+    "Fees listed are approximate based on 2025–2026 data; exact charges vary by institution, location, and category. Government subsidies and scholarships may apply—check with colleges directly.",
+    "This journey assumes a direct entry to BSc Nursing after Class 12. Alternative pathways (GNM → BSc Post-Basic, diploma → degree) exist but are not detailed here; consult a career counselor if interested.",
+    "Only female candidates are eligible for some AIIMS BSc (Hons) Nursing seats; verify gender-specific eligibility with official AIIMS notifications.",
+    "Salary figures reflect 2026 estimates and vary significantly by location, hospital type, experience, and specialization. Government roles offer job security; private sector and abroad offer higher immediate income.",
+    "For steps more than 5 years out (Step 7, international licensing), immigration laws and nursing regulations may change; re-verify requirements when approaching that phase.",
+    "This JSON is generated for guidance only. Verify all claims with official sources, colleges, and career counselors before making decisions."
+  ]
+}

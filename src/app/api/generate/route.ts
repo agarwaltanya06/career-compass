@@ -4,8 +4,11 @@
  * Flow:
  *   1. Validate the request; minimize the profile (no names/contact — §5).
  *   2. CACHE-FIRST: derive the §4 cacheKey, serve a stored VERIFIED journey if
- *      one exists.
- *   3. On a miss, call the model behind the provider abstraction — Gemini's
+ *      one exists, else the newest queued CANDIDATE (stamped "candidate" so the
+ *      UI shows the unverified banner) — this backs the launch catalogue without
+ *      a model call per visit.
+ *   3. On a full miss (no verified default and no candidate yet), call the model
+ *      behind the provider abstraction — Gemini's
  *      grounded free tier by default, falling back to Anthropic Haiku when the
  *      free tier is exhausted or unconfigured (§5). A per-request override lets
  *      a user pick a different provider/model or supply their own key.
@@ -106,7 +109,9 @@ export async function POST(request: Request) {
 
   if (!wantsStream) {
     try {
-      const result = await runGeneration(profile, override, userKey, () => {});
+      const result = await runGeneration(profile, override, userKey, () => {}, {
+        serveExistingCandidate: true,
+      });
       return NextResponse.json(result);
     } catch (err) {
       if (err instanceof GenerateError) return jsonError(err.message, err.status);
@@ -120,7 +125,9 @@ export async function POST(request: Request) {
       const send = (event: unknown) =>
         controller.enqueue(encoder.encode(`data: ${JSON.stringify(event)}\n\n`));
       try {
-        const result = await runGeneration(profile, override, userKey, send);
+        const result = await runGeneration(profile, override, userKey, send, {
+          serveExistingCandidate: true,
+        });
         send({ type: "result", ...result });
       } catch (err) {
         const message =

@@ -131,13 +131,16 @@
       ],
       "errorTitle": "Something went wrong",
       "retry": "Try again",
-      "startOver": "Start over"
+      "startOver": "Start over",
+      "fallbackLead": "No need to wait — you can still plan this yourself. Our step-by-step guide shows how to research any career and check the dates, fees, and eligibility on the official websites.",
+      "fallbackCta": "Open the plan-it-yourself guide"
     }
   },
   "journey": {
     "forCareer": "Your path to becoming a",
     "generatedAt": "Guidance generated {date}",
-    "candidateBanner": "Freshly generated and not yet reviewed. Treat every specific as \"verify\" and confirm on the official links before acting.",
+    "candidateBannerTitle": "AI-generated — not checked by a person yet",
+    "candidateBanner": "A computer wrote this plan and no one has reviewed it yet, so some details may be wrong. Always check dates, fees, and exam rules on the official websites before you depend on them.",
     "confidence": "Confidence",
     "confidenceHigh": "high",
     "confidenceMedium": "medium",

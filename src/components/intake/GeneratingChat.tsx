@@ -11,6 +11,7 @@
  * On error it freezes the timer and shows a friendly bubble with retry / restart.
  */
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 
@@ -130,12 +131,30 @@ export default function GeneratingChat({
           ))}
 
           {error ? (
-            <div className="rounded-2xl rounded-tl-sm border border-rose-200 bg-rose-50 px-4 py-3">
-              <p className="text-sm font-semibold text-rose-800">
-                {t("intake.generatingChat.errorTitle")}
-              </p>
-              <p className="mt-1 text-sm text-rose-700">{error}</p>
-            </div>
+            <>
+              <div className="rounded-2xl rounded-tl-sm border border-rose-200 bg-rose-50 px-4 py-3">
+                <p className="text-sm font-semibold text-rose-800">
+                  {t("intake.generatingChat.errorTitle")}
+                </p>
+                <p className="mt-1 text-sm text-rose-700">{error}</p>
+              </div>
+
+              {/* Graceful fallback: a failed live call must never dead-end. Point
+                  the student to the DIY guide (template + official-search steps)
+                  so they always have a way forward, not just a retry. */}
+              <div className="rounded-2xl border border-orange-200 bg-orange-50 px-4 py-3">
+                <p className="text-sm text-stone-700">
+                  {t("intake.generatingChat.fallbackLead")}
+                </p>
+                <Link
+                  href="/plan-it-yourself"
+                  className="mt-3 inline-flex min-h-11 items-center justify-center gap-2 rounded-xl border border-orange-300 bg-white px-5 text-sm font-semibold text-orange-700 hover:bg-orange-100"
+                >
+                  <span aria-hidden>🧭</span>
+                  {t("intake.generatingChat.fallbackCta")}
+                </Link>
+              </div>
+            </>
           ) : (
             <TypingIndicator />
           )}

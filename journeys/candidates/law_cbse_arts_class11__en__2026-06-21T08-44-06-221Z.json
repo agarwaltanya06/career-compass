@@ -1,0 +1,444 @@
+{
+  "meta": {
+    "career": "Law",
+    "careerAliases": [
+      "Lawyer",
+      "Legal Professional",
+      "Advocate"
+    ],
+    "studentProfile": {
+      "class": "11",
+      "board": "cbse",
+      "stream": "arts",
+      "language": "en",
+      "currentDate": "2026-06-21"
+    },
+    "generatedAt": "2026-06-21",
+    "confidence": "high",
+    "cacheKey": "law|cbse|arts|class11"
+  },
+  "overview": {
+    "summary": "A career in law in India offers diverse pathways—from litigation and corporate law to public prosecution and alternative dispute resolution. Entry requires clearing a competitive entrance exam (CLAT or AILET) after Class 12, followed by a 5-year integrated law degree or 3-year law programme after graduation. Strong analytical and communication skills are essential. The legal profession provides stable, well-respected careers with significant earning potential, especially in corporate law and senior advocacy roles.",
+    "dayInLife": "A lawyer's day varies widely by specialization. Corporate lawyers review contracts, advise on compliance, and negotiate deals. Litigators prepare case files, research legal precedent, and argue in court. In-house counsel work within a company's legal department managing risk and regulatory matters. Many lawyers combine client-facing work with research, writing legal opinions, and professional development. Court appearances, client meetings, and document drafting are common across roles.",
+    "payRange": {
+      "entry": "₹3–6 LPA (entry-level litigators and junior advocates); ₹5–10 LPA (entry-level corporate lawyers)",
+      "experienced": "₹12–40+ LPA depending on specialization and practice area; partners in law firms and senior advocates often earn significantly higher",
+      "note": "Salary varies dramatically by location (metro cities pay ~20–30% more), specialization, employer type, and individual reputation. Corporate law and in-house counsel roles typically offer higher baseline salaries than litigation; independent practice can generate highly variable income."
+    },
+    "demandOutlook": "Law is a respected and growing profession in India. Corporate legal departments, law firms, and government agencies continuously hire. Specializations such as intellectual property, tax law, and regulatory compliance are particularly in-demand. The legal profession is expected to grow 15–20% by 2030, with strong demand in tech-driven areas like cyber law and data protection.",
+    "requirements": [
+      "Strong command of English and regional languages (for court practice)",
+      "Analytical and logical reasoning ability",
+      "Research and writing skills",
+      "Persuasive communication and negotiation skills",
+      "Ethical foundation and commitment to justice",
+      "Ability to handle high-pressure situations and tight deadlines",
+      "Knowledge of Indian legal system and Constitution",
+      "Minimum 45% in Class 12 (40% for SC/ST) for CLAT eligibility"
+    ]
+  },
+  "routes": [
+    {
+      "id": "route-1-integrated-llb",
+      "name": "Integrated 5-Year BA LLB (Hons) via CLAT – Primary Route",
+      "bestFor": "Arts students in Class 11 who want to pursue law as their chosen field and are willing to commit to rigorous entrance exam preparation",
+      "feasibility": "high",
+      "feasibilityReason": "Class 11 Arts students are directly eligible. No stream restrictions apply. CLAT is the most mainstream and well-structured pathway to India's top law universities. By starting preparation in Class 11, you have ~18 months before the next CLAT cycle.",
+      "costBand": "mid",
+      "duration": "~7 years total (Class 11–12: 2 years prep; 5-year degree; ~6–12 months internship/bar exam prep)",
+      "steps": [
+        {
+          "id": "step-1-foundational-law-knowledge",
+          "order": 1,
+          "type": "skill",
+          "title": "Build foundational legal knowledge and current affairs habit",
+          "offsetMonths": 0,
+          "description": "Read newspapers (The Hindu, Indian Express) daily; study Indian Constitution basics; learn about major Supreme Court judgements; familiarise yourself with criminal law, contract law, and constitutional law fundamentals."
+        },
+        {
+          "id": "step-2-english-reasoning",
+          "order": 2,
+          "type": "skill",
+          "title": "Strengthen English comprehension and logical reasoning",
+          "offsetMonths": 1,
+          "description": "Build vocabulary; practise reading comprehension and analytical passages; develop logical reasoning (syllogisms, arguments, analogies). CLAT is heavily reading-based; sustained practice here is foundational."
+        },
+        {
+          "id": "step-3-class-12-board",
+          "order": 3,
+          "type": "education",
+          "title": "Complete CBSE Class 12 (March/April 2027)",
+          "offsetMonths": 9,
+          "description": "Pass CBSE Class 12 with minimum 45% marks in aggregate (40% for SC/ST). Any stream qualifies for law. Your board marks are the eligibility gate for CLAT."
+        },
+        {
+          "id": "step-4-clat-exam-application",
+          "order": 4,
+          "type": "exam",
+          "title": "CLAT 2027 (Common Law Admission Test) – UG",
+          "offsetMonths": 18,
+          "description": "National-level entrance exam conducted by Consortium of NLUs. Scores determine admission to 26 participating National Law Universities. Typically held in early December. Eligibility: Class 12 pass with minimum 45% (40% for SC/ST). No upper age limit."
+        },
+        {
+          "id": "step-5-clat-counselling",
+          "order": 5,
+          "type": "application",
+          "title": "CLAT Counselling & Seat Allotment",
+          "offsetMonths": 20,
+          "description": "After CLAT result (~December 2026), merit list released. Participate in counselling rounds to fill preferences and secure an NLU seat based on rank and category. Allotment typically completed by January–February."
+        },
+        {
+          "id": "step-6-nlu-admission",
+          "order": 6,
+          "type": "application",
+          "title": "NLU Admission & Document Verification",
+          "offsetMonths": 21,
+          "description": "Report to allotted NLU with original Class 10, Class 12 marksheets, category certificate (if applicable), domicile, and identity proof. Pay first-year fees (typically ₹2.5–5 lakh, depending on NLU). Complete registration."
+        },
+        {
+          "id": "step-7-ba-llb-degree",
+          "order": 7,
+          "type": "education",
+          "title": "5-Year BA LLB (Hons) at NLU",
+          "offsetMonths": 21,
+          "description": "Full-time residential programme combining Arts subjects (Political Science, Sociology, Economics) with core law (Constitutional Law, Criminal Law, Torts, Contract Law, Property Law, etc.). Includes moot courts, internships, and clinical legal education. Most NLUs mandate on-campus residence."
+        },
+        {
+          "id": "step-8-internships",
+          "order": 8,
+          "type": "experience",
+          "title": "Legal internships during degree (summer & winter breaks, final year)",
+          "offsetMonths": 36,
+          "description": "Work under senior lawyers in law firms, corporate legal departments, government offices, or courts. Internships (typically 4–8 weeks) build practical skills, networks, and CV credentials essential for post-graduation placement.",
+          "optional": true
+        },
+        {
+          "id": "step-9-bar-council-registration",
+          "order": 9,
+          "type": "application",
+          "title": "Register with Bar Council of India (post-degree)",
+          "offsetMonths": 61,
+          "description": "Before practising as an advocate, register with the Bar Council of your state. Collect a Certificate of Practice from your NLU and submit to BCI along with required documents (degree certificate, character affidavit, etc.). Registration is mandatory."
+        },
+        {
+          "id": "step-10-aibe-exam",
+          "order": 10,
+          "type": "exam",
+          "title": "AIBE (All India Bar Examination) – Optional but recommended",
+          "offsetMonths": 61,
+          "description": "Conducted by BCI to test professional competence. Passing AIBE (mandatory for advocates working in High Court and Supreme Court) is a credential that enhances career prospects, especially in litigation and senior roles. Typically held twice yearly."
+        },
+        {
+          "id": "step-11-career-fork-litigation",
+          "order": 11,
+          "type": "experience",
+          "title": "Practice as Litigator / Advocate (Option A)",
+          "offsetMonths": 62,
+          "description": "Establish independent practice or join a law firm's litigation team. Handle civil, criminal, or commercial cases. Build reputation and client base. Income starts low (₹3–6 LPA) but grows significantly with experience and reputation.",
+          "alternativeTo": "step-11b"
+        },
+        {
+          "id": "step-11b-career-fork-corporate",
+          "order": 11,
+          "type": "experience",
+          "title": "Join Corporate Legal / In-House Counsel (Option B)",
+          "offsetMonths": 62,
+          "description": "Work as in-house counsel or legal associate in a corporation's legal department. Advise on contracts, compliance, mergers, and regulatory matters. Typically higher entry salary (₹5–10 LPA), better work-life balance, and clear growth path to General Counsel.",
+          "alternativeTo": "step-11"
+        },
+        {
+          "id": "step-12-specialisation-pg",
+          "order": 12,
+          "type": "education",
+          "title": "Pursue LLM (Master of Laws) – Optional, after 3–5 years practice",
+          "offsetMonths": 90,
+          "description": "After gaining practice experience (typically 3–5 years), consider LLM specialising in Corporate Law, Constitutional Law, Criminal Law, IP Law, or International Law. Entrance via CLAT PG. Enhances expertise and earning potential, especially for senior roles.",
+          "optional": true
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Constitutional Law & Indian Polity",
+          "Contract Law & Tort Law",
+          "Criminal Law & Procedure",
+          "Legal Research & Writing",
+          "Oral Advocacy & Persuasion",
+          "Reading Comprehension & Analysis",
+          "Logical Reasoning & Problem-Solving",
+          "Current Affairs & General Knowledge",
+          "Negotiation & Mediation",
+          "Case Management & Precedent Study"
+        ],
+        "upskilling": [
+          {
+            "name": "Daily reading habit (newspapers, legal blogs, case summaries)",
+            "why": "CLAT & legal practice are text-heavy. Reading sharpens comprehension, vocabulary, and current affairs awareness—all critical for CLAT & law.",
+            "costBand": "free",
+            "url": "https://www.thehindu.com/",
+            "verified": false
+          },
+          {
+            "name": "CLAT Online Coaching Course (Law Prep Tutorial, Physics Wallah, or similar)",
+            "why": "Structured 12–18 month coaching with live classes, mock tests, doubt-solving, and subject-wise focus. Significantly improves CLAT score.",
+            "costBand": "mid",
+            "url": "https://www.lawpreptutorial.com/",
+            "verified": false
+          },
+          {
+            "name": "CLAT Mock Test Series (free & paid)",
+            "why": "Mock tests replicate exam conditions, test speed & accuracy, and help identify weak areas. Practice at least 1 full mock weekly from Month 12 onwards.",
+            "costBand": "low",
+            "url": "https://www.pw.live/law/exams",
+            "verified": false
+          },
+          {
+            "name": "Indian Constitution study (NCERT Class 11–12 Civics, simplified summaries)",
+            "why": "Constitution is heavily tested in CLAT. Understanding Fundamental Rights, Directive Principles, separation of powers, and key amendments is foundational.",
+            "costBand": "free",
+            "url": "https://ncert.nic.in/",
+            "verified": false
+          },
+          {
+            "name": "Legal Reasoning (Indian Penal Code, Indian Contract Act – simplified guides)",
+            "why": "Legal Reasoning is a high-weightage CLAT section. Familiarity with IPC & ICA principles and their application to scenarios is essential.",
+            "costBand": "free",
+            "url": "https://www.lawpreptutorial.com/blog/clat/legal-reasoning/",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "name": "CLAT 2027 (Common Law Admission Test – Undergraduate)",
+          "purpose": "National entrance for admission to 5-year BA LLB (Hons) and 1-year LLM at 26 National Law Universities (excluding NLU Delhi)",
+          "eligibility": "Must have passed or be appearing in Class 12 (10+2) with minimum 45% marks (40% for SC/ST/PwD). Any stream qualifies. No upper age limit. Indian nationals, NRIs, OCI, PIO eligible.",
+          "typicalWindow": "Notification typically released July–August 2026; registration runs ~August–October 2026; exam held first Sunday of December 2026 (tentatively ~6 December 2026). Verify exact dates on official website.",
+          "costBand": "low",
+          "officialUrl": "https://consortiumofnlus.ac.in",
+          "verified": false
+        },
+        {
+          "name": "AILET 2027 (All India Law Entrance Test)",
+          "purpose": "Separate entrance conducted by NLU Delhi for admission to its 5-year BA LLB (Hons) programme. Alternative/supplementary option to CLAT.",
+          "eligibility": "Same as CLAT: Class 12 pass with 45% (40% for SC/ST). Only ~120 seats available at NLU Delhi, making AILET more competitive than CLAT.",
+          "typicalWindow": "Applications typically open June–July; exam held mid-December 2026 (typically ~2 weeks after CLAT). Verify on official website.",
+          "costBand": "low",
+          "officialUrl": "https://nationallawuniversitydelhi.in",
+          "verified": false
+        },
+        {
+          "name": "AIBE 21 (All India Bar Examination – Post-LLB)",
+          "purpose": "Mandatory professional competence test administered by Bar Council of India. Must pass to practise as advocate in High Court and Supreme Court (state bar admission possible with degree alone, but AIBE credential enhances prospects).",
+          "eligibility": "LLB degree holders. Conducted twice yearly (typically April & October). No upper age limit. Fee ~₹1,500–2,500.",
+          "typicalWindow": "After completing BA LLB (typically 2–3 months post-graduation). Scheduled ~2 months after application. Held online. Verify schedule on BCI website.",
+          "costBand": "low",
+          "officialUrl": "https://allindiabarexamination.com",
+          "verified": false
+        }
+      ],
+      "colleges": [
+        {
+          "name": "National Law School of India University (NLSIU), Bangalore",
+          "type": "government",
+          "location": "Bangalore, Karnataka",
+          "approxAnnualFees": "₹5,00,000 (approximately; includes tuition, on-campus hostel, and meals for BA LLB)",
+          "feesNote": "Total 5-year BA LLB cost ~₹24–25 lakh including annual increments and hostel. Ranked #1 law university in India (NIRF 2025).",
+          "entranceRequired": "CLAT 2027 UG",
+          "costBand": "mid",
+          "officialUrl": "https://www.nls.ac.in",
+          "verified": false
+        },
+        {
+          "name": "National Law University (NLU), New Delhi",
+          "type": "government",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "₹1,85,000–2,45,000 (tuition + hostel + facilities, varies by year)",
+          "feesNote": "Total 5-year cost ~₹20.5–21 lakh. Conducts own exam AILET (not CLAT). Ranked #2 law university in India.",
+          "entranceRequired": "AILET 2027 UG (separate entrance) or CLAT score not accepted",
+          "costBand": "mid",
+          "officialUrl": "https://nationallawuniversitydelhi.in",
+          "verified": false
+        },
+        {
+          "name": "NALSAR University of Law, Hyderabad",
+          "type": "government",
+          "location": "Hyderabad, Telangana",
+          "approxAnnualFees": "₹2,22,000 per year",
+          "feesNote": "Total 5-year cost ~₹15–16 lakh (without hostel increment). Ranked #3 law university in India.",
+          "entranceRequired": "CLAT 2027 UG",
+          "costBand": "mid",
+          "officialUrl": "https://nalsar.ac.in",
+          "verified": false
+        },
+        {
+          "name": "West Bengal National University of Juridical Sciences (WBNUJS), Kolkata",
+          "type": "government",
+          "location": "Kolkata, West Bengal",
+          "approxAnnualFees": "₹2,00,000–2,50,000",
+          "feesNote": "Ranked #4 law university. Strong focus on moot court and legal research. Part of CLAT system.",
+          "entranceRequired": "CLAT 2027 UG",
+          "costBand": "mid",
+          "officialUrl": "https://www.wbnujs.ac.in",
+          "verified": false
+        },
+        {
+          "name": "National Law Institute University (NLIU), Bhopal",
+          "type": "government",
+          "location": "Bhopal, Madhya Pradesh",
+          "approxAnnualFees": "₹2,50,000–3,00,000",
+          "feesNote": "Ranked #5 law university. Part of CLAT system. Second-oldest NLU in India.",
+          "entranceRequired": "CLAT 2027 UG",
+          "costBand": "mid",
+          "officialUrl": "https://www.nliu.ac.in",
+          "verified": false
+        },
+        {
+          "name": "Symbiosis Law School (SLS), Pune",
+          "type": "private",
+          "location": "Pune, Maharashtra",
+          "approxAnnualFees": "₹5,06,000–8,45,000",
+          "feesNote": "Ranked #5–7 in private law colleges (NIRF). Uses SLAT entrance exam (not CLAT). Strong global exposure and mooting culture.",
+          "entranceRequired": "SLAT 2027 (Symbiosis Law Admission Test) – separate exam",
+          "costBand": "high",
+          "officialUrl": "https://www.symbiosis.ac.in/academics/law",
+          "verified": false
+        },
+        {
+          "name": "Jindal Global Law School (JGLS), Sonipat",
+          "type": "private",
+          "location": "Sonipat, Haryana",
+          "approxAnnualFees": "₹7,00,000 per year",
+          "feesNote": "One of India's most expensive private law schools. Uses LSAT India entrance. Known for international exposure and corporate placement.",
+          "entranceRequired": "LSAT India 2027",
+          "costBand": "high",
+          "officialUrl": "https://jgls.edu.in",
+          "verified": false
+        },
+        {
+          "name": "Dr. B.R. Ambedkar National Law University (DBRANLU), Sonipat",
+          "type": "government",
+          "location": "Sonipat, Haryana",
+          "approxAnnualFees": "₹1,43,000 per year",
+          "feesNote": "Among the most affordable NLUs. Total 5-year cost ~₹10–12 lakh. Part of CLAT system. Founded more recently (lower fees to attract students).",
+          "entranceRequired": "CLAT 2027 UG",
+          "costBand": "low",
+          "officialUrl": "https://dbranlu.ac.in",
+          "verified": false
+        },
+        {
+          "name": "Dr. Ram Manohar Lohiya National Law University (RMLNLU), Lucknow",
+          "type": "government",
+          "location": "Lucknow, Uttar Pradesh",
+          "approxAnnualFees": "₹1,45,000 per year",
+          "feesNote": "Among the most affordable NLUs. Part of CLAT system. Strong focus on constitutional law and judicial skills.",
+          "entranceRequired": "CLAT 2027 UG",
+          "costBand": "low",
+          "officialUrl": "https://rmlnlu.ac.in",
+          "verified": false
+        }
+      ],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "Reattempt CLAT in the next cycle (CLAT 2028, typically December 2027). The CLAT exam is conducted annually; there is no age limit or attempt cap. Many successful lawyers attempted CLAT 2–3 times.",
+          "Apply to law colleges that offer merit-based admission without entrance exams (e.g. SRM University, GITAM University, Banasthali Vidyapith, Manipal University Jaipur). These offer admission based on Class 12 marks alone.",
+          "Pursue 3-year LLB after completing any bachelor's degree, then take CLAT PG later. This defers law entry but remains a viable path.",
+          "Check for state-level law entrance exams (e.g. Maharashtra CET Law, AP LAWCET, Tamil Nadu LAWCET) if you missed the CLAT window. Many states run parallel admissions."
+        ]
+      }
+    }
+  ],
+  "prepResources": [
+    {
+      "title": "CLAT Official Syllabus & Notification",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://consortiumofnlus.ac.in",
+      "verified": false
+    },
+    {
+      "title": "Law Prep Tutorial – CLAT Online Coaching",
+      "type": "free-course",
+      "costBand": "mid",
+      "language": "en",
+      "url": "https://www.lawpreptutorial.com/",
+      "verified": false
+    },
+    {
+      "title": "Physics Wallah – Law Entrance Exams Prep (Free & Paid)",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.pw.live/law/exams",
+      "verified": false
+    },
+    {
+      "title": "Indian Constitution (NCERT Class 11–12 Civics)",
+      "type": "book",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://ncert.nic.in/",
+      "verified": false
+    },
+    {
+      "title": "Daily News Habit (The Hindu Editorial & Indian Express)",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.thehindu.com/",
+      "verified": false
+    }
+  ],
+  "groundingSources": [
+    {
+      "claim": "CLAT 2027 exam eligibility: minimum 45% marks in Class 12 (40% for SC/ST), no upper age limit, any stream eligible",
+      "url": "https://consortiumofnlus.ac.in",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "CLAT 2027 typical application window: August–October 2026; exam ~first Sunday of December 2026",
+      "url": "https://consortiumofnlus.ac.in",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "AILET 2027 exam date: mid-December 2026 (separate from CLAT, conducted by NLU Delhi only)",
+      "url": "https://nationallawuniversitydelhi.in",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "NLSIU Bangalore BA LLB annual fees ~₹5,00,000 (including hostel); total 5-year cost ~₹24–25 lakh",
+      "url": "https://www.nls.ac.in",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "NLU Delhi BA LLB annual fees ~₹1,85,000–2,45,000; total 5-year cost ~₹20.5–21 lakh",
+      "url": "https://nationallawuniversitydelhi.in",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "Law salary entry-level: ₹3–6 LPA (litigators), ₹5–10 LPA (corporate lawyers); experienced: ₹12–40+ LPA",
+      "url": "https://articles.findmycollege.com/lawyer-average-salary-in-india/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "26 National Law Universities participate in CLAT; NLU Delhi (AILET only) is separate",
+      "url": "https://consortiumofnlus.ac.in",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "CLAT application fee: ₹4,000 for General/OBC/PwD/NRI/OCI; ₹3,500 for SC/ST/BPL",
+      "url": "https://consortiumofnlus.ac.in",
+      "fetchedAt": "2026-06-21"
+    }
+  ],
+  "disclaimers": [
+    "This journey assumes passage of Class 12 with minimum 45% marks (40% for SC/ST) by April 2027. If you score below these thresholds, you will not be eligible for CLAT UG or AILET. In that case, explore merit-based law college admissions without entrance exams.",
+    "CLAT and AILET exam dates, registration windows, and fee amounts are subject to official notification by the Consortium of NLUs and NLU Delhi. Verify all dates and fees on official websites (consortiumofnlus.ac.in and nationallawuniversitydelhi.in) before applying, as they may change year to year.",
+    "NLU fees and fee components are subject to periodic revision due to inflation, policy changes, and infrastructure upgrades. The fees mentioned here reflect 2026 data but may increase in subsequent years. Check each NLU's official brochure for the latest fees before admission.",
+    "Salary figures are indicative and vary significantly based on practice area (litigation vs. corporate), location (metro vs. tier-2), employer type (law firm, in-house, government), years of experience, and individual reputation. Corporate law and in-house counsel roles typically offer higher entry salaries than litigation.",
+    "This journey focuses on the integrated 5-year BA LLB route via CLAT/AILET as the primary pathway. Alternative routes (3-year LLB after graduation, private law colleges without entrance exams, state-level entrance exams) exist but are not the primary recommendation for a Class 11 student committed to law.",
+    "Internships, bar registration, and AIBE exam details are indicative of common practice. Rules, exam schedules, and requirements may vary by state bar council and by individual NLU. Consult the Bar Council of India (bci.org.in) and your state bar council for latest regulations.",
+    "This journey assumes no major personal, financial, or health disruptions. If circumstances change (e.g. gap year, financial constraints, health issues), reassess your timeline and explore alternative pathways (e.g. reattempting CLAT, merit-based college admission, 3-year LLB after graduation)."
+  ]
+}

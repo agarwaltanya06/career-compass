@@ -1,0 +1,441 @@
+{
+  "meta": {
+    "career": "Civil Services (UPSC)",
+    "careerAliases": [
+      "IAS",
+      "IPS",
+      "IFS",
+      "IRS Officer"
+    ],
+    "studentProfile": {
+      "class": "11",
+      "board": "cbse",
+      "stream": "arts",
+      "language": "en",
+      "currentDate": "2026-06-21"
+    },
+    "generatedAt": "2026-06-21",
+    "confidence": "high",
+    "cacheKey": "civil-services|cbse|arts|class11"
+  },
+  "overview": {
+    "summary": "Civil Services officers serve the nation by working in various administrative roles, including policy implementation, law enforcement, and public welfare. They are responsible for the smooth functioning of government machinery at different levels. The Union Public Service Commission (UPSC) Civil Services Examination (CSE) is the gateway to these prestigious positions.",
+    "dayInLife": "A Civil Services officer's day is dynamic, involving policy analysis, public interaction, administrative decision-making, and crisis management. Depending on the service (e.g., IAS, IPS, IFS) and posting, responsibilities can range from district administration and maintaining law and order to representing India internationally or formulating economic policies.",
+    "payRange": {
+      "entry": "₹56,100 - ₹1,77,500 per month (approx. 7th Pay Commission Level 10)",
+      "experienced": "₹1,44,200 - ₹2,25,000+ per month (approx. 7th Pay Commission Level 14 and above)",
+      "note": "Salaries are as per the 7th Pay Commission recommendations and vary based on post, experience, and allowances. These figures are indicative and subject to change."
+    },
+    "demandOutlook": "The demand for Civil Services officers remains consistently high due to the essential nature of their roles in governance and public administration. It is a highly competitive field with a fixed number of vacancies each year.",
+    "requirements": [
+      "Bachelor's degree from a recognized university",
+      "Indian citizenship",
+      "Minimum age of 21 years",
+      "Strong analytical and critical thinking skills",
+      "Excellent communication and writing abilities",
+      "In-depth knowledge of current affairs and general studies"
+    ]
+  },
+  "routes": [
+    {
+      "id": "route-1",
+      "name": "Bachelor of Arts (BA) followed by UPSC CSE",
+      "bestFor": "Students who want to build a strong foundation in humanities subjects relevant to the UPSC syllabus and prefer a structured academic path before intensive exam preparation.",
+      "feasibility": "high",
+      "feasibilityReason": "The Arts/Humanities stream directly aligns with a significant portion of the UPSC CSE syllabus, providing a natural advantage in subjects like History, Political Science, Economics, and Sociology.",
+      "costBand": "mid",
+      "duration": "7-8 years (3 years UG + 2-3 years dedicated prep + exam cycle)",
+      "steps": [
+        {
+          "id": "step-1",
+          "order": 1,
+          "type": "education",
+          "title": "Complete Class 11 (Arts/Humanities)",
+          "offsetMonths": 0,
+          "description": "Focus on core Arts/Humanities subjects like History, Political Science, Economics, and Geography, as they form a strong foundation for the UPSC CSE syllabus. Develop strong reading and analytical skills."
+        },
+        {
+          "id": "step-2",
+          "order": 2,
+          "type": "education",
+          "title": "Complete Class 12 (Arts/Humanities)",
+          "offsetMonths": 12,
+          "description": "Continue building knowledge in your chosen Arts/Humanities subjects. Start reading newspapers daily to develop a current affairs habit, which is crucial for UPSC. Aim for good scores in board exams."
+        },
+        {
+          "id": "step-3",
+          "order": 3,
+          "type": "exam",
+          "title": "Appear for CBSE Class 12 Board Exams",
+          "offsetMonths": 20,
+          "description": "Take your Class 12 board examinations. Your performance here will be important for university admissions."
+        },
+        {
+          "id": "step-4",
+          "order": 4,
+          "type": "application",
+          "title": "Apply for CUET (Common University Entrance Test)",
+          "offsetMonths": 21,
+          "description": "Apply for CUET if you plan to seek admission to central universities or other participating universities for your Bachelor's degree. Applications usually open ~February."
+        },
+        {
+          "id": "step-5",
+          "order": 5,
+          "type": "exam",
+          "title": "Appear for CUET UG Exam",
+          "offsetMonths": 22,
+          "description": "Take the Common University Entrance Test (CUET) for admission to various undergraduate programs in central and participating universities. The exam is typically held in May."
+        },
+        {
+          "id": "step-6",
+          "order": 6,
+          "type": "education",
+          "title": "Enroll in a Bachelor of Arts (BA) Degree",
+          "offsetMonths": 23,
+          "description": "Join a 3-year Bachelor of Arts program (e.g., History, Political Science, Public Administration, Economics, Sociology). Choose subjects that align with your interest and potential UPSC optional subjects. This degree is a minimum eligibility requirement for UPSC CSE."
+        },
+        {
+          "id": "step-7",
+          "order": 7,
+          "type": "skill",
+          "title": "UPSC Foundation Preparation during Graduation",
+          "offsetMonths": 24,
+          "description": "During your undergraduate years, dedicate 2-3 hours daily to UPSC preparation. Focus on reading NCERTs (Class 6-12) for History, Geography, Polity, and Economics, and consistently read newspapers for current affairs. Practice summarizing articles and developing analytical thinking. This will build a strong base for later intensive preparation."
+        },
+        {
+          "id": "step-8",
+          "order": 8,
+          "type": "experience",
+          "title": "Optional: Internships/Volunteering in relevant fields",
+          "offsetMonths": 40,
+          "description": "Consider internships with NGOs, government bodies, or research organizations to gain practical exposure to public policy, social work, or governance. This can enrich your understanding and interview preparation.",
+          "optional": true
+        },
+        {
+          "id": "step-9",
+          "order": 9,
+          "type": "skill",
+          "title": "Intensive UPSC CSE Preparation",
+          "offsetMonths": 60,
+          "description": "After completing your graduation, dedicate 1-2 years to intensive, full-time preparation for the UPSC CSE. This includes in-depth study of General Studies, optional subjects, essay writing, and current affairs. Consider joining a reputable coaching institute or online program."
+        },
+        {
+          "id": "step-10",
+          "order": 10,
+          "type": "application",
+          "title": "Apply for UPSC Civil Services Exam (CSE)",
+          "offsetMonths": 67,
+          "description": "Apply for the UPSC CSE. You must be at least 21 years old and hold a Bachelor's degree. The application window typically opens in February."
+        },
+        {
+          "id": "step-11",
+          "order": 11,
+          "type": "exam",
+          "title": "Appear for UPSC CSE Preliminary Examination",
+          "offsetMonths": 70,
+          "description": "Take the Prelims exam, which consists of two objective-type papers: General Studies Paper I and General Studies Paper II (CSAT). CSAT is a qualifying paper."
+        },
+        {
+          "id": "step-12",
+          "order": 12,
+          "type": "application",
+          "title": "Fill Detailed Application Form (DAF-I) for Mains",
+          "offsetMonths": 72,
+          "description": "If you clear Prelims, you will need to fill out DAF-I for the Mains examination, providing detailed personal and educational information. This typically opens in June."
+        },
+        {
+          "id": "step-13",
+          "order": 13,
+          "type": "exam",
+          "title": "Appear for UPSC CSE Mains Examination",
+          "offsetMonths": 73,
+          "description": "Take the Mains exam, which comprises nine descriptive papers, including an essay, four General Studies papers, two optional subject papers, and two qualifying language papers."
+        },
+        {
+          "id": "step-14",
+          "order": 14,
+          "type": "application",
+          "title": "Fill Detailed Application Form (DAF-II) for Interview",
+          "offsetMonths": 77,
+          "description": "If you clear Mains, you will fill DAF-II before the Personality Test, detailing your interests, hobbies, and preferences. This form is crucial for the interview. Rules, exams, and fees may change by then, so re-verify when you get there."
+        },
+        {
+          "id": "step-15",
+          "order": 15,
+          "type": "exam",
+          "title": "Appear for UPSC CSE Personality Test (Interview)",
+          "offsetMonths": 78,
+          "description": "Participate in the Personality Test, which assesses your mental aptitude, critical abilities, and suitability for a career in public service. Rules, exams, and fees may change by then, so re-verify when you get there."
+        },
+        {
+          "id": "step-16",
+          "order": 16,
+          "type": "education",
+          "title": "Alternative: Pursue Post-Graduation (if needed)",
+          "offsetMonths": 80,
+          "description": "If you wish to deepen your subject knowledge or improve your academic profile, consider pursuing a Master's degree in a relevant field (e.g., MA in Public Administration, International Relations). This can be a fallback or an enhancement. Rules, exams, and fees may change by then, so re-verify when you get there.",
+          "optional": true,
+          "alternativeTo": "step-17"
+        },
+        {
+          "id": "step-17",
+          "order": 16,
+          "type": "experience",
+          "title": "Alternative: Work in Allied Fields or Re-attempt UPSC",
+          "offsetMonths": 80,
+          "description": "If you are not selected in your first attempt, you can re-attempt the UPSC CSE (within age and attempt limits) or explore careers in research, policy analysis, journalism, or teaching, leveraging your humanities background. Rules, exams, and fees may change by then, so re-verify when you get there.",
+          "optional": true,
+          "alternativeTo": "step-16"
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Analytical & Critical Thinking",
+          "Reading Comprehension",
+          "Writing & Essay Skills",
+          "General Knowledge & Current Affairs",
+          "Logical Reasoning",
+          "Public Speaking & Interview Skills",
+          "Time Management & Discipline"
+        ],
+        "upskilling": [
+          {
+            "name": "Newspaper Reading & Current Affairs Analysis",
+            "why": "Essential for Prelims, Mains, and Interview; builds awareness and analytical depth.",
+            "costBand": "free",
+            "url": "https://www.insightsonindia.com/category/upsc-current-affairs-2024/",
+            "verified": false
+          },
+          {
+            "name": "NCERT Foundation Courses (Online)",
+            "why": "Builds a strong base in core subjects for General Studies papers.",
+            "costBand": "low",
+            "url": "https://edurev.in/course/14546/UPSC-CSE-NCERT-Foundation-Course",
+            "verified": false
+          },
+          {
+            "name": "UPSC Mains Answer Writing Practice",
+            "why": "Crucial for scoring well in descriptive Mains papers; develops structured articulation.",
+            "costBand": "mid",
+            "url": "https://edurev.in/course/14547/UPSC-Mains-Answer-Writing-Practice",
+            "verified": false
+          },
+          {
+            "name": "UPSC CSE Coaching (Online/Offline)",
+            "why": "Provides structured guidance, study materials, test series, and mentorship for comprehensive preparation.",
+            "costBand": "high",
+            "url": "https://www.vajiramandravi.com/",
+            "verified": false
+          },
+          {
+            "name": "Public Speaking & Debate Clubs",
+            "why": "Enhances communication skills, confidence, and ability to articulate thoughts, vital for the interview stage.",
+            "costBand": "low",
+            "url": "https://www.toastmasters.org/find-a-club",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "name": "Common University Entrance Test (CUET) UG",
+          "purpose": "Entrance exam for admission to various undergraduate programs in Central Universities and other participating universities across India.",
+          "eligibility": "Passed Class 12 or appearing in Class 12 from a recognized board. No upper age limit, but universities may have their own age criteria. Minimum 50% marks in Class 12 for General category (45% for reserved categories) may be required by some universities.",
+          "typicalWindow": "Applications usually open ~January-February; exam typically in May.",
+          "costBand": "low",
+          "officialUrl": "https://cuet.nta.nic.in/",
+          "verified": false
+        },
+        {
+          "name": "UPSC Civil Services Examination (CSE)",
+          "purpose": "National-level competitive examination for recruitment to various Civil Services of the Government of India, including IAS, IPS, IFS, etc.",
+          "eligibility": "Indian citizen, minimum 21 years of age, maximum 32 years (with relaxations for OBC, SC/ST, PwBD). Must hold a Bachelor's degree from a recognized university or be in the final year of graduation.",
+          "typicalWindow": "Notification and application usually open ~February; Prelims in May/June; Mains in August/September; Interview in Feb/March of next year.",
+          "costBand": "low",
+          "officialUrl": "https://upsc.gov.in/",
+          "verified": false
+        }
+      ],
+      "colleges": [
+        {
+          "name": "Hindu College",
+          "type": "government",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "₹15,000 - ₹20,000",
+          "feesNote": "Hostel fees are separate.",
+          "entranceRequired": "CUET UG",
+          "costBand": "low",
+          "officialUrl": "https://www.hinducollege.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "Miranda House",
+          "type": "government",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "₹12,000 - ₹18,000",
+          "feesNote": "Hostel fees are separate.",
+          "entranceRequired": "CUET UG",
+          "costBand": "low",
+          "officialUrl": "https://www.mirandahouse.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "Lady Shri Ram College for Women (LSR)",
+          "type": "government",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "₹19,000 - ₹25,000",
+          "feesNote": "Hostel fees are separate.",
+          "entranceRequired": "CUET UG",
+          "costBand": "low",
+          "officialUrl": "https://lsr.edu.in/",
+          "verified": false
+        },
+        {
+          "name": "St. Stephen's College",
+          "type": "private",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "₹35,000 - ₹45,000",
+          "feesNote": "Fees can vary by course and include various charges.",
+          "entranceRequired": "CUET UG + Interview",
+          "costBand": "low",
+          "officialUrl": "https://www.ststephens.edu/",
+          "verified": false
+        },
+        {
+          "name": "Jawaharlal Nehru University (JNU)",
+          "type": "government",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "₹1,000 - ₹5,000",
+          "feesNote": "Highly subsidized fees, primarily for specific courses and based on JNU's own entrance exam (JNUEE) or CUET for some programs.",
+          "entranceRequired": "CUET UG / JNUEE (for some courses)",
+          "costBand": "low",
+          "officialUrl": "https://www.jnu.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "Banaras Hindu University (BHU)",
+          "type": "government",
+          "location": "Varanasi, Uttar Pradesh",
+          "approxAnnualFees": "₹2,500 - ₹10,000",
+          "feesNote": "Fees vary by course and are highly subsidized.",
+          "entranceRequired": "CUET UG",
+          "costBand": "low",
+          "officialUrl": "https://www.bhu.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "University of Hyderabad",
+          "type": "government",
+          "location": "Hyderabad, Telangana",
+          "approxAnnualFees": "₹5,000 - ₹15,000",
+          "feesNote": "Fees vary by course.",
+          "entranceRequired": "CUET UG / UoH Entrance Exam",
+          "costBand": "low",
+          "officialUrl": "https://uohyd.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "Presidency University",
+          "type": "government",
+          "location": "Kolkata, West Bengal",
+          "approxAnnualFees": "₹2,000 - ₹8,000",
+          "feesNote": "Fees are highly subsidized.",
+          "entranceRequired": "PUBDET (Presidency University Bachelor Degree Entrance Test)",
+          "costBand": "low",
+          "officialUrl": "https://www.presiuniv.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "St. Xavier's College",
+          "type": "private",
+          "location": "Mumbai, Maharashtra",
+          "approxAnnualFees": "₹7,000 - ₹10,000",
+          "feesNote": "Fees are relatively low for a private autonomous college.",
+          "entranceRequired": "St. Xavier's Entrance Test (for some courses)",
+          "costBand": "low",
+          "officialUrl": "https://xaviers.edu/",
+          "verified": false
+        },
+        {
+          "name": "Ashoka University",
+          "type": "private",
+          "location": "Sonipat, Haryana",
+          "approxAnnualFees": "₹8,00,000 - ₹10,00,000",
+          "feesNote": "Known for liberal arts, fees are significantly higher but offer financial aid.",
+          "entranceRequired": "Ashoka Aptitude Test / SAT / ACT",
+          "costBand": "high",
+          "officialUrl": "https://www.ashoka.edu.in/",
+          "verified": false
+        }
+      ],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "If you miss the CUET application, explore state universities or private colleges that accept direct applications or other entrance exams.",
+          "If you don't clear CUET, consider applying to universities that admit based on Class 12 marks or conduct their own entrance tests.",
+          "If you don't clear UPSC CSE in the first attempt, analyze your performance, identify weak areas, and re-attempt the exam within the permissible age and attempt limits. Many successful candidates clear in subsequent attempts.",
+          "Explore other government job opportunities through State Public Service Commissions (State PSCs) or other central government exams (e.g., SSC CGL, Bank PO) that also value a humanities background and general knowledge."
+        ]
+      }
+    }
+  ],
+  "prepResources": [
+    {
+      "title": "NCERT Textbooks (Class 6-12)",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://ncert.nic.in/textbook.php",
+      "verified": false
+    },
+    {
+      "title": "The Hindu / Indian Express Newspaper",
+      "type": "official-guide",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://www.thehindu.com/ / https://indianexpress.com/",
+      "verified": false
+    },
+    {
+      "title": "Yojana / Kurukshetra Magazines",
+      "type": "book",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://publicationsdivision.nic.in/journals.asp",
+      "verified": false
+    },
+    {
+      "title": "M. Laxmikanth's Indian Polity",
+      "type": "book",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://www.amazon.in/Indian-Polity-M-Laxmikanth/dp/9354883437",
+      "verified": false
+    },
+    {
+      "title": "Spectrum's A Brief History of Modern India",
+      "type": "book",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://www.amazon.in/Brief-History-Modern-India-Spectrum/dp/8179551000",
+      "verified": false
+    }
+  ],
+  "groundingSources": [
+    {
+      "claim": "UPSC official website",
+      "url": "https://upsc.gov.in/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "CUET official website",
+      "url": "https://cuet.nta.nic.in/",
+      "fetchedAt": "2026-06-21"
+    }
+  ],
+  "disclaimers": [
+    "The information provided is based on typical patterns and publicly available data. Specific dates, fees, and eligibility criteria can change. Always refer to the official notifications and websites for the most accurate and up-to-date information.",
+    "Career paths can be dynamic. While this guide provides a primary route, individual circumstances and opportunities may lead to variations. Flexibility and continuous learning are key.",
+    "The 'verified: false' flag indicates that while the information is grounded in search results, it requires independent verification by the student from official sources before making any decisions."
+  ]
+}

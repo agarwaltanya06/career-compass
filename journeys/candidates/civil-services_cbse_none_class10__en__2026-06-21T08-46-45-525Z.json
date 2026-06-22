@@ -1,0 +1,371 @@
+{
+  "meta": {
+    "career": "Civil Services (UPSC)",
+    "careerAliases": [
+      "IAS Officer",
+      "IPS Officer",
+      "IFS Officer",
+      "IRS Officer",
+      "Civil Servant"
+    ],
+    "studentProfile": {
+      "class": "10",
+      "board": "cbse",
+      "language": "en",
+      "currentDate": "2026-06-21"
+    },
+    "generatedAt": "2026-06-21",
+    "confidence": "high",
+    "cacheKey": "civil-services|cbse|none|class10"
+  },
+  "overview": {
+    "summary": "Civil Services officers, recruited through the highly competitive UPSC Civil Services Examination (CSE), serve in various administrative roles across India, contributing to policy formulation, implementation, and public welfare. They are responsible for maintaining law and order, managing public funds, and driving development initiatives.",
+    "dayInLife": "A civil servant's day can vary significantly based on their service (e.g., IAS, IPS, IFS) and posting. It often involves reviewing files, attending meetings with various stakeholders, overseeing government projects, addressing public grievances, and ensuring the smooth functioning of their department or district. Field visits and crisis management are also common, especially for district-level postings.",
+    "payRange": {
+      "entry": "₹80,000 - ₹1,10,000 per month (including allowances)",
+      "experienced": "₹1,50,000 - ₹2,50,000 per month (for senior positions like Cabinet Secretary)",
+      "note": "Starting basic pay for IAS/IPS officers is typically ₹56,100 per month, with various allowances adding significantly to the in-hand salary."
+    },
+    "demandOutlook": "The demand for civil services remains consistently high due to the prestige, job security, and opportunity for public service. However, it is an extremely competitive field with a very low selection rate.",
+    "requirements": [
+      "Strong analytical and problem-solving skills",
+      "Excellent communication and interpersonal abilities",
+      "In-depth knowledge of current affairs and general studies",
+      "Leadership and decision-making capabilities",
+      "High ethical standards and integrity",
+      "Patience and perseverance for a long preparation journey"
+    ]
+  },
+  "routes": [
+    {
+      "id": "upsc-cse-degree-route",
+      "name": "Bachelor's Degree followed by UPSC Civil Services Exam",
+      "bestFor": "Students aiming for a comprehensive academic foundation before dedicated UPSC preparation, allowing for holistic development and a fallback career option.",
+      "feasibility": "high",
+      "feasibilityReason": "This is the most common and recommended pathway for UPSC aspirants, providing ample time for preparation and maturity.",
+      "costBand": "low",
+      "duration": "7-8 years (from Class 10 to final selection)",
+      "steps": [
+        {
+          "id": "step-1",
+          "order": 1,
+          "type": "education",
+          "title": "Class 11 & 12 (Any Stream)",
+          "offsetMonths": 12,
+          "description": "Choose a stream (Humanities, Science, or Commerce) in Class 11. While any stream is acceptable for UPSC, Humanities subjects like Political Science, History, Economics, and Geography can provide a strong foundation for the General Studies papers."
+        },
+        {
+          "id": "step-2",
+          "order": 2,
+          "type": "exam",
+          "title": "Class 12 Board Exams (CBSE)",
+          "offsetMonths": 33,
+          "description": "Appear for your Class 12 CBSE Board Examinations. A good academic record is beneficial for college admissions."
+        },
+        {
+          "id": "step-3",
+          "order": 3,
+          "type": "application",
+          "title": "Bachelor's Degree Application",
+          "offsetMonths": 36,
+          "description": "Apply for a Bachelor's degree program (3-4 years) in any discipline from a recognized university. Popular choices for UPSC aspirants include B.A. (Political Science, History, Economics, Sociology, Geography) due to syllabus overlap. Admissions often involve university-specific entrance tests or CUET-UG scores."
+        },
+        {
+          "id": "step-4",
+          "order": 4,
+          "type": "education",
+          "title": "Pursue Bachelor's Degree",
+          "offsetMonths": 39,
+          "description": "Complete your Bachelor's degree. Utilize this period to build a strong academic foundation, develop critical thinking, reading habits, and start reading NCERTs (Class 6-12) and newspapers for UPSC preparation. (Rules, exams, and fees may change by then; re-verify when you reach this stage.)"
+        },
+        {
+          "id": "step-5",
+          "order": 5,
+          "type": "experience",
+          "title": "Optional: Internships/Volunteer Work",
+          "offsetMonths": 60,
+          "description": "Consider internships or volunteer work in NGOs, government bodies, or research institutions during your degree to gain practical exposure and enhance your profile. (Rules, exams, and fees may change by then; re-verify when you reach this stage.)",
+          "optional": true
+        },
+        {
+          "id": "step-6",
+          "order": 6,
+          "type": "skill",
+          "title": "Intensive UPSC CSE Preparation",
+          "offsetMonths": 70,
+          "description": "Dedicate 1-2 years to intensive preparation for the UPSC Civil Services Examination (CSE) after graduation, or begin structured preparation during your final year of college. Focus on General Studies, optional subjects, essay writing, and current affairs. (Rules, exams, and fees may change by then; re-verify when you reach this stage.)"
+        },
+        {
+          "id": "step-7",
+          "order": 7,
+          "type": "application",
+          "title": "UPSC CSE Application (Prelims)",
+          "offsetMonths": 80,
+          "description": "Apply for the UPSC Civil Services Examination (CSE) Prelims. The notification is typically released in January-February, with applications open for a few weeks. Ensure you meet the eligibility criteria (minimum 21 years old and a graduate). (Rules, exams, and fees may change by then; re-verify when you reach this stage.)"
+        },
+        {
+          "id": "step-8",
+          "order": 8,
+          "type": "exam",
+          "title": "UPSC CSE Prelims",
+          "offsetMonths": 84,
+          "description": "Appear for the Civil Services (Preliminary) Examination, which consists of two objective-type papers: General Studies Paper I and CSAT (General Studies Paper II). CSAT is a qualifying paper. (Rules, exams, and fees may change by then; re-verify when you reach this stage.)"
+        },
+        {
+          "id": "step-9",
+          "order": 9,
+          "type": "application",
+          "title": "UPSC CSE Mains (DAF-I) Application",
+          "offsetMonths": 86,
+          "description": "If you qualify Prelims, submit the Detailed Application Form (DAF-I) for the Mains examination. This typically opens shortly after Prelims results. (Rules, exams, and fees may change by then; re-verify when you reach this stage.)"
+        },
+        {
+          "id": "step-10",
+          "order": 10,
+          "type": "exam",
+          "title": "UPSC CSE Mains",
+          "offsetMonths": 87,
+          "description": "Appear for the Civil Services (Main) Examination, which comprises nine descriptive papers (including essay, four General Studies papers, two optional subject papers, and two qualifying language papers). Marks from Mains are crucial for the final merit list. (Rules, exams, and fees may change by then; re-verify when you reach this stage.)"
+        },
+        {
+          "id": "step-11",
+          "order": 11,
+          "type": "exam",
+          "title": "UPSC CSE Interview (Personality Test)",
+          "offsetMonths": 93,
+          "description": "Candidates who clear Mains are called for a Personality Test (Interview) by the UPSC Board. This assesses mental aptitude, critical powers, clear and logical exposition, balance of judgment, variety and depth of interest, ability for social cohesion and leadership, and intellectual and moral integrity. (Rules, exams, and fees may change by then; re-verify when you reach this stage.)"
+        },
+        {
+          "id": "step-12",
+          "order": 12,
+          "type": "education",
+          "title": "Foundation Training (e.g., LBSNAA)",
+          "offsetMonths": 95,
+          "description": "Upon selection, undergo rigorous foundation training at institutions like the Lal Bahadur Shastri National Academy of Administration (LBSNAA) for IAS officers or Sardar Vallabhbhai Patel National Police Academy (SVPNPA) for IPS officers. (Rules, exams, and fees may change by then; re-verify when you reach this stage.)"
+        },
+        {
+          "id": "step-13a",
+          "order": 13,
+          "type": "experience",
+          "title": "Join Civil Services",
+          "offsetMonths": 98,
+          "description": "Begin your career as a civil servant in your allocated service (IAS, IPS, IFS, IRS, etc.) and cadre. (Rules, exams, and fees may change by then; re-verify when you reach this stage.)",
+          "alternativeTo": "step-13b"
+        },
+        {
+          "id": "step-13b",
+          "order": 13,
+          "type": "education",
+          "title": "Further Study (e.g., Master's Degree)",
+          "offsetMonths": 98,
+          "description": "If not selected in the first attempt, or to enhance qualifications, pursue a Master's degree in a relevant field while continuing UPSC preparation. (Rules, exams, and fees may change by then; re-verify when you reach this stage.)",
+          "alternativeTo": "step-13a"
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Analytical Reasoning",
+          "Critical Thinking",
+          "General Knowledge & Current Affairs",
+          "Written Communication (Essay & Answer Writing)",
+          "Public Speaking & Interview Skills",
+          "Time Management & Discipline",
+          "Ethical Reasoning"
+        ],
+        "upskilling": [
+          {
+            "name": "Daily Newspaper Reading (The Hindu/Indian Express)",
+            "why": "Essential for current affairs, editorial analysis, and improving language skills for all stages of UPSC CSE.",
+            "costBand": "low",
+            "url": "https://www.thehindu.com/",
+            "verified": false
+          },
+          {
+            "name": "NCERT Books (Class 6-12)",
+            "why": "Builds a strong foundational understanding of core subjects like History, Geography, Polity, and Economics.",
+            "costBand": "low",
+            "url": "https://ncert.nic.in/",
+            "verified": false
+          },
+          {
+            "name": "Online UPSC Preparation Platforms (e.g., ClearIAS, BYJU'S Free IAS Prep, Unacademy)",
+            "why": "Offers free study materials, current affairs updates, mock tests, and video lectures to supplement preparation.",
+            "costBand": "free",
+            "url": "https://www.clearias.com/free-resources/",
+            "verified": false
+          },
+          {
+            "name": "Yojana & Kurukshetra Magazines",
+            "why": "Government publications providing in-depth analysis of socio-economic issues and government policies, useful for Mains.",
+            "costBand": "low",
+            "url": "https://yojana.gov.in/",
+            "verified": false
+          },
+          {
+            "name": "Answer Writing Practice",
+            "why": "Crucial for Mains exam success, focusing on structuring answers, time management, and expressing ideas clearly.",
+            "costBand": "free",
+            "url": "https://www.answerwriting.com/",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "name": "UPSC Civil Services Examination (CSE)",
+          "purpose": "To recruit candidates for various Group 'A' and Group 'B' civil services of the Government of India, including IAS, IPS, IFS, IRS.",
+          "eligibility": "Bachelor's degree from a recognized university; minimum 21 years of age, maximum 32 years (with relaxations for OBC, SC/ST, PwBD).",
+          "typicalWindow": "Applications usually open ~January-February; Prelims in ~May-June; Mains in ~September; Interview ~March-April of the following year.",
+          "costBand": "low",
+          "officialUrl": "https://upsc.gov.in/",
+          "verified": false
+        }
+      ],
+      "colleges": [
+        {
+          "name": "Hindu College, University of Delhi",
+          "type": "government",
+          "location": "Delhi, Delhi",
+          "approxAnnualFees": "₹7,130 - ₹20,000 (for BA Hons Political Science, varies by college/year)",
+          "feesNote": "Fees are indicative and subject to change. Many DU colleges offer similar programs with varying fee structures.",
+          "entranceRequired": "CUET-UG",
+          "costBand": "low",
+          "officialUrl": "https://www.hinducollege.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "Hansraj College, University of Delhi",
+          "type": "government",
+          "location": "Delhi, Delhi",
+          "approxAnnualFees": "₹7,130 - ₹20,000 (for BA Hons Political Science, varies by college/year)",
+          "feesNote": "Fees are indicative and subject to change. Many DU colleges offer similar programs with varying fee structures.",
+          "entranceRequired": "CUET-UG",
+          "costBand": "low",
+          "officialUrl": "https://www.hansrajcollege.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "Jawaharlal Nehru University (JNU)",
+          "type": "government",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "₹300 - ₹1,000 (for BA Hons programs)",
+          "feesNote": "JNU is known for its highly subsidized fee structure for regular programs.",
+          "entranceRequired": "CUET-UG",
+          "costBand": "low",
+          "officialUrl": "https://www.jnu.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "Banaras Hindu University (BHU)",
+          "type": "government",
+          "location": "Varanasi, Uttar Pradesh",
+          "approxAnnualFees": "₹4,000 - ₹10,000 (for BA Hons programs, regular seats)",
+          "feesNote": "BHU offers a highly subsidized fee structure for regular seats, with paid seats being significantly higher.",
+          "entranceRequired": "CUET-UG",
+          "costBand": "low",
+          "officialUrl": "https://www.bhu.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "Presidency University",
+          "type": "government",
+          "location": "Kolkata, West Bengal",
+          "approxAnnualFees": "₹2,000 - ₹5,000 (for BA Hons programs)",
+          "feesNote": "Fees are indicative and subject to change.",
+          "entranceRequired": "Presidency University Admission Test (PUBDET)",
+          "costBand": "low",
+          "officialUrl": "https://www.presiuniv.ac.in/",
+          "verified": false
+        }
+      ],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "If you miss the application deadline for a particular year's UPSC CSE, you can attempt the exam in the subsequent year, provided you still meet the age and attempt limit criteria.",
+          "Consider pursuing a Master's degree or gaining work experience to strengthen your profile and knowledge base before re-attempting the UPSC CSE.",
+          "Utilize the time to intensify your preparation, focus on weaker areas, and practice more mock tests and answer writing."
+        ]
+      }
+    }
+  ],
+  "prepResources": [
+    {
+      "title": "UPSC Official Website",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://upsc.gov.in/",
+      "verified": false
+    },
+    {
+      "title": "NCERT Books (Class 6-12)",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://ncert.nic.in/textbook.php",
+      "verified": false
+    },
+    {
+      "title": "The Hindu / Indian Express (e-paper/online articles)",
+      "type": "official-guide",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://www.thehindu.com/",
+      "verified": false
+    },
+    {
+      "title": "Yojana Magazine",
+      "type": "official-guide",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://yojana.gov.in/",
+      "verified": false
+    },
+    {
+      "title": "ClearIAS (Free Resources)",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.clearias.com/free-resources/",
+      "verified": false
+    },
+    {
+      "title": "BYJU'S Free IAS Prep",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://byjus.com/free-ias-prep/",
+      "verified": false
+    },
+    {
+      "title": "Mrunal.org",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://mrunal.org/",
+      "verified": false
+    }
+  ],
+  "groundingSources": [
+    {
+      "claim": "Banaras Hindu University official website",
+      "url": "https://www.bhu.ac.in/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "Delhi University official website",
+      "url": "https://www.du.ac.in/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "Jawaharlal Nehru University official website",
+      "url": "https://www.jnu.ac.in/",
+      "fetchedAt": "2026-06-21"
+    }
+  ],
+  "disclaimers": [
+    "The information provided is based on typical career paths and current regulations. Specific exam dates, eligibility criteria, fees, and admission processes for colleges and exams can change. Always refer to the official websites and notifications for the most up-to-date and accurate information.",
+    "Salary figures are estimates and can vary based on government policies, location, allowances, and individual performance.",
+    "The 'offsetMonths' are approximate and calculated from the 'currentDate' provided in the student profile. Actual timings may vary slightly."
+  ]
+}

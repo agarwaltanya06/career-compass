@@ -1,0 +1,484 @@
+{
+  "meta": {
+    "career": "Law",
+    "careerAliases": [
+      "Lawyer",
+      "Advocate",
+      "Legal Professional",
+      "Jurist"
+    ],
+    "studentProfile": {
+      "class": "10",
+      "board": "cbse",
+      "language": "en",
+      "currentDate": "2026-06-21"
+    },
+    "generatedAt": "2026-06-21",
+    "confidence": "high",
+    "cacheKey": "law|cbse|none|class10"
+  },
+  "overview": {
+    "summary": "A career in Law involves upholding justice, interpreting legal frameworks, and representing clients in various legal matters. Lawyers can specialize in diverse fields such as corporate law, criminal law, intellectual property, environmental law, and human rights, working in courts, law firms, corporations, or government bodies.",
+    "dayInLife": "A typical day for a lawyer might include researching legal precedents, drafting legal documents, advising clients on their rights and obligations, negotiating settlements, and representing clients in court. The work often demands strong analytical skills, meticulous attention to detail, and effective communication.",
+    "payRange": {
+      "entry": "₹2.5 LPA - ₹7 LPA",
+      "experienced": "₹15 LPA - ₹1 Crore+ LPA",
+      "note": "Entry-level salaries can range from ₹15,000-40,000 per month, with top-tier firms offering ₹12-18 LPA for freshers. Experienced lawyers with 5+ years can earn ₹80,000-2,50,000 per month, and senior attorneys can exceed ₹10,00,000 per month."
+    },
+    "demandOutlook": "The demand for legal professionals in India is stable and growing, driven by economic expansion, increasing regulatory complexities, and a greater emphasis on legal compliance across various sectors. New fields like cyber law are also emerging, creating specialized opportunities.",
+    "requirements": [
+      "Completion of a recognized 5-year integrated law degree (e.g., BA LLB, BBA LLB) after Class 12.",
+      "Qualifying national or state-level law entrance examinations (e.g., CLAT, AILET, SLAT, MH CET Law).",
+      "Enrollment with a State Bar Council and passing the All India Bar Examination (AIBE) for practicing advocacy.",
+      "Strong communication, analytical, research, and critical thinking skills."
+    ]
+  },
+  "routes": [
+    {
+      "id": "route-1",
+      "name": "5-Year Integrated Law Degree after Class 12",
+      "bestFor": "Students aiming for a comprehensive legal education immediately after school, leading to a career as an advocate, legal advisor, or in corporate law.",
+      "feasibility": "high",
+      "feasibilityReason": "This is the most common and direct pathway to becoming a lawyer in India after Class 12, with multiple reputable entrance exams and institutions.",
+      "costBand": "mid",
+      "duration": "Approximately 7-8 years (2 years of Class 11/12 + 5 years of integrated degree + Bar Council enrollment)",
+      "steps": [
+        {
+          "id": "step-1",
+          "order": 1,
+          "type": "education",
+          "title": "Choose Class 11-12 Stream",
+          "offsetMonths": 1,
+          "description": "Select any stream (Humanities, Commerce, or Science) for Class 11 and 12. While any stream is acceptable for law, Humanities or Commerce are often considered beneficial for developing relevant skills."
+        },
+        {
+          "id": "step-2",
+          "order": 2,
+          "type": "education",
+          "title": "Focus on Class 11 & 12 Academics",
+          "offsetMonths": 2,
+          "description": "Maintain strong academic performance in Class 11 and 12, as minimum percentage criteria apply for law entrance exams (typically 45% for General category, 40% for reserved categories)."
+        },
+        {
+          "id": "step-3",
+          "order": 3,
+          "type": "skill",
+          "title": "Begin Law Entrance Exam Preparation",
+          "offsetMonths": 24,
+          "description": "Start preparing for national-level law entrance exams like CLAT, AILET, SLAT, and potentially LNAT UK or MH CET Law during Class 12. Focus on legal aptitude, logical reasoning, general knowledge, and English."
+        },
+        {
+          "id": "step-4a",
+          "order": 4,
+          "type": "application",
+          "title": "Apply for CLAT (Common Law Admission Test)",
+          "offsetMonths": 28,
+          "description": "Applications for CLAT (for 2029 admission) typically open around August and close by November of the preceding year. Verify exact dates on the official website."
+        },
+        {
+          "id": "step-4b",
+          "order": 4,
+          "type": "application",
+          "title": "Apply for AILET (All India Law Entrance Test)",
+          "offsetMonths": 28,
+          "description": "Applications for AILET (for 2029 admission) usually open in August and close by November of the preceding year. NLU Delhi conducts this exam."
+        },
+        {
+          "id": "step-4c",
+          "order": 4,
+          "type": "application",
+          "title": "Apply for SLAT (Symbiosis Law Admission Test)",
+          "offsetMonths": 28,
+          "description": "Applications for SLAT (for 2029 admission) generally open in August and close by November of the preceding year."
+        },
+        {
+          "id": "step-4d",
+          "order": 4,
+          "type": "application",
+          "title": "Apply for LNAT UK (for Jindal Global Law School)",
+          "offsetMonths": 28,
+          "description": "Applications for LNAT UK (for 2029 admission) typically open in August. JGLS accepts LNAT UK scores, focusing on the multiple-choice section."
+        },
+        {
+          "id": "step-6a",
+          "order": 5,
+          "type": "exam",
+          "title": "Appear for CLAT Exam",
+          "offsetMonths": 30,
+          "description": "Take the CLAT exam, usually held in December of the year preceding admission (e.g., December 2028 for 2029 admission)."
+        },
+        {
+          "id": "step-6b",
+          "order": 5,
+          "type": "exam",
+          "title": "Appear for AILET Exam",
+          "offsetMonths": 30,
+          "description": "Take the AILET exam, typically held in December of the year preceding admission (e.g., December 2028 for 2029 admission)."
+        },
+        {
+          "id": "step-6c",
+          "order": 5,
+          "type": "exam",
+          "title": "Appear for SLAT Exam",
+          "offsetMonths": 30,
+          "description": "Take the SLAT exam, usually conducted in December of the year preceding admission (e.g., December 2028 for 2029 admission), often with multiple attempts."
+        },
+        {
+          "id": "step-6d",
+          "order": 5,
+          "type": "exam",
+          "title": "Appear for LNAT UK Exam",
+          "offsetMonths": 30,
+          "description": "Take the LNAT UK exam. Testing windows are typically from September to May, allowing flexibility."
+        },
+        {
+          "id": "step-4e",
+          "order": 5,
+          "type": "application",
+          "title": "Apply for MH CET Law (Maharashtra Common Entrance Test for Law)",
+          "offsetMonths": 31,
+          "description": "Applications for MH CET Law (5-year LLB for 2029 admission) typically open in January and close by March. This is a later admission cycle than the December national exams above."
+        },
+        {
+          "id": "step-5",
+          "order": 6,
+          "type": "exam",
+          "title": "Appear for Class 12 Board Exams",
+          "offsetMonths": 33,
+          "description": "Complete your Class 12 board examinations, as passing with minimum marks is a prerequisite for law school admissions."
+        },
+        {
+          "id": "step-6e",
+          "order": 6,
+          "type": "exam",
+          "title": "Appear for MH CET Law Exam",
+          "offsetMonths": 35,
+          "description": "Take the MH CET Law (5-year LLB) exam, typically held in May of the admission year (e.g., May 2029)."
+        },
+        {
+          "id": "step-7",
+          "order": 7,
+          "type": "application",
+          "title": "College Admissions & Counselling",
+          "offsetMonths": 36,
+          "description": "Participate in the centralized counselling process (e.g., CLAT counselling, MH CET Law CAP rounds) or direct admission processes for private universities based on your entrance exam scores."
+        },
+        {
+          "id": "step-8",
+          "order": 8,
+          "type": "education",
+          "title": "Enroll in a 5-Year Integrated Law Degree (BA LLB/BBA LLB)",
+          "offsetMonths": 38,
+          "description": "Begin your 5-year integrated Bachelor of Arts and Bachelor of Legislative Law (BA LLB) or Bachelor of Business Administration and Bachelor of Legislative Law (BBA LLB) program. This degree combines foundational subjects with core legal studies."
+        },
+        {
+          "id": "step-9",
+          "order": 9,
+          "type": "experience",
+          "title": "Undertake Internships and Moot Court Competitions",
+          "offsetMonths": 62,
+          "description": "Gain practical experience through internships at law firms, corporate legal departments, NGOs, or with individual advocates during summer breaks. Participate in moot court competitions to hone advocacy skills. (Optional) Rules, exams, and fees may change by then; re-verify when you get there.",
+          "optional": true
+        },
+        {
+          "id": "step-10",
+          "order": 10,
+          "type": "education",
+          "title": "Complete 5-Year Law Degree",
+          "offsetMonths": 97,
+          "description": "Successfully complete your 5-year integrated law degree. Rules, exams, and fees may change by then; re-verify when you get there."
+        },
+        {
+          "id": "step-11a",
+          "order": 11,
+          "type": "skill",
+          "title": "Enroll with State Bar Council & Pass AIBE",
+          "offsetMonths": 98,
+          "description": "Enroll with a State Bar Council and pass the All India Bar Examination (AIBE) within two years of enrollment to practice law in India. Rules, exams, and fees may change by then; re-verify when you get there.",
+          "alternativeTo": "step-11b"
+        },
+        {
+          "id": "step-11b",
+          "order": 11,
+          "type": "education",
+          "title": "Pursue Master of Laws (LLM)",
+          "offsetMonths": 98,
+          "description": "Opt for a Master of Laws (LLM) for specialization in a particular field of law (e.g., Corporate Law, Human Rights Law, Cyber Law). Rules, exams, and fees may change by then; re-verify when you get there.",
+          "alternativeTo": "step-11a"
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Legal Research",
+          "Analytical Reasoning",
+          "Critical Thinking",
+          "Oral Communication & Advocacy",
+          "Legal Drafting",
+          "Negotiation",
+          "Problem-Solving",
+          "Ethical Integrity",
+          "Time Management"
+        ],
+        "upskilling": [
+          {
+            "name": "Legal Tech Certifications (e.g., Legal AI, Blockchain in Law)",
+            "why": "Stay updated with technological advancements impacting the legal field, enhancing efficiency and offering specialized services.",
+            "costBand": "mid",
+            "url": "https://www.coursera.org/courses?query=legal%20tech",
+            "verified": false
+          },
+          {
+            "name": "Advanced Legal Writing Courses",
+            "why": "Refine drafting skills crucial for contracts, petitions, and legal opinions.",
+            "costBand": "low",
+            "url": "https://www.nalsar.ac.in/online-courses",
+            "verified": false
+          },
+          {
+            "name": "Specialized Diploma/Certificate Courses (e.g., Cyber Law, Intellectual Property Rights)",
+            "why": "Gain expertise in niche areas, increasing employability and specialization opportunities.",
+            "costBand": "low",
+            "url": "https://www.indianbarassociation.org/certificate-courses/",
+            "verified": false
+          },
+          {
+            "name": "Public Speaking and Debating Clubs",
+            "why": "Enhance oral advocacy and persuasive communication skills, vital for courtrooms and client interactions.",
+            "costBand": "free",
+            "url": "https://www.toastmasters.org/",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "name": "CLAT (Common Law Admission Test)",
+          "purpose": "For admission to 5-year integrated LLB programs in 22 National Law Universities (NLUs) and other affiliated colleges across India.",
+          "eligibility": "Passed or appearing in Class 12 with minimum 45% marks (40% for SC/ST). No upper age limit.",
+          "typicalWindow": "Applications usually open ~August and close ~November. Exam typically in December of the preceding year for admission. (e.g., Aug-Nov 2028 for Dec 2028 exam for 2029 admission).",
+          "costBand": "low",
+          "officialUrl": "https://consortiumofnlus.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "AILET (All India Law Entrance Test)",
+          "purpose": "For admission to BA LLB (Hons.) program at National Law University, Delhi (NLU Delhi).",
+          "eligibility": "Passed or appearing in Class 12 with minimum 45% marks (40% for SC/ST/PwD). No upper age limit.",
+          "typicalWindow": "Applications usually open ~August and close ~November. Exam typically in December of the preceding year for admission. (e.g., Aug-Nov 2028 for Dec 2028 exam for 2029 admission).",
+          "costBand": "low",
+          "officialUrl": "https://nationallawuniversitydelhi.in/",
+          "verified": false
+        },
+        {
+          "name": "SLAT (Symbiosis Law Admission Test)",
+          "purpose": "For admission to undergraduate law programs (BA LLB, BBA LLB) at Symbiosis Law Schools (SLS Pune, Noida, Hyderabad, Nagpur).",
+          "eligibility": "Passed or appearing in Class 12 with minimum 45% marks (40% for SC/ST). No upper age limit.",
+          "typicalWindow": "Applications usually open ~August and close ~November. Exam typically in December of the preceding year for admission, often with two attempts. (e.g., Aug-Nov 2028 for Dec 2028 exam for 2029 admission).",
+          "costBand": "low",
+          "officialUrl": "https://www.set-test.org/",
+          "verified": false
+        },
+        {
+          "name": "LNAT UK (Law National Aptitude Test)",
+          "purpose": "For admission to undergraduate law programs at several UK universities and Jindal Global Law School (JGLS) in India.",
+          "eligibility": "Passed or appearing in Class 12 (or equivalent). No specific age limit.",
+          "typicalWindow": "Registration typically opens ~August. Testing window from ~September to ~July of the admission year. For JGLS, testing is often completed by May of the admission year. (e.g., Aug 2028 - May 2029 for 2029 admission).",
+          "costBand": "low",
+          "officialUrl": "https://lnat.ac.uk/",
+          "verified": false
+        },
+        {
+          "name": "MH CET Law (Maharashtra Common Entrance Test for Law)",
+          "purpose": "For admission to 5-year integrated LLB programs in government, aided, and private law colleges across Maharashtra.",
+          "eligibility": "Passed or appearing in Class 12 with minimum 45% marks (40% for SC/ST/OBC/VJ-NT/SBC/PwD for Maharashtra domicile). No upper age limit.",
+          "typicalWindow": "Applications usually open ~January and close ~March. Exam typically in May of the admission year. (e.g., Jan-Mar 2029 for May 2029 exam for 2029 admission).",
+          "costBand": "low",
+          "officialUrl": "https://cetcell.mahacet.org/",
+          "verified": false
+        }
+      ],
+      "colleges": [
+        {
+          "name": "National Law School of India University (NLSIU)",
+          "type": "government",
+          "location": "Bengaluru, Karnataka",
+          "approxAnnualFees": "₹2.6 Lakhs",
+          "feesNote": "Fees are approximate and subject to change. Excludes hostel/mess charges which are additional.",
+          "entranceRequired": "CLAT",
+          "costBand": "mid",
+          "officialUrl": "https://www.nls.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "NALSAR University of Law",
+          "type": "government",
+          "location": "Hyderabad, Telangana",
+          "approxAnnualFees": "₹2.62 Lakhs",
+          "feesNote": "Fees are approximate and include tuition and some charges, excluding refundable deposits and mess advance. Subject to annual increase.",
+          "entranceRequired": "CLAT",
+          "costBand": "mid",
+          "officialUrl": "https://www.nalsar.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "National Law University, Delhi (NLU Delhi)",
+          "type": "government",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "₹2.9 Lakhs",
+          "feesNote": "Estimated annual cost including tuition (~₹1.56 Lakhs) and hostel/mess charges (~₹1.34 Lakhs). Tuition and hostel fees increase annually.",
+          "entranceRequired": "AILET",
+          "costBand": "mid",
+          "officialUrl": "https://nationallawuniversitydelhi.in/",
+          "verified": false
+        },
+        {
+          "name": "The West Bengal National University of Juridical Sciences (WBNUJS)",
+          "type": "government",
+          "location": "Kolkata, West Bengal",
+          "approxAnnualFees": "₹3.36 Lakhs",
+          "feesNote": "Based on total 5-year fee of ₹16.8 Lakhs. First-year fee is around ₹1.9 Lakhs. Subject to revision.",
+          "entranceRequired": "CLAT",
+          "costBand": "high",
+          "officialUrl": "https://www.nujs.edu/",
+          "verified": false
+        },
+        {
+          "name": "Gujarat National Law University (GNLU)",
+          "type": "government",
+          "location": "Gandhinagar, Gujarat",
+          "approxAnnualFees": "₹2.58 Lakhs",
+          "feesNote": "Estimated annual fee covering tuition, hostel, and mess charges. Total 5-year fee is around ₹12.22 Lakhs. Subject to change.",
+          "entranceRequired": "CLAT",
+          "costBand": "mid",
+          "officialUrl": "https://www.gnlu.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "Symbiosis Law School (SLS)",
+          "type": "private",
+          "location": "Pune, Maharashtra",
+          "approxAnnualFees": "₹5.26 Lakhs",
+          "feesNote": "Annual fee for Indian students, including academic fees and a refundable institute deposit. Hostel/mess charges are additional.",
+          "entranceRequired": "SLAT",
+          "costBand": "high",
+          "officialUrl": "https://www.symlaw.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "Jindal Global Law School (JGLS)",
+          "type": "private",
+          "location": "Sonipat, Haryana",
+          "approxAnnualFees": "₹10.5 Lakhs",
+          "feesNote": "Estimated annual cost including tuition (~₹7 Lakhs) and hostel/allied services (~₹3.5 Lakhs). Subject to annual increase.",
+          "entranceRequired": "LNAT UK",
+          "costBand": "high",
+          "officialUrl": "https://jgu.edu.in/jgls/",
+          "verified": false
+        },
+        {
+          "name": "ILS Law College",
+          "type": "private",
+          "location": "Pune, Maharashtra",
+          "approxAnnualFees": "₹40,000",
+          "feesNote": "Government-aided fees, making it one of the most affordable reputable law colleges. Excludes hostel.",
+          "entranceRequired": "MH CET Law",
+          "costBand": "low",
+          "officialUrl": "https://ilslaw.edu/",
+          "verified": false
+        }
+      ],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "If you miss an application deadline, check for subsequent application windows for the same exam (e.g., SLAT often has multiple attempts).",
+          "Consider taking a gap year to prepare more thoroughly and re-attempt exams in the next admission cycle.",
+          "Explore other state-level law entrance exams or private universities that might have different application timelines.",
+          "If scores are not sufficient for top NLUs, consider other reputable private or state universities, or explore a 3-year LLB after completing any bachelor's degree."
+        ]
+      }
+    }
+  ],
+  "prepResources": [
+    {
+      "title": "CLAT Consortium Official Website",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "English",
+      "url": "https://consortiumofnlus.ac.in/",
+      "verified": false
+    },
+    {
+      "title": "NLU Delhi AILET Official Website",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "English",
+      "url": "https://nationallawuniversitydelhi.in/",
+      "verified": false
+    },
+    {
+      "title": "LNAT Official Website",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "English",
+      "url": "https://lnat.ac.uk/",
+      "verified": false
+    },
+    {
+      "title": "MH CET Law Official Website",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "English",
+      "url": "https://cetcell.mahacet.org/",
+      "verified": false
+    },
+    {
+      "title": "LegalEdge by Toprankers (CLAT/AILET Prep)",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "English",
+      "url": "https://www.toprankers.com/clat-online-coaching",
+      "verified": false
+    },
+    {
+      "title": "Law Prep Tutorial (CLAT/AILET Prep)",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "English",
+      "url": "https://lawpreptutorial.com/clat-online-coaching/",
+      "verified": false
+    }
+  ],
+  "groundingSources": [
+    {
+      "claim": "The LNAT website is lnat.ac.uk.",
+      "url": "https://lnat.ac.uk/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "The MH CET Law official website is cetcell.mahacet.org.",
+      "url": "https://cetcell.mahacet.org/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "The CLAT official website is consortiumofnlus.ac.in.",
+      "url": "https://consortiumofnlus.ac.in/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "The AILET official website is nationallawuniversitydelhi.in.",
+      "url": "https://nationallawuniversitydelhi.in/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "The SLAT official website is set-test.org.",
+      "url": "https://www.set-test.org/",
+      "fetchedAt": "2026-06-21"
+    }
+  ],
+  "disclaimers": [
+    "All dates, fees, and eligibility criteria are subject to change by the respective examination bodies and institutions. Students must always refer to the official websites for the most current and accurate information.",
+    "The 'confidence' rating reflects the grounding of factual claims. Career paths and advice are generalized and may not suit every individual's specific circumstances or aspirations.",
+    "Financial figures are approximate and can vary based on inflation, policy changes, and individual choices (e.g., hostel vs. private accommodation).",
+    "The 'offsetMonths' are calculated from the provided current date (2026-06-21) and are indicative. Actual timelines may vary slightly."
+  ]
+}

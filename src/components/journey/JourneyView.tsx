@@ -256,12 +256,25 @@ export function JourneyView({
         <JourneyActions journey={journey} onDownloadPdf={() => setPrinting(true)} />
 
         {/* Unverified-candidate stamp (spec §4): a fresh, not-yet-reviewed
-            machine generation, shown only to the requester. */}
+            machine generation. Deliberately prominent (not a footnote) and kept
+            in the printed/PDF copy — only verified defaults omit it.
+            candidateBannerTitle + candidateBanner are a SAFETY disclaimer: unlike
+            the rest of hi.json (sparse, English-fallback by design), these two
+            MUST be real Hindi so Hindi readers actually get the warning. That
+            invariant is enforced by `npm run check:i18n`
+            (scripts/check-i18n-banner.ts) — change the English wording there and
+            the check makes you re-verify the Hindi. */}
         {status === "candidate" && (
-          <p className="mt-3 flex items-start gap-2 rounded-xl border border-yellow-300 bg-yellow-50 p-3 text-sm text-yellow-900">
-            <span aria-hidden>⚠️</span>
-            <span>{t("journey.candidateBanner")}</span>
-          </p>
+          <div
+            role="note"
+            className="mt-4 flex items-start gap-3 rounded-xl border-2 border-amber-400 bg-amber-50 p-4 text-amber-900"
+          >
+            <span aria-hidden className="text-xl leading-none">⚠️</span>
+            <div>
+              <p className="font-bold">{t("journey.candidateBannerTitle")}</p>
+              <p className="mt-0.5 text-sm">{t("journey.candidateBanner")}</p>
+            </div>
+          </div>
         )}
       </header>
 
@@ -421,6 +434,8 @@ export function JourneyView({
               // Collapsed by default so several paths are easy to scan and
               // compare at a glance; forced open while printing to PDF.
               forceOpen={printing}
+              // Carries the unverified stamp into this route's offline exports.
+              unverified={status === "candidate"}
             />
           ))}
         </div>
@@ -583,6 +598,7 @@ function CollapsibleRoute({
   journey,
   costMatches,
   forceOpen,
+  unverified,
 }: {
   route: Journey["routes"][number];
   exams: Journey["routes"][number]["exams"];
@@ -590,6 +606,7 @@ function CollapsibleRoute({
   journey: Journey;
   costMatches: (band: CostBand) => boolean;
   forceOpen: boolean;
+  unverified: boolean;
 }) {
   const { t } = useI18n();
   const [open, setOpen] = useState(false);
@@ -660,6 +677,7 @@ function CollapsibleRoute({
               routeName={route.name}
               routeId={route.id}
               disclaimers={journey.disclaimers}
+              unverified={unverified}
             />
           </div>
 

@@ -1,0 +1,605 @@
+{
+  "meta": {
+    "career": "Government Job (SSC / Banking)",
+    "careerAliases": [
+      "SSC Clerical/Administrative Roles",
+      "IBPS Banking Officer",
+      "Public Sector Banking",
+      "Central Government Employment"
+    ],
+    "studentProfile": {
+      "class": "12",
+      "board": "cbse",
+      "stream": "commerce-maths",
+      "language": "en",
+      "currentDate": "2026-06-21"
+    },
+    "generatedAt": "2026-06-21",
+    "confidence": "high",
+    "cacheKey": "govt-job|cbse|commerce-maths|class12"
+  },
+  "overview": {
+    "summary": "Government jobs through SSC or banking sector are among the most stable and sought-after career paths in India for Class 12 Commerce students. SSC CHSL is directly accessible after Class 12 with no degree needed, offering clerical and data entry roles. Alternatively, completing a Bachelor of Commerce (B.Com) opens doors to banking officer positions through IBPS exams, with significantly higher salaries and growth potential.",
+    "dayInLife": "As a government employee, you would work standard office hours (typically 9 AM to 5 PM) in a ministry, department, or bank office. SSC CHSL clerks handle file management, data entry, and official correspondence. Banking officers manage customer relations, process loans, and oversee operations. Both roles come with structured hierarchies, defined responsibilities, job security, and predictable salary growth.",
+    "payRange": {
+      "entry": "SSC CHSL Clerk: ₹21,000–25,000/month; IBPS Clerk: ₹32,000–45,000/month; IBPS PO: ₹60,000–90,000/month (including allowances)",
+      "experienced": "SSC roles after 10–15 years: ₹50,000–80,000/month; Banking PO after 10 years: ₹1.2–1.8 LPA + benefits",
+      "note": "Public sector salaries grow through defined pay bands; banking roles often offer performance-linked bonuses and allowances. No degree needed for SSC CHSL; graduation strongly increases salary via banking roles."
+    },
+    "demandOutlook": "Central government and banking sectors have high, predictable recruitment cycles. SSC conducts exams annually with vacancies ranging from 5,000–15,000 positions. IBPS recruits 3,000–4,000 banking staff yearly. Commerce stream candidates are naturally suited to finance, taxation, and administrative roles, creating strong demand.",
+    "requirements": [
+      "Class 12 (SSC CHSL, SSC MTS, state police)",
+      "Bachelor's degree in any discipline (IBPS PO/Clerk, SSC CGL, RBI Grade B)",
+      "Age 18–27 years (SSC CHSL), 20–30 years (IBPS PO) with relaxations for reserved categories",
+      "Indian nationality (domicile restrictions apply for some state roles)",
+      "Basic computer knowledge (typing speed, MS Office for clerical roles)",
+      "No specific percentage requirement in Class 12 or graduation for most banking/SSC exams"
+    ]
+  },
+  "routes": [
+    {
+      "id": "route-1-ssc-chsl-direct",
+      "name": "Direct Entry: SSC CHSL After Class 12",
+      "bestFor": "Students wanting a government job immediately after 12th without further studies; those preferring stable clerical roles in central ministries; seeking job security over higher salary growth.",
+      "feasibility": "high",
+      "feasibilityReason": "SSC CHSL requires only Class 12 pass (eligible now). Notification released June 2026, Tier I exam typically August–September. Medium competition (~15–20 lakh applicants) but achievable with 4–6 months focused preparation.",
+      "costBand": "low",
+      "duration": "6–8 months prep → exam cycle ~6–8 months → joining after 12–15 months",
+      "steps": [
+        {
+          "id": "step-1a",
+          "order": 0,
+          "type": "education",
+          "title": "Complete CBSE Class 12 Board Exams (if not done)",
+          "offsetMonths": 0,
+          "description": "<cite index=\"3-16\">CBSE Class 12 board examinations commenced on February 17, 2026 and are scheduled to conclude on April 10, 2026.</cite> You are currently in Class 12; ensure you pass all subjects with minimum 33% to be eligible for SSC CHSL."
+        },
+        {
+          "id": "step-2a",
+          "order": 1,
+          "type": "exam",
+          "title": "SSC CHSL Application & Registration",
+          "offsetMonths": 2,
+          "description": "<cite index=\"22-3,22-6\">The Staff Selection Commission is expected to release the SSC CHSL 2026 application form along with the official notification in June 2026.</cite> Register on ssc.gov.in, upload Class 12 certificate, and pay application fee (~₹100 for General category)."
+        },
+        {
+          "id": "step-3a",
+          "order": 2,
+          "type": "exam",
+          "title": "SSC CHSL Tier I (Online CBT)",
+          "offsetMonths": 3,
+          "description": "<cite index=\"1-2\">The selection involves a qualifying Tier I, a merit-deciding Tier II, and a mandatory skill/typing test.</cite> Tier I typically held August–September. General Reasoning, Quantitative Aptitude, English Language. 60 minutes, 100 marks."
+        },
+        {
+          "id": "step-4a",
+          "order": 3,
+          "type": "exam",
+          "title": "SSC CHSL Tier II (Descriptive)",
+          "offsetMonths": 6,
+          "description": "Candidates clearing Tier I (merit-based cutoff) appear for Tier II. Essay/letter writing in English/Hindi, 60 minutes. Final merit list based on Tier I + Tier II combined marks."
+        },
+        {
+          "id": "step-5a",
+          "order": 4,
+          "type": "exam",
+          "title": "SSC CHSL Skill Test (Typing/Computer)",
+          "offsetMonths": 7,
+          "description": "<cite index=\"1-15\">Skill Test / Typing Test (This is a mandatory stage for the clerical nature of the jobs.</cite> 40 words/minute in English or equivalent, conducted on computer. Qualifying in nature; does not add to merit."
+        },
+        {
+          "id": "step-6a",
+          "order": 5,
+          "type": "application",
+          "title": "Document Verification & Final Selection",
+          "offsetMonths": 9,
+          "description": "Final selected candidates appear for document verification and physical verification (where applicable). Post allocation based on merit list to ministries/departments across India."
+        },
+        {
+          "id": "step-7a",
+          "order": 6,
+          "type": "experience",
+          "title": "Probation & Joining",
+          "offsetMonths": 12,
+          "description": "Appointed as LDC, DEO, or JSA on 2-year probation. On-the-job training in government offices. After confirmation, confirmed as permanent government employee with pension eligibility."
+        },
+        {
+          "id": "step-8a-optional",
+          "order": 7,
+          "type": "skill",
+          "title": "Optional: Pursue Further Qualifications (While Working)",
+          "offsetMonths": 24,
+          "description": "After 1–2 years of work, pursue B.Com or professional courses (CA, CMA) via distance education or part-time. Helps in promotions to higher-grade positions (e.g., from LDC to UDC).",
+          "optional": true
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "English Language (grammar, comprehension, error detection, writing)",
+          "Quantitative Aptitude (percentage, profit-loss, ratio, time-work, data interpretation)",
+          "General Reasoning (analogy, coding-decoding, syllogism, seating arrangement, series)",
+          "General Awareness (current affairs, static GK, government schemes)",
+          "Typing & Computer Basics (MS Word, spreadsheet, email, file management)",
+          "Document handling (official writing, file protocols, correspondence format)"
+        ],
+        "upskilling": [
+          {
+            "name": "Free Mock Tests & Question Banks",
+            "why": "SSC exams are 90% about practice and speed. Free platforms offer ~100+ sectional and full-length mocks.",
+            "costBand": "free",
+            "url": "https://www.adda247.com/live-classes",
+            "verified": false
+          },
+          {
+            "name": "NCERT Class 9–10 Maths (basics)",
+            "why": "Quantitative Aptitude in SSC draws from Class 9–10 syllabus. Strengthens conceptual foundation.",
+            "costBand": "free",
+            "url": "https://www.ncert.nic.in",
+            "verified": false
+          },
+          {
+            "name": "Daily Current Affairs (free sources)",
+            "why": "General Awareness questions drawn from 6–12 months of current affairs. Newspapers, YouTube channels essential.",
+            "costBand": "free",
+            "url": "https://www.thehindu.com",
+            "verified": false
+          },
+          {
+            "name": "English Grammar & Comprehension (YouTube tutorials)",
+            "why": "English is 25% of SSC CHSL and often a weak area. Structured grammar lessons from free channels help.",
+            "costBand": "free",
+            "url": "https://www.youtube.com/@EnglishAcademy",
+            "verified": false
+          },
+          {
+            "name": "Typing Practice Software",
+            "why": "Typing test is mandatory but qualifying. Free typing tutors (e.g., TypingMaster, Nitro Type) build speed.",
+            "costBand": "free",
+            "url": "https://www.nitrotype.com",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "name": "SSC CHSL 2026",
+          "purpose": "Recruitment for Lower Divisional Clerk (LDC), Data Entry Operator (DEO), Junior Secretariat Assistant (JSA), Postal Assistant roles in central government departments.",
+          "eligibility": "<cite index=\"2-3\">Candidates who have passed Class 12 and are between 18 to 27 years of age will be eligible to apply for posts like LDC, JSA, Postal Assistant, Sorting Assistant, and DEO.</cite>",
+          "typicalWindow": "<cite index=\"2-13\">The SSC CHSL Notification 2026 is expected to be out in June on the official website, ssc.gov.in.</cite> Applications typically open mid-June, close late June; Tier I exam August–September.",
+          "costBand": "low",
+          "officialUrl": "https://ssc.gov.in",
+          "verified": false
+        }
+      ],
+      "colleges": [],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "SSC MTS (Multi-Tasking Staff): Alternative 12th-pass exam, typically notified June–July, exam September–October. Roles: Safaiwala, chowkidar, support staff. Lower pay but steady work.",
+          "State Police Constable Exams: Several states recruit 12th-pass candidates for police constable roles. Competitive but similar eligibility. Check your state PSC for recruitment cycles.",
+          "Pursue B.Com and retry next year: If you wish to access higher-paying roles (IBPS Clerk/PO, SSC CGL), study B.Com part-time via distance education and apply next year. Banking exams conducted annually."
+        ]
+      }
+    },
+    {
+      "id": "route-2-bcom-banking",
+      "name": "Graduate Route: B.Com → IBPS Banking / SSC CGL (Recommended for Higher Growth)",
+      "bestFor": "Students wanting higher initial and long-term salary; interested in banking operations and finance; aiming for officer-level positions (not just clerical); willing to invest 3 years in formal education.",
+      "feasibility": "high",
+      "feasibilityReason": "Commerce stream directly leads to B.Com admission (merit-based at most government/private colleges, no entrance exam at many institutions). After graduation, IBPS PO/Clerk exams conducted annually (August–October for PO, October for Clerk) with large vacancies. 3–4 months of targeted preparation after 3rd year sufficient for most candidates.",
+      "costBand": "low",
+      "duration": "3 years (B.Com) + 4–6 months prep + 6–9 months exam cycle = ~4 years to first job",
+      "steps": [
+        {
+          "id": "step-1b",
+          "order": 0,
+          "type": "education",
+          "title": "Complete CBSE Class 12 (Current)",
+          "offsetMonths": 0,
+          "description": "You are in Class 12 now. Pass with minimum 45–50% marks in Commerce. No minimum percentage strictly enforced for B.Com admission, but higher marks improve college choices."
+        },
+        {
+          "id": "step-2b",
+          "order": 1,
+          "type": "application",
+          "title": "Apply for B.Com Colleges (Merit-Based Admission)",
+          "offsetMonths": 2,
+          "description": "<cite index=\"47-2\">To be eligible for Direct BCom Admission 2025, candidates must have successfully passed Class 12 with a minimum of 45 to 50% marks from a recognized board.</cite> Government colleges have lower fees (~₹10,000–30,000/year); private colleges ₹1–5 lakh/year. Most admit on Class 12 merit alone; no entrance exam."
+        },
+        {
+          "id": "step-3b",
+          "order": 1,
+          "type": "education",
+          "title": "Bachelor of Commerce (B.Com) – Year 1 to 3",
+          "offsetMonths": 3,
+          "description": "3-year full-time degree. Core subjects: Accountancy, Economics, Business Studies, Taxation, Finance, Auditing, Cost Accounting. Develops numerical aptitude, financial awareness, analytical skills — all directly useful for banking and SSC exams."
+        },
+        {
+          "id": "step-4b",
+          "order": 3,
+          "type": "experience",
+          "title": "Optional: Summer Internship (During 2nd/3rd Year)",
+          "offsetMonths": 15,
+          "description": "Seek summer internships at banks, accounting firms, or government offices. 4–8 weeks of exposure to real banking operations, compliance, or accounting. Builds resume and practical knowledge.",
+          "optional": true
+        },
+        {
+          "id": "step-5b",
+          "order": 4,
+          "type": "skill",
+          "title": "Banking Exam Preparation (Begin in 3rd Year / 6 Months Before IBPS Notification)",
+          "offsetMonths": 30,
+          "description": "During final year or immediately after graduation, begin systematic preparation for IBPS exams. Focus on Quantitative Aptitude, Reasoning, English, General Awareness (banking + current affairs), Computer Knowledge."
+        },
+        {
+          "id": "step-6b",
+          "order": 5,
+          "type": "exam",
+          "title": "IBPS PO / SBI PO Prelims Exam",
+          "offsetMonths": 36,
+          "description": "<cite index=\"33-14\">As per the calendar, IBPS will be conducting the IBPS PO 2026 Prelims Exam on 22nd & 23rd August 2026 and the Mains Exam on 4th October 2026 for Probationary Officer posts through CRP PO/MT-XVI recruitment drive.</cite> 100 marks, 60 minutes, online CBT. Sectional timing (20 min each for Reasoning, Quant, English)."
+        },
+        {
+          "id": "step-7b",
+          "order": 5,
+          "type": "exam",
+          "title": "IBPS PO Mains Exam (if Tier I qualified)",
+          "offsetMonths": 37,
+          "description": "200 marks, 2.5 hours. Covers Reasoning & Comp Aptitude, Data Analysis, English, General/Banking/Economy Awareness, plus descriptive essay/letter. 20% weightage to interview."
+        },
+        {
+          "id": "step-8b",
+          "order": 6,
+          "type": "application",
+          "title": "Interview & Document Verification",
+          "offsetMonths": 39,
+          "description": "<cite index=\"17-2\">Typically, the selection process requires passing Prelims (qualifying), Mains (main score), Interview (20% weight), followed by document verification and medical test.</cite> Final selection list prepared after interview. Medical test, then offer of appointment."
+        },
+        {
+          "id": "step-9b",
+          "order": 7,
+          "type": "experience",
+          "title": "Probation & Joining as Probationary Officer",
+          "offsetMonths": 42,
+          "description": "<cite index=\"61-1\">As a PO, you can get a gross salary in between INR 85k and 90k+ per month (including allowances).</cite> 2-year probation as management trainee, rotations across banking functions. After confirmation, promoted to Assistant Manager. High growth potential: Senior Manager / AVP within 8–10 years."
+        },
+        {
+          "id": "step-10b-fork",
+          "order": 8,
+          "type": "skill",
+          "title": "Post-Job Option A: Pursue Professional Qualification (CA / MBA)",
+          "offsetMonths": 48,
+          "description": "After 1–2 years of banking experience, many officers pursue part-time CA or MBA. Significantly increases salary and career ceiling to Senior Manager / Exec VP roles within 10 years.",
+          "alternativeTo": "step-11b-fork"
+        },
+        {
+          "id": "step-11b-fork",
+          "order": 8,
+          "type": "experience",
+          "title": "Post-Job Option B: Steady Growth in Banking (No Further Qualification)",
+          "offsetMonths": 48,
+          "description": "Remain in banking, gain domain expertise, promotions to Senior Manager roles (~₹1.5–2.5 LPA + benefits within 10 years). Stable, no additional study burden.",
+          "alternativeTo": "step-10b-fork"
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Financial Accounting (balance sheets, P&L, financial ratios)",
+          "Quantitative Aptitude (statistics, data interpretation, financial analysis)",
+          "Business Economics (microeconomics, macroeconomics, market structures)",
+          "Taxation & Auditing (GST, income tax, audit processes)",
+          "Business Law & Compliance (contract law, regulatory framework)",
+          "Banking & Finance Fundamentals (RBI policy, bank operations, credit analysis)",
+          "English (communication, formal writing)",
+          "General Awareness (current affairs, banking news, government schemes)"
+        ],
+        "upskilling": [
+          {
+            "name": "Tally ERP / Accounting Software",
+            "why": "Widely used in accounting/finance departments. Certification (~₹5,000–15,000) makes graduate hireable for entry-level accounting roles before bank exam success.",
+            "costBand": "low",
+            "url": "https://www.tallyacademy.com",
+            "verified": false
+          },
+          {
+            "name": "IBPS Mock Tests & Online Coaching (Testbook, Adda247)",
+            "why": "Banking exams are 90% mock-test dependent. Paid courses (~₹2,000–5,000) worth if targeting IBPS/SBI. Free versions exist but paid offer better analytics.",
+            "costBand": "low",
+            "url": "https://testbook.com/bank-exams/coaching",
+            "verified": false
+          },
+          {
+            "name": "Excel & Data Analysis",
+            "why": "Modern banking uses Excel for reporting, risk analysis. Online courses (DataCamp, Coursera free trials) improve hireability in finance roles.",
+            "costBand": "free",
+            "url": "https://www.coursera.org",
+            "verified": false
+          },
+          {
+            "name": "Banking Awareness (YouTube, Bankers Adda blog)",
+            "why": "RBI structure, monetary policy, bank mergers, current schemes. Free sources sufficient for exam prep.",
+            "costBand": "free",
+            "url": "https://www.bankersadda.com",
+            "verified": false
+          },
+          {
+            "name": "Current Affairs (The Hindu, Yojana magazine, free PDF sources)",
+            "why": "General Awareness is 20% of IBPS Mains. Daily reading of news essential. Free sources (newspapers, YouTube channels) sufficient.",
+            "costBand": "free",
+            "url": "https://www.thehindu.com",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "name": "IBPS PO (Probationary Officer)",
+          "purpose": "Recruitment of management trainees for Probationary Officer positions in 11+ public sector banks. Officer-level entry-level role with 2-year probation and high growth ceiling.",
+          "eligibility": "<cite index=\"12-7\">According to the IBPS PO Eligibility Criteria 2026, candidates must be between 20 and 30 years of age and should have completed their graduation.</cite> Any degree discipline accepted. No work experience needed.",
+          "typicalWindow": "<cite index=\"33-14\">IBPS will be conducting the IBPS PO 2026 Prelims Exam on 22nd & 23rd August 2026 and the Mains Exam on 4th October 2026.</cite>",
+          "costBand": "low",
+          "officialUrl": "https://www.ibps.in",
+          "verified": false
+        },
+        {
+          "name": "IBPS Clerk (Customer Service Associate)",
+          "purpose": "Recruitment for clerical/junior associate roles in public sector banks. Lower than PO but stable, predictable career path.",
+          "eligibility": "<cite index=\"19-32,19-33\">NO, you need to be a graduate to be eligible for clerk exams like IBPS Clerk, SBI Clerk, and IBPS RRB Clerk, etc.</cite> Bachelor's degree in any discipline. Age 20–28 years.",
+          "typicalWindow": "<cite index=\"33-2\">IBPS Clerk prelims exam is to be held on 10th & 11th October 2026, while IBPS Clerk Mains on 27th December 2026.</cite>",
+          "costBand": "low",
+          "officialUrl": "https://www.ibps.in",
+          "verified": false
+        },
+        {
+          "name": "SSC CGL (Combined Graduate Level)",
+          "purpose": "Central government Group B & Group C roles (Accounts Officer, Income Tax Inspector, Auditor, Tax Assistant, Assistant Section Officer). Alternate to banking for finance-focused careers.",
+          "eligibility": "<cite index=\"20-20,20-21\">Candidates who have completed a Graduation degree in any stream and are between 18 and 32 years of age can apply for the SSC CGL 2026 Exam. The eligibility of candidates will be determined as on 1 August 2026.</cite>",
+          "typicalWindow": "<cite index=\"23-6,24-9\">The SSC CHSL exam 2026 is scheduled to be in the months of August - September 2026. As per the SSC CGL 2026 notification, the examination process begins with the Tier I Computer-Based Examination which is tentatively scheduled for August-September, 2026.</cite>",
+          "costBand": "low",
+          "officialUrl": "https://ssc.gov.in",
+          "verified": false
+        }
+      ],
+      "colleges": [
+        {
+          "name": "Delhi University (Delhi)",
+          "type": "government",
+          "location": "Delhi, Delhi",
+          "approxAnnualFees": "₹12,000–25,000",
+          "feesNote": "Among lowest in India. Merit-based admission on Class 12 marks. Highly competitive cutoff (typically 85%+ for general category).",
+          "entranceRequired": "Merit-based on Class 12 score",
+          "costBand": "low",
+          "officialUrl": "https://www.du.ac.in",
+          "verified": false
+        },
+        {
+          "name": "Bombay University (B.Com) – Colleges like KC College, Jai Hind College (Mumbai)",
+          "type": "government",
+          "location": "Mumbai, Maharashtra",
+          "approxAnnualFees": "₹15,000–35,000",
+          "feesNote": "Merit-based. KC College and Jai Hind are prestigious, competitive cutoff 75%+.",
+          "entranceRequired": "Merit-based on Class 12 score",
+          "costBand": "low",
+          "officialUrl": "https://www.mu.ac.in",
+          "verified": false
+        },
+        {
+          "name": "St. Xavier's College, Kolkata (Kolkata)",
+          "type": "government",
+          "location": "Kolkata, West Bengal",
+          "approxAnnualFees": "₹18,000–30,000",
+          "feesNote": "Autonomous college, merit-based, strong academics. Popular choice for commerce students.",
+          "entranceRequired": "Merit-based on Class 12 score",
+          "costBand": "low",
+          "officialUrl": "https://www.sxccal.edu",
+          "verified": false
+        },
+        {
+          "name": "Ramakrishna Mission Vivekananda University (Kolkata)",
+          "type": "private",
+          "location": "Kolkata, West Bengal",
+          "approxAnnualFees": "₹80,000–1,20,000",
+          "feesNote": "Mid-tier private, scholarship options available, good banking placements.",
+          "entranceRequired": "Merit-based / Common entrance exam",
+          "costBand": "mid",
+          "officialUrl": "https://www.rkmvu.ac.in",
+          "verified": false
+        },
+        {
+          "name": "Christ University (Bangalore)",
+          "type": "private",
+          "location": "Bangalore, Karnataka",
+          "approxAnnualFees": "₹1,50,000–2,00,000",
+          "feesNote": "Premium private, strong banking/finance placements, scholarship merit support available.",
+          "entranceRequired": "Merit-based or entrance test (CUET / Christ entrance)",
+          "costBand": "mid",
+          "officialUrl": "https://www.christuniversity.in",
+          "verified": false
+        },
+        {
+          "name": "Loyola College, Chennai (Chennai)",
+          "type": "private",
+          "location": "Chennai, Tamil Nadu",
+          "approxAnnualFees": "₹1,00,000–1,40,000",
+          "feesNote": "Strong commerce reputation, merit scholarships available.",
+          "entranceRequired": "Merit-based on Class 12 score",
+          "costBand": "mid",
+          "officialUrl": "https://www.loyolachennai.edu",
+          "verified": false
+        },
+        {
+          "name": "Government Bikram College of Commerce, Patiala (Patiala)",
+          "type": "government",
+          "location": "Patiala, Punjab",
+          "approxAnnualFees": "₹8,000–12,000",
+          "feesNote": "<cite index=\"42-17\">The course fee was ₹8000 approximately per year at Government Bikram College of Commerce.</cite> Low cost, stable institution.",
+          "entranceRequired": "Merit-based, 12th pass in Commerce stream",
+          "costBand": "low",
+          "officialUrl": "https://gbccpatiala.ac.in",
+          "verified": false
+        },
+        {
+          "name": "Gargi College, Delhi (Delhi)",
+          "type": "government",
+          "location": "Delhi, Delhi",
+          "approxAnnualFees": "₹12,000–20,000",
+          "feesNote": "Women-only college, highly selective for commerce, merit-based. Strong placement for banking.",
+          "entranceRequired": "Merit-based on Class 12 score",
+          "costBand": "low",
+          "officialUrl": "https://gargicollege.in",
+          "verified": false
+        },
+        {
+          "name": "Miranda House, Delhi (Delhi)",
+          "type": "government",
+          "location": "Delhi, Delhi",
+          "approxAnnualFees": "₹12,000–18,000",
+          "feesNote": "Women-only, prestigious, highly competitive. Strong placement for banking careers.",
+          "entranceRequired": "Merit-based on Class 12 score",
+          "costBand": "low",
+          "officialUrl": "https://mirandahouse.ac.in",
+          "verified": false
+        },
+        {
+          "name": "Shobhit University, Meerut (Meerut)",
+          "type": "private",
+          "location": "Meerut, Uttar Pradesh",
+          "approxAnnualFees": "₹60,000–90,000",
+          "feesNote": "Affordable private option, good banking/finance curriculum, scholarship opportunities.",
+          "entranceRequired": "Merit-based / CUET",
+          "costBand": "low",
+          "officialUrl": "https://www.shobhituniversity.ac.in",
+          "verified": false
+        }
+      ],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "Retry IBPS exam next year (conducted annually). Use the intervening period to strengthen weak areas through mock tests.",
+          "Switch to SSC CGL (similar eligibility, may have different cutoffs). Some candidates clear SSC CGL but miss IBPS; vice versa.",
+          "Pursue RBI Grade B / NABARD Grade A (higher-level financial exams for B.Com graduates). More competitive but higher salary (~₹1+ lakh starting).",
+          "Apply to private banking/finance sector (HDFC, ICICI, Axis) after graduation. Easier recruitment but lower pay than public sector. Transition to public sector later via lateral hire.",
+          "Continue work experience in any finance/accounting role and retry banking exams within age limit (up to 30 years for IBPS PO)."
+        ]
+      }
+    }
+  ],
+  "prepResources": [
+    {
+      "title": "Official SSC Website (ssc.gov.in)",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://ssc.gov.in",
+      "verified": false
+    },
+    {
+      "title": "Official IBPS Website (ibps.in) – Exam Calendar, Notifications",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.ibps.in",
+      "verified": false
+    },
+    {
+      "title": "Testbook Free Mock Tests (Banking & SSC)",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://testbook.com",
+      "verified": false
+    },
+    {
+      "title": "Adda247 Free Live Classes (Banking & SSC Exams)",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.adda247.com/live-classes",
+      "verified": false
+    },
+    {
+      "title": "Banking Awareness YouTube Channels (Bankers Adda, Career Guidance)",
+      "type": "video",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.youtube.com",
+      "verified": false
+    },
+    {
+      "title": "NCERT Class 9–10 Mathematics (Free PDF Downloads)",
+      "type": "book",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.ncert.nic.in",
+      "verified": false
+    },
+    {
+      "title": "The Hindu / Indian Express (Daily Current Affairs)",
+      "type": "book",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.thehindu.com",
+      "verified": false
+    },
+    {
+      "title": "Paid Online Coaching (Optional): Mahendra's / Physics Wallah Banking Courses (~₹2,000–5,000)",
+      "type": "free-course",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://www.pw.live/banking/batches",
+      "verified": false
+    }
+  ],
+  "groundingSources": [
+    {
+      "claim": "SSC CHSL 2026 notification expected June, applications typically open mid-June, close late June; Tier I exam August–September.",
+      "url": "https://ssc.gov.in",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "Class 12 CBSE exams Feb 17 – Apr 10, 2026; minimum 33% pass required.",
+      "url": "https://cbse.gov.in",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "SSC CHSL eligibility: Class 12 pass, age 18–27, no entrance exam, 3-tier selection (Tier I qualifying, Tier II merit, Tier III skill test).",
+      "url": "https://testbook.com/ssc-chsl",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "IBPS PO/Clerk eligibility: Bachelor's degree in any discipline, age 20–30 (PO) / 20–28 (Clerk), no minimum percentage required.",
+      "url": "https://www.ibps.in",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "IBPS PO 2026 Prelims Aug 22–23, Mains Oct 4, 2026; IBPS Clerk Prelims Oct 10–11, Mains Dec 27, 2026.",
+      "url": "https://www.ibps.in/wp-content/uploads/IBPS_CALENDAR_2026-27_final.pdf",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "IBPS PO entry salary ₹85,000–90,000+ per month (including allowances); IBPS Clerk ₹40,000–45,000 per month.",
+      "url": "https://www.collegesathi.com/blogs/high-paying-govt-jobs-after-bcom",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "B.Com fresher salary 2026 typically ₹2–3.5 LPA in private sector; banking salary via IBPS higher (~₹5–6 LPA entry as clerk, ₹10+ LPA as PO after 5 years).",
+      "url": "https://www.collegedekho.com/bachelor-of-commerce-bcom-course-salary-sid",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "Government Bikram College of Commerce, Patiala annual fees ~₹8,000; Delhi University B.Com ₹12,000–25,000 annual.",
+      "url": "https://www.getmyuni.com/college/government-bikram-college-of-commerce-gbcc-patiala/admission",
+      "fetchedAt": "2026-06-21"
+    }
+  ],
+  "disclaimers": [
+    "This pathway is grounded on June 2026 exam dates and official eligibility criteria. Exam dates, syllabus, and fee structure may change; verify with official websites (ssc.gov.in, ibps.in) before applying.",
+    "SSC CHSL and IBPS exams are highly competitive (15–20 lakh applicants annually for CHSL; 5–10 lakh for IBPS PO). Success depends on consistent preparation, speed, accuracy, and mock test practice over 4–6 months.",
+    "Route 1 (SSC CHSL direct) is faster to employment (~15 months from now) but offers lower starting salary and slower growth. Route 2 (B.Com + IBPS PO) takes longer (~4 years) but higher salary and officer-level career ceiling.",
+    "Both routes require basic computer knowledge (typing 40 WPM, MS Office). If lacking, dedicate 2–4 weeks to online typing and computer basics courses before formal exam prep.",
+    "Age eligibility is strict: SSC CHSL requires age 18–27 as on specific cutoff date; IBPS PO age 20–30 as on cutoff. Verify your exact age limit eligibility on official notifications.",
+    "No domicile restriction for central government exams (SSC, IBPS) — posting can be anywhere in India. For state-level jobs (state police, state PSC exams), domicile rules may apply; check state PSC notification.",
+    "Banking sector offers pension, job security, and incremental salary growth. However, private sector banking (HDFC, ICICI, Axis) offers faster initial growth but lower job security and no pension. This pathway focuses on public sector (IBPS / SBI), which prioritises stability.",
+    "Both routes assume you pass Class 12 with ≥33% in all subjects. If in doubt, confirm with your school principal that you meet eligibility before final board exams.",
+    "This journey is aspirational; individual performance, exam strategy, and time management directly affect outcomes. Consult mentors/coaching institutes (offline or online) for personalized guidance if needed."
+  ]
+}

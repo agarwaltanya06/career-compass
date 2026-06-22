@@ -1,0 +1,311 @@
+{
+  "meta": {
+    "career": "Nursing (BSc Nursing)",
+    "careerAliases": [
+      "Bachelor of Science in Nursing",
+      "BSc Nursing",
+      "Registered Nurse"
+    ],
+    "studentProfile": {
+      "class": "11",
+      "board": "cbse",
+      "stream": "pcb",
+      "language": "en",
+      "currentDate": "2026-06-21"
+    },
+    "generatedAt": "2026-06-21",
+    "confidence": "high",
+    "cacheKey": "nursing|cbse|pcb|class11"
+  },
+  "overview": {
+    "summary": "Nursing offers a four-year Bachelor of Science degree combining theoretical knowledge with extensive clinical training in patient care, health promotion, and disease management. This career path leads to employment as a staff nurse in hospitals, clinics, and healthcare settings, with strong domestic and international demand.",
+    "dayInLife": "A nurse works in hospital wards, outpatient units, or community health settings, providing direct patient care, monitoring vital signs, administering treatments under medical supervision, coordinating with doctors and paramedics, maintaining patient records, and offering emotional support to patients and families. Shifts may be regular or rotating depending on workplace.",
+    "payRange": {
+      "entry": "₹18,000–₹30,000 per month (entry-level staff nurses in private hospitals); ₹25,000–₹45,000 per month (government hospitals with 7th Pay Commission)",
+      "experienced": "₹50,000–₹90,000 per month after 5+ years experience; specialized roles (ICU, emergency, operation theatre) can reach ₹1,00,000+ per month",
+      "note": "Salary varies significantly by location (metro cities offer 20–30% higher pay), hospital type (government offers security and pension; private offers faster growth), and specialization. International opportunities (UK, Canada, Australia) can yield 3–10 times higher salaries after clearing licensing exams."
+    },
+    "demandOutlook": "High demand globally and in India. World Health Organization reports a shortage of over 2 million nurses in India; global shortage expected to reach 45–60 lakh by 2030. Healthcare infrastructure expansion, ageing population, and the post-pandemic emphasis on healthcare ensure sustained recruitment across government hospitals, private chains, NGOs, telemedicine platforms, and international healthcare systems.",
+    "requirements": [
+      "Passed Class 12 with Physics, Chemistry, Biology, and English as core subjects from a recognised board",
+      "Minimum aggregate 45–55% marks in PCB (varies by exam and category)",
+      "Minimum age 17 years (must be 17 by December 31 of the admission year)",
+      "Medical fitness as per nursing council standards",
+      "Qualifying score in entrance exam (NEET UG or institution-specific nursing entrance exams)",
+      "English language proficiency (for clinical communication and patient interaction)"
+    ]
+  },
+  "routes": [
+    {
+      "id": "route-1",
+      "name": "NEET UG → BSc Nursing (Government & Leading Private Colleges)",
+      "bestFor": "Students targeting top-tier nursing colleges across India and seeking both affordability (government) and reputation. NEET UG is increasingly used by premier institutions like JIPMER, BHU, and state government colleges, making it the broadest gateway for BSc Nursing admission.",
+      "feasibility": "high",
+      "feasibilityReason": "You are in Class 11 (Science-PCB), have sufficient time (~18 months) to prepare rigorously for NEET UG, and this is the most widely accepted entrance route for nursing admissions across the country. NEET syllabus aligns with Class 11–12 NCERT Physics, Chemistry, and Biology, matching your current curriculum.",
+      "costBand": "low",
+      "duration": "12–18 months of preparation (Class 11 remaining + Class 12); followed by 4-year BSc Nursing degree",
+      "steps": [
+        {
+          "id": "step-1",
+          "order": 0,
+          "type": "skill",
+          "title": "Build foundational NEET preparation habits",
+          "offsetMonths": 0,
+          "description": "Strengthen Class 11 PCB fundamentals using NCERT textbooks and supplement with subject-specific guides; develop time-management and mock-test routines."
+        },
+        {
+          "id": "step-2",
+          "order": 1,
+          "type": "skill",
+          "title": "Master NEET-specific Biology (50% weightage)",
+          "offsetMonths": 6,
+          "description": "Focus intensely on Human Physiology, Genetics, Ecology, Plant & Animal Biology using NCERT Class 11–12 and solve previous year papers to identify high-scoring topics."
+        },
+        {
+          "id": "step-3",
+          "order": 2,
+          "type": "skill",
+          "title": "Develop Physics and Chemistry problem-solving skills",
+          "offsetMonths": 9,
+          "description": "Complete NCERT Class 11–12 Physics and Chemistry; practice numerical and conceptual questions; aim for 25% weightage mastery in both subjects."
+        },
+        {
+          "id": "step-4",
+          "order": 3,
+          "type": "skill",
+          "title": "English language and general knowledge for nursing context",
+          "offsetMonths": 12,
+          "description": "Build English comprehension and communication skills; stay updated on health schemes (Ayushman Bharat 2.0), WHO initiatives, and basic healthcare awareness—increasingly tested in nursing entrance exams."
+        },
+        {
+          "id": "step-5",
+          "order": 4,
+          "type": "exam",
+          "title": "NEET UG examination",
+          "offsetMonths": 12,
+          "description": "Take the mandatory National Eligibility cum Entrance Test (Undergraduate); score well to access NEET nursing seats (typically ~487 seats nationwide through state quotas and central institutions). Cutoff for BSc Nursing varies: general category ~580–600, OBC ~530–560, SC ~450–500, ST ~380–450 marks."
+        },
+        {
+          "id": "step-6",
+          "order": 5,
+          "type": "application",
+          "title": "NEET counselling and college application",
+          "offsetMonths": 13,
+          "description": "Register for state and central counselling portals (online); fill college preferences in order; submit required documents (mark sheets, medical fitness certificate, ID proof); be ready for seat allotment in multiple rounds."
+        },
+        {
+          "id": "step-7",
+          "order": 6,
+          "type": "education",
+          "title": "BSc Nursing (4-year undergraduate degree)",
+          "offsetMonths": 14,
+          "description": "Enroll in selected nursing college for full-time 4-year programme combining classroom teaching (nursing theory, anatomy, pharmacology, ethics), laboratory practicals, and rotating clinical internships in hospital departments (medical-surgical, maternity, pediatrics, psychiatry, community health)."
+        },
+        {
+          "id": "step-8",
+          "order": 7,
+          "type": "experience",
+          "title": "Clinical internship and bedside training",
+          "offsetMonths": 30,
+          "description": "Participate in mandatory 6-month final-year clinical internship at teaching hospital; rotate through different wards; apply classroom knowledge to real patient care under supervision; build communication, critical thinking, and technical nursing skills.",
+          "optional": true
+        },
+        {
+          "id": "step-9",
+          "order": 8,
+          "type": "skill",
+          "title": "State Nursing Council registration and licensure",
+          "offsetMonths": 48,
+          "description": "Register as a nurse with your state nursing council upon graduation; obtain INC (Indian Nursing Council) certificate; this licence is mandatory to work as a staff nurse in India or abroad."
+        },
+        {
+          "id": "step-10",
+          "order": 9,
+          "type": "experience",
+          "title": "Employment as staff nurse or specialized role",
+          "offsetMonths": 49,
+          "description": "Secure position in government hospital (AIIMS, civil hospital, state health department), private hospital chain (Apollo, Fortis, Max), NGO, or clinic; gain 1–2 years bedside experience to build professional profile."
+        },
+        {
+          "id": "step-10b",
+          "order": 9,
+          "type": "education",
+          "title": "MSc Nursing or international nursing licensure (alternative path)",
+          "offsetMonths": 49,
+          "description": "Pursue MSc Nursing in specialization (critical care, pediatrics, psychiatric nursing) for advanced roles and salary growth; or prepare for NCLEX (USA), OSCE (UK), or AHPRA (Australia) for international placement at significantly higher salaries.",
+          "optional": true,
+          "alternativeTo": "step-10"
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Clinical patient care and bedside nursing",
+          "Vital sign monitoring and health assessment",
+          "Medication administration and pharmacology knowledge",
+          "Infection control and aseptic techniques",
+          "Communication and emotional support for patients/families",
+          "Team collaboration with doctors and paramedics",
+          "Documentation and electronic health records",
+          "Critical thinking and problem-solving in healthcare",
+          "Basic life support and emergency care",
+          "Community health and health education"
+        ],
+        "upskilling": [
+          {
+            "name": "NEET UG preparation online course (Physics, Chemistry, Biology MCQ focus)",
+            "why": "Bridges Class 11–12 gaps and builds exam-specific problem-solving for the 180-question, 3-hour NEET exam with 50% biology weightage.",
+            "costBand": "low",
+            "url": "https://www.nta.ac.in",
+            "verified": false
+          },
+          {
+            "name": "Advanced Life Support (ALS) and Basic Life Support (BLS) certification",
+            "why": "Essential clinical skill for nurses; improves employability and confidence in emergency care; often required by private hospitals and for international nursing jobs.",
+            "costBand": "low",
+            "url": "https://www.americanheart.org",
+            "verified": false
+          },
+          {
+            "name": "IELTS or OET English language certification (for international aspirants)",
+            "why": "Mandatory for UK, Canada, Australia, USA nursing licences; builds pathway to 3–10× higher international salaries; improves patient communication.",
+            "costBand": "mid",
+            "url": "https://www.ielts.org",
+            "verified": false
+          },
+          {
+            "name": "Critical Care Nursing certification or ICU specialization course",
+            "why": "Specialized skills command 20–30% higher salaries; addresses high-demand areas in modern hospitals; opens faster career progression to senior nursing roles.",
+            "costBand": "mid",
+            "url": "",
+            "verified": false
+          },
+          {
+            "name": "Free online NEET biology revision from Khan Academy or YouTube medical channels",
+            "why": "Supplementary visual learning for complex topics (photosynthesis, genetics, human physiology); cost-free alternative to coaching; helps build intuitive understanding.",
+            "costBand": "free",
+            "url": "https://www.youtube.com",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "id": "neet-ug",
+          "name": "NEET UG",
+          "purpose": "Mandatory entrance exam for admission to MBBS/BDS courses in India.",
+          "eligibility": "Passed 10+2 with Physics, Chemistry, Biology/Biotechnology and English; minimum 50% aggregate (40% for reserved categories); minimum age 17 by Dec 31 of the admission year.",
+          "typicalWindow": "Applications usually open ~Dec–Feb; exam typically held ~May.",
+          "costBand": "low",
+          "officialUrl": "https://neet.nta.nic.in/",
+          "verified": true
+        }
+      ],
+      "colleges": [],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "If you miss NEET UG registration: Some state governments and private colleges conduct separate nursing entrance exams (e.g., UP CNET, Maharashtra CET, state-level exams). Register immediately for these state exams as alternative pathways.",
+          "If you do not clear NEET UG this year: Retake the exam next year (no attempt limit until age 25). Use the gap year to strengthen biology and chemistry; many students clear on their second or third attempt.",
+          "If your NEET score is lower than nursing cutoff: Apply to private nursing colleges accepting lower NEET scores (~350–400 marks) or those with management quota seats; expect higher fees but similar quality education.",
+          "If you prefer to avoid NEET: Pursue admission through merit-based Class 12 scores at private colleges or state-level colleges conducting their own nursing exams; fewer seats but still valid pathway."
+        ]
+      }
+    }
+  ],
+  "prepResources": [
+    {
+      "title": "NCERT Class 11 Biology textbook (official)",
+      "type": "book",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://ncert.nic.in",
+      "verified": false
+    },
+    {
+      "title": "NCERT Class 12 Chemistry textbook (official)",
+      "type": "book",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://ncert.nic.in",
+      "verified": false
+    },
+    {
+      "title": "NTA NEET official mock test portal",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.nta.ac.in",
+      "verified": false
+    },
+    {
+      "title": "Physics and Chemistry problem-solving from previous NEET papers (YouTube channels or coaching sites)",
+      "type": "video",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.youtube.com",
+      "verified": false
+    },
+    {
+      "title": "Indian Nursing Council (INC) official website for nursing regulations and college accreditation",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.indiannursingcouncil.org",
+      "verified": false
+    }
+  ],
+  "groundingSources": [
+    {
+      "claim": "NEET UG is increasingly used for BSc Nursing admission in premier institutions such as JIPMER, BHU, AFMC, and state colleges as per 2026 guidelines.",
+      "url": "https://nprep.in/blogs/list-of-nursing-exams-in-india-2026",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "BSc Nursing candidates must pass Class 12 with Physics, Chemistry, Biology, and English; minimum 45–55% aggregate (varies by exam/category) and minimum age 17 years by December 31 of admission year.",
+      "url": "https://nursing.belarani.com/bsc-nursing-entrance-exam-2026/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "Entry-level nursing salary in India ranges from ₹18,000–₹30,000 per month in private hospitals; government nurses earn ₹25,000–₹45,000 per month; experienced nurses (5+ years) earn ₹50,000–₹90,000 per month.",
+      "url": "https://www.pw.live/nursing/exams/bsc-nursing-salary",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "NEET UG exam typically held ~May, with applications usually opening ~Dec–Feb; covers 180 questions in Physics, Chemistry, and Biology with 3-hour duration.",
+      "url": "https://collegedunia.com/exams/neet/bsc-nursing-cutoff",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "Government nursing colleges charge between ₹2,000–₹30,000 per year; private colleges charge ₹1,00,000–₹3,00,000 per year; fees often include hostel and library charges.",
+      "url": "https://www.collegesimplified.in/post/top-government-nursing-colleges-in-india-2026-state-wise-list-cutoff-fees",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "AIIMS offers 19 campuses with BSc Nursing programmes; AIIMS BSc Nursing exam conducted separately in June; requires female candidates for Hons program at some AIIMS; total ~1,416 seats across all AIIMS nursing courses.",
+      "url": "https://www.promilo.com/blog/courses/aiims-bsc-nursing-2026-registration-exam-dates-eligibility-syllabus-pattern-1",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "Top BSc Nursing colleges in India include AIIMS Delhi, CMC Vellore, PGIMER Chandigarh, JIPMER Puducherry, and AFMC Pune; AIIMS Delhi ranked #1 by NIRF 2025 in medical category.",
+      "url": "https://www.shiksha.com/nursing/colleges/b-sc-colleges-india",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "Global nursing shortage expected to reach 45–60 lakh by 2030; international nursing salaries can be 3–10 times higher than India (UK, Canada, Australia offer €20–50 lakh annually equivalent).",
+      "url": "https://www.careercollegeindia.com/blog/bsc-nursing-2026-job-salary-growth/",
+      "fetchedAt": "2026-06-21"
+    }
+  ],
+  "disclaimers": [
+    "This journey assumes you will complete Class 12 with Science stream (PCB) as planned. If your board or stream changes, verify eligibility criteria with the exam conducting authority and nursing college of interest.",
+    "NEET UG eligibility, application windows, exam dates, and cutoff marks are subject to change annually. Always verify the latest details on the official NTA website (https://www.nta.ac.in) before applying.",
+    "Nursing college fees, admission criteria, and entrance exam requirements vary by institution, state, and category (general/OBC/SC/ST). Check individual college websites and state nursing education authority portals for accurate, up-to-date information.",
+    "State-level nursing exams (e.g., UP CNET, Maharashtra CET, West Bengal exams) and some private/deemed university nursing exams operate independently of NEET; if you choose a state-specific or private route, register separately with those exam authorities.",
+    "International nursing licensure (NCLEX, OSCE, AHPRA) requires additional certifications and exams beyond the BSc degree. Plan to pursue these in your 3rd or 4th year if aiming for abroad placement.",
+    "Salary figures and job market demand are based on 2025–2026 data. Economic conditions, healthcare policy changes, and post-pandemic shifts may alter salary expectations and job availability in your career span.",
+    "Male candidates applying to some AIIMS BSc Nursing (Hons) programs may face eligibility restrictions (e.g., female-only at AIIMS Delhi as of 2026 guidelines). Verify gender eligibility for your target college before application.",
+    "This journey prioritizes the NEET UG route (the allowed exam provided). State-specific nursing exams and AIIMS nursing entrance exams (which conduct separately) are alternative pathways but require independent registration and preparation.",
+    "Class 12 board marks, entrance exam scores, and category-based reservations all influence admission to government colleges. Secure strong Class 12 scores (45–55% minimum) to remain eligible across competitive rounds.",
+    "For any future steps beyond 5 years (e.g., MSc Nursing, international licensing), re-verify that regulations, exam structures, and fee details have not changed before committing."
+  ]
+}

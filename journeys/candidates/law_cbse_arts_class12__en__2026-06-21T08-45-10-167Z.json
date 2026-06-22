@@ -1,0 +1,320 @@
+{
+  "meta": {
+    "career": "Lawyer",
+    "careerAliases": [
+      "Advocate",
+      "Legal Counsel",
+      "Attorney"
+    ],
+    "studentProfile": {
+      "class": "12",
+      "board": "cbse",
+      "stream": "arts",
+      "language": "en",
+      "currentDate": "2026-06-21"
+    },
+    "generatedAt": "2026-06-21",
+    "confidence": "high",
+    "cacheKey": "law|cbse|arts|class12"
+  },
+  "overview": {
+    "summary": "A lawyer, or advocate, advises and represents individuals, organizations, and governments on legal matters. This profession involves interpreting laws, drafting legal documents, conducting research, and presenting cases in court. Lawyers can specialize in various fields like corporate law, criminal law, intellectual property law, family law, and more.",
+    "dayInLife": "A typical day for a lawyer might involve client meetings, court appearances, drafting legal documents such as contracts, wills, or petitions, conducting extensive legal research, negotiating settlements, and preparing for upcoming cases. The work often demands strong analytical skills, attention to detail, and effective communication.",
+    "payRange": {
+      "entry": "₹3.5 - 7 Lakhs per annum",
+      "experienced": "₹15 - 25 Lakhs per annum, potentially up to ₹1 Crore for senior corporate roles",
+      "note": "Salaries vary significantly based on specialization, location, type of firm (e.g., corporate vs. independent practice), and individual experience. Top-tier law firms may offer higher starting packages."
+    },
+    "demandOutlook": "The demand for legal professionals in India is stable and growing, particularly in specialized areas like corporate law, intellectual property, cyber law, and alternative dispute resolution. The evolving legal landscape and increasing regulatory complexities ensure a continuous need for skilled lawyers.",
+    "requirements": [
+      "Strong analytical and logical reasoning skills",
+      "Excellent communication and advocacy skills (written and verbal)",
+      "Critical thinking and problem-solving abilities",
+      "Thorough research capabilities",
+      "High ethical standards and integrity",
+      "Perseverance and attention to detail"
+    ]
+  },
+  "routes": [
+    {
+      "id": "route-1",
+      "name": "5-Year Integrated LLB Program (e.g., BA LLB)",
+      "bestFor": "Students who wish to pursue a direct path to a legal career immediately after Class 12, gaining a comprehensive understanding of law integrated with humanities subjects.",
+      "feasibility": "high",
+      "feasibilityReason": "This is the most common and well-established pathway for Class 12 Arts/Humanities students aspiring to become lawyers in India.",
+      "costBand": "mid",
+      "duration": "5 years (degree) + preparation time",
+      "steps": [
+        {
+          "id": "step-1",
+          "order": 1,
+          "type": "education",
+          "title": "Complete Class 12 Board Exams",
+          "offsetMonths": 0,
+          "description": "Focus on achieving good scores in your Class 12 board exams, as most law entrance exams require a minimum percentage (typically 45% for General/OBC and 40% for SC/ST/PWD)."
+        },
+        {
+          "id": "step-2",
+          "order": 2,
+          "type": "skill",
+          "title": "Prepare for Law Entrance Exams (CLAT, AILET, etc.)",
+          "offsetMonths": 1,
+          "description": "Begin intensive preparation for national-level law entrance exams like CLAT (Common Law Admission Test) and AILET (All India Law Entrance Test), focusing on Legal Reasoning, English, General Knowledge, Logical Reasoning, and Quantitative Techniques."
+        },
+        {
+          "id": "step-3",
+          "order": 3,
+          "type": "application",
+          "title": "Apply for CLAT and AILET",
+          "offsetMonths": 2,
+          "description": "Submit online applications for CLAT and AILET. Applications for both typically open around August and close by November each year."
+        },
+        {
+          "id": "step-4",
+          "order": 4,
+          "type": "exam",
+          "title": "Appear for CLAT and AILET",
+          "offsetMonths": 6,
+          "description": "Take the CLAT and AILET exams. CLAT is typically held in early December, and AILET usually follows in mid-December."
+        },
+        {
+          "id": "step-5",
+          "order": 5,
+          "type": "application",
+          "title": "Participate in Counseling and Secure Admission",
+          "offsetMonths": 7,
+          "description": "Based on your entrance exam scores, participate in the counseling process for National Law Universities (NLUs) or apply to other reputable private law colleges. This typically happens from January to July."
+        },
+        {
+          "id": "step-6",
+          "order": 6,
+          "type": "education",
+          "title": "Enroll in 5-Year Integrated LLB Program",
+          "offsetMonths": 14,
+          "description": "Begin your 5-year integrated Bachelor of Arts and Bachelor of Laws (BA LLB) or equivalent program at your chosen university. The academic year usually starts in August."
+        },
+        {
+          "id": "step-7",
+          "order": 7,
+          "type": "experience",
+          "title": "Undertake Legal Internships",
+          "offsetMonths": 46,
+          "description": "Gain practical experience during your degree through internships with law firms, corporate legal departments, NGOs, or individual advocates during summer breaks. This is optional but highly recommended for career development.",
+          "optional": true
+        },
+        {
+          "id": "step-8",
+          "order": 8,
+          "type": "application",
+          "title": "Enroll with State Bar Council",
+          "offsetMonths": 73,
+          "description": "After completing your 5-year LLB degree, enroll as an advocate with a State Bar Council to be eligible to practice law in India. You must also pass the All India Bar Examination (AIBE) within two years of provisional enrollment. Rules and fees may change by then, re-verify."
+        },
+        {
+          "id": "step-9",
+          "order": 9,
+          "type": "experience",
+          "title": "Begin Legal Practice",
+          "offsetMonths": 74,
+          "description": "Start your career by practicing independently, joining a law firm, working as an in-house counsel for a corporation, or pursuing litigation. Rules and fees may change by then, re-verify.",
+          "alternativeTo": "step-9b"
+        },
+        {
+          "id": "step-9b",
+          "order": 9,
+          "type": "education",
+          "title": "Pursue Master of Laws (LLM)",
+          "offsetMonths": 74,
+          "description": "Opt for a Master of Laws (LLM) for specialization in a particular area of law (e.g., Corporate Law, Intellectual Property Law, Criminal Law) to enhance career prospects. Rules and fees may change by then, re-verify.",
+          "alternativeTo": "step-9"
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Legal Research",
+          "Case Analysis",
+          "Drafting Legal Documents",
+          "Oral Advocacy",
+          "Negotiation",
+          "Client Counseling",
+          "Critical Thinking",
+          "Ethical Reasoning"
+        ],
+        "upskilling": [
+          {
+            "name": "Advanced Legal Research Tools (e.g., Manupatra, SCC Online)",
+            "why": "Enhances efficiency and accuracy in legal research, a core skill for any lawyer.",
+            "costBand": "mid",
+            "url": "https://www.manupatrafast.com/",
+            "verified": false
+          },
+          {
+            "name": "Moot Court Training",
+            "why": "Develops oral advocacy, argumentation, and court etiquette skills essential for litigation.",
+            "costBand": "low",
+            "url": "",
+            "verified": false
+          },
+          {
+            "name": "Legal Writing Workshops",
+            "why": "Improves clarity, precision, and persuasiveness in drafting legal documents and arguments.",
+            "costBand": "low",
+            "url": "",
+            "verified": false
+          },
+          {
+            "name": "Certification in Cyber Law/Intellectual Property Rights",
+            "why": "Specialized knowledge in high-demand areas, opening up niche career opportunities.",
+            "costBand": "mid",
+            "url": "",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "name": "CLAT (Common Law Admission Test)",
+          "purpose": "For admission to undergraduate (BA LLB, BBA LLB, etc.) and postgraduate law programs offered by 26 National Law Universities (NLUs) and various other private law colleges across India.",
+          "eligibility": "Candidates must have passed or be appearing in Class 12 (or equivalent) with a minimum of 45% marks (40% for SC/ST/PWD categories). There is no upper age limit.",
+          "typicalWindow": "Applications usually open ~August and close ~November.",
+          "costBand": "low",
+          "officialUrl": "https://consortiumofnlus.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "AILET (All India Law Entrance Test)",
+          "purpose": "For admission to BA LLB (Hons.), LLM, and PhD programs at National Law University (NLU) Delhi, which does not accept CLAT scores.",
+          "eligibility": "Candidates must have passed or be appearing in Class 12 (or equivalent) with a minimum of 45% marks (40% for SC/ST/PwD categories). There is no upper age limit.",
+          "typicalWindow": "Applications usually open ~August and close ~November.",
+          "costBand": "low",
+          "officialUrl": "https://nludelhi.ac.in/",
+          "verified": false
+        }
+      ],
+      "colleges": [
+        {
+          "name": "National Law School of India University (NLSIU)",
+          "type": "government",
+          "location": "Bengaluru, Karnataka",
+          "approxAnnualFees": "₹5,00,000",
+          "feesNote": "Includes tuition, hostel, mess, and refundable deposits for General category. Total 5-year cost approx ₹24-25 lakhs.",
+          "entranceRequired": "CLAT",
+          "costBand": "high",
+          "officialUrl": "https://www.nls.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "NALSAR University of Law",
+          "type": "government",
+          "location": "Hyderabad, Telangana",
+          "approxAnnualFees": "₹2,62,000",
+          "feesNote": "Approximate annual fee for General category, including refundable deposits. First year total around ₹3,17,000. Total 5-year cost approx ₹11-14 lakhs.",
+          "entranceRequired": "CLAT",
+          "costBand": "mid",
+          "officialUrl": "https://www.nalsar.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "National Law University (NLU)",
+          "type": "government",
+          "location": "Delhi",
+          "approxAnnualFees": "₹1,56,000",
+          "feesNote": "Tuition fee per year for Indian students. Total 5-year cost approx ₹20.5-21 lakhs including tuition, hostel, and mess charges.",
+          "entranceRequired": "AILET",
+          "costBand": "mid",
+          "officialUrl": "https://nludelhi.ac.in/",
+          "verified": false
+        },
+        {
+          "name": "The West Bengal National University of Juridical Sciences (WBNUJS)",
+          "type": "government",
+          "location": "Kolkata, West Bengal",
+          "approxAnnualFees": "₹2,70,000",
+          "feesNote": "Approximate annual fees for BA LLB (Hons).",
+          "entranceRequired": "CLAT",
+          "costBand": "mid",
+          "officialUrl": "https://www.nujs.edu/",
+          "verified": false
+        },
+        {
+          "name": "National Law University Jodhpur",
+          "type": "government",
+          "location": "Jodhpur, Rajasthan",
+          "approxAnnualFees": "₹2,50,000",
+          "feesNote": "Approximate annual fees for BA LLB (Hons).",
+          "entranceRequired": "CLAT",
+          "costBand": "mid",
+          "officialUrl": "https://www.nlujodhpur.ac.in/",
+          "verified": false
+        }
+      ],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "If you miss the application window for CLAT/AILET, you will have to wait for the next academic year's cycle.",
+          "Consider exploring other private universities that might have separate entrance exams or later application deadlines.",
+          "Utilize the gap year to strengthen your preparation, take coaching, and gain relevant experience through internships or volunteering."
+        ]
+      }
+    }
+  ],
+  "prepResources": [
+    {
+      "title": "CLAT Pathfinder",
+      "type": "book",
+      "costBand": "low",
+      "language": "English",
+      "url": "",
+      "verified": false
+    },
+    {
+      "title": "Universal's Guide to CLAT & LLB Entrance Examination",
+      "type": "book",
+      "costBand": "low",
+      "language": "English",
+      "url": "",
+      "verified": false
+    },
+    {
+      "title": "Lucent's General Knowledge",
+      "type": "book",
+      "costBand": "low",
+      "language": "English",
+      "url": "",
+      "verified": false
+    },
+    {
+      "title": "Online CLAT Mock Test Series (various platforms)",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "English",
+      "url": "",
+      "verified": false
+    },
+    {
+      "title": "Official CLAT Consortium Website (Previous Year Papers)",
+      "type": "official-guide",
+      "costBand": "low",
+      "language": "English",
+      "url": "https://consortiumofnlus.ac.in/",
+      "verified": false
+    }
+  ],
+  "groundingSources": [
+    {
+      "claim": "WBNUJS Kolkata approximate annual fees for BA LLB (Hons).",
+      "url": "https://www.nujs.edu/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "NLU Jodhpur approximate annual fees for BA LLB (Hons).",
+      "url": "https://www.nlujodhpur.ac.in/",
+      "fetchedAt": "2026-06-21"
+    }
+  ],
+  "disclaimers": [
+    "The information provided is based on typical trends and publicly available data as of the 'generatedAt' date. Specific dates, fees, and eligibility criteria for exams and colleges can change. Always verify the latest information from official websites before making any decisions.",
+    "Career paths can be dynamic. While this journey outlines common routes, individual experiences may vary. Networking, continuous learning, and adaptability are crucial for success.",
+    "Fees mentioned are approximate and can vary based on category, scholarships, and annual revisions by institutions. Hostel, mess, and other miscellaneous charges are often additional."
+  ]
+}

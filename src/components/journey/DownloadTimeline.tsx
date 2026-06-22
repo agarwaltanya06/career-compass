@@ -28,6 +28,7 @@ export default function DownloadTimeline({
   routeName,
   routeId,
   disclaimers,
+  unverified,
 }: {
   steps: JourneyStep[];
   anchor: string;
@@ -35,6 +36,8 @@ export default function DownloadTimeline({
   routeName: string;
   routeId: string;
   disclaimers: string[];
+  /** When true, the printable export carries the AI-generated/unverified banner. */
+  unverified?: boolean;
 }) {
   const { t } = useI18n();
 
@@ -76,11 +79,23 @@ export default function DownloadTimeline({
       });
     }
 
-    const html = buildTimelinePrintHtml(printSteps, ctx, labels, disclaimers, {
-      forCareer: t("journey.forCareer"),
-      timeline: t("journey.timeline"),
-      important: t("journey.disclaimers"),
-    });
+    const html = buildTimelinePrintHtml(
+      printSteps,
+      ctx,
+      labels,
+      disclaimers,
+      {
+        forCareer: t("journey.forCareer"),
+        timeline: t("journey.timeline"),
+        important: t("journey.disclaimers"),
+      },
+      unverified
+        ? {
+            title: t("journey.candidateBannerTitle"),
+            body: t("journey.candidateBanner"),
+          }
+        : undefined,
+    );
     printHtmlDocument(html);
   };
 

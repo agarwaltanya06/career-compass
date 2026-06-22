@@ -1,0 +1,463 @@
+{
+  "meta": {
+    "career": "Civil Services (UPSC) – IAS/IPS/IFS",
+    "careerAliases": [
+      "Indian Administrative Service",
+      "Indian Police Service",
+      "Indian Foreign Service",
+      "Central Civil Services"
+    ],
+    "studentProfile": {
+      "class": "12",
+      "board": "cbse",
+      "stream": "arts",
+      "language": "en",
+      "currentDate": "2026-06-21"
+    },
+    "generatedAt": "2026-06-21",
+    "confidence": "high",
+    "cacheKey": "civil-services|cbse|arts|class12"
+  },
+  "overview": {
+    "summary": "Civil Services recruitment through UPSC is India's premier pathway to elite government positions. The journey requires a bachelor's degree (any discipline), passing three stages of examination (Preliminary, Mains, and Interview), and typically 1.5–2 years of focused preparation alongside graduation. Arts stream students have a natural advantage due to syllabus overlap with subjects like History, Political Science, and Geography.",
+    "dayInLife": "IAS/IPS/IFS officers execute policy, lead administrative divisions, maintain law and order, or represent India abroad. A typical day involves analyzing policy briefs, attending coordination meetings, addressing public grievances, managing resource allocation, and strategic decision-making that impacts thousands of lives.",
+    "payRange": {
+      "entry": "₹57,700 per month (basic + dearness allowance, excluding HRA/other allowances)",
+      "experienced": "₹2,50,000+ per month (at senior levels like Secretary or Chief Secretary)",
+      "note": "Salaries follow the 7th Pay Commission. Entry-level IAS officers receive Grade Pay of ₹8,700. Career progression offers significant salary growth alongside pension and other benefits. Exact figures vary by cadre (IAS vs IPS vs IFS) and posting."
+    },
+    "demandOutlook": "UPSC 2026 recruited 933 vacancies across IAS, IPS, IFS, IRS, and allied services—highly competitive. Success rate is <0.5% due to high applicant volume. Demand remains constant; no reduction in government roles expected.",
+    "requirements": [
+      "Bachelor's degree from a recognized Indian university (any stream, any discipline)",
+      "Indian citizenship",
+      "Minimum age 21 years as of August 1 of the exam year",
+      "Maximum age 32 years (General), with relaxation for SC/ST/OBC/PwBD",
+      "Clear of medical fitness, no criminal record",
+      "Willingness to serve anywhere in India and abroad (for IFS)"
+    ]
+  },
+  "routes": [
+    {
+      "id": "route-1-primary-upsc",
+      "name": "Standard Route: Graduation + UPSC Civil Services Examination",
+      "bestFor": "Class 12 Arts students aiming to complete a bachelor's degree while building UPSC preparation foundation; clear goal of entering All-India Services by mid-late 20s.",
+      "feasibility": "high",
+      "feasibilityReason": "Arts stream provides direct overlap with UPSC syllabus (History, Political Science, Geography, Economics). Student can start preparation immediately post-12th, build foundational knowledge during graduation, and attempt UPSC within the optimal 1.5–2 year preparation window. No barrier to Arts graduates in UPSC selection.",
+      "costBand": "mid",
+      "duration": "~3–4 years (3-year graduation + 1–2 years parallel UPSC prep)",
+      "steps": [
+        {
+          "id": "step-1-graduation-admission",
+          "order": 0,
+          "type": "application",
+          "title": "Apply for BA Admission to UPSC-friendly college",
+          "offsetMonths": 0,
+          "description": "Enrol in a government or reputable private arts college. Prioritize institutions with strong humanities faculty, peer UPSC preparation culture, and academic rigour (e.g., Delhi University, BHU, Allahabad University, Christ Bangalore, St. Xavier's Mumbai). Admission typically via CUET UG or merit-based board scores."
+        },
+        {
+          "id": "step-2-build-gs-foundation",
+          "order": 1,
+          "type": "education",
+          "title": "Year 1: Complete BA coursework + start NCERT foundation reading",
+          "offsetMonths": 0,
+          "description": "Pursue BA with focus on History, Political Science, Geography, Economics. Simultaneously, begin reading NCERT Class 6–12 texts in these subjects to build UPSC General Studies foundation. Attend college regularly; balanced approach to both worlds."
+        },
+        {
+          "id": "step-3-optional-selection-prep",
+          "order": 2,
+          "type": "skill",
+          "title": "Decide and prepare optional subject (end of Year 1)",
+          "offsetMonths": 12,
+          "description": "Choose one optional subject from 48 UPSC offerings for Mains (carries 500 marks). Recommended for Arts students: History, Political Science & International Relations (PSIR), Geography, Public Administration, Sociology. Study syllabus thoroughly; collect quality study materials."
+        },
+        {
+          "id": "step-4-year2-deepen-gs",
+          "order": 3,
+          "type": "education",
+          "title": "Year 2: Deepen General Studies + optional subject foundation",
+          "offsetMonths": 12,
+          "description": "Complete BA Year 2. Move beyond NCERTs to reference books (e.g., Laxmikanth for Polity, Spectrum for Modern History). Develop answer-writing skills. Follow daily current affairs via The Hindu or Indian Express. Enrol in optional subject coaching if needed."
+        },
+        {
+          "id": "step-5-current-affairs-habit",
+          "order": 4,
+          "type": "skill",
+          "title": "Establish current affairs tracking routine (from Month 18)",
+          "offsetMonths": 18,
+          "description": "Read newspapers daily; maintain monthly magazine subscriptions (e.g., Pratiyogita Darpan, Indian Express archives, government reports). Track national and international developments. Build habit of connecting current events to static GS syllabus."
+        },
+        {
+          "id": "step-6-year3-mains-ready",
+          "order": 5,
+          "type": "education",
+          "title": "Year 3: Complete graduation + transition to Mains-level study",
+          "offsetMonths": 24,
+          "description": "Finish BA coursework. Shift focus to writing practice, mock tests, and optional subject deep-dive. Prepare Detailed Application Form (DAF) content (essay topics, hobbies, achievements). By end of Year 3, be exam-ready for UPSC attempt."
+        },
+        {
+          "id": "step-7-upsc-prelims-exam",
+          "order": 6,
+          "type": "exam",
+          "title": "Sit for UPSC Civil Services Preliminary Exam",
+          "offsetMonths": 34,
+          "description": "Appear for UPSC Prelims (Objective-type screening). Two papers: General Studies Paper I (2 hours, 100 questions) and CSAT Paper II (2 hours, 80 questions; qualifying, 33% pass). Aim for 90+ marks in GS Paper I to clear Prelims cutoff."
+        },
+        {
+          "id": "step-8-prelims-result-mains-prep",
+          "order": 7,
+          "type": "experience",
+          "title": "Post-Prelims: 3-month focused Mains preparation (if qualified)",
+          "offsetMonths": 36,
+          "description": "After Prelims result (~6 weeks later), if qualified, dedicate 3 months to Mains exam only. Write full-length essays, complete answer-writing mock tests (9 papers), revise General Studies I–IV and optional thoroughly. Manage work-life balance.",
+          "optional": true
+        },
+        {
+          "id": "step-9-upsc-mains-exam",
+          "order": 8,
+          "type": "exam",
+          "title": "Sit for UPSC Civil Services Mains Exam",
+          "offsetMonths": 39,
+          "description": "Appear for UPSC Mains (Descriptive-type, 5 consecutive days). Nine papers: 2 language papers (qualifying), 4 General Studies papers, 1 Essay, 2 Optional subject papers (500 marks total optional). Merit determined by GS + Essay + Optional marks (approx. 1750 marks written). Mains performance is decisive."
+        },
+        {
+          "id": "step-10-mains-interview-prep",
+          "order": 9,
+          "type": "experience",
+          "title": "Post-Mains: Interview preparation (if qualified)",
+          "offsetMonths": 45,
+          "description": "After Mains results (~3 months), if shortlisted for Interview, prepare intensively. Study DAF content, personal background, current affairs, ethical dilemmas. Mock interviews with mentors. Interview carries 250 marks.",
+          "optional": true
+        },
+        {
+          "id": "step-11-interview-exam",
+          "order": 10,
+          "type": "exam",
+          "title": "Appear for UPSC Personality Test (Interview)",
+          "offsetMonths": 50,
+          "description": "Final stage: 20–30 minute interview before a board. Questions on personal background, optional subject, current affairs, ethics, decision-making. Interview score + Mains score determine final all-India rank and cadre allocation."
+        },
+        {
+          "id": "step-12-selection-training",
+          "order": 11,
+          "type": "education",
+          "title": "On-selection: National Academy of Administration (Mussoorie) or Police Academy training",
+          "offsetMonths": 57,
+          "description": "Selected candidates undergo 24-month foundational training at Lal Bahadur Shastri National Academy of Administration (LBSNAA) for IAS/IFS, or Central Police Academy for IPS. Post-training, officers assigned to their cadre and initial posting."
+        },
+        {
+          "id": "step-13-reattempt-fallback",
+          "order": 12,
+          "type": "experience",
+          "title": "Reattempt strategy (if not selected)",
+          "offsetMonths": 60,
+          "description": "General category candidates have 6 attempts until age 32. If unsuccessful in first attempt, analyze weaknesses, refine optional subject, strengthen GS, and reattempt next cycle. Many successful officers clear on 2nd or 3rd attempt.",
+          "optional": true
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "General Studies mastery (History, Polity, Geography, Economy, Environment, Ethics, Current Affairs)",
+          "Optional subject expertise (depth and breadth depending on choice)",
+          "Essay writing and structured argumentation",
+          "Answer writing under time constraints",
+          "Current affairs analysis and integration",
+          "Logical reasoning (CSAT Paper II)",
+          "Leadership and ethical decision-making",
+          "Public administration and policy understanding"
+        ],
+        "upskilling": [
+          {
+            "name": "UPSC GS Coaching (Online or Classroom)",
+            "why": "Structured syllabus coverage, mock tests, expert faculty. Accelerates preparation timeline.",
+            "costBand": "mid",
+            "url": "https://www.pw.live/upsc",
+            "verified": false
+          },
+          {
+            "name": "NCERT Books (Class 6–12 History, Polity, Geography, Economics, Science)",
+            "why": "Official, concise foundation. Free from most libraries. Essential baseline before reference books.",
+            "costBand": "free",
+            "url": "https://ncert.nic.in",
+            "verified": false
+          },
+          {
+            "name": "The Hindu (Daily Newspaper) + Monthly Current Affairs Magazines",
+            "why": "Track national and international developments. Essential for General Studies and Interview preparation.",
+            "costBand": "low",
+            "url": "https://www.thehindu.com",
+            "verified": false
+          },
+          {
+            "name": "Answer Writing Practice & Mains Mock Test Series",
+            "why": "Timed writing practice improves speed, clarity, and scoring in descriptive Mains papers.",
+            "costBand": "mid",
+            "url": "https://www.drishtiias.com",
+            "verified": false
+          },
+          {
+            "name": "Optional Subject-Specific Coaching",
+            "why": "For subjects like PSIR, Sociology, or Geography—coaching provides expert insights, PYQ analysis, and essay frameworks.",
+            "costBand": "mid",
+            "url": "https://www.byjus.com/upsc",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "name": "UPSC Civil Services Preliminary Exam (Prelims)",
+          "purpose": "Objective-type screening stage; shortlist top candidates (typically 10–15k from 1+ million applicants) for Mains.",
+          "eligibility": "Bachelor's degree (or final-year student) from recognized university. Indian citizen, age 21–32 (General). Minimum 21 years as of August 1 of exam year.",
+          "typicalWindow": "Notification released ~early February; applications close ~mid-February; exam held ~late May. Verify at upsconline.nic.in.",
+          "costBand": "low",
+          "officialUrl": "https://upsconline.nic.in",
+          "verified": false
+        },
+        {
+          "name": "UPSC Civil Services Mains Exam (Mains)",
+          "purpose": "Descriptive-type substantive exam (9 papers over 5 days). Tests depth of knowledge, analytical writing, and subject expertise. Merit-based shortlist for Interview.",
+          "eligibility": "Candidates who clear Prelims. Must submit Detailed Application Form (DAF) with proof of degree completion before Mains admission.",
+          "typicalWindow": "Applications for Mains typically open ~mid-June; exam held ~late August / early September. Admit card released ~mid-August.",
+          "costBand": "low",
+          "officialUrl": "https://upsconline.nic.in",
+          "verified": false
+        },
+        {
+          "name": "UPSC Civil Services Interview (Personality Test)",
+          "purpose": "Final stage. 20–30 minute structured interview by board. Assesses suitability for civil services, personality, ethics, decision-making, optional subject knowledge.",
+          "eligibility": "Candidates shortlisted after Mains (typically top 2000–3000 across all services).",
+          "typicalWindow": "Interviews typically held ~January–March following exam year. Exact dates released ~November prior. Admit cards issued ~one month before interview date.",
+          "costBand": "free",
+          "officialUrl": "https://upsconline.nic.in",
+          "verified": false
+        }
+      ],
+      "colleges": [
+        {
+          "name": "Delhi University (St. Stephen's College, Ramjas College, Kirori Mal College, Miranda House)",
+          "type": "government",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "₹30,000–₹60,000 (Delhi University college fees are state-subsidized)",
+          "feesNote": "Lowest fees in India for quality education. Highest UPSC topper concentration. Merit-based admission via CUET UG.",
+          "entranceRequired": "CUET UG",
+          "costBand": "low",
+          "officialUrl": "https://www.du.ac.in",
+          "verified": false
+        },
+        {
+          "name": "Banaras Hindu University (BHU)",
+          "type": "deemed",
+          "location": "Varanasi, Uttar Pradesh",
+          "approxAnnualFees": "₹80,000–₹1,20,000",
+          "feesNote": "Prestigious deemed university. Strong humanities faculty. Competitive entrance via BHU UET or CUET.",
+          "entranceRequired": "BHU UET or CUET UG",
+          "costBand": "low",
+          "officialUrl": "https://www.bhu.ac.in",
+          "verified": false
+        },
+        {
+          "name": "Allahabad University",
+          "type": "government",
+          "location": "Allahabad, Uttar Pradesh",
+          "approxAnnualFees": "₹25,000–₹50,000",
+          "feesNote": "One of India's oldest universities. Produces consistent UPSC toppers. Low fees, strong academic culture.",
+          "entranceRequired": "CUET UG or merit-based",
+          "costBand": "low",
+          "officialUrl": "https://www.allduniv.ac.in",
+          "verified": false
+        },
+        {
+          "name": "Christ University (Bangalore) or Flame University (Pune)",
+          "type": "private",
+          "location": "Bangalore, Karnataka / Pune, Maharashtra",
+          "approxAnnualFees": "₹2,50,000–₹3,50,000",
+          "feesNote": "Private institutions with strong UPSC preparation culture. Better infrastructure and mentorship. Higher fees.",
+          "entranceRequired": "CUET UG",
+          "costBand": "high",
+          "officialUrl": "https://christuniversity.in",
+          "verified": false
+        },
+        {
+          "name": "St. Xavier's College Mumbai",
+          "type": "private",
+          "location": "Mumbai, Maharashtra",
+          "approxAnnualFees": "₹1,80,000–₹2,50,000",
+          "feesNote": "Prestigious Jesuit institution. Strong humanities discipline. Excellent library and peer learning environment for UPSC aspirants.",
+          "entranceRequired": "CUET UG",
+          "costBand": "mid",
+          "officialUrl": "https://www.sxcmumbai.ac.in",
+          "verified": false
+        },
+        {
+          "name": "SAGE University Indore (UPSC-Oriented BA Programs)",
+          "type": "private",
+          "location": "Indore, Madhya Pradesh",
+          "approxAnnualFees": "₹1,50,000–₹2,00,000",
+          "feesNote": "Integrated BA + UPSC coaching programmes. Collaboration with TATHAASTU coaching. Suitable if you want parallel degree + professional prep.",
+          "entranceRequired": "CUET UG or merit-based",
+          "costBand": "mid",
+          "officialUrl": "https://sageuniversity.in",
+          "verified": false
+        },
+        {
+          "name": "Jawaharlal Nehru University (JNU)",
+          "type": "government",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "₹30,000–₹50,000",
+          "feesNote": "Premier research university. Strong social sciences and humanities. Vibrant UPSC preparation culture. Merit-based admission.",
+          "entranceRequired": "JNUEE or CUET",
+          "costBand": "low",
+          "officialUrl": "https://www.jnu.ac.in",
+          "verified": false
+        },
+        {
+          "name": "Madras Christian College, Chennai",
+          "type": "private",
+          "location": "Chennai, Tamil Nadu",
+          "approxAnnualFees": "₹1,00,000–₹1,50,000",
+          "feesNote": "Established 1837. Strong humanities programme. Good balance of affordability and quality.",
+          "entranceRequired": "CUET UG",
+          "costBand": "low",
+          "officialUrl": "https://www.mcc.edu.in",
+          "verified": false
+        }
+      ],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "Reattempt UPSC next year: General category has 6 attempts. Analyze current weakness (optional subject, GS depth, writing speed), refine strategy, and attempt following cycle.",
+          "Pursue Master's degree while reattempting: Some aspirants pursue MA (History, Political Science, or relevant field) to strengthen optional subject and general knowledge, then reattempt after graduation.",
+          "Take up civil services entry-level roles (SSC, State PSC): If UPSC path delays, apply for SSC CGL (Grade B), State PSC, or other central/state civil services for intermediate administrative roles.",
+          "Professional transition (Law, Journalism, NGO): If UPSC becomes protracted, consider BA LLB, journalism, or social sector roles. Path remains open later if you maintain interest and meet age limit."
+        ]
+      }
+    }
+  ],
+  "prepResources": [
+    {
+      "title": "UPSC Official Notification & Calendar 2026",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://upsc.gov.in",
+      "verified": false
+    },
+    {
+      "title": "NCERT Books (Class 6–12): History, Political Science, Geography, Economics",
+      "type": "book",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://ncert.nic.in",
+      "verified": false
+    },
+    {
+      "title": "The Hindu – Daily Newspaper (Current Affairs)",
+      "type": "free-course",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://www.thehindu.com",
+      "verified": false
+    },
+    {
+      "title": "Drishti IAS – UPSC General Studies & Optional Subject Notes",
+      "type": "book",
+      "costBand": "mid",
+      "language": "en",
+      "url": "https://www.drishtiias.com",
+      "verified": false
+    },
+    {
+      "title": "Physics Wallah – Free UPSC Prelims Courses (YouTube + App)",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.pw.live/upsc",
+      "verified": false
+    },
+    {
+      "title": "Unacademy – UPSC Mains Optional Subject Courses (Paid)",
+      "type": "video",
+      "costBand": "mid",
+      "language": "en",
+      "url": "https://unacademy.com/upsc",
+      "verified": false
+    },
+    {
+      "title": "Laxmikanth – Indian Polity (Reference Book)",
+      "type": "book",
+      "costBand": "low",
+      "language": "en",
+      "url": "",
+      "verified": false
+    },
+    {
+      "title": "Spectrum – Modern India History (Reference Book)",
+      "type": "book",
+      "costBand": "low",
+      "language": "en",
+      "url": "",
+      "verified": false
+    }
+  ],
+  "groundingSources": [
+    {
+      "claim": "UPSC Civil Services requires a bachelor's degree from a recognized university; final-year students may apply for Preliminary Exam if they submit proof of degree before Mains.",
+      "url": "https://www.nextias.com/about-cse",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "Minimum age for UPSC CSE is 21 years as of August 1 of the exam year; maximum 32 years for General category with age relaxation for SC/ST/OBC/PwBD.",
+      "url": "https://www.nextias.com/about-cse",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "UPSC Prelims 2026 held on May 24, 2026. Mains 2026 scheduled for August 21, 2026 onwards (5 days). Application window typically opens early February.",
+      "url": "https://vajiramandravi.com/upsc-exam/upsc-notification-2026/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "UPSC offers 48 optional subjects including 25 core academic subjects and 23 literature subjects. Optional subject carries 500 marks (two papers, 250 each) out of 1750 total Mains marks.",
+      "url": "https://unacademy.com/content/upsc/upsc-optional-subject-list/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "Arts stream provides direct overlap with UPSC syllabus; History, Political Science, Geography, Economics, and Sociology are highly relevant subjects for UPSC General Studies and popular optional choices.",
+      "url": "https://www.pw.live/upsc/exams/which-stream-is-best-for-upsc",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "Popular optional subjects for UPSC include History, Political Science & International Relations (PSIR), Geography, Public Administration, and Sociology, especially for Arts stream candidates.",
+      "url": "https://kpriasacademy.in/upsc-optional-subject-lists/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "Delhi University (St. Stephen's College, Ramjas College), BHU, Allahabad University, and JNU produce consistent UPSC toppers and offer affordable, rigorous humanities education.",
+      "url": "https://testbook.com/ias-preparation/best-college-for-upsc-preparation-in-india",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "UPSC Mains comprises 9 papers: 2 language papers (qualifying), 4 General Studies papers, 1 Essay paper, and 2 Optional subject papers, conducted over 5 consecutive days.",
+      "url": "https://www.nextias.com/blog/upsc-mains/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "General category candidates have 6 attempts; OBC candidates have 9 attempts; SC/ST candidates have unlimited attempts (within age limit) to clear UPSC exam.",
+      "url": "https://www.nextias.com/about-cse",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "IAS/IPS entry-level basic salary is ₹57,700 per month (7th Pay Commission). Senior positions (Secretary, Chief Secretary) can earn ₹2,50,000+ per month.",
+      "url": "https://prepp.in/upsc-exam",
+      "fetchedAt": "2026-06-21"
+    }
+  ],
+  "disclaimers": [
+    "UPSC eligibility criteria, exam dates, application windows, and fees are subject to annual changes. Always verify current rules at upsconline.nic.in before applying.",
+    "College fees and admission criteria vary year to year. Contact colleges directly for 2026–2027 admission details.",
+    "This journey assumes continuous, disciplined self-study alongside graduation. Actual timeline may extend if personal circumstances, health, or other commitments intervene.",
+    "UPSC success depends primarily on sustained preparation, optional subject choice, answer-writing quality, and interview performance—not just stream or college name. Many non-Arts, non-Delhi toppers have succeeded.",
+    "Coaching institutes mentioned are for reference only. Self-study with NCERT + reference books is sufficient; coaching is optional and should suit your learning style and budget.",
+    "All salary figures and career prospects are as of June 2026 and follow the 7th Pay Commission. Government compensation structures may be revised.",
+    "If not selected after your first attempt, reattempt is allowed within age and attempt limits. Many UPSC toppers succeed on their 2nd or 3rd attempt; do not lose motivation."
+  ]
+}

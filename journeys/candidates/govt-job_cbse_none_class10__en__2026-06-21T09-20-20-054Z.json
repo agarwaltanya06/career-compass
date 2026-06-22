@@ -1,0 +1,464 @@
+{
+  "meta": {
+    "career": "Government Job (SSC / Banking)",
+    "careerAliases": [
+      "Civil Service (Non-IAS)",
+      "Public Sector Banking",
+      "Government Clerical Positions"
+    ],
+    "studentProfile": {
+      "class": "10",
+      "board": "cbse",
+      "language": "en",
+      "currentDate": "2026-06-21"
+    },
+    "generatedAt": "2026-06-21",
+    "confidence": "high",
+    "cacheKey": "govt-job|cbse|none|class10"
+  },
+  "overview": {
+    "summary": "Government jobs in India through SSC (Staff Selection Commission) exams or banking recruitment offer job security, fixed income, pension, medical benefits, and work-life balance. SSC positions (LDC, DEO, JSA) require Class 12 pass; banking roles (PO, Clerk) via IBPS or SBI require graduation. Starting salaries range from ₹24,000–₹30,000 (clerical) to ₹74,000–₹76,000 (banking PO). Demand is extremely high; competition is intense, with lakhs of candidates annually.",
+    "dayInLife": "An SSC LDC (Lower Division Clerk) handles file management, data entry, correspondence and administrative support in government ministries. A bank PO (Probationary Officer) manages customer accounts, supervises staff, handles credit decisions, and leads client relationships. Both roles offer fixed working hours (typically 9 AM–5 PM), holiday security, and structured career progression.",
+    "payRange": {
+      "entry": "₹24,050–₹30,000/month (clerical SSC posts); ₹74,000–₹76,000/month (banking PO)",
+      "experienced": "₹50,000–₹80,000+/month (after 5–10 years promotion in SSC); ₹1,20,000+/month (experienced bank officers post-probation)",
+      "note": "Government salaries follow the 7th Pay Commission and include allowances (HRA, DA, medical, travel). Final salary varies by location, post, and seniority."
+    },
+    "demandOutlook": "Exceptionally high demand: SSC conducts multiple recruitment cycles annually with thousands of vacancies across government departments. Banking sector (IBPS, SBI) recruits 5,000–6,000+ positions yearly. However, competition is severe—lakhs apply for limited posts, making success dependent on disciplined, long-term preparation.",
+    "requirements": [
+      "Class 10 passed (mandatory to sit for Class 12 in your chosen stream)",
+      "Stream selection in Class 11 (Commerce or Science/Non-Medical recommended; Humanities also eligible)",
+      "Class 12 pass (10+2) from a recognised board for SSC CHSL exams",
+      "Bachelor's degree for banking (IBPS PO, SBI PO) and graduate-level SSC exams (CGL)",
+      "Age limit 18–27 years for SSC CHSL; 20–30 years for banking; age relaxation available for SC/ST/OBC/PwD",
+      "Indian citizenship or specified eligibility",
+      "Basic computer knowledge for clerical and banking roles",
+      "No upper limit on exam attempts; constrained only by age ceiling"
+    ]
+  },
+  "routes": [
+    {
+      "id": "route-1",
+      "name": "SSC CHSL Path: Class 12 → Government Clerical Job",
+      "bestFor": "Students aiming for stable central government administrative roles (LDC, DEO, JSA) after completing Class 12. Requires Class 12 pass and age 18–27. No graduation needed. Ideal if you seek job security, pension, and predictable career growth without further degree study.",
+      "feasibility": "high",
+      "feasibilityReason": "Straightforward eligibility (12th pass + age limit). SSC conducts CHSL annually with ~3,000+ vacancies. However, competition is intense; success requires disciplined 8–12 month preparation. Stream choice (Commerce or Science) is flexible for eligibility.",
+      "costBand": "low",
+      "duration": "6–24 months: 12 months Class 11, 12 months Class 12, then 6–12 months competitive exam prep before first attempt.",
+      "steps": [
+        {
+          "id": "step-1",
+          "order": 0,
+          "type": "education",
+          "title": "Complete Class 10; Select Stream for Class 11",
+          "offsetMonths": 0,
+          "description": "Finish Class 10 CBSE board exam (expected by May 2026). Choose Commerce or Science (Non-Medical) stream for Class 11 (advised: Commerce provides economics/accounts foundation useful for government exams; Science/Non-Medical acceptable too). Humanities also viable but typically less correlated to SSC syllabus."
+        },
+        {
+          "id": "step-2",
+          "order": 1,
+          "type": "education",
+          "title": "Complete Class 11 and Class 12",
+          "offsetMonths": 6,
+          "description": "Study Class 11 (6 months) and Class 12 (6 months) in your chosen stream. Focus on core subjects: if Commerce, study Accountancy, Business Studies, Economics; if Science/Non-Medical, Physics, Chemistry, Maths. Maintain consistency; SSC does not require specific marks, only 12th pass proof. Prepare initial aptitude (Maths, English, Reasoning, GK) during these two years for a smoother transition to exam prep."
+        },
+        {
+          "id": "step-3",
+          "order": 2,
+          "type": "exam",
+          "title": "SSC CHSL Examination (Tier 1 & 2)",
+          "offsetMonths": 12,
+          "description": "Once Class 12 pass is confirmed, apply for SSC CHSL when notification releases (typically ~June-July yearly). Exam comprises Tier 1 (CBT, 100 questions, 60 min, Reasoning/English/Quant/GK) and Tier 2 (descriptive + typing/skill test). Prepare for 6–8 months with coaching/self-study before attempting."
+        },
+        {
+          "id": "step-4",
+          "order": 3,
+          "type": "experience",
+          "title": "Document Verification & Final Selection",
+          "offsetMonths": 18,
+          "description": "Candidates clearing Tier 1 & 2 undergo document verification, medical test (for certain posts), and skill test verification. Posting allotted by zone and category preference. Complete process typically 8–12 months after exam."
+        },
+        {
+          "id": "step-5",
+          "order": 4,
+          "type": "experience",
+          "title": "Join as Government Clerical Officer (LDC/JSA/DEO)",
+          "offsetMonths": 24,
+          "description": "Upon final selection, join as Lower Division Clerk (LDC), Junior Secretariat Assistant (JSA), or Data Entry Operator (DEO) in central government ministries. Start at Pay Band-1 (~₹24,000–₹30,000/month). Probation period ~6 months; then confirmed appointment with pension, medical, housing benefits."
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Quantitative Aptitude (percentage, ratio, geometry, algebra)",
+          "English Language (comprehension, grammar, spotting errors)",
+          "Reasoning (analogy, classification, coding-decoding, series)",
+          "General Awareness (current events, history, geography, polity)",
+          "Typing Speed (40–50 WPM minimum for typing tests)",
+          "Computer Basics (MS Office, file management)"
+        ],
+        "upskilling": [
+          {
+            "name": "Online SSC CHSL Coaching",
+            "why": "Structured curriculum, mock tests, time management strategies, and expert guidance reduce preparation time.",
+            "costBand": "mid",
+            "url": "https://testbook.com/super-coaching",
+            "verified": false
+          },
+          {
+            "name": "Free Government Job Prep Resources",
+            "why": "Official SSC website, YouTube channels, and government exam portals provide free study material and previous year papers.",
+            "costBand": "free",
+            "url": "https://ssc.gov.in",
+            "verified": false
+          },
+          {
+            "name": "Banking & SSC Coaching Institutes (In-Person)",
+            "why": "Classroom coaching offers personal mentorship, doubt-solving, and peer competition; fees typically ₹10,000–₹50,000 for 3–6 month courses.",
+            "costBand": "low",
+            "url": "https://www.studydekho.com/new-delhi/coaching/govt-jobs",
+            "verified": false
+          },
+          {
+            "name": "Aptitude Test Series & Mock Exams",
+            "why": "Regular practice with timed tests and performance analysis (via platforms like Adda247, Oliveboard) boost accuracy and speed.",
+            "costBand": "low",
+            "url": "https://www.adda247.com/ssc-chsl",
+            "verified": false
+          },
+          {
+            "name": "Speed Reading & Typing Practice Tools",
+            "why": "Typing speed and reading comprehension are critical; apps like TypingMaster, NitroType help build these skills.",
+            "costBand": "free",
+            "url": "",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "name": "SSC CHSL (Combined Higher Secondary Level)",
+          "purpose": "Recruitment for Lower Division Clerk (LDC), Junior Secretariat Assistant (JSA), Data Entry Operator (DEO), Postal Assistant (PA), and Sorting Assistant (SA) in central government departments.",
+          "eligibility": "Class 12 pass (10+2) from recognised board; age 18–27 years (relaxation for SC/ST/OBC/PwD/Ex-servicemen). For DEO (Science): Science stream with Maths mandatory.",
+          "typicalWindow": "Notification typically released June–July yearly; applications usually open ~June–July, close ~August. Tier 1 exam ~July–September; Tier 2 ~October–November (indicative; verify official SSC calendar).",
+          "costBand": "low",
+          "officialUrl": "https://ssc.gov.in",
+          "verified": false
+        }
+      ],
+      "colleges": [],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "SSC CHSL exam is held annually; candidates can re-apply the following year if they remain within age limits (18–27, with relaxation for reserved categories).",
+          "Alternative: Pursue graduation and attempt SSC CGL (combined graduate level) for Group B posts, or IBPS/SBI banking exams (PO/Clerk) which typically have higher age limit (20–30).",
+          "Consider State Government exams (UPSC state service exams, state PSC exams) which may have different timelines and age criteria."
+        ]
+      }
+    },
+    {
+      "id": "route-2",
+      "name": "Banking Path: Class 12 → Graduation → Banking PO/Clerk",
+      "bestFor": "Students targeting prestigious banking careers (Probationary Officer, Clerk/Junior Associate) with higher salaries (₹74,000–₹76,000/month for PO) and management potential. Requires Class 12 pass, then a bachelor's degree (any discipline), then competitive banking exams. Ideal if you aim for corporate environment, client interaction, and career growth into senior management.",
+      "feasibility": "high",
+      "feasibilityReason": "Banking exams (IBPS PO, SBI PO, IBPS Clerk, SBI Clerk) are held annually with 5,000–6,000+ vacancies yearly. Eligibility is clear (graduation + age). However, requires ~4 years (Class 12 + graduation) before exam eligibility. Competition is very high; success demands focused preparation over 3–6 months alongside or post-graduation.",
+      "costBand": "mid",
+      "duration": "~7–9 years total: 2 years (Class 11 & 12) + 3–4 years (graduation) + 6–12 months (banking exam prep) + 6–12 months (exam + result cycle).",
+      "steps": [
+        {
+          "id": "step-6",
+          "order": 0,
+          "type": "education",
+          "title": "Complete Class 10; Select Stream for Class 11",
+          "offsetMonths": 0,
+          "description": "Finish Class 10 CBSE exam. For banking-friendly foundation, select Commerce stream (provides Economics, Business Studies, Accountancy background). Science/Non-Medical also acceptable. Humanities viable but less aligned with banking syllabus."
+        },
+        {
+          "id": "step-7",
+          "order": 1,
+          "type": "education",
+          "title": "Complete Class 11 and Class 12",
+          "offsetMonths": 6,
+          "description": "Study Class 11–12 in your chosen stream (preferably Commerce). Build strong foundations in Mathematics, English, Economics, and general knowledge. No specific marks required for banking exam eligibility; only Class 12 pass certificate needed."
+        },
+        {
+          "id": "step-8",
+          "order": 2,
+          "type": "education",
+          "title": "Pursue Bachelor's Degree (Any Discipline)",
+          "offsetMonths": 12,
+          "description": "Enroll in a 3–4 year undergraduate programme (BSc, BCom, BA, BCA, etc.) from a recognised university. Maintain consistent academic performance, though only proof of graduation is required for banking exams, not specific GPA. Focus on building time-management and conceptual clarity alongside academics."
+        },
+        {
+          "id": "step-9",
+          "order": 3,
+          "type": "skill",
+          "title": "Build Banking Domain Knowledge",
+          "offsetMonths": 36,
+          "description": "During final year of graduation, start familiarising yourself with banking concepts: financial products, monetary policy, stock market basics, current financial news. Follow RBI announcements and economic indicators; read 'The Hindu' or 'Financial Times' for context.",
+          "optional": true
+        },
+        {
+          "id": "step-10",
+          "order": 4,
+          "type": "exam",
+          "title": "IBPS PO / SBI PO / IBPS Clerk / SBI Clerk Exams",
+          "offsetMonths": 48,
+          "description": "Post-graduation (or final-year status, provisionally), apply for banking recruitment. IBPS PO prelims typically held August–September; mains October–November. SBI PO typically February–March. IBPS Clerk October–November. SBI Clerk August–September (indicative; verify official calendars). Each exam has prelims + mains + interview + psychometric test."
+        },
+        {
+          "id": "step-11",
+          "order": 5,
+          "type": "experience",
+          "title": "Document Verification & Psychometric Evaluation",
+          "offsetMonths": 54,
+          "description": "Candidates clearing prelims and mains undergo document verification (degree certificate, age proof, category certificates), medical exam, psychometric assessment, and group discussion / interview. Final merit list prepared; allotment by bank and zone preference."
+        },
+        {
+          "id": "step-12",
+          "order": 6,
+          "type": "experience",
+          "title": "Join as Probationary Officer / Junior Associate (Clerk)",
+          "offsetMonths": 60,
+          "description": "Upon final selection, join bank as PO (Pay Grade: Junior Management Scale-I, ~₹74,000–₹76,000/month) or as Clerk/Junior Associate (~₹24,000–₹30,000/month). Undergo 6–24 month probation with rotational training across branches/departments. Post-probation, confirmed as permanent employee with all PSU benefits (pension, medical, housing loan eligibility, LTC, etc.)."
+        },
+        {
+          "id": "step-13",
+          "order": 7,
+          "type": "experience",
+          "title": "Career Progression in Banking",
+          "offsetMonths": 84,
+          "description": "Post-probation and permanent status, eligible for promotions to Senior PO, AGM, DGM, and potentially branch management roles. Clear internal departmental exams (JAIIB, CAIIB) to accelerate career. Exposure to retail banking, corporate credit, operations, and digital banking.",
+          "optional": true
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Quantitative Aptitude (percentage, averages, simple & compound interest, profit-loss)",
+          "English Language (reading comprehension, cloze tests, paragraph jumbles)",
+          "Reasoning & Logic (puzzles, seating arrangement, blood relation)",
+          "General Awareness & Current Affairs (banking regulations, RBI policy, economic news)",
+          "Computer Proficiency (basic MS Office, online banking platforms, data entry)",
+          "Soft Skills (communication, client handling, decision-making, teamwork)"
+        ],
+        "upskilling": [
+          {
+            "name": "Banking-Specific Online Courses",
+            "why": "Courses on IBPS/SBI exam patterns, banking fundamentals (JAIIB prerequisites) provide targeted knowledge.",
+            "costBand": "mid",
+            "url": "https://testbook.com/super-coaching",
+            "verified": false
+          },
+          {
+            "name": "Free Mock Tests & Previous Year Papers",
+            "why": "Official IBPS and SBI websites offer free mock tests; practising past papers builds familiarity with question types and sectional cut-offs.",
+            "costBand": "free",
+            "url": "https://www.ibps.in",
+            "verified": false
+          },
+          {
+            "name": "Financial News & RBI Bulletin Reading",
+            "why": "Regular consumption of economic news (RBI website, financial press) ensures strong general awareness for exam and job readiness.",
+            "costBand": "free",
+            "url": "https://www.rbi.org.in",
+            "verified": false
+          },
+          {
+            "name": "Coaching Institute for Banking Exams",
+            "why": "Classroom or online banking coaching (₹15,000–₹50,000) provides structured prep, doubt-solving, and strategy.",
+            "costBand": "low",
+            "url": "https://www.careerpower.in/ibps-po.html",
+            "verified": false
+          },
+          {
+            "name": "Aptitude & Reasoning Workshops",
+            "why": "Intensive short-term workshops (online or in-person) on time management, speed-solving techniques.",
+            "costBand": "low",
+            "url": "",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "name": "IBPS PO (Institute of Banking Personnel Selection – Probationary Officer)",
+          "purpose": "Recruitment of Probationary Officers / Management Trainees for 11 public sector banks (SBI, Bank of Baroda, PNB, Canara Bank, etc.). Entry pay ~₹74,000–₹76,000/month; fast-track management career.",
+          "eligibility": "Bachelor's degree in any discipline from recognised university; age 20–30 years (relaxation per government norms); valid mark sheet or degree certificate on day of interview required.",
+          "typicalWindow": "Notification typically June–July yearly. Prelims exam ~August–September; Mains ~October; Interviews ~December–January. Verify IBPS calendar at ibps.in.",
+          "costBand": "low",
+          "officialUrl": "https://www.ibps.in",
+          "verified": false
+        },
+        {
+          "name": "SBI PO (State Bank of India – Probationary Officer)",
+          "purpose": "Recruitment of Probationary Officers for SBI. Similar pay and career progression as IBPS PO; prestige of joining India's largest bank.",
+          "eligibility": "Bachelor's degree any discipline; age typically 21–30 years; Final year / final semester students can apply provisionally (degree proof required by interview date).",
+          "typicalWindow": "Notification typically released June–July; registration usually ~June–July; Prelims ~August–September; Mains ~October–November; Interviews ~November–December. Verify official SBI website: sbi.bank.in.",
+          "costBand": "low",
+          "officialUrl": "https://sbi.bank.in/web/careers/current-openings",
+          "verified": false
+        },
+        {
+          "name": "IBPS Clerk (Institute of Banking Personnel Selection – Clerk / Junior Associate)",
+          "purpose": "Recruitment of Junior Associates (clerical cadre) for 11 public sector banks. Entry pay ~₹24,000–₹30,000/month. Customer-facing role with potential for growth to officer cadre.",
+          "eligibility": "Bachelor's degree any discipline; age 20–28 years (relaxation per norms). No prior experience required.",
+          "typicalWindow": "Notification typically June–July. Prelims ~October–November; Mains ~December–January. Verify IBPS calendar.",
+          "costBand": "low",
+          "officialUrl": "https://www.ibps.in",
+          "verified": false
+        },
+        {
+          "name": "SBI Clerk (State Bank of India – Junior Associate)",
+          "purpose": "Recruitment of Junior Associates (clerical cadre) for SBI branches nationwide. Similar salary and role as IBPS Clerk but with SBI brand prestige and largest network.",
+          "eligibility": "Bachelor's degree any discipline; age 20–28 years.",
+          "typicalWindow": "Notification typically July–August. Prelims ~August–September; Mains ~October–November; Language Proficiency Test ~December. Verify sbi.bank.in.",
+          "costBand": "low",
+          "officialUrl": "https://sbi.bank.in/web/careers/current-openings",
+          "verified": false
+        }
+      ],
+      "colleges": [],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "Banking exams held annually; if you miss IBPS PO 2026, retry in 2027 provided age limit (20–30) not exceeded.",
+          "Parallel pathway: Attempt SSC CGL (graduate level) in the interim, offering similar job security and salary growth trajectory if banking exams are not cleared.",
+          "Insurance sector recruitment (ICICI, HDFC Insurance, etc.) offers similar salary (~₹30,000–₹60,000/month) and career growth without strict bank-specific competition."
+        ]
+      }
+    }
+  ],
+  "prepResources": [
+    {
+      "title": "Official SSC Website – Notifications & Resources",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://ssc.gov.in",
+      "verified": false
+    },
+    {
+      "title": "Official IBPS Website – Calendar & Exam Details",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.ibps.in",
+      "verified": false
+    },
+    {
+      "title": "Official SBI Careers Page",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://sbi.bank.in/web/careers/current-openings",
+      "verified": false
+    },
+    {
+      "title": "Testbook – SSC & Banking Free Courses & Mock Tests",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://testbook.com",
+      "verified": false
+    },
+    {
+      "title": "Adda247 – SSC CHSL Previous Year Papers & Analysis",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.adda247.com/ssc-chsl",
+      "verified": false
+    },
+    {
+      "title": "Physics Wallah Government Exams Playlist (YouTube)",
+      "type": "video",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.youtube.com/@PhysicsWallah",
+      "verified": false
+    },
+    {
+      "title": "Career Power – SSC CHSL & Banking Coaching Online",
+      "type": "free-course",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://www.careerpower.in/ssc-chsl.html",
+      "verified": false
+    },
+    {
+      "title": "RBI Official Website – Banking Policy & News (General Awareness)",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.rbi.org.in",
+      "verified": false
+    }
+  ],
+  "groundingSources": [
+    {
+      "claim": "SSC CHSL notification typically released June yearly; application window approximately June–July; exam schedule July–September (Tier 1) and October–November (Tier 2).",
+      "url": "https://ssc.gov.in",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "SSC CHSL application fee is ₹100 for General/OBC/EWS candidates; exempted for women, SC, ST, PwD, and Ex-Servicemen.",
+      "url": "https://www.pw.live/ssc/exams/ssc-chsl-apply-online",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "SSC CHSL eligibility: Class 12 pass from recognised board; age 18–27 years; age relaxation for SC/ST (5 years), OBC (3 years), PwD, Ex-servicemen as per government rules.",
+      "url": "https://prepp.in/ssc-chsl-exam/eligibility",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "IBPS PO prelims typically held August–September 2026; mains October 2026; salary approximately ₹74,000–₹76,000/month for Probationary Officers.",
+      "url": "https://www.adda247.com/jobs/ibps-po/",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "IBPS PO eligibility: Bachelor's degree any discipline from recognised university; age 20–30 years; no fixed limit on attempts (age-constrained only).",
+      "url": "https://competition.careers360.com/articles/ibps-po-2026",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "SBI PO 2026 notification released 18 June 2026; online registration open 18 June–08 July 2026; 1,500 vacancies for Probationary Officers.",
+      "url": "https://www.careerpower.in/sbi-po.html",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "SBI PO application fee ₹750 for General/OBC; exempted for SC/ST/PwD; salary gross CTC approximately ₹21.97 lakhs per annum.",
+      "url": "https://www.careerpower.in/sbi-po.html",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "IBPS Clerk prelims scheduled October 10–11, 2026; mains December 27, 2026; salary approximately ₹24,000–₹30,000/month.",
+      "url": "https://competition.careers360.com/articles/ibps-clerk-2026",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "SBI Clerk notification expected July–August 2026; previous year (2025) released 6,589 vacancies for Junior Associates.",
+      "url": "https://www.careerpower.in/sbi-clerk.html",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "Government job coaching institutes in India charge fees ranging ₹10,000–₹50,000 for 3–6 month combined SSC/Banking prep courses.",
+      "url": "https://www.studydekho.com/new-delhi/coaching/govt-jobs",
+      "fetchedAt": "2026-06-21"
+    },
+    {
+      "claim": "Commerce stream in Class 11 provides foundational subjects (Accountancy, Business Studies, Economics) beneficial for banking and government job exams.",
+      "url": "https://www.mindgroom.com/blog/stream-selection-in-class-11-a-detailed-look-into-all-3-streams/",
+      "fetchedAt": "2026-06-21"
+    }
+  ],
+  "disclaimers": [
+    "This career path is highly competitive. Lakhs of candidates apply annually for limited vacancies. Success requires consistent, disciplined preparation over 6–12 months minimum.",
+    "Exam dates, fee amounts, age limits, and eligibility criteria are subject to official notification release. Always verify on official SSC (ssc.gov.in), IBPS (ibps.in), and SBI (sbi.bank.in) websites before applying.",
+    "Salary figures (entry and experienced) are indicative and based on 7th Pay Commission norms. Actual in-hand salary varies by location (HRA differs by city), seniority, and allowances. Consult official government salary tables for precise figures.",
+    "Age limit calculations are as of the reference date specified in official notifications (typically 1 January of the exam year). Always re-verify your exact age eligibility in the official notification.",
+    "Banking (IBPS/SBI) exams require bachelor's degree. There is no diploma or certificate pathway into these roles directly from Class 12; formal degree completion (~3–4 years post-Class 12) is mandatory.",
+    "Coaching institutes listed are illustrative. Quality, fee structure, and reputation vary widely. Verify reviews, faculty credentials, and course content before enrolling. Many free resources (YouTube, official websites) are available and equally effective with self-discipline.",
+    "Rules regarding exam attempts, selection process, reservation categories, and age relaxation may change; always consult the official notification PDF released by SSC, IBPS, or SBI for your specific exam cycle.",
+    "This journey assumes continuous, full-time engagement in Class 11, 12, and graduation studies. Working students or those with gaps should adjust timelines accordingly and verify eligibility after any break.",
+    "Postings (location allotment) for government jobs and banks are based on merit, category, zone preference, and organizational requirement. Your choice of posting location is subject to availability and final allotment by the recruiting authority."
+  ]
+}

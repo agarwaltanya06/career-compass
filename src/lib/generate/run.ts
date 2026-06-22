@@ -24,7 +24,7 @@ import {
 import { auditJourney, type AuditResult } from "./audit";
 import { buildCacheKey, cacheFileName } from "./cacheKey";
 import { SYSTEM_PROMPT, buildUserPrompt, type AllowedEntities } from "./prompt";
-import { readVerified, writeCandidate } from "./store";
+import { readVerified, readLatestCandidate, writeCandidate } from "./store";
 import { DEFAULT_CHOICE, FALLBACK_CHOICE, makeProvider } from "./providers";
 import {
   FreeTierLimitError,
@@ -292,12 +292,18 @@ async function generateOnce(
  *   provider is used with NO automatic Anthropic fallback — so a free-tier 429
  *   surfaces as a `GenerateError` with `rateLimited: true` instead of silently
  *   spending the paid key.
+ * @param options.serveExistingCandidate When true (the live route), a verified
+ *   miss first tries the newest queued CANDIDATE and serves it stamped
+ *   "candidate" — so the reviewed seeded journeys back the 20-career catalogue at
+ *   launch without a model call per visit. Left false by the SEED script, which
+ *   must always regenerate to refresh the queue (otherwise re-seeding is a no-op).
  */
 export async function runGeneration(
   profile: GenerationProfile,
   override: ProviderChoice | undefined,
   userKey: string | undefined,
   emit: Emit,
+  options?: { serveExistingCandidate?: boolean },
 ): Promise<GenerateResponseBody> {
   // ---- Cache-first (§4): serve a verified default if we have one. ----
   const cacheKey = buildCacheKey(profile);
@@ -306,6 +312,17 @@ export async function runGeneration(
   const verified = await readVerified(fileName);
   if (verified) {
     return { journey: verified, status: "verified", cacheKey };
+  }
+
+  // ---- Else serve the newest reviewed CANDIDATE if one is queued (live route
+  // only). It's stamped "candidate" so the UI shows the unverified banner, and it
+  // spares a model call per visit at launch. The seed script opts out so it always
+  // regenerates a fresh candidate. ----
+  if (options?.serveExistingCandidate) {
+    const candidate = await readLatestCandidate(fileName);
+    if (candidate) {
+      return { journey: candidate, status: "candidate", cacheKey };
+    }
   }
 
   // ---- Miss → generate behind the provider abstraction. ----
