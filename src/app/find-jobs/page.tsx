@@ -152,19 +152,19 @@ export default function FindJobsPage() {
         ))}
       </ol>
 
-      {/* Scam-safety — deliberately prominent (red border, warning icon). */}
-      <section className="mt-12 rounded-2xl border-2 border-red-300 bg-red-50 p-5">
-        <h2 className="flex items-center gap-2 text-xl font-bold text-red-900">
-          <span aria-hidden>⚠️</span>
+      {/* Scam-safety — kept clear but warm (amber, shield icon), not alarming. */}
+      <section className="mt-12 rounded-2xl border border-amber-200 bg-amber-50 p-5">
+        <h2 className="flex items-center gap-2 text-xl font-bold text-amber-900">
+          <span aria-hidden>🛡️</span>
           {t(`${PREFIX}.scams.heading`)}
         </h2>
-        <p className="mt-2 text-red-900">{t(`${PREFIX}.scams.intro`)}</p>
+        <p className="mt-2 text-stone-700">{t(`${PREFIX}.scams.intro`)}</p>
         <ul className="mt-3 space-y-2">
           {SCAM_RULES.map((rule) => (
-            <li key={rule.lead} className="flex gap-2 text-red-900">
-              <span aria-hidden className="select-none">•</span>
+            <li key={rule.lead} className="flex gap-2 text-stone-700">
+              <span aria-hidden className="select-none text-amber-500">•</span>
               <span>
-                <strong className="font-bold">{rule.lead}</strong>
+                <strong className="font-bold text-stone-900">{rule.lead}</strong>
                 {rule.rest}
               </span>
             </li>
@@ -173,24 +173,24 @@ export default function FindJobsPage() {
       </section>
 
       {/* Quick start. */}
-      <section className="mt-8 rounded-2xl bg-stone-900 p-5 text-stone-50">
-        <span className="font-bold text-amber-300">{t(`${PREFIX}.quickStart.label`)}: </span>
-        <span className="text-stone-200">
+      <section className="mt-8 rounded-2xl border border-orange-200 bg-orange-50 p-5">
+        <span className="font-bold text-orange-800">{t(`${PREFIX}.quickStart.label`)}: </span>
+        <span className="text-stone-700">
           make a{" "}
           <ExternalLink
             href="https://linkedin.com"
-            className="font-semibold text-amber-300 underline underline-offset-2 hover:text-amber-200"
+            className="font-semibold text-orange-700 underline underline-offset-2 hover:text-orange-800"
           >
             LinkedIn
           </ExternalLink>{" "}
-          profile + an{" "}
+          profile, an{" "}
           <ExternalLink
             href="https://internshala.com"
-            className="font-semibold text-amber-300 underline underline-offset-2 hover:text-amber-200"
+            className="font-semibold text-orange-700 underline underline-offset-2 hover:text-orange-800"
           >
             Internshala
           </ExternalLink>{" "}
-          account + a simple CV. That&apos;s enough to begin applying today.
+          account, and a simple CV. That&apos;s enough to start applying today!
         </span>
       </section>
     </div>

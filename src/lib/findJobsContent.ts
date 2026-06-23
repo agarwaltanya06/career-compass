@@ -25,30 +25,30 @@ export interface LeadLine {
 export const AUDIENCE: LeadLine[] = [
   {
     lead: "In school (Class 9–12):",
-    rest: " start a simple CV and a free LinkedIn profile. Some internships are open to you.",
+    rest: " make a simple CV and a free LinkedIn profile. Some internships are open to you too!",
   },
   {
     lead: "Finished Class 12 / ITI / diploma / graduation:",
-    rest: " all the options below are open, including government schemes.",
+    rest: " every option below is open to you, including government schemes.",
   },
 ];
 
 export const INTERNSHIP_LINKS: JobLink[] = [
-  { name: "Internshala", url: "https://internshala.com", desc: "most popular in India for student internships + fresher jobs" },
-  { name: "LinkedIn", url: "https://linkedin.com", desc: "jobs + a free profile that works like an online CV" },
-  { name: "Naukri", url: "https://www.naukri.com", desc: "large job site (use the “fresher” filter)" },
-  { name: "Indeed", url: "https://in.indeed.com", desc: "search many companies at once" },
+  { name: "Internshala", url: "https://internshala.com", desc: "India's most popular site for student internships and fresher jobs" },
+  { name: "LinkedIn", url: "https://linkedin.com", desc: "jobs, plus a free profile that works like an online CV" },
+  { name: "Naukri", url: "https://www.naukri.com", desc: "big job site — use the “fresher” filter" },
+  { name: "Indeed", url: "https://in.indeed.com", desc: "search lots of companies at once" },
 ];
 
 export const GOVERNMENT_LINKS: JobLink[] = [
-  { name: "National Career Service", url: "https://www.ncs.gov.in", desc: "govt portal: jobs + free career counselling" },
+  { name: "National Career Service", url: "https://www.ncs.gov.in", desc: "government site: jobs and free career help" },
   {
     name: "PM Internship Scheme",
     url: "https://pminternship.mca.gov.in",
-    desc: "paid internships at big companies (mostly after school/college)",
-    note: "Use only this official site. Check it for current rules.",
+    desc: "paid internships at big companies (mostly after school or college)",
+    note: "Use only this official site. Check it for the latest rules.",
   },
-  { name: "Apprenticeships — NAPS", url: "https://www.apprenticeshipindia.gov.in", desc: "“earn while you learn”, good for ITI/diploma/degree" },
+  { name: "Apprenticeships — NAPS", url: "https://www.apprenticeshipindia.gov.in", desc: "earn while you learn — good for ITI, diploma or degree" },
 ];
 
 /** Government-jobs portals (rendered inline, separated by · ). */
@@ -73,33 +73,33 @@ export interface ApplyStep {
 
 export const APPLY_STEPS: ApplyStep[] = [
   { text: "Make a CV", see: { label: "CV Templates page", href: "/cv-templates" } },
-  { text: "Create accounts — start with Internshala + LinkedIn. Fill the profile fully." },
-  { text: "Search with filters — location, “fresher” / “internship”, your field." },
-  { text: "Apply to many, not just one. No reply ≠ failure. It's a numbers game." },
-  { text: "Add a short message if allowed — 2–3 honest lines on why you're interested." },
+  { text: "Make accounts on Internshala and LinkedIn. Fill in the whole profile." },
+  { text: "Use filters to search — your city, “fresher” or “internship”, your field." },
+  { text: "Apply to many, not just one. No reply doesn't mean you failed — keep going!" },
+  { text: "Add a short note if you can — 2–3 honest lines on why you want the job." },
   { text: "Track where and when you applied." },
   { text: "Prepare for the interview", see: { label: "Interview Prep", href: "/interview-prep" } },
 ];
 
 export const SCAM_RULES: LeadLine[] = [
   {
-    lead: "Never pay to get a job.",
-    rest: " Any “registration fee”, “deposit”, or “₹X for a guaranteed job” = scam. Real employers pay you. Government schemes are free.",
+    lead: "Don't pay to get a job.",
+    rest: " A “registration fee”, “deposit”, or “₹X for a sure job” is a scam. Real employers pay you. Government schemes are free.",
   },
   {
-    lead: "Never share",
+    lead: "Don't share",
     rest: " your bank password, OTP, or full bank details.",
   },
   {
-    lead: "“Too good to be true” = fake",
-    rest: " — huge pay for little work, instant offers with no interview.",
+    lead: "Sounds too good to be true?",
+    rest: " Big pay for little work, or an offer with no interview — that's usually fake.",
   },
   {
-    lead: "Check the address",
-    rest: " — real government sites end in .gov.in or .nic.in. Type it yourself; don't trust forwarded links.",
+    lead: "Check the web address",
+    rest: " — real government sites end in .gov.in or .nic.in. Type it yourself instead of trusting forwarded links.",
   },
   {
-    lead: "Unsure?",
-    rest: " Slow down, ask a teacher or trusted adult. A real opportunity will still be there tomorrow.",
+    lead: "Not sure?",
+    rest: " Slow down and ask a teacher or someone you trust. A real chance will still be there tomorrow.",
   },
 ];

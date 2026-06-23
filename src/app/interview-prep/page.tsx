@@ -74,8 +74,6 @@ export default function InterviewPrepPage() {
             “{boldParens(t(`${PREFIX}.method.example`))}”
           </blockquote>
         </figure>
-
-        <p className="mt-4 text-stone-700">{t(`${PREFIX}.method.outro`)}</p>
       </section>
 
       {/* Common questions — a flat, scannable list. */}
@@ -130,9 +128,9 @@ export default function InterviewPrepPage() {
       </ul>
 
       {/* Closing reassurance. */}
-      <section className="mt-12 rounded-2xl bg-stone-900 p-5 text-stone-50">
-        <span className="font-bold text-amber-300">{t(`${PREFIX}.remember.heading`)}</span>{" "}
-        <span className="text-stone-200">{t(`${PREFIX}.remember.body`)}</span>
+      <section className="mt-12 rounded-2xl border border-orange-200 bg-orange-50 p-5">
+        <span className="font-bold text-orange-800">{t(`${PREFIX}.remember.heading`)}</span>{" "}
+        <span className="text-stone-700">{t(`${PREFIX}.remember.body`)}</span>
       </section>
     </div>
   );

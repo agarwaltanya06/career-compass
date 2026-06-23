@@ -33,7 +33,7 @@ export const QUESTIONS: InterviewQA[] = [
     q: "“What is your weakness?”",
     a: "Name a real, fixable one, plus what you're doing about it.",
     eg: "I get nervous presenting, so I now volunteer to speak in class.",
-    note: "Never say “I have none.”",
+    note: "Don't say “I have none.”",
   },
   {
     q: "“Why do you want this internship/job?”",
@@ -60,13 +60,13 @@ export const QUESTIONS: InterviewQA[] = [
   },
   {
     q: "“What do you know about us?”",
-    a: "This is why you research the company for 10 minutes before the interview.",
+    a: "Spend 10 minutes reading about the company before you go.",
   },
   {
     q: "“Do you have any questions for us?”",
-    a: "Always say yes.",
+    a: "Say yes!",
     eg: "What would I do day to day?” or “What will I learn here?",
-    note: "Never say “no questions.”",
+    note: "Don't say “no questions.”",
   },
 ];
 
@@ -92,7 +92,7 @@ export const TIP_GROUPS: InterviewTipGroup[] = [
       "Greet politely, sit up, make eye contact.",
       "Listen fully. Pausing to think is fine.",
       "Don't understand? Ask them to repeat.",
-      "Be honest: “I haven't done that yet, but I'd like to learn.” Never make things up.",
+      "Be honest: “I haven't done that yet, but I'd like to learn.” Don't make things up.",
       "English is hard? Speak slowly, or ask if you can answer in Hindi.",
     ],
   },

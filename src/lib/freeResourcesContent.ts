@@ -33,19 +33,19 @@ export const RESOURCES: Resource[] = [
   {
     title: "Khan Academy",
     url: "https://www.khanacademy.org",
-    desc: "Maths, science and more — free videos + practice.",
+    desc: "Maths, science and more — free videos and practice.",
     tags: ["school", "boards", "jeeNeet"],
   },
   {
     title: "NCERT textbooks",
     url: "https://ncert.nic.in/textbook.php",
-    desc: "Official books, free to download — the core of most board exams.",
+    desc: "Official books, free to download — the base of most board exams.",
     tags: ["school", "boards"],
   },
   {
     title: "DIKSHA",
     url: "https://diksha.gov.in",
-    desc: "Government school platform — many subjects & languages, board-aligned.",
+    desc: "Government school app — many subjects and languages, matched to your board.",
     tags: ["school", "boards"],
   },
   {
@@ -57,25 +57,25 @@ export const RESOURCES: Resource[] = [
   {
     title: "Physics Wallah (free YouTube)",
     url: "https://www.youtube.com/@PhysicsWallah",
-    desc: "Popular low-cost / free entrance-exam prep.",
+    desc: "Popular free entrance-exam prep.",
     tags: ["jeeNeet"],
   },
   {
     title: "NEET official site",
     url: "https://neet.nta.nic.in",
-    desc: "Syllabus, past papers and exam information.",
+    desc: "Syllabus, past papers and exam info.",
     tags: ["jeeNeet"],
   },
   {
     title: "JEE Main official site",
     url: "https://jeemain.nta.nic.in",
-    desc: "Syllabus, dates and exam information.",
+    desc: "Syllabus, dates and exam info.",
     tags: ["jeeNeet"],
   },
   {
     title: "SWAYAM",
     url: "https://swayam.gov.in",
-    desc: "Free government online courses, with certificates — incl. IT & computing.",
+    desc: "Free government online courses with certificates — including IT and computing.",
     tags: ["college", "digital"],
   },
   {

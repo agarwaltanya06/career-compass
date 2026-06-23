@@ -38,19 +38,19 @@
   },
   "home": {
     "heroTitle": "What do you want to do after school? 🤔",
-    "heroSubtitle": "Get a step-by-step plan towards the career you want — colleges, exams, costs and timelines, all in one place!",
+    "heroSubtitle": "Get a step-by-step plan for the career you want — colleges, exams, costs and dates, all in one place!",
     "ctaStart": "Start my journey",
     "ctaSample": "See a sample journey",
     "featuresTitle": "",
     "feature1Title": "A step-by-step timeline",
-    "feature1Body": "Every milestone in order — which class, which exam, which year.",
+    "feature1Body": "Every step in order — which class, which exam, which year.",
     "feature2Title": "Colleges & exams you can filter",
-    "feature2Body": "Compare options and filter them by cost: free, low, mid or high.",
-    "feature3Title": "Always verify-first",
-    "feature3Body": "Check specific links to the official sites to confirm.",
+    "feature2Body": "Compare your options and sort them by cost: free, low, mid or high.",
+    "feature3Title": "Check before you trust",
+    "feature3Body": "We link to the official site so you can confirm everything yourself.",
     "exploreTitle": "Already know what you need?",
-    "exploreBody": "Browse our free guides anytime.",
-    "disclaimer": "Dates, fees and eligibility change every year. Always confirm on official links before acting!"
+    "exploreBody": "Browse our free guides.",
+    "disclaimer": "Dates, fees and rules change every year. Check the official site before you act!"
   },
   "intake": {
     "title": "Let's build your journey!",
@@ -248,41 +248,41 @@
   "static": {
     "cvTemplates": {
       "title": "CV / Resume Templates",
-      "intro": "Free, simple résumé tools for students and first-time job seekers — fill in a quick form to make your CV, or download a blank template to complete yourself. No work experience needed.",
+      "intro": "Free, simple CV tools for students. Fill in a short form to make your CV, or download a blank one to fill in yourself. No work experience needed!",
       "quickTitle": "Quickly make my CV",
-      "quickIntro": "Fill in the boxes and download a finished CV with your details. Choose Word to keep editing it, or PDF to send as-is. Any boxes you leave empty are simply left out.",
+      "quickIntro": "Fill in the boxes and download your finished CV. Pick Word to keep editing it, or PDF to send as-is. Empty boxes are left out.",
       "quickPickLabel": "Pick a template",
       "quickDownloadWord": "Download as Word",
       "quickDownloadPdf": "Download as PDF",
       "privacyNote": "Everything you type stays on your device — nothing is uploaded or saved.",
       "blankTitle": "Prefer a blank template?",
-      "blankIntro": "Download a clean, one-page template and fill it in your own way — as an editable Word file, or a plain text file that opens on any phone.",
+      "blankIntro": "Download a clean, one-page template and fill it in your own way. Get a Word file you can edit, or a text file that opens on any phone.",
       "guideLabel": "How to fill this in",
       "downloadWordLabel": "Download Word (.doc)",
       "downloadTxtLabel": "Download text (.txt)",
       "templates": {
         "student-no-experience": {
           "name": "Student CV — no work experience",
-          "guide": "Start with your name and how to reach you at the top. You don't need any job experience — school, projects and activities all count. Under Education, put your most recent school or college first. In Projects & activities, list things you've actually done — a class project, a poster you made, helping at a family shop, a sports team — and write one short line on what you did. Under Skills, add the languages you speak and any computer or practical skills. Keep it to one page and use plain, simple words."
+          "guide": "Put your name and contact details at the top. You don't need job experience — school, projects and activities all count. List your latest school or college first. Under Projects & activities, write things you've really done — a class project, a poster, helping at a family shop, a sports team — one short line each. Under Skills, add the languages you speak and any computer or practical skills. Keep it to one page. Use simple words."
         },
         "first-internship": {
           "name": "First internship CV",
-          "guide": "This one is for your first internship or part-time role. Put your contact details at the top, then a short two-line About me saying what you're studying and the kind of internship you want — change these two lines for each company you apply to. List your education with the latest first. Under Experience add any work, volunteering or freelance task (even unpaid) with one line on what you did and what changed because of it. Use Projects for course or personal work and Skills for tools and languages. Keep it to one page and save it as a PDF before applying."
+          "guide": "This one is for your first internship or part-time job. Put your contact details at the top. Add a two-line About me: what you're studying and the internship you want. Change these two lines for each company. List your education, latest first. Under Experience, add any work, volunteering or freelance task — even unpaid — with one line on what you did. Use Projects for course or personal work, and Skills for tools and languages. Keep it to one page and save it as a PDF before applying."
         }
       },
       "buildersTitle": "Free CV builders",
-      "buildersIntro": "Prefer to build it on screen? These tools are well-known and free to use:",
+      "buildersIntro": "Prefer to build it on screen? These tools are free to use:",
       "builders": {
         "googleDocs": "Free with any Google account — open Google Docs, choose Template gallery, then a Resume template. Download as PDF.",
-        "canva": "Free templates you fill in by clicking. A free account lets you download your résumé as a PDF.",
-        "flowcv": "Clean templates you fill in online, with a free PDF download — no payment to export.",
+        "canva": "Free templates you fill in by clicking. A free account lets you download your CV as a PDF.",
+        "flowcv": "Clean templates you fill in online. Free PDF download — no payment to export.",
         "indeed": "Build a résumé on Indeed and apply to jobs with it. Free to create and download."
       },
-      "buildersAvoid": "Some sites let you build for free but charge to download the PDF — usually after you've spent 30–60 minutes. Before you start, confirm the download is free."
+      "buildersAvoid": "Some sites let you build for free, then charge you to download the PDF. Check that the download is free before you start."
     },
     "freeResources": {
       "title": "Free Learning Resources",
-      "intro": "All free. Find what you need by what it's for — tap a filter below.",
+      "intro": "All free! Tap a filter to find what you need.",
       "filterLabel": "Filter resources by need",
       "all": "All",
       "tags": {
@@ -298,7 +298,7 @@
     },
     "interviewPrep": {
       "title": "Interview Prep",
-      "intro": "Your first interview feels scary — that's normal. Nobody expects a student to be perfect. They want to see that you're honest, willing to learn, and a little prepared. You can prepare for almost everything below.",
+      "intro": "Your first interview feels scary — that's normal! Nobody expects a student to be perfect. They just want to see that you're honest, keen to learn, and a little prepared. You can get ready for almost everything below.",
       "method": {
         "heading": "How to answer most questions",
         "intro": "When asked “tell me about a time you…”, use 3 steps:",
@@ -310,8 +310,7 @@
         ],
         "exampleLabel": "Example",
         "exampleQ": "“Tell me about a time you worked in a team.”",
-        "example": "Our class had to organise a fundraiser (situation). I was put in charge of collecting and tracking the money (action). We raised ₹8,000 and I made sure every rupee was accounted for (result).",
-        "outro": "That's it. No fancy words needed."
+        "example": "Our class had to organise a fundraiser (situation). I was put in charge of collecting and tracking the money (action). We raised ₹8,000 and I made sure every rupee was accounted for (result)."
       },
       "questions": {
         "heading": "Common questions"
@@ -327,14 +326,14 @@
       },
       "remember": {
         "heading": "Remember:",
-        "body": "honest + willing to learn + a little prepared beats “perfect” every time."
+        "body": "being honest and keen to learn is more important than being “perfect”. Just relax and give it your best!"
       }
     },
     "findJobs": {
       "title": "Find Jobs & Internships",
-      "intro": "Not knowing where to look is the biggest hurdle. Here's where to search, how to apply, and how to avoid scams.",
+      "intro": "Don't know where to start? Here's where to look, how to apply, and how to stay safe.",
       "audience": {
-        "heading": "Which fits you now?"
+        "heading": "Which one is you right now?"
       },
       "where": {
         "heading": "Where to look",
@@ -350,8 +349,8 @@
         "see": "see"
       },
       "scams": {
-        "heading": "Staying safe from scams",
-        "intro": "Fake “jobs” target young first-time seekers. These rules stop almost all of them:"
+        "heading": "Stay safe from fake jobs",
+        "intro": "Some fake “jobs” go after students looking for their first job. A few quick checks keep you safe:"
       },
       "quickStart": {
         "label": "Quick start"
@@ -359,12 +358,12 @@
     },
     "planItYourself": {
       "title": "Plan It Yourself",
-      "intro": "No ready-made match for you yet? Use this blank plan and the short guide below to research any career on your own!",
+      "intro": "No ready-made plan for you yet? Use this blank plan and the short guide below to research any career yourself!",
       "templateTitle": "Your blank plan",
-      "templateIntro": "Fill each step in for the career you have in mind.",
-      "downloadNote": "Print or Save as PDF — your downloaded plan includes everything you've typed below.",
+      "templateIntro": "Fill in each step for the career you have in mind.",
+      "downloadNote": "Print or Save as PDF — your plan includes everything you type below.",
       "monthlyTitle": "Your next 12 months",
-      "monthlyIntro": "Block out one or two things to do each month — an exam to register for, a skill to build, someone to talk to.",
+      "monthlyIntro": "Pick one or two things to do each month — an exam to sign up for, a skill to build, someone to talk to.",
       "monthlyPlaceholder": "What will you do this month?",
       "templateSteps": [
         "The career I want:",
@@ -377,15 +376,15 @@
       "guideTitle": "How to research any career on your own",
       "guideSteps": [
         "Search the career plus \"official\" to find the governing body or institute.",
-        "Find the real website — prefer .gov.in, .org, or the named institute's own domain.",
+        "Find the real website — look for .gov.in, .org, or the institute's own site.",
         "Look for the \"admissions\" or \"apply\" page; that's where real dates and fees live.",
-        "Sanity-check fees against a second source — if one number looks too low or too high, dig deeper.",
-        "Never pay an \"agent\" for an application you can submit yourself for free."
+        "Check the fees against a second source. If a number looks too low or too high, dig deeper.",
+        "Don't pay an \"agent\" for something you can do yourself for free."
       ]
     }
   },
   "footer": {
-    "rights": "A free, public-good tool. Always verify specifics on official sites.",
+    "rights": "A free career guide for Indian students. Check official sites for exam dates and fees.",
     "diy": "Plan it yourself"
   }
 }
