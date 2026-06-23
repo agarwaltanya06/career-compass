@@ -100,7 +100,7 @@ function toProfile(seed: SeedProfile, currentDate: string): GenerationProfile {
 async function generateOnGemini(profile: GenerationProfile): Promise<GenerateResponseBody> {
   for (let attempt = 0; ; attempt++) {
     try {
-      return await runGeneration(profile, GEMINI, undefined, () => {});
+      return await runGeneration(profile, GEMINI, () => {});
     } catch (err) {
       const rateLimited = err instanceof GenerateError && err.rateLimited;
       if (rateLimited && attempt < RETRY_BACKOFFS_MS.length) {
@@ -129,7 +129,7 @@ async function generateProfile(profile: GenerationProfile): Promise<string> {
     const why = err instanceof Error ? err.message : String(err);
     console.log(`      ⚠ Gemini exhausted (${why}) — falling back to Haiku`);
   }
-  const res = await runGeneration(profile, ANTHROPIC, undefined, () => {});
+  const res = await runGeneration(profile, ANTHROPIC, () => {});
   return res.generatedBy?.provider ?? "anthropic";
 }
 

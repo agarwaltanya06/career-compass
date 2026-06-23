@@ -8,10 +8,11 @@
  *      UI shows the unverified banner) — this backs the launch catalogue without
  *      a model call per visit.
  *   3. On a full miss (no verified default and no candidate yet), call the model
- *      behind the provider abstraction — Gemini's
- *      grounded free tier by default, falling back to Anthropic Haiku when the
- *      free tier is exhausted or unconfigured (§5). A per-request override lets
- *      a user pick a different provider/model or supply their own key.
+ *      behind the provider abstraction — Gemini's grounded free tier by default,
+ *      falling back to Anthropic Haiku when the free tier is exhausted or
+ *      unconfigured (§5). There is ONE path for everyone: no per-request model
+ *      picker, no bring-your-own-key. If both providers fail, the error carries a
+ *      copyable, pre-filled prompt the user can paste into any free AI tool.
  *   4. Validate the response against the Journey type; retry once on a parse
  *      failure, then a friendly error.
  *   5. Compute the timeline in code, not the model: the model emits relative
@@ -25,11 +26,11 @@
 
 import { NextResponse } from "next/server";
 import { slugifyCareer } from "@/lib/generate/cacheKey";
+import { buildExternalPrompt } from "@/lib/generate/externalPrompt";
 import { runGeneration, GenerateError } from "@/lib/generate/run";
 import type {
   GenerateRequestBody,
   GenerationProfile,
-  ProviderChoice,
 } from "@/lib/generate/types";
 
 // fs access requires the Node runtime; this route is always dynamic.
@@ -43,8 +44,44 @@ export const maxDuration = 300;
 /** The intake sentinel for "Not sure — help me explore" (see lib/intake.ts). */
 const EXPLORE_GOAL = "__explore__";
 
-function jsonError(message: string, status: number) {
-  return NextResponse.json({ error: message }, { status });
+// ---- Best-effort rate limit for the "Regenerate" (force-fresh) path ----------
+// Regeneration is open to everyone — no login — but each one spends a real model
+// call, so we cap how often one client can force a fresh draft. This is an
+// in-memory sliding window: it protects a warm instance from button-spamming, and
+// the upstream free-tier quota (→ friendly busy message) is the real global cap.
+const REFRESH_WINDOW_MS = 10 * 60 * 1000; // 10 minutes
+const REFRESH_MAX = 5; // per client per window
+const refreshHits = new Map<string, number[]>();
+
+/** Identify the client as best we can behind a proxy; "unknown" shares one bucket. */
+function clientKey(request: Request): string {
+  const fwd = request.headers.get("x-forwarded-for");
+  if (fwd) return fwd.split(",")[0].trim();
+  return request.headers.get("x-real-ip")?.trim() || "unknown";
+}
+
+/** Record a refresh hit and report whether this client is now over the limit. */
+function refreshRateLimited(request: Request): boolean {
+  const key = clientKey(request);
+  const now = Date.now();
+  // Opportunistically sweep stale clients so the map can't grow unbounded on a
+  // long-lived instance (cheap; only when it's gotten large).
+  if (refreshHits.size > 2000) {
+    for (const [k, hits] of refreshHits) {
+      if (hits.every((t) => now - t >= REFRESH_WINDOW_MS)) refreshHits.delete(k);
+    }
+  }
+  const recent = (refreshHits.get(key) ?? []).filter((t) => now - t < REFRESH_WINDOW_MS);
+  recent.push(now);
+  refreshHits.set(key, recent);
+  return recent.length > REFRESH_MAX;
+}
+
+function jsonError(message: string, status: number, externalPrompt?: string) {
+  return NextResponse.json(
+    externalPrompt ? { error: message, externalPrompt } : { error: message },
+    { status },
+  );
 }
 
 /** Read the minimal, name-free profile out of an arbitrary request body. */
@@ -69,18 +106,6 @@ function readProfile(raw: unknown): GenerationProfile | null {
   };
 }
 
-function readChoice(raw: unknown): ProviderChoice | undefined {
-  if (typeof raw !== "object" || raw === null) return undefined;
-  const m = raw as Record<string, unknown>;
-  if (m.provider === "gemini" || m.provider === "anthropic") {
-    return {
-      provider: m.provider,
-      model: typeof m.model === "string" && m.model.trim() ? m.model.trim() : undefined,
-    };
-  }
-  return undefined;
-}
-
 export async function POST(request: Request) {
   let body: GenerateRequestBody;
   try {
@@ -100,21 +125,40 @@ export async function POST(request: Request) {
     );
   }
 
-  const override = readChoice(body.model);
-  const userKey = typeof body.apiKey === "string" ? body.apiKey : undefined;
+  // Force-fresh "Regenerate": bypass the cache and run the model. Open to all, but
+  // rate-limited (each one is a real model call). On limit, hand back the same
+  // friendly busy message + copyable prompt the both-providers-failed path uses.
+  const forceFresh = body.refresh === true;
+  if (forceFresh && refreshRateLimited(request)) {
+    return jsonError(
+      "You've regenerated a few times just now. Please wait a little before trying again.",
+      429,
+      buildExternalPrompt({
+        career: profile.career,
+        classCode: profile.class,
+        board: profile.board,
+        stream: profile.stream,
+        locale: profile.locale,
+      }),
+    );
+  }
 
   // Stream progress when the client asks for it (intake flow); otherwise return
-  // a single JSON body (back-compat for any plain caller).
+  // a single JSON body (back-compat for any plain caller). Everyone gets the same
+  // pipeline — no per-request model/key override is read from the body.
   const wantsStream = (request.headers.get("accept") ?? "").includes("text/event-stream");
 
   if (!wantsStream) {
     try {
-      const result = await runGeneration(profile, override, userKey, () => {}, {
+      const result = await runGeneration(profile, undefined, () => {}, {
         serveExistingCandidate: true,
+        forceFresh,
       });
       return NextResponse.json(result);
     } catch (err) {
-      if (err instanceof GenerateError) return jsonError(err.message, err.status);
+      if (err instanceof GenerateError) {
+        return jsonError(err.message, err.status, err.externalPrompt);
+      }
       return jsonError("Couldn't generate a plan right now. Please try again.", 502);
     }
   }
@@ -125,8 +169,9 @@ export async function POST(request: Request) {
       const send = (event: unknown) =>
         controller.enqueue(encoder.encode(`data: ${JSON.stringify(event)}\n\n`));
       try {
-        const result = await runGeneration(profile, override, userKey, send, {
+        const result = await runGeneration(profile, undefined, send, {
           serveExistingCandidate: true,
+          forceFresh,
         });
         send({ type: "result", ...result });
       } catch (err) {
@@ -134,7 +179,13 @@ export async function POST(request: Request) {
           err instanceof GenerateError
             ? err.message
             : "Couldn't generate a plan right now. Please try again.";
-        send({ type: "error", message });
+        const externalPrompt =
+          err instanceof GenerateError ? err.externalPrompt : undefined;
+        send(
+          externalPrompt
+            ? { type: "error", message, externalPrompt }
+            : { type: "error", message },
+        );
       } finally {
         controller.close();
       }

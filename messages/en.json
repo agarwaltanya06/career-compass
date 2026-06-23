@@ -29,6 +29,13 @@
     "comingSoon": "Content coming soon",
     "comingSoonNote": "This page is a placeholder for now — real content will be added here."
   },
+  "copyPrompt": {
+    "copy": "Copy prompt",
+    "copied": "Copied!",
+    "openAi": "Search on Google",
+    "aria": "Career plan prompt to copy",
+    "hint": "Tip: copy the prompt and paste it into a free AI chatbot (Gemini, ChatGPT, Copilot) for the best answer — a long prompt can get cut short if you only open the Google link. Always double-check exam dates and fees on the official websites."
+  },
   "home": {
     "heroTitle": "What do you want to do after school? 🤔",
     "heroSubtitle": "Get a step-by-step plan towards the career you want — colleges, exams, costs and timelines, all in one place!",
@@ -42,7 +49,7 @@
     "feature3Title": "Always verify-first",
     "feature3Body": "Check specific links to the official sites to confirm.",
     "exploreTitle": "Already know what you need?",
-    "exploreBody": "Browse free guides without signing in.",
+    "exploreBody": "Browse our free guides anytime.",
     "disclaimer": "Dates, fees and eligibility change every year. Always confirm on official links before acting!"
   },
   "intake": {
@@ -132,6 +139,8 @@
       "errorTitle": "Something went wrong",
       "retry": "Try again",
       "startOver": "Start over",
+      "promptTitle": "Get your plan from a free AI tool instead",
+      "promptLead": "Copy this ready-made prompt and paste it into any free AI chatbot — or search it on Google. Your career and class are already filled in.",
       "fallbackLead": "No need to wait — you can still plan this yourself. Our step-by-step guide shows how to research any career and check the dates, fees, and eligibility on the official websites.",
       "fallbackCta": "Open the plan-it-yourself guide"
     }
@@ -160,7 +169,10 @@
       "copyLink": "Copy link",
       "copied": "Link copied!",
       "copyManual": "Copy this link to bookmark or share your plan:",
-      "downloadPdf": "Download as PDF"
+      "downloadPdf": "Download as PDF",
+      "regenerate": "Regenerate",
+      "copyPrompt": "Copy this plan's prompt",
+      "copyPromptLead": "Paste this into any free AI chatbot, or search it on Google, to regenerate this plan or dig deeper — your career and class are already filled in."
     },
     "notFound": {
       "title": "This plan is being refreshed",
@@ -236,43 +248,118 @@
   "static": {
     "cvTemplates": {
       "title": "CV / Resume Templates",
-      "intro": "Fill-in-the-blank CV templates you can copy, complete, and print.",
-      "items": [
-        "Fresher / first-job CV (one page)",
-        "Internship application CV",
-        "Skills-first CV for career switchers"
-      ]
+      "intro": "Free, simple résumé tools for students and first-time job seekers — fill in a quick form to make your CV, or download a blank template to complete yourself. No work experience needed.",
+      "quickTitle": "Quickly make my CV",
+      "quickIntro": "Fill in the boxes and download a finished CV with your details. Choose Word to keep editing it, or PDF to send as-is. Any boxes you leave empty are simply left out.",
+      "quickPickLabel": "Pick a template",
+      "quickDownloadWord": "Download as Word",
+      "quickDownloadPdf": "Download as PDF",
+      "privacyNote": "Everything you type stays on your device — nothing is uploaded or saved.",
+      "blankTitle": "Prefer a blank template?",
+      "blankIntro": "Download a clean, one-page template and fill it in your own way — as an editable Word file, or a plain text file that opens on any phone.",
+      "guideLabel": "How to fill this in",
+      "downloadWordLabel": "Download Word (.doc)",
+      "downloadTxtLabel": "Download text (.txt)",
+      "templates": {
+        "student-no-experience": {
+          "name": "Student CV — no work experience",
+          "guide": "Start with your name and how to reach you at the top. You don't need any job experience — school, projects and activities all count. Under Education, put your most recent school or college first. In Projects & activities, list things you've actually done — a class project, a poster you made, helping at a family shop, a sports team — and write one short line on what you did. Under Skills, add the languages you speak and any computer or practical skills. Keep it to one page and use plain, simple words."
+        },
+        "first-internship": {
+          "name": "First internship CV",
+          "guide": "This one is for your first internship or part-time role. Put your contact details at the top, then a short two-line About me saying what you're studying and the kind of internship you want — change these two lines for each company you apply to. List your education with the latest first. Under Experience add any work, volunteering or freelance task (even unpaid) with one line on what you did and what changed because of it. Use Projects for course or personal work and Skills for tools and languages. Keep it to one page and save it as a PDF before applying."
+        }
+      },
+      "buildersTitle": "Free CV builders",
+      "buildersIntro": "Prefer to build it on screen? These tools are well-known and free to use:",
+      "builders": {
+        "googleDocs": "Free with any Google account — open Google Docs, choose Template gallery, then a Resume template. Download as PDF.",
+        "canva": "Free templates you fill in by clicking. A free account lets you download your résumé as a PDF.",
+        "flowcv": "Clean templates you fill in online, with a free PDF download — no payment to export.",
+        "indeed": "Build a résumé on Indeed and apply to jobs with it. Free to create and download."
+      },
+      "buildersAvoid": "Some sites let you build for free but charge to download the PDF — usually after you've spent 30–60 minutes. Before you start, confirm the download is free."
     },
     "freeResources": {
-      "title": "Free Resources",
-      "intro": "A curated list of free videos and courses to learn the skills your career needs.",
-      "items": [
-        "Free video lectures for common entrance exams",
-        "Beginner online courses (no fee)",
-        "Official government skilling portals"
-      ]
+      "title": "Free Learning Resources",
+      "intro": "All free. Find what you need by what it's for — tap a filter below.",
+      "filterLabel": "Filter resources by need",
+      "all": "All",
+      "tags": {
+        "school": "School subjects",
+        "boards": "Board exams",
+        "jeeNeet": "JEE / NEET",
+        "college": "College courses",
+        "english": "Spoken English",
+        "digital": "Digital skills"
+      },
+      "tipLabel": "Tip",
+      "tip": "Most of these work on a basic phone. Start with one, not ten."
     },
     "interviewPrep": {
       "title": "Interview Prep",
-      "intro": "Common behavioural questions and simple frameworks for answering them with confidence.",
-      "items": [
-        "\"Tell me about yourself\" — how to structure it",
-        "Strengths and weaknesses without clichés",
-        "Questions to ask the interviewer"
-      ]
+      "intro": "Your first interview feels scary — that's normal. Nobody expects a student to be perfect. They want to see that you're honest, willing to learn, and a little prepared. You can prepare for almost everything below.",
+      "method": {
+        "heading": "How to answer most questions",
+        "intro": "When asked “tell me about a time you…”, use 3 steps:",
+        "steps": ["Situation", "Action", "Result"],
+        "stepHints": [
+          "What was happening?",
+          "What did you do? (Say “I”, not “we”.)",
+          "What happened in the end?"
+        ],
+        "exampleLabel": "Example",
+        "exampleQ": "“Tell me about a time you worked in a team.”",
+        "example": "Our class had to organise a fundraiser (situation). I was put in charge of collecting and tracking the money (action). We raised ₹8,000 and I made sure every rupee was accounted for (result).",
+        "outro": "That's it. No fancy words needed."
+      },
+      "questions": {
+        "heading": "Common questions"
+      },
+      "tips": {
+        "heading": "Before · During · After",
+        "before": "Before",
+        "during": "During",
+        "after": "After"
+      },
+      "resources": {
+        "heading": "Free practice resources"
+      },
+      "remember": {
+        "heading": "Remember:",
+        "body": "honest + willing to learn + a little prepared beats “perfect” every time."
+      }
     },
     "findJobs": {
       "title": "Find Jobs & Internships",
-      "intro": "Trusted portals to find internships and jobs, plus a step-by-step guide to applying.",
-      "items": [
-        "Where to look for internships",
-        "How to apply on a job portal, step by step",
-        "Spotting and avoiding job scams"
-      ]
+      "intro": "Not knowing where to look is the biggest hurdle. Here's where to search, how to apply, and how to avoid scams.",
+      "audience": {
+        "heading": "Which fits you now?"
+      },
+      "where": {
+        "heading": "Where to look",
+        "internships": "Internships & first jobs",
+        "government": "Free government options",
+        "sarkari": "Government jobs (sarkari naukri)",
+        "portals": "Portals",
+        "exams": "Exam bodies",
+        "statePsc": "your state PSC"
+      },
+      "apply": {
+        "heading": "How to apply",
+        "see": "see"
+      },
+      "scams": {
+        "heading": "Staying safe from scams",
+        "intro": "Fake “jobs” target young first-time seekers. These rules stop almost all of them:"
+      },
+      "quickStart": {
+        "label": "Quick start"
+      }
     },
     "planItYourself": {
       "title": "Plan It Yourself",
-      "intro": "No login and no ready-made match for you yet? Use this blank plan and the short guide below to research any career on your own!",
+      "intro": "No ready-made match for you yet? Use this blank plan and the short guide below to research any career on your own!",
       "templateTitle": "Your blank plan",
       "templateIntro": "Fill each step in for the career you have in mind.",
       "downloadNote": "Print or Save as PDF — your downloaded plan includes everything you've typed below.",

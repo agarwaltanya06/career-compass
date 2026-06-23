@@ -23,6 +23,7 @@ import {
 } from "@/lib/referenceTables";
 import { auditJourney, type AuditResult } from "./audit";
 import { buildCacheKey, cacheFileName } from "./cacheKey";
+import { buildExternalPrompt } from "./externalPrompt";
 import { SYSTEM_PROMPT, buildUserPrompt, type AllowedEntities } from "./prompt";
 import { readVerified, readLatestCandidate, writeCandidate } from "./store";
 import { DEFAULT_CHOICE, FALLBACK_CHOICE, makeProvider } from "./providers";
@@ -45,14 +46,22 @@ export class GenerateError extends Error {
    * (the original error is preserved as `cause`).
    */
   readonly rateLimited: boolean;
+  /**
+   * A friendly, pre-filled prompt the user can paste into Google's AI Mode or any
+   * free AI tool to generate their own plan. Set when a model run failed (so the
+   * UI can offer a real way forward instead of a dead end). Mutable so the
+   * pipeline can stamp it onto an error raised deeper in the call stack.
+   */
+  externalPrompt?: string;
   constructor(
     message: string,
     status: number,
-    options?: { rateLimited?: boolean; cause?: unknown },
+    options?: { rateLimited?: boolean; cause?: unknown; externalPrompt?: string },
   ) {
     super(message);
     this.status = status;
     this.rateLimited = options?.rateLimited ?? false;
+    this.externalPrompt = options?.externalPrompt;
     if (options?.cause !== undefined) this.cause = options.cause;
     this.name = "GenerateError";
   }
@@ -263,7 +272,10 @@ async function generateOnce(
         journey = await attempt(fallback, systemPrompt, userPrompt, tableArg);
         if (!journey) journey = await attempt(fallback, systemPrompt, userPrompt, tableArg);
       } catch {
-        throw new GenerateError("Couldn't generate a plan right now. Please try again.", 502);
+        throw new GenerateError(
+          "Our free plan generator is busy right now. Please try again in a little while.",
+          502,
+        );
       }
     } else {
       // No fallback (e.g. an explicit provider override): surface the cause so a
@@ -291,37 +303,44 @@ async function generateOnce(
  * @param override When set (e.g. the seed script forcing Gemini), this exact
  *   provider is used with NO automatic Anthropic fallback — so a free-tier 429
  *   surfaces as a `GenerateError` with `rateLimited: true` instead of silently
- *   spending the paid key.
+ *   spending the paid key. This is internal seeding tooling, not a user-facing
+ *   model picker: live visitors always pass `undefined` and get the one pipeline.
  * @param options.serveExistingCandidate When true (the live route), a verified
  *   miss first tries the newest queued CANDIDATE and serves it stamped
  *   "candidate" — so the reviewed seeded journeys back the 20-career catalogue at
  *   launch without a model call per visit. Left false by the SEED script, which
  *   must always regenerate to refresh the queue (otherwise re-seeding is a no-op).
+ * @param options.forceFresh When true (the user-facing "Regenerate" button),
+ *   skip BOTH the verified and candidate cache serves and always run the model —
+ *   so a regenerate produces a genuinely new draft rather than echoing the cache.
+ *   The route rate-limits this path.
  */
 export async function runGeneration(
   profile: GenerationProfile,
   override: ProviderChoice | undefined,
-  userKey: string | undefined,
   emit: Emit,
-  options?: { serveExistingCandidate?: boolean },
+  options?: { serveExistingCandidate?: boolean; forceFresh?: boolean },
 ): Promise<GenerateResponseBody> {
-  // ---- Cache-first (§4): serve a verified default if we have one. ----
+  // ---- Cache-first (§4): serve a verified default if we have one — unless the
+  // caller asked to force a fresh regeneration. ----
   const cacheKey = buildCacheKey(profile);
   const fileName = cacheFileName(cacheKey, profile.locale);
   emit({ type: "status", phase: "checking" });
-  const verified = await readVerified(fileName);
-  if (verified) {
-    return { journey: verified, status: "verified", cacheKey };
-  }
+  if (!options?.forceFresh) {
+    const verified = await readVerified(fileName);
+    if (verified) {
+      return { journey: verified, status: "verified", cacheKey };
+    }
 
-  // ---- Else serve the newest reviewed CANDIDATE if one is queued (live route
-  // only). It's stamped "candidate" so the UI shows the unverified banner, and it
-  // spares a model call per visit at launch. The seed script opts out so it always
-  // regenerates a fresh candidate. ----
-  if (options?.serveExistingCandidate) {
-    const candidate = await readLatestCandidate(fileName);
-    if (candidate) {
-      return { journey: candidate, status: "candidate", cacheKey };
+    // ---- Else serve the newest reviewed CANDIDATE if one is queued (live route
+    // only). It's stamped "candidate" so the UI shows the unverified banner, and
+    // it spares a model call per visit at launch. The seed script opts out so it
+    // always regenerates a fresh candidate. ----
+    if (options?.serveExistingCandidate) {
+      const candidate = await readLatestCandidate(fileName);
+      if (candidate) {
+        return { journey: candidate, status: "candidate", cacheKey };
+      }
     }
   }
 
@@ -337,13 +356,24 @@ export async function runGeneration(
   const tableArg = useTable ? allowed : null;
   const userPrompt = buildUserPrompt(profile, useTable ? allowed : undefined);
 
+  // A friendly, pre-filled prompt the user can paste into a free AI tool if the
+  // whole pipeline can't produce a plan right now — so a busy free tier (or an
+  // unconfigured backend) never dead-ends. Stamped onto any failure thrown below.
+  const externalPrompt = buildExternalPrompt({
+    career: profile.career,
+    classCode: profile.class,
+    board: profile.board,
+    stream: profile.stream,
+    locale: profile.locale,
+  });
+
   // Build the primary provider (override if given, else the Gemini free-tier
-  // default) and a fallback (the user's chosen one can't fall back to your key).
+  // default) and the Haiku fallback (skipped for an explicit override).
   let primary: ModelProvider;
   let fallback: ModelProvider | null = null;
   try {
     if (override) {
-      primary = makeProvider(override, userKey);
+      primary = makeProvider(override);
     } else {
       primary = makeProvider(DEFAULT_CHOICE);
       try {
@@ -358,8 +388,9 @@ export async function runGeneration(
       primary = makeProvider(FALLBACK_CHOICE);
     } catch {
       throw new GenerateError(
-        "Live generation isn't configured yet. Please try a cached journey.",
+        "Our free plan generator is unavailable right now. Please try again later.",
         503,
+        { externalPrompt },
       );
     }
   }
@@ -383,8 +414,12 @@ export async function runGeneration(
     } catch (err) {
       // A regeneration failed: keep the earlier (structurally-flawed) draft if we
       // have one — a flagged candidate beats failing the request. The first
-      // attempt has nothing to fall back on, so its error propagates.
+      // attempt has nothing to fall back on, so its error propagates — stamped
+      // with the copyable prompt so the UI can offer a free way forward.
       if (journey) break;
+      if (err instanceof GenerateError && !err.externalPrompt) {
+        err.externalPrompt = externalPrompt;
+      }
       throw err;
     }
 
@@ -407,6 +442,7 @@ export async function runGeneration(
     throw new GenerateError(
       "The plan came back in an unexpected format. Please try again.",
       502,
+      { externalPrompt },
     );
   }
 

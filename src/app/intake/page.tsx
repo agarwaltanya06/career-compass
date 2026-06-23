@@ -23,6 +23,7 @@ import {
   type IntakeQuestion,
 } from "@/lib/intake";
 import {
+  GenerationFailedError,
   isExplore,
   profileFromAnswers,
   requestJourneyStream,
@@ -223,6 +224,9 @@ function IntakeSummary({
   // explore case shown on the summary itself.
   const [generating, setGenerating] = useState(false);
   const [genError, setGenError] = useState<string | null>(null);
+  // When both providers are busy, the failure carries a copyable prompt the
+  // student can paste into a free AI tool — surfaced on the chat error screen.
+  const [genPrompt, setGenPrompt] = useState<string | null>(null);
   const [modelLabel, setModelLabel] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   // Bumped on each attempt so the chat screen remounts fresh (resets its
@@ -244,6 +248,7 @@ function IntakeSummary({
     }
     setError(null);
     setGenError(null);
+    setGenPrompt(null);
     setModelLabel(null);
     setGenerating(true);
     setAttempt((n) => n + 1);
@@ -256,6 +261,9 @@ function IntakeSummary({
     } catch (err) {
       // Stay on the chat screen so the friendly error + retry live there.
       setGenError(err instanceof Error ? err.message : t("intake.done.generateError"));
+      if (err instanceof GenerationFailedError && err.externalPrompt) {
+        setGenPrompt(err.externalPrompt);
+      }
     }
   }
 
@@ -291,6 +299,7 @@ function IntakeSummary({
         modelLabel={modelLabel}
         profile={profileChips}
         error={genError}
+        externalPrompt={genPrompt}
         onRetry={generate}
         onStartOver={onRestart}
       />

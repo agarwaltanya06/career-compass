@@ -13,6 +13,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import { journeyPath } from "@/lib/generate/client";
+import { buildExternalPrompt } from "@/lib/generate/externalPrompt";
+import CopyablePrompt from "@/components/CopyablePrompt";
 import type { JourneyStatus } from "@/lib/generate/types";
 import type {
   CostBand,
@@ -55,11 +57,14 @@ const CARD_OPTIONS: { value: CardFilter; labelKey: string }[] = [
   { value: "exams", labelKey: "journey.filters.showExams" },
 ];
 
-const SORT_OPTIONS: { value: SortOption; labelKey: string }[] = [
-  { value: "default", labelKey: "journey.filters.sortDefault" },
-  { value: "feesAsc", labelKey: "journey.filters.sortFeesAsc" },
-  { value: "feesDesc", labelKey: "journey.filters.sortFeesDesc" },
-];
+// Cost-sort UI is temporarily disabled (see the filter bar below). The sort
+// machinery is left intact; to re-enable, uncomment this, restore `setSort`,
+// and uncomment the sort chips in the filter bar.
+// const SORT_OPTIONS: { value: SortOption; labelKey: string }[] = [
+//   { value: "default", labelKey: "journey.filters.sortDefault" },
+//   { value: "feesAsc", labelKey: "journey.filters.sortFeesAsc" },
+//   { value: "feesDesc", labelKey: "journey.filters.sortFeesDesc" },
+// ];
 
 /** Numeric rank for cost buckets, so exams (which carry only a band, not a fee
  * string) can be ordered by cost the same way colleges are ordered by fees. */
@@ -125,15 +130,20 @@ function collectLocations(journey: Journey): string[] {
 export function JourneyView({
   journey,
   status,
+  onRegenerate,
 }: {
   journey: Journey;
   status: JourneyStatus | null;
+  /** When provided, shows a "Regenerate" button that forces a fresh live plan. */
+  onRegenerate?: () => void;
 }) {
   const { t } = useI18n();
   const [cost, setCost] = useState<CostFilter>("all");
   const [cards, setCards] = useState<CardFilter>("all");
   const [location, setLocation] = useState<string>("all");
-  const [sort, setSort] = useState<SortOption>("default");
+  // `sort` stays pinned to "default" while the cost-sort UI is disabled, so
+  // `sortByCost` is a no-op. Restore `setSort` to re-enable the sort controls.
+  const [sort] = useState<SortOption>("default");
   // When true, every route is forced open (and the on-screen chrome hidden by
   // print CSS) so the browser's print-to-PDF captures the FULL plan, not just
   // whichever routes the reader happened to expand.
@@ -253,7 +263,11 @@ export function JourneyView({
         </div>
 
         {/* Share + save actions (hidden from the printed/PDF copy). */}
-        <JourneyActions journey={journey} onDownloadPdf={() => setPrinting(true)} />
+        <JourneyActions
+          journey={journey}
+          onDownloadPdf={() => setPrinting(true)}
+          onRegenerate={onRegenerate}
+        />
 
         {/* Unverified-candidate stamp (spec §4): a fresh, not-yet-reviewed
             machine generation. Deliberately prominent (not a footnote) and kept
@@ -371,6 +385,8 @@ export function JourneyView({
                 </select>
               </label>
             )}
+            {/* Cost sort temporarily hidden — re-enable by uncommenting this
+                block (and the SORT_OPTIONS const + setSort above).
             <div className="flex flex-col gap-1">
               <span className="text-xs font-semibold uppercase tracking-wide text-stone-500">
                 {t("journey.filters.sortHeading")}
@@ -387,6 +403,7 @@ export function JourneyView({
                 ))}
               </div>
             </div>
+            */}
           </div>
         )}
       </div>
@@ -524,12 +541,29 @@ export function JourneyView({
 function JourneyActions({
   journey,
   onDownloadPdf,
+  onRegenerate,
 }: {
   journey: Journey;
   onDownloadPdf: () => void;
+  onRegenerate?: () => void;
 }) {
   const { t } = useI18n();
   const [copied, setCopied] = useState(false);
+  const [showPrompt, setShowPrompt] = useState(false);
+
+  // A ready-to-paste prompt rebuilt from this plan's non-personal profile, so the
+  // student can regenerate or extend it in Google's AI Mode or any free AI tool.
+  const prompt = useMemo(
+    () =>
+      buildExternalPrompt({
+        career: journey.meta.career,
+        classCode: journey.meta.studentProfile.class,
+        board: journey.meta.studentProfile.board,
+        stream: journey.meta.studentProfile.stream,
+        locale: journey.meta.studentProfile.language,
+      }),
+    [journey.meta]
+  );
 
   const handleCopy = async () => {
     const path = journeyPath(
@@ -549,13 +583,33 @@ function JourneyActions({
   };
 
   return (
-    <div className="mt-4 flex flex-wrap gap-2 print:hidden">
-      <ActionButton onClick={handleCopy} icon={copied ? "✅" : "🔗"}>
-        {copied ? t("journey.actions.copied") : t("journey.actions.copyLink")}
-      </ActionButton>
-      <ActionButton onClick={onDownloadPdf} icon="📄">
-        {t("journey.actions.downloadPdf")}
-      </ActionButton>
+    <div className="print:hidden">
+      <div className="mt-4 flex flex-wrap gap-2">
+        <ActionButton onClick={handleCopy} icon={copied ? "✅" : "🔗"}>
+          {copied ? t("journey.actions.copied") : t("journey.actions.copyLink")}
+        </ActionButton>
+        <ActionButton onClick={onDownloadPdf} icon="📄">
+          {t("journey.actions.downloadPdf")}
+        </ActionButton>
+        {onRegenerate && (
+          <ActionButton onClick={onRegenerate} icon="🔄">
+            {t("journey.actions.regenerate")}
+          </ActionButton>
+        )}
+        <ActionButton
+          onClick={() => setShowPrompt((v) => !v)}
+          icon="✨"
+          aria-expanded={showPrompt}
+        >
+          {t("journey.actions.copyPrompt")}
+        </ActionButton>
+      </div>
+
+      {showPrompt && (
+        <div className="mt-3 rounded-2xl border border-sky-200 bg-sky-50 p-4">
+          <CopyablePrompt prompt={prompt} intro={t("journey.actions.copyPromptLead")} />
+        </div>
+      )}
     </div>
   );
 }
@@ -565,15 +619,18 @@ function ActionButton({
   onClick,
   icon,
   children,
+  "aria-expanded": ariaExpanded,
 }: {
   onClick: () => void;
   icon: string;
   children: React.ReactNode;
+  "aria-expanded"?: boolean;
 }) {
   return (
     <button
       type="button"
       onClick={onClick}
+      aria-expanded={ariaExpanded}
       className="inline-flex min-h-10 items-center gap-1.5 rounded-full border border-orange-300 bg-white px-4 text-sm font-semibold text-orange-700 transition-colors hover:bg-orange-50"
     >
       <span aria-hidden>{icon}</span>

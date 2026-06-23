@@ -19,6 +19,21 @@ import type {
 export const JOURNEY_STORAGE_KEY = "career-compass:journey";
 
 /**
+ * A generation failure that may carry a copyable, pre-filled prompt the user can
+ * paste into a free AI tool (set when both providers were unavailable). The UI
+ * checks for `externalPrompt` to show the friendly busy-message + paste-anywhere
+ * fallback instead of a bare error.
+ */
+export class GenerationFailedError extends Error {
+  readonly externalPrompt?: string;
+  constructor(message: string, externalPrompt?: string) {
+    super(message);
+    this.name = "GenerationFailedError";
+    this.externalPrompt = externalPrompt;
+  }
+}
+
+/**
  * The shareable, bookmarkable path for a journey, derived from its non-personal
  * cache key (spec §bookmarkable). The plan's language rides in `?lang=` so a
  * shared link reopens in the same language whatever the visitor's cookie says.
@@ -90,22 +105,25 @@ export function profileFromAnswers(
 /** Call the endpoint. Throws an Error with a user-friendly message on failure. */
 export async function requestJourney(
   profile: GenerationProfile,
+  options?: { refresh?: boolean },
 ): Promise<GenerateResponseBody> {
   const res = await fetch("/api/generate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ profile }),
+    body: JSON.stringify({ profile, refresh: options?.refresh === true }),
   });
   const data = (await res.json().catch(() => null)) as
     | (GenerateResponseBody & { error?: string })
-    | { error: string }
+    | { error: string; externalPrompt?: string }
     | null;
   if (!res.ok || !data || "error" in data) {
     const message =
       data && "error" in data && data.error
         ? data.error
         : "Couldn't generate a plan right now. Please try again.";
-    throw new Error(message);
+    const externalPrompt =
+      data && "externalPrompt" in data ? data.externalPrompt : undefined;
+    throw new GenerationFailedError(message, externalPrompt);
   }
   return data as GenerateResponseBody;
 }
@@ -123,6 +141,7 @@ export async function requestJourney(
 export async function requestJourneyStream(
   profile: GenerationProfile,
   onProgress: (event: GenerateStatusEvent) => void,
+  options?: { refresh?: boolean },
 ): Promise<GenerateResponseBody> {
   const res = await fetch("/api/generate", {
     method: "POST",
@@ -130,16 +149,17 @@ export async function requestJourneyStream(
       "Content-Type": "application/json",
       Accept: "text/event-stream",
     },
-    body: JSON.stringify({ profile }),
+    body: JSON.stringify({ profile, refresh: options?.refresh === true }),
   });
 
   // Validation / config errors come back as a normal JSON response, not a stream.
   if (!res.ok || !res.body) {
     const data = (await res.json().catch(() => null)) as
-      | { error?: string }
+      | { error?: string; externalPrompt?: string }
       | null;
-    throw new Error(
+    throw new GenerationFailedError(
       data?.error || "Couldn't generate a plan right now. Please try again.",
+      data?.externalPrompt,
     );
   }
 
@@ -148,6 +168,7 @@ export async function requestJourneyStream(
   let buffer = "";
   let result: GenerateResponseBody | null = null;
   let errorMessage: string | null = null;
+  let errorPrompt: string | undefined;
 
   for (;;) {
     const { done, value } = await reader.read();
@@ -178,14 +199,19 @@ export async function requestJourneyStream(
         result = body as unknown as GenerateResponseBody;
       } else if (event.type === "error") {
         errorMessage = typeof event.message === "string" ? event.message : null;
+        if (typeof event.externalPrompt === "string") {
+          errorPrompt = event.externalPrompt;
+        }
       }
     }
     if (done) break;
   }
 
-  if (errorMessage) throw new Error(errorMessage);
+  if (errorMessage) throw new GenerationFailedError(errorMessage, errorPrompt);
   if (!result) {
-    throw new Error("Couldn't generate a plan right now. Please try again.");
+    throw new GenerationFailedError(
+      "Couldn't generate a plan right now. Please try again.",
+    );
   }
   return result;
 }

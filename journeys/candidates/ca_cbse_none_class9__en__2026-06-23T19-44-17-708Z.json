@@ -1,0 +1,351 @@
+{
+  "meta": {
+    "career": "Chartered Accountant (CA)",
+    "careerAliases": [
+      "Accountant",
+      "Auditor",
+      "Financial Analyst",
+      "Tax Consultant"
+    ],
+    "studentProfile": {
+      "class": "9",
+      "board": "cbse",
+      "language": "en",
+      "currentDate": "2026-06-23"
+    },
+    "generatedAt": "2026-06-23",
+    "confidence": "high",
+    "cacheKey": "ca|cbse|none|class9"
+  },
+  "overview": {
+    "summary": "A Chartered Accountant (CA) is a highly respected professional in India, specializing in accounting, auditing, taxation, and financial management. The role involves ensuring financial compliance, providing expert financial advice, and managing financial records for individuals and organizations.",
+    "dayInLife": "A CA's day can involve auditing financial statements, preparing tax returns, advising clients on financial planning and investment strategies, managing budgets, conducting forensic accounting, or ensuring compliance with corporate laws. They often work with diverse clients, from large corporations to small businesses and individuals, requiring strong analytical and communication skills.",
+    "payRange": {
+      "entry": "₹6-8 lakhs per annum",
+      "experienced": "₹15-30+ lakhs per annum",
+      "note": "Salaries vary significantly based on the firm's size, location, industry, and individual experience and expertise. Top-tier firms and specialized roles can command higher packages."
+    },
+    "demandOutlook": "The demand for Chartered Accountants in India remains consistently high and is expected to grow due to increasing economic activity, complex tax laws, and stricter regulatory environments. CAs are crucial for businesses to navigate financial challenges and ensure compliance.",
+    "requirements": [
+      "Strong numerical and analytical skills",
+      "Attention to detail and accuracy",
+      "Excellent problem-solving abilities",
+      "High ethical standards and integrity",
+      "Effective communication and interpersonal skills",
+      "Proficiency in accounting software and financial technology",
+      "Business acumen and strategic thinking"
+    ]
+  },
+  "routes": [
+    {
+      "id": "ca-foundation-route",
+      "name": "CA Foundation to Final Route",
+      "bestFor": "Students who wish to pursue Chartered Accountancy directly after Class 12, building a strong foundation in accounting and finance from an early stage.",
+      "feasibility": "high",
+      "feasibilityReason": "This is the most common and structured pathway to becoming a CA, directly managed by the Institute of Chartered Accountants of India (ICAI).",
+      "costBand": "low",
+      "duration": "Approximately 4.5 to 5 years after Class 12 (or 8-9 years from Class 9)",
+      "steps": [
+        {
+          "id": "step-1",
+          "order": 1,
+          "type": "education",
+          "title": "Complete Class 9 and 10",
+          "offsetMonths": 0,
+          "description": "Focus on building a strong academic foundation in all subjects, especially Mathematics, as it helps with logical reasoning and quantitative aptitude required later. You are currently in Class 9."
+        },
+        {
+          "id": "step-2",
+          "order": 2,
+          "type": "education",
+          "title": "Choose Commerce Stream in Class 11 & 12",
+          "offsetMonths": 22,
+          "description": "Opt for the Commerce stream with subjects like Accountancy, Business Studies, Economics, and Mathematics (optional but highly recommended) to align with the CA curriculum. This typically starts in April 2028."
+        },
+        {
+          "id": "step-3",
+          "order": 3,
+          "type": "exam",
+          "title": "Appear for Class 12 Board Exams",
+          "offsetMonths": 44,
+          "description": "Prepare thoroughly for your CBSE Class 12 Board examinations, typically held in February-March. Strong performance in commerce subjects will be beneficial for your CA Foundation preparation."
+        },
+        {
+          "id": "step-4",
+          "order": 4,
+          "type": "application",
+          "title": "Register for CA Foundation Course",
+          "offsetMonths": 47,
+          "description": "You can provisionally register for the CA Foundation course after passing Class 10, but you can only appear for the exam after clearing Class 12. It is advisable to register after Class 12 results are out. Registration for the September exam typically closes by July 1st."
+        },
+        {
+          "id": "step-5",
+          "order": 5,
+          "type": "exam",
+          "title": "Clear CA Foundation Examination",
+          "offsetMonths": 51,
+          "description": "Pass the CA Foundation exam, which is the entry-level test for the CA course. Exams are typically held in September, January, and May/June. This would be your first attempt, likely in September 2030."
+        },
+        {
+          "id": "step-6",
+          "order": 6,
+          "type": "application",
+          "title": "Register for CA Intermediate Course",
+          "offsetMonths": 54,
+          "description": "After clearing CA Foundation, register for the CA Intermediate course. You must complete an 8-month study period before appearing for the Intermediate exams."
+        },
+        {
+          "id": "step-7",
+          "order": 7,
+          "type": "skill",
+          "title": "Complete ICITSS (Information Technology and Soft Skills)",
+          "offsetMonths": 55,
+          "description": "Undergo the mandatory 4-week Integrated Course on Information Technology and Soft Skills (ICITSS) before commencing practical training (Articleship)."
+        },
+        {
+          "id": "step-8",
+          "order": 8,
+          "type": "exam",
+          "title": "Clear CA Intermediate Examination",
+          "offsetMonths": 63,
+          "description": "Pass both groups of the CA Intermediate examination. Exams are typically held in May/June, September, and November. Your first attempt would likely be September 2031."
+        },
+        {
+          "id": "step-9",
+          "order": 9,
+          "type": "experience",
+          "title": "Register and Commence Articleship Training",
+          "offsetMonths": 66,
+          "description": "After clearing both groups of CA Intermediate and completing ICITSS, register for and begin the mandatory 2-year (24 months) practical training (Articleship) under a practicing Chartered Accountant."
+        },
+        {
+          "id": "step-10",
+          "order": 10,
+          "type": "skill",
+          "title": "Complete AICITSS (Advanced Integrated Course on Information Technology and Soft Skills)",
+          "offsetMonths": 87,
+          "description": "Undergo the mandatory Advanced Integrated Course on Information Technology and Soft Skills (AICITSS) during the latter part of your Articleship or before appearing for CA Final exams."
+        },
+        {
+          "id": "step-11",
+          "order": 11,
+          "type": "exam",
+          "title": "Clear CA Final Examination",
+          "offsetMonths": 95,
+          "description": "Pass both groups of the CA Final examination, the last stage of the CA course. You can appear for the exam after completing Articleship and a 6-month study period. Exams are typically held in May/June and November. Your first attempt would likely be May 2034. (Rules, exams, and fees may change by then; re-verify when you get there.)"
+        },
+        {
+          "id": "step-12",
+          "order": 12,
+          "type": "application",
+          "title": "Become a Member of ICAI",
+          "offsetMonths": 98,
+          "description": "After successfully clearing the CA Final exams and completing all training requirements, apply for membership with the Institute of Chartered Accountants of India (ICAI) to officially become a Chartered Accountant. (Rules, exams, and fees may change by then; re-verify when you get there.)"
+        },
+        {
+          "id": "step-13",
+          "order": 13,
+          "type": "experience",
+          "title": "Start Professional Career as a CA",
+          "offsetMonths": 99,
+          "description": "Begin your career as a Chartered Accountant in various roles such as auditor, tax consultant, financial analyst, or corporate finance professional. (Rules, exams, and fees may change by then; re-verify when you get there.)"
+        },
+        {
+          "id": "step-13b",
+          "order": 13,
+          "type": "education",
+          "title": "Pursue Higher Education (e.g., MBA, CFA)",
+          "offsetMonths": 99,
+          "description": "Consider pursuing further certifications like CFA (Chartered Financial Analyst) or an MBA from a top business school to specialize further or transition into management roles. (Rules, exams, and fees may change by then; re-verify when you get there.)",
+          "optional": true,
+          "alternativeTo": "step-13"
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Financial Accounting & Reporting",
+          "Auditing & Assurance",
+          "Taxation (Direct & Indirect)",
+          "Cost & Management Accounting",
+          "Financial Management",
+          "Corporate & Allied Laws",
+          "Business Communication",
+          "Data Analysis & Interpretation",
+          "Ethical Judgement"
+        ],
+        "upskilling": [
+          {
+            "name": "Advanced Excel & Financial Modeling",
+            "why": "Essential for efficient data analysis, budgeting, and financial forecasting in real-world scenarios.",
+            "costBand": "low",
+            "url": "https://www.coursera.org/specializations/excel-business-data-analysis",
+            "verified": false
+          },
+          {
+            "name": "SAP FICO Certification",
+            "why": "Gain expertise in a widely used Enterprise Resource Planning (ERP) software for finance and control functions.",
+            "costBand": "high",
+            "url": "https://www.sap.com/india/training-certification.html",
+            "verified": false
+          },
+          {
+            "name": "Data Analytics for Finance Professionals",
+            "why": "Develop skills in using data tools (e.g., Python, R, Power BI) to extract insights from financial data.",
+            "costBand": "mid",
+            "url": "https://www.edx.org/course/data-analytics-for-finance-professionals",
+            "verified": false
+          },
+          {
+            "name": "Communication & Presentation Skills Courses",
+            "why": "Enhance ability to articulate complex financial information clearly to clients and stakeholders.",
+            "costBand": "free",
+            "url": "https://www.youtube.com/results?search_query=communication+skills+for+finance",
+            "verified": false
+          },
+          {
+            "name": "Forensic Accounting & Fraud Detection",
+            "why": "Specialized skill set for investigating financial discrepancies and fraud, highly valued in auditing.",
+            "costBand": "mid",
+            "url": "https://www.icai.org/post.html?post_id=14603",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "name": "CA Foundation",
+          "purpose": "Entry-level examination for the Chartered Accountancy course.",
+          "eligibility": "Passed Class 12 examination from a recognized board. Provisional registration allowed after Class 10.",
+          "typicalWindow": "Applications usually open ~May for September attempt, ~November for January attempt, ~January for May/June attempt.",
+          "costBand": "low",
+          "officialUrl": "https://www.icai.org/",
+          "verified": false
+        },
+        {
+          "name": "CA Intermediate",
+          "purpose": "Second level of the CA course, covering in-depth subjects like accounting, taxation, and auditing.",
+          "eligibility": "Cleared CA Foundation exam OR eligible for Direct Entry (Commerce graduates with 55% aggregate, Non-commerce graduates with 60% aggregate, or CS Executive/CMA Inter passed).",
+          "typicalWindow": "Applications usually open ~May for September attempt, ~November for January attempt, ~January for May/June attempt.",
+          "costBand": "low",
+          "officialUrl": "https://www.icai.org/",
+          "verified": false
+        },
+        {
+          "name": "CA Final",
+          "purpose": "Final and most advanced level of the CA course, focusing on advanced financial management, auditing, and corporate law.",
+          "eligibility": "Cleared both groups of CA Intermediate, completed Articleship training (or in last 6 months), and completed AICITSS.",
+          "typicalWindow": "Applications usually open ~March for May/June attempt, ~July for November attempt.",
+          "costBand": "low",
+          "officialUrl": "https://www.icai.org/",
+          "verified": false
+        }
+      ],
+      "colleges": [
+        {
+          "name": "Shri Ram College of Commerce (SRCC)",
+          "type": "government",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "₹15,000 - ₹30,000",
+          "feesNote": "Highly subsidized government college fees. Additional costs for hostel and personal expenses.",
+          "entranceRequired": "CUET (Common University Entrance Test)",
+          "costBand": "low",
+          "officialUrl": "https://www.srcc.edu/",
+          "verified": false
+        },
+        {
+          "name": "Lady Shri Ram College for Women (LSR)",
+          "type": "government",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "₹15,000 - ₹30,000",
+          "feesNote": "Highly subsidized government college fees. Additional costs for hostel and personal expenses.",
+          "entranceRequired": "CUET (Common University Entrance Test)",
+          "costBand": "low",
+          "officialUrl": "https://lsr.edu.in/",
+          "verified": false
+        },
+        {
+          "name": "Loyola College",
+          "type": "private",
+          "location": "Chennai, Tamil Nadu",
+          "approxAnnualFees": "₹50,000 - ₹1,00,000",
+          "feesNote": "Fees are indicative and can vary by program and year. Excludes hostel and other charges.",
+          "entranceRequired": "College-specific entrance exam",
+          "costBand": "mid",
+          "officialUrl": "https://www.loyolacollege.edu/",
+          "verified": false
+        },
+        {
+          "name": "Christ University",
+          "type": "private",
+          "location": "Bengaluru, Karnataka",
+          "approxAnnualFees": "₹1,00,000 - ₹2,00,000",
+          "feesNote": "Fees are indicative and can vary by program and year. Excludes hostel and other charges.",
+          "entranceRequired": "CUET (Christ University Entrance Test)",
+          "costBand": "mid",
+          "officialUrl": "https://christuniversity.in/",
+          "verified": false
+        },
+        {
+          "name": "Symbiosis College of Arts & Commerce",
+          "type": "private",
+          "location": "Pune, Maharashtra",
+          "approxAnnualFees": "₹40,000 - ₹80,000",
+          "feesNote": "Fees are indicative and can vary by program and year. Excludes hostel and other charges.",
+          "entranceRequired": "College-specific entrance exam",
+          "costBand": "mid",
+          "officialUrl": "https://www.symbiosiscollege.edu.in/",
+          "verified": false
+        }
+      ],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "If you miss an exam registration deadline, you will have to wait for the next attempt. ICAI conducts exams multiple times a year for each level.",
+          "If you fail an exam, you can re-attempt it in the subsequent examination cycle. There is no limit on the number of attempts.",
+          "Consider enrolling in a B.Com degree program as a parallel option, which can provide a strong academic base and a fallback degree."
+        ]
+      }
+    }
+  ],
+  "prepResources": [
+    {
+      "title": "ICAI Study Material",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "English",
+      "url": "https://www.icai.org/post.html?post_id=14094",
+      "verified": false
+    },
+    {
+      "title": "ICAI Mock Test Papers & Previous Year Question Papers",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "English",
+      "url": "https://www.icai.org/post.html?post_id=14095",
+      "verified": false
+    },
+    {
+      "title": "Online Coaching Platforms (e.g., Unacademy, Edu91, VSI Jaipur)",
+      "type": "free-course",
+      "costBand": "mid",
+      "language": "English/Hindi",
+      "url": "https://www.youtube.com/results?search_query=CA+Foundation+free+lectures",
+      "verified": false
+    },
+    {
+      "title": "Reference Books by Reputed Authors (e.g., P.C. Tulsian for Accounts, M.P. Vijay Kumar for Law)",
+      "type": "book",
+      "costBand": "low",
+      "language": "English",
+      "url": "",
+      "verified": false
+    }
+  ],
+  "groundingSources": [],
+  "disclaimers": [
+    "The information provided is based on current understanding and publicly available data. Exam patterns, eligibility criteria, application windows, and fees are subject to change by the respective authorities (e.g., ICAI, CBSE, universities).",
+    "Students are strongly advised to verify all details, especially deadlines and fees, on the official websites of the Institute of Chartered Accountants of India (ICAI) and relevant educational institutions.",
+    "Cost bands are approximate annual figures and do not include living expenses, study materials, or coaching fees unless explicitly stated.",
+    "The 'officialUrl' and 'url' links are provided for convenience; please ensure you are visiting the legitimate official websites for critical information."
+  ]
+}

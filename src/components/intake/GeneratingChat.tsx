@@ -14,6 +14,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { useI18n } from "@/lib/i18n/I18nProvider";
+import CopyablePrompt from "@/components/CopyablePrompt";
 
 /** How long (ms) each rotating status message stays before the next appears. */
 const STEP_INTERVAL_MS = 6000;
@@ -30,6 +31,7 @@ export default function GeneratingChat({
   modelLabel,
   profile,
   error,
+  externalPrompt,
   onRetry,
   onStartOver,
 }: {
@@ -40,6 +42,8 @@ export default function GeneratingChat({
   profile?: string[];
   /** A user-friendly error message, or null while still working. */
   error: string | null;
+  /** When both providers were busy, a copyable prompt for a free AI tool. */
+  externalPrompt?: string | null;
   onRetry: () => void;
   onStartOver: () => void;
 }) {
@@ -138,6 +142,23 @@ export default function GeneratingChat({
                 </p>
                 <p className="mt-1 text-sm text-rose-700">{error}</p>
               </div>
+
+              {/* Both providers busy: hand the student a ready-to-paste prompt so
+                  they can generate the same plan for free in another AI tool —
+                  with their career/class/board already filled in. */}
+              {externalPrompt && (
+                <div className="rounded-2xl border border-sky-200 bg-sky-50 px-4 py-3">
+                  <p className="text-sm font-semibold text-sky-900">
+                    {t("intake.generatingChat.promptTitle")}
+                  </p>
+                  <div className="mt-2">
+                    <CopyablePrompt
+                      prompt={externalPrompt}
+                      intro={t("intake.generatingChat.promptLead")}
+                    />
+                  </div>
+                </div>
+              )}
 
               {/* Graceful fallback: a failed live call must never dead-end. Point
                   the student to the DIY guide (template + official-search steps)

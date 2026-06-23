@@ -15,9 +15,11 @@ import type { Journey } from "@/lib/types";
 export type ProviderId = "gemini" | "anthropic";
 
 /**
- * A per-request model override. Lets a logged-in user — or a user with their own
- * API key — pick a different provider/model later without rewriting the route
- * (spec §5). `model` is optional: each provider has a sane default.
+ * Which backend to run. This is an INTERNAL knob, not a user-facing tier: the
+ * seed script (scripts/seed.ts) uses it to force Gemini-only or Anthropic-only
+ * runs while pre-seeding the cache. Live visitors never choose — they all get the
+ * one path (cache → candidate → Gemini → Haiku fallback). `model` is optional;
+ * each provider has a sane default.
  */
 export interface ProviderChoice {
   provider: ProviderId;
@@ -92,10 +94,12 @@ export class ProviderUnavailableError extends Error {
 
 export interface GenerateRequestBody {
   profile: GenerationProfile;
-  /** Optional per-request override (logged-in user / their own key). */
-  model?: ProviderChoice;
-  /** Optional user-supplied API key — session-only, NEVER logged or stored. */
-  apiKey?: string;
+  /**
+   * Force a fresh live generation, bypassing the cached verified/candidate serve
+   * (the user-facing "Regenerate" button). Open to everyone but rate-limited at
+   * the route, since each one spends a real model call.
+   */
+  refresh?: boolean;
 }
 
 /**
@@ -125,6 +129,13 @@ export interface GenerateResponseBody {
 
 export interface GenerateErrorBody {
   error: string;
+  /**
+   * Set when generation failed because BOTH the free Gemini tier and the Haiku
+   * fallback were unavailable. Carries a friendly, pre-filled prompt the user can
+   * paste into Google's AI Mode or any free AI tool to generate their own plan —
+   * so a busy free tier never dead-ends. Absent for ordinary validation errors.
+   */
+  externalPrompt?: string;
 }
 
 // ---- Streaming contract (SSE) ----------------------------------------------
@@ -146,4 +157,5 @@ export interface GenerateStatusEvent {
 export type GenerateStreamEvent =
   | GenerateStatusEvent
   | ({ type: "result" } & GenerateResponseBody)
-  | { type: "error"; message: string };
+  /** `externalPrompt` is present only when both providers were unavailable. */
+  | { type: "error"; message: string; externalPrompt?: string };

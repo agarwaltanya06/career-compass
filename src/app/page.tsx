@@ -60,7 +60,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DIY / no-login backstop */}
+      {/* DIY backstop */}
       <section className="mt-12 rounded-2xl border border-amber-200 bg-amber-50 p-6 text-center">
         <h2 className="text-xl font-bold text-stone-900">
           {t("home.exploreTitle")}

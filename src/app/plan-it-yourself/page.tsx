@@ -2,8 +2,8 @@
 
 /**
  * The teach-to-fish tier (§6). This is the equity backstop — it serves students
- * with no login and no cached match: a blank plan template they can fill in, a
- * rolling 12-month planner, plus a short "how to research any career" guide.
+ * with no cached match: a blank plan template they can fill in, a rolling
+ * 12-month planner, plus a short "how to research any career" guide.
  *
  * Everything the student types is held in state and flows into the printable /
  * PDF export, so a download is *their* plan with their answers — not an empty

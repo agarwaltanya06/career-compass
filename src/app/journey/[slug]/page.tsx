@@ -10,10 +10,11 @@
 
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import {
   fetchJourneyBySlug,
+  GenerationFailedError,
   profileFromSlug,
   requestJourneyStream,
   storeJourney,
@@ -37,8 +38,14 @@ export default function BookmarkedJourneyPage() {
   const [served, setServed] = useState<Served | null>(null);
   const [modelLabel, setModelLabel] = useState<string | null>(null);
   const [genError, setGenError] = useState<string | null>(null);
+  // When both providers are busy, the failure carries a copyable prompt for a
+  // free AI tool — shown on the regenerating screen.
+  const [genPrompt, setGenPrompt] = useState<string | null>(null);
   // Bumped per attempt so the chat screen remounts fresh (timer + steps) on retry.
   const [attempt, setAttempt] = useState(0);
+  // Whether the in-flight regeneration is a forced refresh (a cached journey the
+  // user chose to re-roll) — so a retry uses the same mode.
+  const forceRef = useRef(false);
 
   // The plan's language rides in ?lang= so a shared link reopens in its own
   // language; fall back to the visitor's UI locale. Read on the client only.
@@ -68,32 +75,49 @@ export default function BookmarkedJourneyPage() {
     };
   }, [slug, lang]);
 
-  // Live regeneration for an evicted bookmark: rebuild the minimal profile from
-  // the slug and stream a fresh plan, then render it in place.
-  async function regenerate() {
+  // Live regeneration, used two ways: rebuilding an evicted bookmark (force=false,
+  // a cache miss generates anyway), and the user's "Regenerate" button on a cached
+  // plan (force=true bypasses the cache for a genuinely fresh draft). Either way we
+  // rebuild the minimal profile from the slug, stream, and render it in place.
+  async function regenerate(force = false) {
     const profile = profileFromSlug(slug, lang, new Date().toISOString().slice(0, 10));
     if (!profile) {
       setGenError(t("journey.notFound.badLink"));
       return;
     }
+    forceRef.current = force;
     setGenError(null);
+    setGenPrompt(null);
     setModelLabel(null);
     setPhase("regenerating");
     setAttempt((n) => n + 1);
     try {
-      const payload = await requestJourneyStream(profile, (event) => {
-        if (event.model) setModelLabel(modelDisplayName(event.provider, event.model));
-      });
+      const payload = await requestJourneyStream(
+        profile,
+        (event) => {
+          if (event.model) setModelLabel(modelDisplayName(event.provider, event.model));
+        },
+        { refresh: force },
+      );
       storeJourney(payload);
       setServed({ journey: payload.journey, status: payload.status });
       setPhase("ready");
     } catch (err) {
       setGenError(err instanceof Error ? err.message : t("journey.notFound.error"));
+      if (err instanceof GenerationFailedError && err.externalPrompt) {
+        setGenPrompt(err.externalPrompt);
+      }
     }
   }
 
   if (phase === "ready" && served) {
-    return <JourneyView journey={served.journey} status={served.status} />;
+    return (
+      <JourneyView
+        journey={served.journey}
+        status={served.status}
+        onRegenerate={() => regenerate(true)}
+      />
+    );
   }
 
   if (phase === "regenerating") {
@@ -102,7 +126,8 @@ export default function BookmarkedJourneyPage() {
         key={attempt}
         modelLabel={modelLabel}
         error={genError}
-        onRetry={regenerate}
+        externalPrompt={genPrompt}
+        onRetry={() => regenerate(forceRef.current)}
         onStartOver={() => router.push("/intake")}
       />
     );
@@ -120,7 +145,7 @@ export default function BookmarkedJourneyPage() {
           <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-center">
             <button
               type="button"
-              onClick={regenerate}
+              onClick={() => regenerate()}
               className="flex min-h-12 items-center justify-center rounded-xl bg-orange-500 px-6 text-base font-semibold text-white hover:bg-orange-600"
             >
               {t("journey.notFound.regenerate")}
