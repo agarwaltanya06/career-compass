@@ -10,14 +10,13 @@ export type Locale = "en" | "hi";
 export const DEFAULT_LOCALE: Locale = "en";
 
 /**
- * Locales the app knows about. `enabled: false` keeps a locale visible in code
- * (and translatable) but not yet selectable — Hindi stays here until its
- * message file is filled. The switcher only offers `enabled` locales.
+ * Locales the app knows about. The switcher only offers `enabled` locales;
+ * set `enabled: false` to keep a locale in code (and translatable) but hide it
+ * from the dropdown while its message file is still being filled.
  */
 export const locales: { code: Locale; labelKey: string; enabled: boolean }[] = [
   { code: "en", labelKey: "lang.english", enabled: true },
-  // TODO: enable once messages/hi.json is filled.
-  { code: "hi", labelKey: "lang.hindi", enabled: false },
+  { code: "hi", labelKey: "lang.hindi", enabled: true },
 ];
 
 /** Cookie that persists the user's locale choice across visits. */

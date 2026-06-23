@@ -2,9 +2,7 @@
 
 /**
  * Language dropdown for the header. Reads the locale list from i18n config and
- * only renders options that are `enabled`. Hindi stays in the list but its
- * <option> is commented out until messages/hi.json is filled (see below), so
- * English is the only selectable choice for now.
+ * only renders options that are `enabled`.
  */
 
 import { locales, type Locale } from "@/lib/i18n/config";
@@ -23,15 +21,6 @@ export default function LanguageSwitcher() {
         // Large tap target + readable on mobile.
         className="min-h-11 rounded-lg border border-stone-300 bg-white px-3 py-2 text-base text-stone-800 shadow-sm focus:border-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-200"
       >
-        {/*
-          English is enabled and selectable today.
-
-          TODO: enable once messages/hi.json is filled — uncomment the Hindi
-          <option> below (and flip `enabled: true` for 'hi' in
-          src/lib/i18n/config.ts) to let users actually pick Hindi.
-
-          <option value="hi">हिंदी (Hindi)</option>
-        */}
         {locales
           .filter((l) => l.enabled)
           .map((l: { code: Locale; labelKey: string }) => (
