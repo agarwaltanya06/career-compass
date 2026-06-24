@@ -12,6 +12,8 @@
 
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n/I18nProvider";
+import { localize } from "@/lib/i18n/localized";
+import type { Locale } from "@/lib/i18n/config";
 import ExternalLink from "@/components/ExternalLink";
 import {
   AUDIENCE,
@@ -27,15 +29,15 @@ import {
 const PREFIX = "static.findJobs";
 
 /** A portal as a list row: bold linked name, then its description. */
-function LinkRow({ link }: { link: JobLink }) {
+function LinkRow({ link, locale }: { link: JobLink; locale: Locale }) {
   return (
     <li className="flex gap-2 text-stone-700">
       <span aria-hidden className="select-none text-amber-500">↗</span>
       <span>
         <ExternalLink href={link.url}>{link.name}</ExternalLink>
-        {link.desc && <span className="text-stone-600"> — {link.desc}</span>}
+        {link.desc && <span className="text-stone-600"> — {localize(link.desc, locale)}</span>}
         {link.note && (
-          <span className="mt-1 block text-sm font-medium text-amber-800">{link.note}</span>
+          <span className="mt-1 block text-sm font-medium text-amber-800">{localize(link.note, locale)}</span>
         )}
       </span>
     </li>
@@ -43,7 +45,7 @@ function LinkRow({ link }: { link: JobLink }) {
 }
 
 export default function FindJobsPage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-10">
@@ -54,15 +56,18 @@ export default function FindJobsPage() {
       <section className="mt-8 rounded-2xl border border-amber-200 bg-amber-50 p-5">
         <h2 className="text-lg font-bold text-stone-900">{t(`${PREFIX}.audience.heading`)}</h2>
         <ul className="mt-3 space-y-2">
-          {AUDIENCE.map((line) => (
-            <li key={line.lead} className="flex gap-2 text-stone-700">
-              <span aria-hidden className="select-none text-amber-500">•</span>
-              <span>
-                <strong className="font-semibold text-stone-900">{line.lead}</strong>
-                {line.rest}
-              </span>
-            </li>
-          ))}
+          {AUDIENCE.map((line) => {
+            const lead = localize(line.lead, locale);
+            return (
+              <li key={lead} className="flex gap-2 text-stone-700">
+                <span aria-hidden className="select-none text-amber-500">•</span>
+                <span>
+                  <strong className="font-semibold text-stone-900">{lead}</strong>
+                  {localize(line.rest, locale)}
+                </span>
+              </li>
+            );
+          })}
         </ul>
       </section>
 
@@ -75,7 +80,7 @@ export default function FindJobsPage() {
           </h3>
           <ul className="mt-2 space-y-2">
             {INTERNSHIP_LINKS.map((link) => (
-              <LinkRow key={link.url} link={link} />
+              <LinkRow key={link.url} link={link} locale={locale} />
             ))}
           </ul>
         </div>
@@ -86,7 +91,7 @@ export default function FindJobsPage() {
           </h3>
           <ul className="mt-2 space-y-2">
             {GOVERNMENT_LINKS.map((link) => (
-              <LinkRow key={link.url} link={link} />
+              <LinkRow key={link.url} link={link} locale={locale} />
             ))}
           </ul>
         </div>
@@ -110,7 +115,7 @@ export default function FindJobsPage() {
               <span key={link.url}>
                 {i > 0 && <span className="text-stone-400"> · </span>}
                 <ExternalLink href={link.url}>{link.name}</ExternalLink>
-                {link.desc && <span className="text-stone-500"> ({link.desc})</span>}
+                {link.desc && <span className="text-stone-500"> ({localize(link.desc, locale)})</span>}
               </span>
             ))}
             <span className="text-stone-400"> · </span>
@@ -122,34 +127,37 @@ export default function FindJobsPage() {
       {/* How to apply — numbered steps. */}
       <h2 className="mt-12 text-2xl font-bold text-stone-900">{t(`${PREFIX}.apply.heading`)}</h2>
       <ol className="mt-5 space-y-3">
-        {APPLY_STEPS.map((step, i) => (
-          <li key={step.text} className="flex gap-3">
-            <span
-              aria-hidden
-              className="flex h-7 w-7 flex-none items-center justify-center rounded-full bg-stone-800 text-sm font-bold text-white"
-            >
-              {i + 1}
-            </span>
-            <span className="pt-0.5 text-stone-700">
-              {step.text}
-              {step.see ? (
-                <>
-                  {" ("}
-                  {t(`${PREFIX}.apply.see`)}{" "}
-                  <Link
-                    href={step.see.href}
-                    className="font-semibold text-amber-800 underline underline-offset-2 hover:text-amber-900"
-                  >
-                    {step.see.label}
-                  </Link>
-                  {")."}
-                </>
-              ) : (
-                "."
-              )}
-            </span>
-          </li>
-        ))}
+        {APPLY_STEPS.map((step, i) => {
+          const text = localize(step.text, locale);
+          return (
+            <li key={text} className="flex gap-3">
+              <span
+                aria-hidden
+                className="flex h-7 w-7 flex-none items-center justify-center rounded-full bg-stone-800 text-sm font-bold text-white"
+              >
+                {i + 1}
+              </span>
+              <span className="pt-0.5 text-stone-700">
+                {text}
+                {step.see ? (
+                  <>
+                    {" ("}
+                    {t(`${PREFIX}.apply.see`)}{" "}
+                    <Link
+                      href={step.see.href}
+                      className="font-semibold text-amber-800 underline underline-offset-2 hover:text-amber-900"
+                    >
+                      {localize(step.see.label, locale)}
+                    </Link>
+                    {")."}
+                  </>
+                ) : (
+                  "."
+                )}
+              </span>
+            </li>
+          );
+        })}
       </ol>
 
       {/* Scam-safety — kept clear but warm (amber, shield icon), not alarming. */}
@@ -160,15 +168,18 @@ export default function FindJobsPage() {
         </h2>
         <p className="mt-2 text-stone-700">{t(`${PREFIX}.scams.intro`)}</p>
         <ul className="mt-3 space-y-2">
-          {SCAM_RULES.map((rule) => (
-            <li key={rule.lead} className="flex gap-2 text-stone-700">
-              <span aria-hidden className="select-none text-amber-500">•</span>
-              <span>
-                <strong className="font-bold text-stone-900">{rule.lead}</strong>
-                {rule.rest}
-              </span>
-            </li>
-          ))}
+          {SCAM_RULES.map((rule) => {
+            const lead = localize(rule.lead, locale);
+            return (
+              <li key={lead} className="flex gap-2 text-stone-700">
+                <span aria-hidden className="select-none text-amber-500">•</span>
+                <span>
+                  <strong className="font-bold text-stone-900">{lead}</strong>
+                  {localize(rule.rest, locale)}
+                </span>
+              </li>
+            );
+          })}
         </ul>
       </section>
 
@@ -176,21 +187,21 @@ export default function FindJobsPage() {
       <section className="mt-8 rounded-2xl border border-orange-200 bg-orange-50 p-5">
         <span className="font-bold text-orange-800">{t(`${PREFIX}.quickStart.label`)}: </span>
         <span className="text-stone-700">
-          make a{" "}
+          {t(`${PREFIX}.quickStart.p1`)}
           <ExternalLink
             href="https://linkedin.com"
             className="font-semibold text-orange-700 underline underline-offset-2 hover:text-orange-800"
           >
             LinkedIn
-          </ExternalLink>{" "}
-          profile, an{" "}
+          </ExternalLink>
+          {t(`${PREFIX}.quickStart.p2`)}
           <ExternalLink
             href="https://internshala.com"
             className="font-semibold text-orange-700 underline underline-offset-2 hover:text-orange-800"
           >
             Internshala
-          </ExternalLink>{" "}
-          account, and a simple CV. That&apos;s enough to start applying today!
+          </ExternalLink>
+          {t(`${PREFIX}.quickStart.p3`)}
         </span>
       </section>
     </div>

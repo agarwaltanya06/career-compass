@@ -367,7 +367,7 @@
     "costBand": "low",
     "feesNote": "Among the most affordable engineering programmes in India, as it is a West Bengal state-government university. Non-IT B.E. branches cost only a few thousand rupees a year (~₹2,400–3,000/year; ~₹10,000–12,000 for the full course), while IT/CSE is higher at ~₹29,900/year (~₹1.2 lakh for four years). Merit-cum-means aid (e.g. Swami Vivekananda scholarship) and fee concessions are available for low-income students.",
     "entranceRequired": "WBJEE (also admits via JEE Main)",
-    "officialUrl": "https://www.jadavpuruniversity.in/",
+    "officialUrl": "https://jadavpuruniversity.in/",
     "sourceUrl": "https://jadavpuruniversity.in/storage/2024/04/MD-4-FEE-1.pdf",
     "careers": [
       "engineer"
@@ -387,6 +387,78 @@
     "entranceRequired": "BITSAT",
     "officialUrl": "https://www.bits-pilani.ac.in/",
     "sourceUrl": "https://admissions.bits-pilani.ac.in/FD/FD_fee.html",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": null,
+    "verified": true
+  },
+  {
+    "id": "vit-vellore",
+    "name": "Vellore Institute of Technology (VIT Vellore)",
+    "type": "deemed",
+    "state": "Tamil Nadu",
+    "city": "Vellore",
+    "approxAnnualFees": "₹1,98,000 - ₹3,98,000",
+    "costBand": "high",
+    "feesNote": "B.Tech tuition is tiered by VITEEE rank/fee category, roughly ₹1.98–3.98 lakh/year; hostel & mess extra. VIT's GV School Development Programme (GVSDP) gives merit scholarships to top rankers.",
+    "entranceRequired": "VITEEE",
+    "officialUrl": "https://vit.ac.in/",
+    "sourceUrl": "https://vit.ac.in/admissions/btech",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": null,
+    "verified": true
+  },
+  {
+    "id": "manipal-mit",
+    "name": "Manipal Institute of Technology (MIT Manipal)",
+    "type": "deemed",
+    "state": "Karnataka",
+    "city": "Manipal",
+    "approxAnnualFees": "₹3,80,000 - ₹4,30,000",
+    "costBand": "high",
+    "feesNote": "B.Tech tuition ~₹3.8–4.3 lakh/year depending on branch; hostel & mess extra. Admission via MET (Manipal Entrance Test). MAHE offers a limited number of merit scholarships.",
+    "entranceRequired": "MET (Manipal Entrance Test)",
+    "officialUrl": "https://manipal.edu/mit.html",
+    "sourceUrl": "https://manipal.edu/mit/program-list/btech.html",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": null,
+    "verified": true
+  },
+  {
+    "id": "uvce-bengaluru",
+    "name": "University Visvesvaraya College of Engineering (UVCE), Bengaluru",
+    "type": "government",
+    "state": "Karnataka",
+    "city": "Bengaluru",
+    "approxAnnualFees": "₹45,000 - ₹70,000",
+    "costBand": "low",
+    "feesNote": "State government college under Bangalore University — open-category fee ~₹45,000–70,000/year; reserved-category and KCET government-quota seats cost far less. Confirm the current fee on the official site.",
+    "entranceRequired": "KCET (Karnataka CET); also admits via COMEDK",
+    "officialUrl": "https://uvce.ac.in/",
+    "sourceUrl": "https://uvce.ac.in/",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": null,
+    "verified": true
+  },
+  {
+    "id": "vjti-mumbai",
+    "name": "Veermata Jijabai Technological Institute (VJTI), Mumbai",
+    "type": "government",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "approxAnnualFees": "₹83,000 - ₹1,05,000",
+    "costBand": "mid",
+    "feesNote": "Government-aided autonomous institute — open-category B.Tech fee ~₹83,000–1,05,000/year; reserved-category and Maharashtra EBC/TFWS waivers cut this substantially. Admission mainly via MHT-CET, with a JEE Main quota too. Confirm the current fee on the official site.",
+    "entranceRequired": "MHT-CET (also admits a JEE Main quota)",
+    "officialUrl": "https://vjti.ac.in/",
+    "sourceUrl": "https://vjti.ac.in/",
     "careers": [
       "engineer"
     ],

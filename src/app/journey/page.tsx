@@ -11,7 +11,7 @@
  */
 
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { sampleJourney } from "@/lib/sampleJourney";
 import {
   GenerationFailedError,
@@ -60,6 +60,9 @@ export default function JourneyPage() {
   // The sample isn't a verified default, but it's curated, so don't stamp it.
   const status: JourneyStatus | null = served?.status ?? null;
 
+  // Holds the in-flight regeneration's controller so "Cancel" can abort it.
+  const abortRef = useRef<AbortController | null>(null);
+
   // Force a fresh live plan, rebuilt from this journey's non-personal cache key.
   // `regenerate` is recreated each render, so it closes over the current journey.
   async function regenerate() {
@@ -75,23 +78,37 @@ export default function JourneyPage() {
     setModelLabel(null);
     setRegenerating(true);
     setAttempt((n) => n + 1);
+    const controller = new AbortController();
+    abortRef.current = controller;
     try {
       const payload = await requestJourneyStream(
         profile,
         (event) => {
           if (event.model) setModelLabel(modelDisplayName(event.provider, event.model));
         },
-        { refresh: true },
+        { refresh: true, signal: controller.signal },
       );
       storeJourney(payload);
       setServed({ journey: payload.journey, status: payload.status });
       setRegenerating(false);
     } catch (err) {
+      if (controller.signal.aborted) return; // silent user cancel
       setGenError(err instanceof Error ? err.message : t("intake.done.generateError"));
       if (err instanceof GenerationFailedError && err.externalPrompt) {
         setGenPrompt(err.externalPrompt);
       }
+    } finally {
+      if (abortRef.current === controller) abortRef.current = null;
     }
+  }
+
+  // Abort an in-flight regeneration and return to the current journey view.
+  function cancelRegenerate() {
+    abortRef.current?.abort();
+    abortRef.current = null;
+    setRegenerating(false);
+    setGenError(null);
+    setGenPrompt(null);
   }
 
   if (regenerating) {
@@ -106,6 +123,7 @@ export default function JourneyPage() {
           setRegenerating(false);
           router.push("/intake");
         }}
+        onCancel={cancelRegenerate}
       />
     );
   }

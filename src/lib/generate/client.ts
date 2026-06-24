@@ -141,7 +141,7 @@ export async function requestJourney(
 export async function requestJourneyStream(
   profile: GenerationProfile,
   onProgress: (event: GenerateStatusEvent) => void,
-  options?: { refresh?: boolean },
+  options?: { refresh?: boolean; signal?: AbortSignal },
 ): Promise<GenerateResponseBody> {
   const res = await fetch("/api/generate", {
     method: "POST",
@@ -150,6 +150,9 @@ export async function requestJourneyStream(
       Accept: "text/event-stream",
     },
     body: JSON.stringify({ profile, refresh: options?.refresh === true }),
+    // When the caller aborts (the "Cancel" button), fetch and the stream reader
+    // below reject with an AbortError; callers treat that as a silent cancel.
+    signal: options?.signal,
   });
 
   // Validation / config errors come back as a normal JSON response, not a stream.

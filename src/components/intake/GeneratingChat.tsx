@@ -34,6 +34,7 @@ export default function GeneratingChat({
   externalPrompt,
   onRetry,
   onStartOver,
+  onCancel,
 }: {
   /** Friendly name of the LLM in use, or null until the server reports it. */
   modelLabel: string | null;
@@ -46,6 +47,9 @@ export default function GeneratingChat({
   externalPrompt?: string | null;
   onRetry: () => void;
   onStartOver: () => void;
+  /** Abort an in-flight generation. When provided, a Cancel button shows while
+   *  the call is still running (not on the error screen). */
+  onCancel?: () => void;
 }) {
   const { t, tList } = useI18n();
   const steps = tList("intake.generatingChat.steps");
@@ -100,7 +104,7 @@ export default function GeneratingChat({
                 }`}
               />
               {modelLabel
-                ? `${t("intake.generatingChat.modelPrefix")} ${modelLabel}`
+                ? t("intake.generatingChat.modelLine", { model: modelLabel })
                 : t("intake.generatingChat.connecting")}
             </p>
           </div>
@@ -180,6 +184,20 @@ export default function GeneratingChat({
             <TypingIndicator />
           )}
         </div>
+
+        {/* While the call is in flight, let the student back out — the model
+            APIs may already be running, so aborting stops the wait cleanly. */}
+        {!error && onCancel && (
+          <div className="border-t border-stone-100 px-4 py-3">
+            <button
+              type="button"
+              onClick={onCancel}
+              className="min-h-11 w-full rounded-xl border border-stone-300 px-6 text-sm font-medium text-stone-600 hover:bg-stone-100 sm:w-auto"
+            >
+              {t("intake.generatingChat.cancel")}
+            </button>
+          </div>
+        )}
 
         {/* Footer actions — only on error (otherwise the work is in flight). */}
         {error && (

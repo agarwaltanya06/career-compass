@@ -7,12 +7,15 @@
   Fonts are loaded via `next/font/google` in layout.tsx (Nunito for body, Baloo
   2 for headings) — next/font self-hosts and subsets them, so there is no
   render-blocking request to Google and no layout shift. Baloo 2 also covers
-  Devanagari, so Hindi headings stay on-brand.
+  Devanagari, so Hindi headings stay on-brand. Nunito has no Devanagari glyphs,
+  so Hindi body text falls through (per-glyph) to Mukta, a soft Devanagari face.
 */
 @theme inline {
-  /* Body copy: soft, rounded, very readable. */
-  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, -apple-system,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  /* Body copy: soft, rounded, very readable. Latin renders in Nunito; Devanagari
+     glyphs (absent from Nunito) fall through to Mukta before any system font. */
+  --font-sans: var(--font-nunito), var(--font-mukta), ui-sans-serif, system-ui,
+    -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif;
   /* Headings: warm, rounded display face. */
   --font-display: var(--font-baloo), var(--font-nunito), ui-sans-serif,
     system-ui, sans-serif;

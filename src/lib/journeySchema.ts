@@ -38,14 +38,28 @@ import type {
 function isObj(v: unknown): v is Record<string, unknown> {
   return typeof v === "object" && v !== null && !Array.isArray(v);
 }
+/**
+ * Strip the model's inline grounding citations — `<cite index="…">…</cite>` — from
+ * a string, keeping the sentence inside and removing only the markup. The
+ * `google_search` grounding wraps narrative sentences (summary, dayInLife,
+ * demandOutlook, …) in these tags; they're an internal annotation that must never
+ * reach students. Matches the opening tag with any attributes and the closing tag.
+ * Applied in `str`/`strArray` so it covers every text field, alongside the
+ * search-redirect URL stripping below (spec §3 rule 12).
+ */
+function stripCiteTags(s: string): string {
+  return s.replace(/<\/?cite\b[^>]*>/gi, "");
+}
 function str(v: unknown, fallback = ""): string {
-  return typeof v === "string" ? v : fallback;
+  return typeof v === "string" ? stripCiteTags(v) : fallback;
 }
 function bool(v: unknown, fallback = false): boolean {
   return typeof v === "boolean" ? v : fallback;
 }
 function strArray(v: unknown): string[] {
-  return Array.isArray(v) ? v.filter((x): x is string => typeof x === "string") : [];
+  return Array.isArray(v)
+    ? v.filter((x): x is string => typeof x === "string").map(stripCiteTags)
+    : [];
 }
 function arr(v: unknown): unknown[] {
   return Array.isArray(v) ? v : [];

@@ -32,8 +32,12 @@ export default function Home() {
           >
             {t("home.ctaStart")}
           </Link>
+          {/* Always the same fixed, verified example (Engineer, Class 10) so the
+              sample is stable and known-good — never a random or latest-cached
+              plan. The [slug] route serves the verified default; language follows
+              the visitor's locale. */}
           <Link
-            href="/journey"
+            href="/journey/engineer_cbse_none_class10"
             className="flex min-h-12 items-center justify-center rounded-xl border border-stone-300 bg-white px-6 text-base font-semibold text-stone-800 hover:bg-stone-100"
           >
             {t("home.ctaSample")}

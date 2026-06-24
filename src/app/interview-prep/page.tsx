@@ -11,6 +11,7 @@
 
 import type { ReactNode } from "react";
 import { useI18n } from "@/lib/i18n/I18nProvider";
+import { localize } from "@/lib/i18n/localized";
 import ExternalLink from "@/components/ExternalLink";
 import {
   QUESTIONS,
@@ -34,7 +35,7 @@ function boldParens(text: string): ReactNode[] {
 }
 
 export default function InterviewPrepPage() {
-  const { t, tList } = useI18n();
+  const { t, tList, locale } = useI18n();
   const steps = tList(`${PREFIX}.method.steps`);
   const stepHints = tList(`${PREFIX}.method.stepHints`);
 
@@ -81,14 +82,17 @@ export default function InterviewPrepPage() {
         {t(`${PREFIX}.questions.heading`)}
       </h2>
       <div className="mt-5 space-y-3">
-        {QUESTIONS.map((qa) => (
-          <div key={qa.q} className="rounded-xl border border-stone-200 bg-white p-4 shadow-sm">
-            <p className="font-bold text-stone-900">{qa.q}</p>
-            <p className="mt-1 text-stone-700">{qa.a}</p>
-            {qa.eg && <p className="mt-1 text-sm italic text-stone-500">“{qa.eg}”</p>}
-            {qa.note && <p className="mt-1 text-sm text-stone-600">{qa.note}</p>}
-          </div>
-        ))}
+        {QUESTIONS.map((qa) => {
+          const q = localize(qa.q, locale);
+          return (
+            <div key={q} className="rounded-xl border border-stone-200 bg-white p-4 shadow-sm">
+              <p className="font-bold text-stone-900">{q}</p>
+              <p className="mt-1 text-stone-700">{localize(qa.a, locale)}</p>
+              {qa.eg && <p className="mt-1 text-sm italic text-stone-500">“{localize(qa.eg, locale)}”</p>}
+              {qa.note && <p className="mt-1 text-sm text-stone-600">{localize(qa.note, locale)}</p>}
+            </div>
+          );
+        })}
       </div>
 
       {/* Before / during / after. */}
@@ -103,12 +107,15 @@ export default function InterviewPrepPage() {
               {t(`${PREFIX}.tips.${group.id}`)}
             </h3>
             <ul className="mt-2 space-y-2">
-              {group.tips.map((tip) => (
-                <li key={tip} className="flex gap-2 text-sm text-stone-700">
-                  <span aria-hidden className="select-none text-amber-500">•</span>
-                  <span>{tip}</span>
-                </li>
-              ))}
+              {group.tips.map((tip) => {
+                const text = localize(tip, locale);
+                return (
+                  <li key={text} className="flex gap-2 text-sm text-stone-700">
+                    <span aria-hidden className="select-none text-amber-500">•</span>
+                    <span>{text}</span>
+                  </li>
+                );
+              })}
             </ul>
           </section>
         ))}
@@ -122,7 +129,7 @@ export default function InterviewPrepPage() {
         {PRACTICE_LINKS.map((link) => (
           <li key={link.url} className="flex gap-2 text-stone-700">
             <span aria-hidden className="select-none text-amber-500">↗</span>
-            <ExternalLink href={link.url}>{link.label}</ExternalLink>
+            <ExternalLink href={link.url}>{localize(link.label, locale)}</ExternalLink>
           </li>
         ))}
       </ul>

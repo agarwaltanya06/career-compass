@@ -51,11 +51,15 @@ const COST_OPTIONS: { value: CostFilter; labelKey: string }[] = [
   { value: "high", labelKey: "journey.filters.high" },
 ];
 
-const CARD_OPTIONS: { value: CardFilter; labelKey: string }[] = [
-  { value: "all", labelKey: "journey.filters.showAll" },
-  { value: "colleges", labelKey: "journey.filters.showColleges" },
-  { value: "exams", labelKey: "journey.filters.showExams" },
-];
+// Card-type selector (Show all / Colleges / Exams) is disabled: filtering now
+// works on whole routes by cost. The machinery is left intact — to re-enable,
+// uncomment this, restore `setCards`, and uncomment the card chips in the filter
+// bar.
+// const CARD_OPTIONS: { value: CardFilter; labelKey: string }[] = [
+//   { value: "all", labelKey: "journey.filters.showAll" },
+//   { value: "colleges", labelKey: "journey.filters.showColleges" },
+//   { value: "exams", labelKey: "journey.filters.showExams" },
+// ];
 
 // Cost-sort UI is temporarily disabled (see the filter bar below). The sort
 // machinery is left intact; to re-enable, uncomment this, restore `setSort`,
@@ -108,24 +112,26 @@ function feeUpperBound(approxAnnualFees: string): number {
   return max === -Infinity ? Infinity : max;
 }
 
-/**
- * Distinct state/city tokens that actually appear in a journey's college
- * locations, so the location filter only ever offers real options. Locations
- * are freeform ("Jaipur, Rajasthan"), so we split on commas and keep the short,
- * place-name-like parts, dropping prose fragments ("with a regional office in…").
- */
-function collectLocations(journey: Journey): string[] {
-  const set = new Set<string>();
-  for (const route of journey.routes) {
-    for (const college of route.colleges) {
-      for (const part of college.location.split(",")) {
-        const token = part.trim();
-        if (token && token.split(/\s+/).length <= 3) set.add(token);
-      }
-    }
-  }
-  return [...set].sort((a, b) => a.localeCompare(b));
-}
+// Location filter disabled alongside the card-type selector — the filter bar now
+// offers only the cost filter, which gates whole routes. Left intact for restore:
+// re-add `locationOptions`/`hasColleges`/`hasExams` and the location <select>.
+//
+// Distinct state/city tokens that actually appear in a journey's college
+// locations, so the location filter only ever offers real options. Locations
+// are freeform ("Jaipur, Rajasthan"), so we split on commas and keep the short,
+// place-name-like parts, dropping prose fragments ("with a regional office in…").
+// function collectLocations(journey: Journey): string[] {
+//   const set = new Set<string>();
+//   for (const route of journey.routes) {
+//     for (const college of route.colleges) {
+//       for (const part of college.location.split(",")) {
+//         const token = part.trim();
+//         if (token && token.split(/\s+/).length <= 3) set.add(token);
+//       }
+//     }
+//   }
+//   return [...set].sort((a, b) => a.localeCompare(b));
+// }
 
 export function JourneyView({
   journey,
@@ -139,8 +145,11 @@ export function JourneyView({
 }) {
   const { t } = useI18n();
   const [cost, setCost] = useState<CostFilter>("all");
-  const [cards, setCards] = useState<CardFilter>("all");
-  const [location, setLocation] = useState<string>("all");
+  // `cards` and `location` stay pinned while their selectors are disabled, so the
+  // filter logic below is a no-op for them: `cards` keeps the full-route view and
+  // `location` never narrows. Restore `setCards`/`setLocation` to re-enable.
+  const [cards] = useState<CardFilter>("all");
+  const [location] = useState<string>("all");
   // `sort` stays pinned to "default" while the cost-sort UI is disabled, so
   // `sortByCost` is a no-op. Restore `setSort` to re-enable the sort controls.
   const [sort] = useState<SortOption>("default");
@@ -149,21 +158,28 @@ export function JourneyView({
   // whichever routes the reader happened to expand.
   const [printing, setPrinting] = useState(false);
 
-  const costMatches = (band: CostBand) => cost === "all" || band === cost;
+  // Cost filter is a budget ceiling, not an exact match: picking a band shows
+  // that band and everything cheaper (e.g. "mid" → free, low, mid but not high).
+  const costMatches = (band: CostBand) =>
+    cost === "all" || COST_BAND_RANK[band] <= COST_BAND_RANK[cost];
+  // In "show all", the cost ceiling gates whole routes (by route.costBand) and
+  // each surviving route is shown in full — so individual cards/skills aren't
+  // pruned by cost. Only the colleges/exams views prune cards by cost.
+  const cardCostMatches = (band: CostBand) => cards === "all" || costMatches(band);
   const locationMatches = (loc: string) =>
     location === "all" || loc.includes(location);
 
-  // Real state/city options drawn from the colleges in this journey, plus
-  // whether there are any colleges at all (gates the colleges-only controls).
-  const locationOptions = useMemo(() => collectLocations(journey), [journey]);
-  const hasColleges = useMemo(
-    () => journey.routes.some((r) => r.colleges.length > 0),
-    [journey.routes]
-  );
-  const hasExams = useMemo(
-    () => journey.routes.some((r) => r.exams.length > 0),
-    [journey.routes]
-  );
+  // Disabled with the location/card selectors (see filter bar). Restore these
+  // memos alongside the location <select> to re-enable the colleges-only controls.
+  // const locationOptions = useMemo(() => collectLocations(journey), [journey]);
+  // const hasColleges = useMemo(
+  //   () => journey.routes.some((r) => r.colleges.length > 0),
+  //   [journey.routes]
+  // );
+  // const hasExams = useMemo(
+  //   () => journey.routes.some((r) => r.exams.length > 0),
+  //   [journey.routes]
+  // );
 
   // Exam-transition cautions (spec §4.1), driven by the reference table's
   // `supersededBy` field — e.g. NEET PG → NExT. Scanned across ALL routes (never
@@ -207,7 +223,7 @@ export function JourneyView({
           cards === "colleges"
             ? []
             : sortByCost(
-                route.exams.filter((e) => costMatches(e.costBand)),
+                route.exams.filter((e) => cardCostMatches(e.costBand)),
                 (e) => COST_BAND_RANK[e.costBand]
               );
         const colleges =
@@ -215,13 +231,16 @@ export function JourneyView({
             ? []
             : sortByCost(
                 route.colleges.filter(
-                  (c) => costMatches(c.costBand) && locationMatches(c.location)
+                  (c) => cardCostMatches(c.costBand) && locationMatches(c.location)
                 ),
                 (c) => feeUpperBound(c.approxAnnualFees)
               );
-        // Keep the route if it (or any surviving card) matches the cost filter.
+        // "Show all": cost gates the whole route by its overall band. Drilling
+        // into colleges/exams instead keeps a route only if a card survives.
         const visible =
-          costMatches(route.costBand) || exams.length > 0 || colleges.length > 0;
+          cards === "all"
+            ? costMatches(route.costBand)
+            : exams.length > 0 || colleges.length > 0;
         return { route, exams, colleges, visible };
       })
       .filter((r) => r.visible);
@@ -350,6 +369,11 @@ export function JourneyView({
             </FilterChip>
           ))}
         </div>
+        {/* Card-type selector + result controls (location, cost-sort) are
+            removed: the bar now offers only the cost filter, which gates whole
+            routes. All machinery is left intact — to bring these back, restore
+            CARD_OPTIONS/setCards (and the location <select> / SORT_OPTIONS) and
+            uncomment the chips below.
         <div className="mt-3 flex flex-wrap gap-2">
           {CARD_OPTIONS.map((o) => (
             <FilterChip
@@ -361,51 +385,7 @@ export function JourneyView({
             </FilterChip>
           ))}
         </div>
-
-        {/* Result controls: location (colleges only) + cost sort (colleges and
-            exams). The sort stays available whenever there's anything to sort. */}
-        {(hasColleges || hasExams) && (
-          <div className="mt-3 flex flex-wrap items-end gap-x-6 gap-y-3">
-            {hasColleges && cards !== "exams" && locationOptions.length > 0 && (
-              <label className="flex flex-col gap-1">
-                <span className="text-xs font-semibold uppercase tracking-wide text-stone-500">
-                  {t("journey.filters.locationHeading")}
-                </span>
-                <select
-                  value={location}
-                  onChange={(e) => setLocation(e.target.value)}
-                  className="min-h-10 rounded-full border border-stone-300 bg-white px-4 text-sm font-medium text-stone-700"
-                >
-                  <option value="all">{t("journey.filters.allLocations")}</option>
-                  {locationOptions.map((loc) => (
-                    <option key={loc} value={loc}>
-                      {loc}
-                    </option>
-                  ))}
-                </select>
-              </label>
-            )}
-            {/* Cost sort temporarily hidden — re-enable by uncommenting this
-                block (and the SORT_OPTIONS const + setSort above).
-            <div className="flex flex-col gap-1">
-              <span className="text-xs font-semibold uppercase tracking-wide text-stone-500">
-                {t("journey.filters.sortHeading")}
-              </span>
-              <div className="flex flex-wrap gap-2">
-                {SORT_OPTIONS.map((o) => (
-                  <FilterChip
-                    key={o.value}
-                    active={sort === o.value}
-                    onClick={() => setSort(o.value)}
-                  >
-                    {t(o.labelKey)}
-                  </FilterChip>
-                ))}
-              </div>
-            </div>
-            */}
-          </div>
-        )}
+        */}
       </div>
 
       {/* ---- Routes ---- */}
@@ -447,7 +427,7 @@ export function JourneyView({
               exams={exams}
               colleges={colleges}
               journey={journey}
-              costMatches={costMatches}
+              costMatches={cardCostMatches}
               // Collapsed by default so several paths are easy to scan and
               // compare at a glance; forced open while printing to PDF.
               forceOpen={printing}

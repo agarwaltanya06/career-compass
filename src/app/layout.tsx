@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Nunito, Baloo_2 } from "next/font/google";
+import { Nunito, Baloo_2, Mukta } from "next/font/google";
 import { cookies } from "next/headers";
 import "./globals.css";
 import { I18nProvider } from "@/lib/i18n/I18nProvider";
@@ -20,6 +20,16 @@ const baloo = Baloo_2({
   subsets: ["latin", "devanagari"],
   weight: ["500", "600", "700", "800"],
   variable: "--font-baloo",
+  display: "swap",
+});
+
+// Devanagari body face: Nunito has no Devanagari glyphs, so Hindi body text used
+// to fall back to a plain system font. Mukta is soft and rounded — it matches
+// the friendly vibe and is picked up per-glyph for Devanagari (see globals.css).
+const mukta = Mukta({
+  subsets: ["latin", "devanagari"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-mukta",
   display: "swap",
 });
 
@@ -48,7 +58,7 @@ export default async function RootLayout({
   return (
     <html
       lang={initialLocale}
-      className={`${nunito.variable} ${baloo.variable} h-full`}
+      className={`${nunito.variable} ${baloo.variable} ${mukta.variable} h-full`}
     >
       <body className="min-h-full bg-orange-50 text-stone-900 antialiased">
         <I18nProvider initialLocale={initialLocale}>

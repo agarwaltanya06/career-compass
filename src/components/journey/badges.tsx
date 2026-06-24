@@ -87,6 +87,9 @@ export function ConfidenceBadge({ level }: { level: Confidence }) {
 /** A small labelled link to an official site (always the page to verify on). */
 export function OfficialLink({ url }: { url: string }) {
   const { t } = useI18n();
+  // No real link (e.g. a generic state-CET placeholder, or a stripped search
+  // redirect) → render nothing rather than an <a href=""> that reloads the page.
+  if (!url.trim()) return null;
   return (
     <a
       href={url}

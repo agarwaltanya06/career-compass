@@ -121,5 +121,58 @@
     ],
     "lastVerified": null,
     "verified": true
+  },
+  {
+    "id": "viteee",
+    "name": "VITEEE",
+    "fullName": "VIT Engineering Entrance Examination",
+    "conductingBody": "Vellore Institute of Technology (VIT)",
+    "purpose": "Sole entrance exam for B.Tech admission to VIT's campuses (Vellore, Chennai, Bhopal, Amaravati).",
+    "typicalWindow": "Applications ~Nov–Mar; computer-based exam in slots ~April. Dates are set by VIT each year.",
+    "eligibility": "Passed or appearing in 10+2 with Physics, Mathematics and one of Chemistry/Biology. Minimum 60% aggregate in PCM (50% for SC/ST and specified categories).",
+    "costBand": "low",
+    "feesNote": "Application fee approx ₹1,350 (single attempt). Verify on the official VITEEE portal.",
+    "officialUrl": "https://viteee.vit.ac.in/",
+    "sourceUrl": "https://viteee.vit.ac.in/",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": null,
+    "verified": true
+  },
+  {
+    "id": "met",
+    "name": "MET",
+    "fullName": "Manipal Entrance Test",
+    "conductingBody": "Manipal Academy of Higher Education (MAHE)",
+    "purpose": "Entrance test for B.Tech admission to Manipal Institute of Technology campuses (Manipal, Bengaluru).",
+    "typicalWindow": "Applications ~Nov–Mar; online proctored exam in phases ~Apr–May. Dates are set by MAHE each year.",
+    "eligibility": "Passed or appearing in 10+2 with Physics and Mathematics plus one of Chemistry/Biology/Biotech/Technical-vocational, and English. Minimum 50% aggregate in PCM.",
+    "costBand": "low",
+    "feesNote": "Application fee approx ₹2,000 per attempt. Verify on the official MAHE admissions portal.",
+    "officialUrl": "https://manipal.edu/mu/admission.html",
+    "sourceUrl": "https://manipal.edu/mu/admission.html",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": null,
+    "verified": true
+  },
+  {
+    "id": "state-cet",
+    "name": "State CET (e.g. MHT-CET / KCET / WBJEE)",
+    "fullName": "State-level Common Entrance Test for engineering admission",
+    "conductingBody": "Your state's CET authority (varies by state)",
+    "purpose": "Generic placeholder for your own state's engineering entrance test, used for admission to that state's government (and many private) engineering colleges. Each state runs its own — e.g. MHT-CET (Maharashtra), KCET (Karnataka), WBJEE (West Bengal), AP/TS EAPCET (Andhra/Telangana). Since we don't know your state, check your state CET cell for the exact exam, eligibility, fees and dates.",
+    "typicalWindow": "Most state CETs: applications ~Jan–Mar and the exam ~Apr–Jun, but every state sets its own calendar — confirm on your state CET portal.",
+    "eligibility": "Typically 10+2 with Physics and Mathematics (plus Chemistry/Biology/Vocational) and, for state-quota seats, domicile in that state. Minimum marks and reservation rules vary by state.",
+    "costBand": "low",
+    "feesNote": "Application fees vary by state and category (commonly ₹500–₹1,200).",
+    "officialUrl": "",
+    "careers": [
+      "engineer"
+    ],
+    "lastVerified": null,
+    "verified": true
   }
 ]

@@ -16,6 +16,7 @@
 
 import { useState } from "react";
 import { useI18n } from "@/lib/i18n/I18nProvider";
+import { localize } from "@/lib/i18n/localized";
 import {
   CV_TEMPLATES,
   buildCvDocHtml,
@@ -63,7 +64,7 @@ const BUILDERS: { name: string; url: string; noteKey: string }[] = [
 ];
 
 export default function CvTemplatesPage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
 
   // Translated display name, falling back to the name baked into the data.
   const nameOf = (tpl: CvTemplate) => t(`${PREFIX}.templates.${tpl.id}.name`);
@@ -102,13 +103,15 @@ export default function CvTemplatesPage() {
   ) => {
     const key = entryFieldKey(si, ei, fi);
     const id = `${selectedId}-${key}`;
+    const label = localize(field.label, locale);
+    const hint = field.hint ? localize(field.hint, locale) : undefined;
     const className =
       "mt-1 w-full rounded-lg border border-stone-300 px-3 py-2 text-stone-900 placeholder:text-stone-400 focus:border-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-200";
     return (
       <div key={key}>
         {!opts?.hideLabel && (
           <label htmlFor={id} className="block text-sm font-medium text-stone-700">
-            {field.label}
+            {label}
           </label>
         )}
         {opts?.multiline ? (
@@ -116,7 +119,7 @@ export default function CvTemplatesPage() {
             id={id}
             rows={2}
             value={values[key] ?? ""}
-            placeholder={field.hint ?? ""}
+            placeholder={hint ?? ""}
             onChange={(e) => setField(key, e.target.value)}
             className={className}
           />
@@ -125,8 +128,8 @@ export default function CvTemplatesPage() {
             id={id}
             type="text"
             value={values[key] ?? ""}
-            placeholder={field.hint ?? field.label}
-            aria-label={opts?.hideLabel ? field.label : undefined}
+            placeholder={hint ?? label}
+            aria-label={opts?.hideLabel ? label : undefined}
             onChange={(e) => setField(key, e.target.value)}
             className={`${className} min-h-11`}
           />
@@ -150,7 +153,8 @@ export default function CvTemplatesPage() {
   const handleMakePdf = () =>
     printHtmlDocument(buildCvDocHtml(selected, values, false));
 
-  // Blank-template downloads (no values, no title/tips baked in).
+  // Blank-template downloads (no values, no title/tips baked in). The downloaded
+  // CV is always English (the form UI above is Hindi) — see lib/cvTemplates.
   const handleBlankWord = (tpl: CvTemplate) =>
     downloadTextFile(`${fileBase(tpl)}.doc`, WORD_MIME, buildCvDocHtml(tpl, {}, true));
   const handleBlankText = (tpl: CvTemplate) =>
@@ -198,9 +202,9 @@ export default function CvTemplatesPage() {
           {selected.sections.map((sec, si) => (
             <div key={`${selectedId}-${si}`}>
               <h3 className="text-sm font-bold uppercase tracking-wide text-amber-700">
-                {sec.heading}
+                {localize(sec.heading, locale)}
               </h3>
-              {sec.note && <p className="mt-0.5 text-xs text-stone-500">{sec.note}</p>}
+              {sec.note && <p className="mt-0.5 text-xs text-stone-500">{localize(sec.note, locale)}</p>}
 
               {sec.kind === "about" ? (
                 renderField(si, 0, 0, sec.fields[0], { multiline: true })
@@ -230,7 +234,7 @@ export default function CvTemplatesPage() {
                     className="inline-flex min-h-9 items-center gap-1 rounded-full border border-dashed border-amber-400 px-4 text-sm font-semibold text-amber-700 transition-colors hover:bg-amber-50"
                   >
                     <span aria-hidden className="text-base leading-none">＋</span>
-                    {sec.entry?.addLabel ?? "Add another"}
+                    {sec.entry ? localize(sec.entry.addLabel, locale) : "Add another"}
                   </button>
                 </div>
               )}

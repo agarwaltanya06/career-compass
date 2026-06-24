@@ -12,6 +12,7 @@
 
 import { useMemo, useState } from "react";
 import { useI18n } from "@/lib/i18n/I18nProvider";
+import { localize } from "@/lib/i18n/localized";
 import ExternalLink from "@/components/ExternalLink";
 import {
   RESOURCES,
@@ -22,7 +23,7 @@ import {
 const PREFIX = "static.freeResources";
 
 export default function FreeResourcesPage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   // null = "All". Single active filter keeps the UI simple and obvious.
   const [active, setActive] = useState<ResourceTag | null>(null);
 
@@ -61,7 +62,7 @@ export default function FreeResourcesPage() {
               {r.title}
               <span aria-hidden className="ml-1 text-amber-500">↗</span>
             </ExternalLink>
-            <p className="mt-1 text-sm text-stone-600">{r.desc}</p>
+            <p className="mt-1 text-sm text-stone-600">{localize(r.desc, locale)}</p>
             <div className="mt-2 flex flex-wrap gap-1.5">
               {r.tags.map((tag) => (
                 <span

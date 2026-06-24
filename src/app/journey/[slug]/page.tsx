@@ -46,6 +46,8 @@ export default function BookmarkedJourneyPage() {
   // Whether the in-flight regeneration is a forced refresh (a cached journey the
   // user chose to re-roll) — so a retry uses the same mode.
   const forceRef = useRef(false);
+  // Holds the in-flight regeneration's controller so "Cancel" can abort it.
+  const abortRef = useRef<AbortController | null>(null);
 
   // The plan's language rides in ?lang= so a shared link reopens in its own
   // language; fall back to the visitor's UI locale. Read on the client only.
@@ -91,23 +93,38 @@ export default function BookmarkedJourneyPage() {
     setModelLabel(null);
     setPhase("regenerating");
     setAttempt((n) => n + 1);
+    const controller = new AbortController();
+    abortRef.current = controller;
     try {
       const payload = await requestJourneyStream(
         profile,
         (event) => {
           if (event.model) setModelLabel(modelDisplayName(event.provider, event.model));
         },
-        { refresh: force },
+        { refresh: force, signal: controller.signal },
       );
       storeJourney(payload);
       setServed({ journey: payload.journey, status: payload.status });
       setPhase("ready");
     } catch (err) {
+      if (controller.signal.aborted) return; // silent user cancel
       setGenError(err instanceof Error ? err.message : t("journey.notFound.error"));
       if (err instanceof GenerationFailedError && err.externalPrompt) {
         setGenPrompt(err.externalPrompt);
       }
+    } finally {
+      if (abortRef.current === controller) abortRef.current = null;
     }
+  }
+
+  // Abort an in-flight (re)generation. Return to the loaded journey if we have
+  // one, else the "missing" screen so the user can retry.
+  function cancelRegenerate() {
+    abortRef.current?.abort();
+    abortRef.current = null;
+    setGenError(null);
+    setGenPrompt(null);
+    setPhase(served ? "ready" : "missing");
   }
 
   if (phase === "ready" && served) {
@@ -129,6 +146,7 @@ export default function BookmarkedJourneyPage() {
         externalPrompt={genPrompt}
         onRetry={() => regenerate(forceRef.current)}
         onStartOver={() => router.push("/intake")}
+        onCancel={cancelRegenerate}
       />
     );
   }

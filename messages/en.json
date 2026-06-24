@@ -45,7 +45,7 @@
     "feature1Title": "A step-by-step timeline",
     "feature1Body": "Every step in order — which class, which exam, which year.",
     "feature2Title": "Colleges & exams you can filter",
-    "feature2Body": "Compare your options and sort them by cost: free, low, mid or high.",
+    "feature2Body": "Compare your options and filter them by cost: free, low, mid or high.",
     "feature3Title": "Check before you trust",
     "feature3Body": "We link to the official site so you can confirm everything yourself.",
     "exploreTitle": "Already know what you need?",
@@ -126,7 +126,7 @@
     },
     "generatingChat": {
       "assistant": "Career Compass AI",
-      "modelPrefix": "Powered by",
+      "modelLine": "Powered by {model}",
       "connecting": "Connecting…",
       "footnote": "This usually takes a minute or two while we check official sources. You can keep this open.",
       "steps": [
@@ -139,6 +139,7 @@
       "errorTitle": "Something went wrong",
       "retry": "Try again",
       "startOver": "Start over",
+      "cancel": "Cancel",
       "promptTitle": "Get your plan from a free AI tool instead",
       "promptLead": "Copy this ready-made prompt and paste it into any free AI chatbot — or search it on Google. Your career and class are already filled in.",
       "fallbackLead": "No need to wait — you can still plan this yourself. Our step-by-step guide shows how to research any career and check the dates, fees, and eligibility on the official websites.",
@@ -222,9 +223,9 @@
       "costHeading": "Filter by cost",
       "allCosts": "All costs",
       "free": "Free",
-      "low": "Low",
-      "mid": "Medium",
-      "high": "High",
+      "low": "Low & under",
+      "mid": "Medium & under",
+      "high": "High & under",
       "showColleges": "Colleges",
       "showExams": "Exams",
       "showAll": "Show all",
@@ -353,7 +354,10 @@
         "intro": "Some fake “jobs” go after students looking for their first job. A few quick checks keep you safe:"
       },
       "quickStart": {
-        "label": "Quick start"
+        "label": "Quick start",
+        "p1": "make a ",
+        "p2": " profile, an ",
+        "p3": " account, and a simple CV. That's enough to start applying today!"
       }
     },
     "planItYourself": {

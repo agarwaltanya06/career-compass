@@ -335,114 +335,96 @@
       }
     },
     {
-      "id": "route-2-bitsat",
-      "name": "B.E. via BITSAT (BITS Pilani)",
-      "bestFor": "Students seeking admission to a top-tier private deemed university with a flexible academic structure and strong industry connections.",
+      "id": "engineering-private-universities",
+      "name": "Private universities (BITS, VIT, Manipal…)",
+      "bestFor": "Students targeting top private/deemed engineering universities — like BITS Pilani, VIT and Manipal — each admitting through its own entrance exam (BITSAT, VITEEE, MET) that you can sit in parallel with JEE.",
       "feasibility": "high",
-      "feasibilityReason": "BITSAT is a well-established entrance exam for a highly reputed private institution, offering a distinct pathway to engineering.",
+      "feasibilityReason": "You're in Class 10 — choosing PCM now and preparing steadily over Classes 11–12 gives you ample time for this route.",
       "costBand": "high",
-      "duration": "Approximately 6 years (2 years of 11th/12th + 4 years B.E.)",
+      "duration": "4 years (after Class 12)",
       "steps": [
         {
-          "id": "step-1",
+          "id": "priv-1",
           "order": 1,
           "type": "education",
           "title": "Complete Class 10 Board Exams",
           "offsetMonths": 0,
-          "description": "Focus on scoring well in Class 10 board exams, especially in Science and Mathematics."
+          "description": "Finish your Class 10 boards — they decide stream eligibility for Class 11."
         },
         {
-          "id": "step-2",
+          "id": "priv-2",
           "order": 2,
           "type": "education",
-          "title": "Choose Science Stream (PCM) for Class 11 & 12",
+          "title": "Choose Science stream (PCM) for Class 11 & 12",
           "offsetMonths": 1,
-          "description": "Enroll in the Science stream with Physics, Chemistry, and Mathematics (PCM) for Class 11 and 12, aiming for a minimum of 75% aggregate in PCM and 60% in each subject for BITSAT eligibility. [cite: bitsat]"
+          "description": "Pick Physics, Chemistry and Mathematics — the required stream for every engineering route."
         },
         {
-          "id": "step-3",
+          "id": "priv-3",
           "order": 3,
           "type": "skill",
-          "title": "BITSAT Preparation",
+          "title": "Prepare for private-university entrance exams",
           "offsetMonths": 13,
-          "description": "Prepare specifically for BITSAT, which tests Physics, Chemistry, Mathematics, English Proficiency, and Logical Reasoning. This can be done alongside JEE preparation."
+          "description": "Through Classes 11–12, prepare for the entrance test(s) of the private universities you're targeting — BITSAT for BITS, VITEEE for VIT, MET for Manipal. Their syllabi overlap heavily with the Class 12 PCM board syllabus."
         },
         {
-          "id": "step-4",
+          "id": "priv-4",
           "order": 4,
           "type": "application",
-          "title": "BITSAT Session 1 Application",
-          "offsetMonths": 30,
-          "description": "Apply for BITSAT Session 1, typically opening in January. [cite: bitsat]"
+          "title": "Register for BITSAT / VITEEE / MET",
+          "offsetMonths": 16,
+          "description": "Apply for each target university's exam separately on its official portal. They run on different dates, so you can sit more than one to widen your options."
         },
         {
-          "id": "step-5",
+          "id": "priv-5",
           "order": 5,
           "type": "exam",
-          "title": "Appear for BITSAT Session 1 Exam",
-          "offsetMonths": 35,
-          "description": "Take the computer-based BITSAT Session 1 exam, usually held in late May. [cite: bitsat]"
+          "title": "Appear for your chosen private-university exams",
+          "offsetMonths": 22,
+          "description": "Take BITSAT, VITEEE and/or MET as applicable — these are parallel options, so you only need a strong score in the exam(s) for the university you want."
         },
         {
-          "id": "step-6",
+          "id": "priv-6",
           "order": 6,
           "type": "application",
-          "title": "BITSAT Session 2 Application (if needed)",
-          "offsetMonths": 36,
-          "description": "If you wish to improve your score, apply for BITSAT Session 2. [cite: bitsat]",
-          "optional": true
+          "title": "Counselling & secure admission",
+          "offsetMonths": 24,
+          "description": "Complete each university's own counselling/admission process based on your score and take the seat you prefer."
         },
         {
-          "id": "step-7",
+          "id": "priv-7",
           "order": 7,
-          "type": "exam",
-          "title": "Appear for BITSAT Session 2 Exam",
-          "offsetMonths": 37,
-          "description": "Take the BITSAT Session 2 exam, typically held in late June. The best of the two scores is considered. [cite: bitsat]",
-          "optional": true
+          "type": "education",
+          "title": "Pursue your B.Tech / B.E. degree (4 years)",
+          "offsetMonths": 26,
+          "description": "Begin the four-year engineering degree at your chosen private university."
         },
         {
-          "id": "step-8",
+          "id": "priv-8",
           "order": 8,
-          "type": "application",
-          "title": "BITS Pilani Admission & Counselling",
-          "offsetMonths": 39,
-          "description": "Participate in the BITS Pilani admission process based on your BITSAT score and preferences."
+          "type": "experience",
+          "title": "Internships & practice school",
+          "offsetMonths": 61,
+          "optional": true,
+          "description": "Take up internships (BITS runs its Practice School) to build practical experience and strengthen placements. Exam patterns, fees and eligibility rules may change by then — verify on the official site when you get there."
         },
         {
-          "id": "step-9",
+          "id": "priv-9a",
           "order": 9,
           "type": "education",
-          "title": "Pursue B.E. Degree at BITS (4 years)",
-          "offsetMonths": 40,
-          "description": "Enroll in a 4-year Bachelor of Engineering (B.E.) program at BITS Pilani, Goa, or Hyderabad campuses. Rules and fees may change by then, re-verify when you get there."
+          "title": "Pursue M.Tech / MS (optional higher studies)",
+          "offsetMonths": 71,
+          "alternativeTo": "priv-9b",
+          "description": "Optionally continue to a master's via GATE/GRE for specialisation or research. Exam patterns, fees and eligibility rules may change by then — verify on the official site when you get there."
         },
         {
-          "id": "step-10",
-          "order": 10,
+          "id": "priv-9b",
+          "order": 9,
           "type": "experience",
-          "title": "Practice School (Internships)",
-          "offsetMonths": 64,
-          "description": "Engage in BITS Pilani's 'Practice School' program, which offers structured internships in industry, providing valuable real-world experience. This step is optional but highly recommended. Rules and fees may change by then, re-verify when you get there.",
-          "optional": true
-        },
-        {
-          "id": "step-11",
-          "order": 11,
-          "type": "experience",
-          "title": "Campus Placements / Job Search",
-          "offsetMonths": 88,
-          "description": "Participate in campus placements or seek engineering roles in various sectors after graduation. Rules and fees may change by then, re-verify when you get there."
-        },
-        {
-          "id": "step-11b",
-          "order": 11,
-          "type": "education",
-          "title": "Pursue Higher Studies",
-          "offsetMonths": 88,
-          "description": "Opt for Master's or Doctoral programs in engineering or related fields, either in India or abroad. Rules and fees may change by then, re-verify when you get there.",
-          "optional": true,
-          "alternativeTo": "step-11"
+          "title": "Begin your professional engineering career",
+          "offsetMonths": 71,
+          "alternativeTo": "priv-9a",
+          "description": "Enter the workforce through campus placements or off-campus roles after graduation. Exam patterns, fees and eligibility rules may change by then — verify on the official site when you get there."
         }
       ],
       "skills": {
@@ -450,39 +432,39 @@
           "Physics",
           "Chemistry",
           "Mathematics",
-          "English Proficiency",
-          "Logical Reasoning",
           "Problem Solving",
-          "Analytical Skills",
-          "Programming"
+          "Analytical Thinking",
+          "Programming Fundamentals (e.g., C, C++, Python)",
+          "Technical Communication",
+          "Teamwork"
         ],
         "upskilling": [
           {
-            "name": "Advanced Calculus & Linear Algebra",
-            "why": "Deepen mathematical foundations for complex engineering problems.",
+            "name": "Data Structures and Algorithms",
+            "why": "Essential for competitive programming and software development roles.",
             "costBand": "free",
-            "url": "https://ocw.mit.edu/courses/mathematics/",
+            "url": "https://www.geeksforgeeks.org/data-structures/",
             "verified": false
           },
           {
-            "name": "Technical Writing",
-            "why": "Essential for documenting projects, research, and communicating complex ideas clearly.",
-            "costBand": "free",
-            "url": "https://www.coursera.org/learn/technical-writing",
-            "verified": false
-          },
-          {
-            "name": "Cloud Computing Fundamentals (AWS/Azure/GCP)",
-            "why": "Increasingly relevant for software and data-intensive engineering roles.",
+            "name": "CAD Software (e.g., AutoCAD, SolidWorks)",
+            "why": "Crucial for design and mechanical/civil engineering roles.",
             "costBand": "low",
-            "url": "https://aws.amazon.com/training/digital-training/",
+            "url": "https://www.autodesk.in/products/autocad/overview",
             "verified": false
           },
           {
-            "name": "Entrepreneurship Basics",
-            "why": "Useful for those interested in innovation, startups, or leadership roles.",
+            "name": "Machine Learning/AI Basics",
+            "why": "High-demand skills across various engineering domains.",
             "costBand": "free",
-            "url": "https://www.nptel.ac.in/courses/110106141",
+            "url": "https://www.coursera.org/learn/machine-learning",
+            "verified": false
+          },
+          {
+            "name": "Project Management Tools",
+            "why": "Important for leading and organizing engineering projects.",
+            "costBand": "free",
+            "url": "https://asana.com/resources/project-management-guide",
             "verified": false
           }
         ]
@@ -496,6 +478,26 @@
           "typicalWindow": "Applications ~Jan–Mar for Session 1 (reopen ~Apr–May for Session-2-only candidates); computer-based exams ~late May (Session 1) and ~late June (Session 2).",
           "costBand": "low",
           "officialUrl": "https://www.bitsadmission.com/",
+          "verified": true
+        },
+        {
+          "id": "viteee",
+          "name": "VITEEE",
+          "purpose": "Sole entrance exam for B.Tech admission to VIT's campuses (Vellore, Chennai, Bhopal, Amaravati).",
+          "eligibility": "Passed or appearing in 10+2 with Physics, Mathematics and one of Chemistry/Biology. Minimum 60% aggregate in PCM (50% for SC/ST and specified categories).",
+          "typicalWindow": "Applications ~Nov–Mar; computer-based exam in slots ~April. Dates are set by VIT each year.",
+          "costBand": "low",
+          "officialUrl": "https://viteee.vit.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "met",
+          "name": "MET",
+          "purpose": "Entrance test for B.Tech admission to Manipal Institute of Technology campuses (Manipal, Bengaluru).",
+          "eligibility": "Passed or appearing in 10+2 with Physics and Mathematics plus one of Chemistry/Biology/Biotech/Technical-vocational, and English. Minimum 50% aggregate in PCM.",
+          "typicalWindow": "Applications ~Nov–Mar; online proctored exam in phases ~Apr–May. Dates are set by MAHE each year.",
+          "costBand": "low",
+          "officialUrl": "https://manipal.edu/mu/admission.html",
           "verified": true
         }
       ],
@@ -511,14 +513,256 @@
           "costBand": "high",
           "officialUrl": "https://www.bits-pilani.ac.in/",
           "verified": true
+        },
+        {
+          "id": "vit-vellore",
+          "name": "Vellore Institute of Technology (VIT Vellore)",
+          "type": "deemed",
+          "location": "Vellore, Tamil Nadu",
+          "approxAnnualFees": "₹1,98,000 - ₹3,98,000",
+          "feesNote": "B.Tech tuition is tiered by VITEEE rank/fee category, roughly ₹1.98–3.98 lakh/year; hostel & mess extra. VIT's GV School Development Programme (GVSDP) gives merit scholarships to top rankers.",
+          "entranceRequired": "VITEEE",
+          "costBand": "high",
+          "officialUrl": "https://vit.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "manipal-mit",
+          "name": "Manipal Institute of Technology (MIT Manipal)",
+          "type": "deemed",
+          "location": "Manipal, Karnataka",
+          "approxAnnualFees": "₹3,80,000 - ₹4,30,000",
+          "feesNote": "B.Tech tuition ~₹3.8–4.3 lakh/year depending on branch; hostel & mess extra. Admission via MET (Manipal Entrance Test). MAHE offers a limited number of merit scholarships.",
+          "entranceRequired": "MET (Manipal Entrance Test)",
+          "costBand": "high",
+          "officialUrl": "https://manipal.edu/mit.html",
+          "verified": true
         }
       ],
       "missedDeadlineFallback": {
         "applies": true,
         "options": [
-          "Re-attempt BITSAT in the next academic cycle (if eligible).",
-          "Consider other private universities that accept JEE Main scores or conduct their own entrance exams.",
-          "Explore state-level engineering entrance exams for admission to various colleges."
+          "Sit a later session of the same exam — BITSAT, VITEEE and MET often have multiple slots or phases.",
+          "Many private universities also admit on a management or board-merit quota; check each university's admission page.",
+          "Fall back to your state CET (see the state-college route) or reattempt JEE next year.",
+          "Consider a diploma followed by lateral entry into a B.Tech programme."
+        ]
+      }
+    },
+    {
+      "id": "engineering-state-cet",
+      "name": "State government colleges via your state's CET",
+      "bestFor": "Students who want an affordable government engineering seat in their home state through that state's Common Entrance Test (e.g. MHT-CET, KCET, WBJEE). We keep this generic because your state isn't known — substitute your own state's CET.",
+      "feasibility": "high",
+      "feasibilityReason": "You're in Class 10 — choosing PCM now and preparing steadily over Classes 11–12 gives you ample time for this route.",
+      "costBand": "low",
+      "duration": "4 years (after Class 12)",
+      "steps": [
+        {
+          "id": "state-1",
+          "order": 1,
+          "type": "education",
+          "title": "Complete Class 10 Board Exams",
+          "offsetMonths": 0,
+          "description": "Finish your Class 10 boards — they decide stream eligibility for Class 11."
+        },
+        {
+          "id": "state-2",
+          "order": 2,
+          "type": "education",
+          "title": "Choose Science stream (PCM) for Class 11 & 12",
+          "offsetMonths": 1,
+          "description": "Pick Physics, Chemistry and Mathematics — the required stream for every engineering route."
+        },
+        {
+          "id": "state-3",
+          "order": 3,
+          "type": "skill",
+          "title": "Prepare for your state CET",
+          "offsetMonths": 13,
+          "description": "Through Classes 11–12, prepare for your home state's engineering CET — e.g. MHT-CET (Maharashtra), KCET (Karnataka) or WBJEE (West Bengal). The syllabus follows the Class 11–12 PCM curriculum."
+        },
+        {
+          "id": "state-4",
+          "order": 4,
+          "type": "application",
+          "title": "Register for your state's CET (e.g. MHT-CET / KCET / WBJEE)",
+          "offsetMonths": 16,
+          "description": "Apply on your state CET cell's official portal. Many states also need a separate domicile/eligibility step for state-quota seats — check your state's rules."
+        },
+        {
+          "id": "state-5",
+          "order": 5,
+          "type": "exam",
+          "title": "Appear for your state CET",
+          "offsetMonths": 22,
+          "description": "Sit your state's entrance test. A good rank qualifies you for that state's government and many private engineering colleges."
+        },
+        {
+          "id": "state-6",
+          "order": 6,
+          "type": "application",
+          "title": "State counselling & seat allotment",
+          "offsetMonths": 24,
+          "description": "Join your state's centralised counselling to get a seat in a government (or private) college by rank and category."
+        },
+        {
+          "id": "state-7",
+          "order": 7,
+          "type": "education",
+          "title": "Pursue your B.Tech / B.E. degree (4 years)",
+          "offsetMonths": 26,
+          "description": "Begin the four-year engineering degree at your allotted state college — government colleges keep fees low."
+        },
+        {
+          "id": "state-8",
+          "order": 8,
+          "type": "experience",
+          "title": "Internships & projects",
+          "offsetMonths": 61,
+          "optional": true,
+          "description": "Take up internships and projects to build practical experience and strengthen placements. Exam patterns, fees and eligibility rules may change by then — verify on the official site when you get there."
+        },
+        {
+          "id": "state-9a",
+          "order": 9,
+          "type": "education",
+          "title": "Pursue M.Tech / MS (optional higher studies)",
+          "offsetMonths": 71,
+          "alternativeTo": "state-9b",
+          "description": "Optionally continue to a master's via GATE/GRE for specialisation or research. Exam patterns, fees and eligibility rules may change by then — verify on the official site when you get there."
+        },
+        {
+          "id": "state-9b",
+          "order": 9,
+          "type": "experience",
+          "title": "Begin your professional engineering career",
+          "offsetMonths": 71,
+          "alternativeTo": "state-9a",
+          "description": "Enter the workforce through campus placements or off-campus roles after graduation. Exam patterns, fees and eligibility rules may change by then — verify on the official site when you get there."
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Physics",
+          "Chemistry",
+          "Mathematics",
+          "Problem Solving",
+          "Analytical Thinking",
+          "Programming Fundamentals (e.g., C, C++, Python)",
+          "Technical Communication",
+          "Teamwork"
+        ],
+        "upskilling": [
+          {
+            "name": "Data Structures and Algorithms",
+            "why": "Essential for competitive programming and software development roles.",
+            "costBand": "free",
+            "url": "https://www.geeksforgeeks.org/data-structures/",
+            "verified": false
+          },
+          {
+            "name": "CAD Software (e.g., AutoCAD, SolidWorks)",
+            "why": "Crucial for design and mechanical/civil engineering roles.",
+            "costBand": "low",
+            "url": "https://www.autodesk.in/products/autocad/overview",
+            "verified": false
+          },
+          {
+            "name": "Machine Learning/AI Basics",
+            "why": "High-demand skills across various engineering domains.",
+            "costBand": "free",
+            "url": "https://www.coursera.org/learn/machine-learning",
+            "verified": false
+          },
+          {
+            "name": "Project Management Tools",
+            "why": "Important for leading and organizing engineering projects.",
+            "costBand": "free",
+            "url": "https://asana.com/resources/project-management-guide",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "id": "state-cet",
+          "name": "State CET (e.g. MHT-CET / KCET / WBJEE)",
+          "purpose": "Generic placeholder for your own state's engineering entrance test, used for admission to that state's government (and many private) engineering colleges. Each state runs its own — e.g. MHT-CET (Maharashtra), KCET (Karnataka), WBJEE (West Bengal), AP/TS EAPCET (Andhra/Telangana). Since we don't know your state, check your state CET cell for the exact exam, eligibility, fees and dates.",
+          "eligibility": "Typically 10+2 with Physics and Mathematics (plus Chemistry/Biology/Vocational) and, for state-quota seats, domicile in that state. Minimum marks and reservation rules vary by state.",
+          "typicalWindow": "Most state CETs: applications ~Jan–Mar and the exam ~Apr–Jun, but every state sets its own calendar — confirm on your state CET portal.",
+          "costBand": "low",
+          "officialUrl": "",
+          "verified": true
+        },
+        {
+          "id": "mht-cet",
+          "name": "MHT-CET",
+          "purpose": "State-level entrance exam for engineering degree admissions in Maharashtra. Shown as an example of a state CET — most states run their own (e.g. WBJEE in West Bengal, KCET in Karnataka, AP/TS EAPCET); eligibility, fees and windows vary by state.",
+          "eligibility": "Passed or appearing in 10+2 with Physics and Mathematics plus one of Chemistry/Biology/Vocational. Minimum 45% aggregate (40% for reserved categories). No age limit. Other states' CETs set their own criteria.",
+          "typicalWindow": "Applications ~Jan–Feb; PCM-group exam ~Apr–May. Dates are set by the Maharashtra CET Cell each year (other states' CETs run on their own calendars).",
+          "costBand": "low",
+          "officialUrl": "https://cetcell.mahacet.org/",
+          "verified": true
+        }
+      ],
+      "colleges": [
+        {
+          "id": "coep-pune",
+          "name": "COEP Technological University (College of Engineering, Pune)",
+          "type": "government",
+          "location": "Pune, Maharashtra",
+          "approxAnnualFees": "₹1,42,000 - ₹1,63,000",
+          "feesNote": "Open-category fee ~₹1.42–1.63 lakh/year. As a state institution, reserved-category fees are far lower — OBC ~₹45,000–50,000/year and SC/ST ~₹3,500–4,000/year. Maharashtra EBC and TFWS (tuition-fee-waiver) schemes can further reduce fees for low-income families; verify eligibility on the official site.",
+          "entranceRequired": "MHT-CET (also accepts JEE Main)",
+          "costBand": "mid",
+          "officialUrl": "https://www.coeptech.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "vjti-mumbai",
+          "name": "Veermata Jijabai Technological Institute (VJTI), Mumbai",
+          "type": "government",
+          "location": "Mumbai, Maharashtra",
+          "approxAnnualFees": "₹83,000 - ₹1,05,000",
+          "feesNote": "Government-aided autonomous institute — open-category B.Tech fee ~₹83,000–1,05,000/year; reserved-category and Maharashtra EBC/TFWS waivers cut this substantially. Admission mainly via MHT-CET, with a JEE Main quota too. Confirm the current fee on the official site.",
+          "entranceRequired": "MHT-CET (also admits a JEE Main quota)",
+          "costBand": "mid",
+          "officialUrl": "https://vjti.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "uvce-bengaluru",
+          "name": "University Visvesvaraya College of Engineering (UVCE), Bengaluru",
+          "type": "government",
+          "location": "Bengaluru, Karnataka",
+          "approxAnnualFees": "₹45,000 - ₹70,000",
+          "feesNote": "State government college under Bangalore University — open-category fee ~₹45,000–70,000/year; reserved-category and KCET government-quota seats cost far less. Confirm the current fee on the official site.",
+          "entranceRequired": "KCET (Karnataka CET); also admits via COMEDK",
+          "costBand": "low",
+          "officialUrl": "https://uvce.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "jadavpur-university",
+          "name": "Jadavpur University, Kolkata",
+          "type": "government",
+          "location": "Kolkata, West Bengal",
+          "approxAnnualFees": "₹2,400 - ₹30,000",
+          "feesNote": "Among the most affordable engineering programmes in India, as it is a West Bengal state-government university. Non-IT B.E. branches cost only a few thousand rupees a year (~₹2,400–3,000/year; ~₹10,000–12,000 for the full course), while IT/CSE is higher at ~₹29,900/year (~₹1.2 lakh for four years). Merit-cum-means aid (e.g. Swami Vivekananda scholarship) and fee concessions are available for low-income students.",
+          "entranceRequired": "WBJEE (also admits via JEE Main)",
+          "costBand": "low",
+          "officialUrl": "https://jadavpuruniversity.in/",
+          "verified": true
+        }
+      ],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "Check whether your state CET runs a second round of counselling or spot admissions.",
+          "Use your JEE Main score where your state accepts it — many states admit on JEE Main too.",
+          "Apply to private colleges in your state on their management or board-merit quota.",
+          "Reattempt the CET next year, or take a diploma + lateral-entry route."
         ]
       }
     }

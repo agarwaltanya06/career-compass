@@ -12,7 +12,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import {
   visibleQuestions,
@@ -235,6 +235,9 @@ function IntakeSummary({
 
   const explore = isExplore(answers);
 
+  // Holds the in-flight generation's controller so "Cancel" can abort it.
+  const abortRef = useRef<AbortController | null>(null);
+
   // Kick off live generation, then hand the result to the journey page via
   // sessionStorage (spec §7 phase 6: intake "finish" calls /api/generate, not
   // the sample data). Streams progress so the chat screen can show the real
@@ -252,19 +255,39 @@ function IntakeSummary({
     setModelLabel(null);
     setGenerating(true);
     setAttempt((n) => n + 1);
+    const controller = new AbortController();
+    abortRef.current = controller;
     try {
-      const payload = await requestJourneyStream(profile, (event) => {
-        if (event.model) setModelLabel(modelDisplayName(event.provider, event.model));
-      });
+      const payload = await requestJourneyStream(
+        profile,
+        (event) => {
+          if (event.model) setModelLabel(modelDisplayName(event.provider, event.model));
+        },
+        { signal: controller.signal },
+      );
       storeJourney(payload);
       router.push("/journey");
     } catch (err) {
+      // A user-initiated cancel surfaces as an AbortError — already handled by
+      // cancelGenerate (which reset the screen), so don't show it as a failure.
+      if (controller.signal.aborted) return;
       // Stay on the chat screen so the friendly error + retry live there.
       setGenError(err instanceof Error ? err.message : t("intake.done.generateError"));
       if (err instanceof GenerationFailedError && err.externalPrompt) {
         setGenPrompt(err.externalPrompt);
       }
+    } finally {
+      if (abortRef.current === controller) abortRef.current = null;
     }
+  }
+
+  // Abort an in-flight generation and return to the review screen.
+  function cancelGenerate() {
+    abortRef.current?.abort();
+    abortRef.current = null;
+    setGenerating(false);
+    setGenError(null);
+    setGenPrompt(null);
   }
 
   // Turn a stored answer value back into a human label by finding the option
@@ -302,6 +325,7 @@ function IntakeSummary({
         externalPrompt={genPrompt}
         onRetry={generate}
         onStartOver={onRestart}
+        onCancel={cancelGenerate}
       />
     );
   }

@@ -21,12 +21,20 @@
  */
 
 import { htmlEscape } from "./timelineExport";
+import { localize, type LangText } from "./i18n/localized";
+
+/**
+ * Resolve a {@link LangText} to its English string. The downloadable CV always
+ * uses English (headings, labels, hints) even when the form UI is in Hindi —
+ * see filledInnerHtml for why. The on-screen form localises these separately.
+ */
+const enText = (value: LangText) => localize(value, "en");
 
 /** A single labelled blank a student fills in. */
 export interface CvField {
-  label: string;
+  label: LangText;
   /** Plain-language example, e.g. "e.g. 98xxxxxx" — a placeholder, never CV text. */
-  hint?: string;
+  hint?: LangText;
 }
 
 /** Config for a repeatable "entries" section. */
@@ -36,7 +44,7 @@ export interface CvEntryConfig {
   /** Joins a multi-field entry into one CV line, e.g. " — " → "School — 82%". */
   joiner: string;
   /** Label for the "add another" button. */
-  addLabel: string;
+  addLabel: LangText;
 }
 
 /**
@@ -48,8 +56,8 @@ export interface CvEntryConfig {
  *     CV joins each entry's filled fields with `entry.joiner` onto one line.
  */
 export interface CvSection {
-  heading: string;
-  note?: string;
+  heading: LangText;
+  note?: LangText;
   kind: "details" | "about" | "entries";
   fields: CvField[];
   /** Required when kind === "entries". */
@@ -87,44 +95,75 @@ const NO_EXPERIENCE: CvTemplate = {
   name: "Student CV — no work experience",
   sections: [
     {
-      heading: "Your details",
+      heading: { en: "Your details", hi: "आपकी जानकारी" },
       kind: "details",
       fields: [
-        { label: "Full name" },
-        { label: "Phone number", hint: "e.g. 98xxxxxxxx" },
-        { label: "Email", hint: "Keep it simple — firstname.lastname@…" },
-        { label: "City / town" },
+        { label: { en: "Full name", hi: "पूरा नाम" } },
+        { label: { en: "Phone number", hi: "फ़ोन नंबर" }, hint: { en: "e.g. 98xxxxxxxx", hi: "जैसे 98xxxxxxxx" } },
+        {
+          label: { en: "Email", hi: "ईमेल" },
+          hint: { en: "Keep it simple — firstname.lastname@…", hi: "आसान रखें — firstname.lastname@…" },
+        },
+        { label: { en: "City / town", hi: "शहर / कस्बा" } },
       ],
     },
     {
-      heading: "About me",
+      heading: { en: "About me", hi: "मेरे बारे में" },
       kind: "about",
-      note: "Two short lines: what you're studying and what you're looking for.",
-      fields: [{ label: "About me" }],
+      note: {
+        en: "Two short lines: what you're studying and what you're looking for.",
+        hi: "दो छोटी लाइनें: आप क्या पढ़ रहे हैं और क्या ढूँढ रहे हैं।",
+      },
+      fields: [{ label: { en: "About me", hi: "मेरे बारे में" } }],
     },
     {
-      heading: "Education",
+      heading: { en: "Education", hi: "शिक्षा" },
       kind: "entries",
-      note: "Most recent first. Add your marks or grade if you're proud of them.",
-      entry: { initial: 2, joiner: " — ", addLabel: "Add another qualification" },
+      note: {
+        en: "Most recent first. Add your marks or grade if you're proud of them.",
+        hi: "सबसे नया पहले। अगर मार्क्स या ग्रेड पर गर्व है तो उन्हें जोड़ें।",
+      },
+      entry: { initial: 2, joiner: " — ", addLabel: { en: "Add another qualification", hi: "एक और योग्यता जोड़ें" } },
       fields: [
-        { label: "School / college, course", hint: "e.g. Govt. Sr. Sec. School — Class 12 (Science)" },
-        { label: "Year & result", hint: "e.g. 2026 · 82%" },
+        {
+          label: { en: "School / college, course", hi: "स्कूल / कॉलेज, कोर्स" },
+          hint: {
+            en: "e.g. Govt. Sr. Sec. School — Class 12 (Science)",
+            hi: "जैसे गवर्नमेंट सीनियर सेकेंडरी स्कूल — क्लास 12 (साइंस)",
+          },
+        },
+        { label: { en: "Year & result", hi: "साल और नतीजा" }, hint: { en: "e.g. 2026 · 82%", hi: "जैसे 2026 · 82%" } },
       ],
     },
     {
-      heading: "Projects & activities",
+      heading: { en: "Projects & activities", hi: "प्रोजेक्ट्स और एक्टिविटीज़" },
       kind: "entries",
-      note: "No job needed — class projects, clubs, sports, helping at home or a shop all count.",
-      entry: { initial: 3, joiner: " — ", addLabel: "Add another" },
-      fields: [{ label: "Something you did", hint: "One line: what it was and what you did" }],
+      note: {
+        en: "No job needed — class projects, clubs, sports, helping at home or a shop all count.",
+        hi: "नौकरी की ज़रूरत नहीं — क्लास प्रोजेक्ट, क्लब, खेल, घर या दुकान पर मदद, सब मायने रखते हैं।",
+      },
+      entry: { initial: 3, joiner: " — ", addLabel: { en: "Add another", hi: "एक और जोड़ें" } },
+      fields: [
+        {
+          label: { en: "Something you did", hi: "कुछ जो आपने किया" },
+          hint: { en: "One line: what it was and what you did", hi: "एक लाइन: यह क्या था और आपने क्या किया" },
+        },
+      ],
     },
     {
-      heading: "Skills",
+      heading: { en: "Skills", hi: "स्किल्स" },
       kind: "entries",
-      note: "Languages you speak, plus any computer or practical skills.",
-      entry: { initial: 3, joiner: " — ", addLabel: "Add another skill" },
-      fields: [{ label: "Skill or language", hint: "e.g. Hindi & English, MS Word, Tally, drawing" }],
+      note: {
+        en: "Languages you speak, plus any computer or practical skills.",
+        hi: "जो भाषाएँ आप बोलते हैं, साथ ही कोई कंप्यूटर या प्रैक्टिकल स्किल्स।",
+      },
+      entry: { initial: 3, joiner: " — ", addLabel: { en: "Add another skill", hi: "एक और स्किल जोड़ें" } },
+      fields: [
+        {
+          label: { en: "Skill or language", hi: "स्किल या भाषा" },
+          hint: { en: "e.g. Hindi & English, MS Word, Tally, drawing", hi: "जैसे हिंदी और इंग्लिश, MS Word, Tally, ड्रॉइंग" },
+        },
+      ],
     },
   ],
 };
@@ -136,55 +175,81 @@ const FIRST_INTERNSHIP: CvTemplate = {
   name: "First internship CV",
   sections: [
     {
-      heading: "Your details",
+      heading: { en: "Your details", hi: "आपकी जानकारी" },
       kind: "details",
       fields: [
-        { label: "Full name" },
-        { label: "Phone number", hint: "e.g. 98xxxxxxxx" },
-        { label: "Email" },
-        { label: "City / town" },
-        { label: "Link (optional)", hint: "LinkedIn, portfolio or GitHub" },
+        { label: { en: "Full name", hi: "पूरा नाम" } },
+        { label: { en: "Phone number", hi: "फ़ोन नंबर" }, hint: { en: "e.g. 98xxxxxxxx", hi: "जैसे 98xxxxxxxx" } },
+        { label: { en: "Email", hi: "ईमेल" } },
+        { label: { en: "City / town", hi: "शहर / कस्बा" } },
+        {
+          label: { en: "Link (optional)", hi: "लिंक (ज़रूरी नहीं)" },
+          hint: { en: "LinkedIn, portfolio or GitHub", hi: "LinkedIn, पोर्टफोलियो या GitHub" },
+        },
       ],
     },
     {
-      heading: "About me",
+      heading: { en: "About me", hi: "मेरे बारे में" },
       kind: "about",
-      note: "Two lines: what you study and the internship you want. Change this for each company.",
-      fields: [{ label: "About me" }],
+      note: {
+        en: "Two lines: what you study and the internship you want. Change this for each company.",
+        hi: "दो लाइनें: आप क्या पढ़ते हैं और कौन सी इंटर्नशिप चाहते हैं। हर कंपनी के लिए इसे बदलें।",
+      },
+      fields: [{ label: { en: "About me", hi: "मेरे बारे में" } }],
     },
     {
-      heading: "Education",
+      heading: { en: "Education", hi: "शिक्षा" },
       kind: "entries",
-      note: "Latest first.",
-      entry: { initial: 2, joiner: " — ", addLabel: "Add another qualification" },
+      note: { en: "Latest first.", hi: "सबसे नया पहले।" },
+      entry: { initial: 2, joiner: " — ", addLabel: { en: "Add another qualification", hi: "एक और योग्यता जोड़ें" } },
       fields: [
-        { label: "Course & institution", hint: "e.g. B.Com, 2nd year — XYZ College" },
-        { label: "Year & result", hint: "e.g. 2024–2027 · 7.8 CGPA" },
+        {
+          label: { en: "Course & institution", hi: "कोर्स और संस्थान" },
+          hint: { en: "e.g. B.Com, 2nd year — XYZ College", hi: "जैसे बी.कॉम, दूसरा साल — XYZ कॉलेज" },
+        },
+        {
+          label: { en: "Year & result", hi: "साल और नतीजा" },
+          hint: { en: "e.g. 2024–2027 · 7.8 CGPA", hi: "जैसे 2024–2027 · 7.8 CGPA" },
+        },
       ],
     },
     {
-      heading: "Experience",
+      heading: { en: "Experience", hi: "अनुभव" },
       kind: "entries",
-      note: "Any work, volunteering or freelance task — even unpaid.",
-      entry: { initial: 2, joiner: " — ", addLabel: "Add another" },
+      note: {
+        en: "Any work, volunteering or freelance task — even unpaid.",
+        hi: "कोई भी काम, वॉलंटियरिंग या फ्रीलांस टास्क — भले ही बिना पैसे का हो।",
+      },
+      entry: { initial: 2, joiner: " — ", addLabel: { en: "Add another", hi: "एक और जोड़ें" } },
       fields: [
-        { label: "Role / task, where", hint: "e.g. Volunteer, school book fair" },
-        { label: "What you did & the result" },
+        {
+          label: { en: "Role / task, where", hi: "रोल / काम, कहाँ" },
+          hint: { en: "e.g. Volunteer, school book fair", hi: "जैसे वॉलंटियर, स्कूल बुक फेयर" },
+        },
+        { label: { en: "What you did & the result", hi: "आपने क्या किया और नतीजा" } },
       ],
     },
     {
-      heading: "Projects",
+      heading: { en: "Projects", hi: "प्रोजेक्ट्स" },
       kind: "entries",
-      note: "Course or personal work that shows your skills.",
-      entry: { initial: 2, joiner: " — ", addLabel: "Add another project" },
-      fields: [{ label: "Project — what it was and your part" }],
+      note: {
+        en: "Course or personal work that shows your skills.",
+        hi: "कोर्स या पर्सनल काम जो आपकी स्किल्स दिखाए।",
+      },
+      entry: { initial: 2, joiner: " — ", addLabel: { en: "Add another project", hi: "एक और प्रोजेक्ट जोड़ें" } },
+      fields: [{ label: { en: "Project — what it was and your part", hi: "प्रोजेक्ट — यह क्या था और आपका हिस्सा" } }],
     },
     {
-      heading: "Skills",
+      heading: { en: "Skills", hi: "स्किल्स" },
       kind: "entries",
-      note: "Tools, software and languages.",
-      entry: { initial: 3, joiner: " — ", addLabel: "Add another skill" },
-      fields: [{ label: "Skill or language", hint: "e.g. Excel, Canva, Python (basic), Tamil" }],
+      note: { en: "Tools, software and languages.", hi: "टूल्स, सॉफ़्टवेयर और भाषाएँ।" },
+      entry: { initial: 3, joiner: " — ", addLabel: { en: "Add another skill", hi: "एक और स्किल जोड़ें" } },
+      fields: [
+        {
+          label: { en: "Skill or language", hi: "स्किल या भाषा" },
+          hint: { en: "e.g. Excel, Canva, Python (basic), Tamil", hi: "जैसे Excel, Canva, Python (बेसिक), तमिल" },
+        },
+      ],
     },
   ],
 };
@@ -271,37 +336,47 @@ function filledInnerHtml(template: CvTemplate, values: CvValues): string {
       return;
     }
 
+    // Hindi guidance, English output: the form is localised to help the student
+    // fill it in, but the downloaded CV always uses English headings/structure —
+    // Indian employers expect English CVs, and a Hindi-headed one could count
+    // against the student. So the document builders always resolve English.
+    const heading = enText(sec.heading);
+
     if (sec.kind === "about") {
       const about = (values[entryFieldKey(si, 0, 0)] ?? "").trim();
-      if (about) parts.push(`<h2>${esc(sec.heading)}</h2><p class="about">${esc(about)}</p>`);
+      if (about) parts.push(`<h2>${esc(heading)}</h2><p class="about">${esc(about)}</p>`);
       return;
     }
 
     // entries
     const lines = entryLines(sec, si, values);
     if (lines.length === 0) return;
-    parts.push(`<h2>${esc(sec.heading)}</h2>`);
+    parts.push(`<h2>${esc(heading)}</h2>`);
     parts.push(`<ul>${lines.map((l) => `<li>${esc(l)}</li>`).join("")}</ul>`);
   });
 
   return parts.join("\n");
 }
 
-/** A blank, fill-in CV skeleton: headings + labelled blanks, no title or tips. */
+/**
+ * A blank, fill-in CV skeleton: headings + labelled blanks, no title or tips.
+ * English-only (see filledInnerHtml): the blank template *is* the CV the student
+ * submits, so it keeps English headings/structure regardless of the UI language.
+ */
 function blankInnerHtml(template: CvTemplate): string {
   const blankField = (f: CvField) => {
-    const hint = f.hint ? `<span class="hint">${esc(f.hint)}</span>` : "";
-    return `<p class="field"><span class="label">${esc(f.label)}:</span><span class="blank"></span>${hint}</p>`;
+    const hint = f.hint ? `<span class="hint">${esc(enText(f.hint))}</span>` : "";
+    return `<p class="field"><span class="label">${esc(enText(f.label))}:</span><span class="blank"></span>${hint}</p>`;
   };
 
   return template.sections
     .map((sec) => {
-      const note = sec.note ? `<p class="note">${esc(sec.note)}</p>` : "";
+      const note = sec.note ? `<p class="note">${esc(enText(sec.note))}</p>` : "";
       // Entries sections get `initial` blank slots so there's room to write.
       const reps = sec.kind === "entries" ? sec.entry?.initial ?? 1 : 1;
       let body = "";
       for (let i = 0; i < reps; i++) body += sec.fields.map(blankField).join("");
-      return `<h2>${esc(sec.heading)}</h2>${note}${body}`;
+      return `<h2>${esc(enText(sec.heading))}</h2>${note}${body}`;
     })
     .join("\n");
 }
@@ -326,17 +401,17 @@ export function buildCvDocHtml(
 // Plain-text version (edits anywhere, even offline on a basic phone)
 // ---------------------------------------------------------------------------
 
-/** Build a plain-text, fill-in-the-blank version of a blank template. */
+/** Build a plain-text, fill-in-the-blank version of a blank template (English). */
 export function buildCvText(template: CvTemplate): string {
   const lines: string[] = [];
   const blankField = (f: CvField) => {
-    const hint = f.hint ? `   <- ${f.hint}` : "";
-    lines.push(`${f.label}: ______________________________${hint}`);
+    const hint = f.hint ? `   <- ${enText(f.hint)}` : "";
+    lines.push(`${enText(f.label)}: ______________________________${hint}`);
   };
 
   for (const sec of template.sections) {
-    lines.push(sec.heading.toUpperCase());
-    if (sec.note) lines.push(`(${sec.note})`);
+    lines.push(enText(sec.heading).toUpperCase());
+    if (sec.note) lines.push(`(${enText(sec.note)})`);
     const reps = sec.kind === "entries" ? sec.entry?.initial ?? 1 : 1;
     for (let i = 0; i < reps; i++) {
       sec.fields.forEach(blankField);
