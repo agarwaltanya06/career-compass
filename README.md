@@ -20,6 +20,27 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Analytics
+
+The site uses [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/)
+— privacy-friendly and cookieless: no cookies, no cross-site identifiers, no
+personal data, so no consent banner is required. It reports page views, top
+pages (each career journey has its own `/journey/[slug]` path, so popular
+careers surface automatically) and referrers (traffic sources).
+
+To enable it, set one public env var on the deploy (and locally if you want to
+test it):
+
+```bash
+NEXT_PUBLIC_CF_BEACON_TOKEN=your-beacon-token
+```
+
+Get the token from the Cloudflare dashboard under **Analytics & Logs → Web
+Analytics → Add a site** (it's the value inside `data-cf-beacon='{"token":"…"}'`).
+When the var is unset the analytics script is not loaded at all, so local dev
+stays clean. In the Web Analytics site settings, turn on **SPA tracking** so
+client-side navigations between pages are counted.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

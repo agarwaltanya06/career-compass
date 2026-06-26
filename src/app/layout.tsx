@@ -6,6 +6,7 @@ import { I18nProvider } from "@/lib/i18n/I18nProvider";
 import { LOCALE_COOKIE, normalizeLocale } from "@/lib/i18n/config";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Analytics from "@/components/Analytics";
 
 // Body face: soft, rounded, highly readable. Self-hosted by next/font.
 const nunito = Nunito({
@@ -75,6 +76,7 @@ export default async function RootLayout({
             </div>
           </div>
         </I18nProvider>
+        <Analytics />
       </body>
     </html>
   );
