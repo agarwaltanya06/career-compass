@@ -64,18 +64,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* DIY backstop */}
+      {/* DIY backstop — the guides + DIY plan live in the header tabs now, so this
+          is just a pointer, no extra button. */}
       <section className="mt-12 rounded-2xl border border-amber-200 bg-amber-50 p-6 text-center">
         <h2 className="text-xl font-bold text-stone-900">
           {t("home.exploreTitle")}
         </h2>
         <p className="mt-1 text-stone-600">{t("home.exploreBody")}</p>
-        <Link
-          href="/plan-it-yourself"
-          className="mt-4 inline-flex min-h-11 items-center justify-center rounded-xl border border-orange-300 bg-white px-5 font-semibold text-orange-700 hover:bg-orange-100"
-        >
-          {t("nav.planItYourself")}
-        </Link>
       </section>
 
       <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-stone-500">

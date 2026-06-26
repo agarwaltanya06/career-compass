@@ -26,6 +26,8 @@ import { buildCacheKey, cacheFileName } from "./cacheKey";
 import { buildExternalPrompt } from "./externalPrompt";
 import { SYSTEM_PROMPT, buildUserPrompt, type AllowedEntities } from "./prompt";
 import { readVerified, readLatestCandidate, writeCandidate } from "./store";
+import { screenCareer } from "./screen";
+import { distressMessage, safetyStrings } from "./safetyMessages";
 import { DEFAULT_CHOICE, FALLBACK_CHOICE, makeProvider } from "./providers";
 import {
   FreeTierLimitError,
@@ -53,15 +55,29 @@ export class GenerateError extends Error {
    * pipeline can stamp it onto an error raised deeper in the call stack.
    */
   externalPrompt?: string;
+  /**
+   * Set when the request was rejected by the input safety gate (lib/screen.ts):
+   * "blocked" for off-topic/disallowed input (neutral nudge), "distress" for
+   * self-harm signals (helpline message). The UI keys off this to show the calm
+   * SafetyNotice instead of the generic "generation failed" + retry screen, and
+   * we deliberately DON'T attach an externalPrompt (we won't help search it).
+   */
+  safety?: "blocked" | "distress";
   constructor(
     message: string,
     status: number,
-    options?: { rateLimited?: boolean; cause?: unknown; externalPrompt?: string },
+    options?: {
+      rateLimited?: boolean;
+      cause?: unknown;
+      externalPrompt?: string;
+      safety?: "blocked" | "distress";
+    },
   ) {
     super(message);
     this.status = status;
     this.rateLimited = options?.rateLimited ?? false;
     this.externalPrompt = options?.externalPrompt;
+    this.safety = options?.safety;
     if (options?.cause !== undefined) this.cause = options.cause;
     this.name = "GenerateError";
   }
@@ -341,6 +357,22 @@ export async function runGeneration(
       if (candidate) {
         return { journey: candidate, status: "candidate", cacheKey };
       }
+    }
+  }
+
+  // ---- Input safety gate (before ANY web search). For a live, typed career we
+  // run a cheap, search-less LLM classification; if it isn't actually a career
+  // worth planning — off-topic, harmful, or a sign of distress — we stop here and
+  // never proceed to the grounded generation. Skipped for `override` (the offline
+  // seed script only ever feeds known catalogue careers). Fails open on infra
+  // trouble (see screenCareer). ----
+  if (!override) {
+    const verdict = await screenCareer(profile.career);
+    if (verdict === "distress") {
+      throw new GenerateError(distressMessage(profile.locale), 422, { safety: "distress" });
+    }
+    if (verdict !== "ok") {
+      throw new GenerateError(safetyStrings(profile.locale).blocked, 422, { safety: "blocked" });
     }
   }
 

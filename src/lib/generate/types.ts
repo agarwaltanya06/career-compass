@@ -136,6 +136,12 @@ export interface GenerateErrorBody {
    * so a busy free tier never dead-ends. Absent for ordinary validation errors.
    */
   externalPrompt?: string;
+  /**
+   * Set when the input safety gate rejected the request: "blocked" (off-topic /
+   * disallowed → neutral nudge) or "distress" (self-harm signals → helpline). The
+   * UI shows the calm SafetyNotice instead of the generic failure screen.
+   */
+  safety?: "blocked" | "distress";
 }
 
 // ---- Streaming contract (SSE) ----------------------------------------------
@@ -157,5 +163,11 @@ export interface GenerateStatusEvent {
 export type GenerateStreamEvent =
   | GenerateStatusEvent
   | ({ type: "result" } & GenerateResponseBody)
-  /** `externalPrompt` is present only when both providers were unavailable. */
-  | { type: "error"; message: string; externalPrompt?: string };
+  /** `externalPrompt` is present only when both providers were unavailable;
+   *  `safety` is present only when the input safety gate rejected the request. */
+  | {
+      type: "error";
+      message: string;
+      externalPrompt?: string;
+      safety?: "blocked" | "distress";
+    };

@@ -288,27 +288,27 @@ export function JourneyView({
           onRegenerate={onRegenerate}
         />
 
-        {/* Unverified-candidate stamp (spec §4): a fresh, not-yet-reviewed
-            machine generation. Deliberately prominent (not a footnote) and kept
-            in the printed/PDF copy — only verified defaults omit it.
+        {/* AI-generated disclaimer (spec §4): shown on EVERY journey — verified
+            defaults included — since they're all machine-written. Deliberately
+            prominent (not a footnote) and kept in the printed/PDF copy. The
+            thick border + bold + ⚠️ carry the weight when "background graphics"
+            are off in print, so it survives Save-as-PDF without the fill.
             candidateBannerTitle + candidateBanner are a SAFETY disclaimer: unlike
             the rest of hi.json (sparse, English-fallback by design), these two
             MUST be real Hindi so Hindi readers actually get the warning. That
             invariant is enforced by `npm run check:i18n`
             (scripts/check-i18n-banner.ts) — change the English wording there and
             the check makes you re-verify the Hindi. */}
-        {status === "candidate" && (
-          <div
-            role="note"
-            className="mt-4 flex items-start gap-3 rounded-xl border-2 border-amber-400 bg-amber-50 p-4 text-amber-900"
-          >
-            <span aria-hidden className="text-xl leading-none">⚠️</span>
-            <div>
-              <p className="font-bold">{t("journey.candidateBannerTitle")}</p>
-              <p className="mt-0.5 text-sm">{t("journey.candidateBanner")}</p>
-            </div>
+        <div
+          role="note"
+          className="mt-4 flex items-start gap-3 rounded-xl border-2 border-amber-400 bg-amber-100 p-4 text-amber-900"
+        >
+          <span aria-hidden className="text-xl leading-none">⚠️</span>
+          <div>
+            <p className="font-bold">{t("journey.candidateBannerTitle")}</p>
+            <p className="mt-0.5 text-sm">{t("journey.candidateBanner")}</p>
           </div>
-        )}
+        </div>
       </header>
 
       {/* ---- Overview ---- */}

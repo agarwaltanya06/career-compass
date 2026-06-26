@@ -1,0 +1,370 @@
+{
+  "meta": {
+    "career": "Fashion Blogger",
+    "careerAliases": [
+      "Fashion Influencer",
+      "Style Blogger",
+      "Content Creator (Fashion)"
+    ],
+    "studentProfile": {
+      "class": "10",
+      "board": "cbse",
+      "language": "en",
+      "currentDate": "2026-06-25"
+    },
+    "generatedAt": "2026-06-25",
+    "confidence": "high",
+    "cacheKey": "fashion-blogger|cbse|none|class10"
+  },
+  "overview": {
+    "summary": "A Fashion Blogger creates engaging content about fashion, style, and trends across various digital platforms like blogs, Instagram, YouTube, and TikTok. This career blends creativity with business acumen, requiring strong communication, visual storytelling, and digital marketing skills.",
+    "dayInLife": "A typical day might involve researching fashion trends, attending virtual or physical fashion events, styling outfits for photoshoots, writing blog posts or social media captions, editing photos and videos, engaging with followers, collaborating with brands, and planning future content. It's a dynamic role that often requires self-discipline and continuous learning.",
+    "payRange": {
+      "entry": "₹2,00,000 - ₹5,00,000 per year",
+      "experienced": "₹10,00,000 - ₹50,00,000+ per year",
+      "note": "Income for fashion bloggers can vary widely based on audience size, engagement, brand collaborations, and monetization strategies (affiliate marketing, sponsored content, product sales). These figures are indicative and can be higher for top-tier influencers."
+    },
+    "demandOutlook": "The demand for digital content creators, including fashion bloggers, is growing steadily in India. As more brands shift their marketing budgets to digital platforms, authentic and engaging influencers are highly sought after. However, the field is competitive, requiring continuous innovation and strong personal branding.",
+    "requirements": [
+      "Strong aesthetic sense and understanding of fashion trends",
+      "Excellent communication and writing skills",
+      "Proficiency in photography and video creation/editing",
+      "Social media marketing and audience engagement skills",
+      "Networking and collaboration abilities",
+      "Business acumen for brand partnerships and monetization"
+    ]
+  },
+  "routes": [
+    {
+      "id": "fashion-comm-degree-route",
+      "name": "Bachelor's Degree in Fashion Communication/Design & Content Creation",
+      "bestFor": "Students seeking a structured educational foundation in fashion, design principles, and communication, combined with practical skill development for digital content creation.",
+      "feasibility": "high",
+      "feasibilityReason": "This route provides a strong academic and practical base, increasing credibility and opening doors to industry connections and structured learning.",
+      "costBand": "high",
+      "duration": "7-8 years (including 10+2 and 4-year UG degree)",
+      "steps": [
+        {
+          "id": "step-1",
+          "order": 1,
+          "type": "education",
+          "title": "Choose Class 11/12 Stream (Humanities/Commerce)",
+          "offsetMonths": 1,
+          "description": "Opt for Humanities or Commerce stream in Class 11 and 12. Subjects like English, Fashion Studies (if available), Psychology, Economics, Business Studies, or Fine Arts can provide a relevant foundation for creative and communication-focused careers."
+        },
+        {
+          "id": "step-2",
+          "order": 2,
+          "type": "skill",
+          "title": "Develop Foundational Creative & Communication Skills",
+          "offsetMonths": 3,
+          "description": "During Class 11 and 12, actively pursue hobbies and online learning in areas like creative writing, basic photography, graphic design tools (e.g., Canva), and understanding social media platforms. Start a personal blog or social media page to practice content creation.",
+          "optional": true
+        },
+        {
+          "id": "step-3",
+          "order": 3,
+          "type": "exam",
+          "title": "Prepare for Entrance Exams (NIFT, UCEED, SET, Pearl Academy)",
+          "offsetMonths": 28,
+          "description": "Begin preparing for entrance exams required for design, fashion, or mass communication undergraduate programs. These typically test general aptitude, creative ability, and English comprehension. Focus on drawing, observation, and analytical skills."
+        },
+        {
+          "id": "step-4a",
+          "order": 4,
+          "type": "application",
+          "title": "Apply for NIFT Entrance Exam",
+          "offsetMonths": 30,
+          "description": "Apply for the NIFT Entrance Exam for Bachelor of Design (B.Des) programs, especially Fashion Communication. This exam includes a Creative Ability Test (CAT) and a General Ability Test (GAT)."
+        },
+        {
+          "id": "step-4b",
+          "order": 4,
+          "type": "application",
+          "title": "Apply for UCEED",
+          "offsetMonths": 30,
+          "description": "Apply for the Undergraduate Common Entrance Examination for Design (UCEED) for admission to B.Des programs at IITs and other participating institutes. This exam assesses design aptitude."
+        },
+        {
+          "id": "step-4c",
+          "order": 4,
+          "type": "application",
+          "title": "Apply for SET (Symbiosis Entrance Test)",
+          "offsetMonths": 30,
+          "description": "Apply for the Symbiosis Entrance Test (SET) for design or mass communication programs offered by Symbiosis International University."
+        },
+        {
+          "id": "step-4d",
+          "order": 4,
+          "type": "application",
+          "title": "Apply for Pearl Academy Entrance Exam",
+          "offsetMonths": 30,
+          "description": "Apply for the Pearl Academy Entrance Exam, which includes a General Proficiency Test (GPT) and a Design Aptitude Test (DAT), for their B.Des programs."
+        },
+        {
+          "id": "step-5",
+          "order": 5,
+          "type": "education",
+          "title": "Pursue a Bachelor's Degree (e.g., B.Des Fashion Communication)",
+          "offsetMonths": 36,
+          "description": "Enroll in a 3 or 4-year undergraduate degree program such as B.Des in Fashion Communication, B.Des in Fashion Design, or BA in Mass Communication/Journalism. This will provide theoretical knowledge and practical skills in fashion, media, and communication. Rules, exams, and fees may change by then, so re-verify when you get there."
+        },
+        {
+          "id": "step-6",
+          "order": 6,
+          "type": "experience",
+          "title": "Gain Internships and Build Portfolio",
+          "offsetMonths": 60,
+          "description": "During your degree, seek internships with fashion brands, PR agencies, digital marketing firms, or established fashion bloggers. Continuously build your personal portfolio by creating content for your own blog/social media. Rules, exams, and fees may change by then, so re-verify when you get there.",
+          "optional": true
+        },
+        {
+          "id": "step-7a",
+          "order": 7,
+          "type": "skill",
+          "title": "Launch/Grow Professional Fashion Blog/Brand",
+          "offsetMonths": 85,
+          "description": "After graduation, focus on establishing and growing your personal fashion blog and social media presence as a full-time career. This involves consistent content creation, audience engagement, and seeking brand collaborations. Rules, exams, and fees may change by then, so re-verify when you get there.",
+          "alternativeTo": "step-7b"
+        },
+        {
+          "id": "step-7b",
+          "order": 7,
+          "type": "education",
+          "title": "Pursue a Master's Degree (e.g., MFM, Digital Marketing)",
+          "offsetMonths": 85,
+          "description": "Consider a Master's degree in Fashion Management (MFM), Digital Marketing, or Brand Communication to specialize further and enhance business and strategic skills. Rules, exams, and fees may change by then, so re-verify when you get there.",
+          "alternativeTo": "step-7a"
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "Fashion Styling & Trend Analysis",
+          "Content Writing & Storytelling",
+          "Photography & Videography",
+          "Photo/Video Editing (Adobe Photoshop, Lightroom, Premiere Pro)",
+          "Social Media Management & Strategy",
+          "Digital Marketing & SEO Basics",
+          "Personal Branding",
+          "Communication & Networking"
+        ],
+        "upskilling": [
+          {
+            "name": "Google Digital Garage: Fundamentals of Digital Marketing",
+            "why": "Learn essential digital marketing concepts, including SEO, social media, and content marketing, crucial for online visibility.",
+            "costBand": "free",
+            "url": "https://learndigital.withgoogle.com/digitalgarage/course/digital-marketing",
+            "verified": false
+          },
+          {
+            "name": "Alison: Diploma in Digital Photography",
+            "why": "Develop a strong understanding of photography principles, camera settings, and composition for high-quality visuals.",
+            "costBand": "free",
+            "url": "https://alison.com/course/diploma-in-digital-photography",
+            "verified": false
+          },
+          {
+            "name": "HubSpot Academy: Content Marketing Certification Course",
+            "why": "Master the art of creating engaging and effective content strategies for your blog and social platforms.",
+            "costBand": "free",
+            "url": "https://academy.hubspot.com/courses/content-marketing",
+            "verified": false
+          },
+          {
+            "name": "Coursera/Udemy: Fashion Styling Courses",
+            "why": "Enhance your styling skills, understand body types, color theory, and current fashion trends.",
+            "costBand": "low",
+            "url": "https://www.coursera.org/courses?query=fashion%20styling",
+            "verified": false
+          },
+          {
+            "name": "Adobe Creative Cloud Photography Plan",
+            "why": "Gain professional proficiency in industry-standard photo editing tools like Lightroom and Photoshop.",
+            "costBand": "low",
+            "url": "https://www.adobe.com/in/creativecloud/photography.html",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "name": "NIFT Entrance Exam",
+          "purpose": "For admission to Bachelor of Design (B.Des) programs, including Fashion Communication, at National Institutes of Fashion Technology.",
+          "eligibility": "10+2 pass in any stream; maximum age 24 years as of August 1 of the admission year (with relaxation for reserved categories).",
+          "typicalWindow": "Applications usually open ~October-December; exam ~February.",
+          "costBand": "low",
+          "officialUrl": "https://nift.ac.in",
+          "verified": false
+        },
+        {
+          "name": "UCEED (Undergraduate Common Entrance Examination for Design)",
+          "purpose": "For admission to Bachelor of Design (B.Des) programs at IIT Bombay, IIT Delhi, IIT Guwahati, IIT Hyderabad, IIT Roorkee, IIITDM Jabalpur, and other participating institutes.",
+          "eligibility": "10+2 pass in any stream; born on or after October 1, 2001 (General/EWS/OBC-NCL) or October 1, 1996 (SC/ST/PwD).",
+          "typicalWindow": "Applications usually open ~October; exam ~January.",
+          "costBand": "low",
+          "officialUrl": "https://www.uceed.iitb.ac.in",
+          "verified": false
+        },
+        {
+          "name": "SET (Symbiosis Entrance Test)",
+          "purpose": "For admission to various undergraduate programs at Symbiosis International University, including design and mass communication.",
+          "eligibility": "10+2 pass with minimum 50% marks (45% for SC/ST).",
+          "typicalWindow": "Applications usually open ~January; exam ~May.",
+          "costBand": "low",
+          "officialUrl": "https://www.set-test.org",
+          "verified": false
+        },
+        {
+          "name": "Pearl Academy Entrance Exam",
+          "purpose": "For admission to various undergraduate design and fashion programs at Pearl Academy campuses.",
+          "eligibility": "10+2 pass certificate in any stream.",
+          "typicalWindow": "Multiple cycles: applications usually open ~January, April, June; exams follow.",
+          "costBand": "low",
+          "officialUrl": "https://pearlacademy.com",
+          "verified": false
+        }
+      ],
+      "colleges": [
+        {
+          "name": "National Institute of Fashion Technology (NIFT), Delhi",
+          "type": "government",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "₹3,50,000 - ₹4,50,000",
+          "feesNote": "Approximate annual fees for B.Des Fashion Communication, subject to change. Includes tuition and other charges. Hostel fees extra.",
+          "entranceRequired": "NIFT Entrance Exam",
+          "costBand": "high",
+          "officialUrl": "https://nift.ac.in/campuses/delhi",
+          "verified": false
+        },
+        {
+          "name": "Pearl Academy, Mumbai",
+          "type": "private",
+          "location": "Mumbai, Maharashtra",
+          "approxAnnualFees": "₹7,50,000 - ₹8,50,000",
+          "feesNote": "Approximate annual fees for B.Des Fashion Communication, subject to change. Total course fees can be higher. Hostel fees extra.",
+          "entranceRequired": "Pearl Academy Entrance Exam",
+          "costBand": "high",
+          "officialUrl": "https://pearlacademy.com/campuses/mumbai",
+          "verified": false
+        },
+        {
+          "name": "Symbiosis Centre for Media & Communication (SCMC), Pune",
+          "type": "private",
+          "location": "Pune, Maharashtra",
+          "approxAnnualFees": "₹3,50,000 - ₹4,00,000",
+          "feesNote": "Approximate annual fees for BA (Hons) Mass Communication, subject to change. Total course fees can be higher. Hostel fees extra.",
+          "entranceRequired": "SET (Symbiosis Entrance Test)",
+          "costBand": "high",
+          "officialUrl": "https://www.scmcpune.ac.in",
+          "verified": false
+        },
+        {
+          "name": "Symbiosis Institute of Design (SID), Pune",
+          "type": "private",
+          "location": "Pune, Maharashtra",
+          "approxAnnualFees": "₹4,50,000 - ₹5,00,000",
+          "feesNote": "Approximate annual fees for B.Des programs, subject to change. Total course fees can be higher. Hostel fees extra.",
+          "entranceRequired": "SET (Symbiosis Entrance Test) / SEED",
+          "costBand": "high",
+          "officialUrl": "https://www.sid.edu.in",
+          "verified": false
+        },
+        {
+          "name": "National Institute of Fashion Technology (NIFT), Bengaluru",
+          "type": "government",
+          "location": "Bengaluru, Karnataka",
+          "approxAnnualFees": "₹3,50,000 - ₹4,50,000",
+          "feesNote": "Approximate annual fees for B.Des Fashion Communication, subject to change. Includes tuition and other charges. Hostel fees extra.",
+          "entranceRequired": "NIFT Entrance Exam",
+          "costBand": "high",
+          "officialUrl": "https://nift.ac.in/campuses/bengaluru",
+          "verified": false
+        }
+      ],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "Re-attempt entrance exams in the next admission cycle.",
+          "Explore diploma or certificate courses in fashion styling, digital marketing, or content creation.",
+          "Focus on building a strong online portfolio and gaining practical experience through internships or freelance work.",
+          "Consider open universities or distance learning programs in related fields."
+        ]
+      }
+    }
+  ],
+  "prepResources": [
+    {
+      "title": "NIFT/UCEED/SET/Pearl Academy Sample Papers & Mock Tests",
+      "type": "official-guide",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://nift.ac.in/admission/test-papers",
+      "verified": false
+    },
+    {
+      "title": "YouTube Channels for Fashion Design & Communication Basics",
+      "type": "video",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.youtube.com/results?search_query=fashion+design+basics",
+      "verified": false
+    },
+    {
+      "title": "Online Tutorials for Adobe Photoshop & Lightroom",
+      "type": "video",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.youtube.com/results?search_query=photoshop+lightroom+tutorial",
+      "verified": false
+    },
+    {
+      "title": "Books on Fashion History and Trends",
+      "type": "book",
+      "costBand": "low",
+      "language": "en",
+      "url": "https://www.amazon.in/fashion-history-books/s?k=fashion+history+books",
+      "verified": false
+    },
+    {
+      "title": "iPhotography: The 60 Second Photographer (Free Course)",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "en",
+      "url": "https://www.iphotography.com/free-photography-course",
+      "verified": false
+    }
+  ],
+  "groundingSources": [
+    {
+      "claim": "UCEED eligibility criteria: 10+2 pass in any stream; born on or after October 1, 2001 (General/EWS/OBC-NCL) or October 1, 1996 (SC/ST/PwD).",
+      "url": "https://www.uceed.iitb.ac.in/2026/",
+      "fetchedAt": "2026-06-25"
+    },
+    {
+      "claim": "Average salary fashion blogger India entry level and experienced.",
+      "url": "https://www.linkedin.com/salary/fashion-blogger-salaries-in-india",
+      "fetchedAt": "2026-06-25"
+    },
+    {
+      "claim": "Free online photography courses from Alison, iPhotography, Udemy.",
+      "url": "https://alison.com/courses/photography",
+      "fetchedAt": "2026-06-25"
+    },
+    {
+      "claim": "Google Digital Garage: Fundamentals of Digital Marketing.",
+      "url": "https://learndigital.withgoogle.com/digitalgarage/course/digital-marketing",
+      "fetchedAt": "2026-06-25"
+    },
+    {
+      "claim": "HubSpot Academy: Content Marketing Certification Course.",
+      "url": "https://academy.hubspot.com/courses/content-marketing",
+      "fetchedAt": "2026-06-25"
+    }
+  ],
+  "disclaimers": [
+    "The career path of a fashion blogger is highly dynamic and depends significantly on individual creativity, networking, and adaptability to evolving digital trends.",
+    "Fees and application windows mentioned are typical and subject to change by the respective institutions. Always verify the latest information on official websites.",
+    "Success in fashion blogging is not guaranteed by a degree alone; continuous skill development, consistent effort, and building an authentic personal brand are crucial.",
+    "Salary ranges are indicative and can vary based on experience, location, platform, audience size, and specific brand deals."
+  ]
+}

@@ -3,15 +3,15 @@
 import Link from "next/link";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 
-/** Footer with the standing verify-first reminder + the DIY equity backstop. */
+/** Footer with the standing verify-first reminder + a small About link. */
 export default function Footer() {
   const { t } = useI18n();
   return (
     <footer className="mt-auto border-t border-stone-200 bg-orange-50">
       <div className="mx-auto flex max-w-5xl flex-col gap-2 px-4 py-6 text-sm text-stone-600 sm:flex-row sm:items-center sm:justify-between">
         <p>{t("footer.rights")}</p>
-        <Link href="/plan-it-yourself" className="font-medium text-orange-700 underline">
-          {t("footer.diy")}
+        <Link href="/about" className="font-medium text-orange-700 underline">
+          {t("footer.about")}
         </Link>
       </div>
     </footer>

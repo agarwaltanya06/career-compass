@@ -11,11 +11,14 @@
   "nav": {
     "home": "Home",
     "start": "Start my journey",
-    "cvTemplates": "CV Templates",
-    "freeResources": "Free Resources",
-    "interviewPrep": "Interview Prep",
-    "findJobs": "Find Jobs",
-    "planItYourself": "Plan It Yourself"
+    "careerJourneys": "Career Journeys",
+    "startJourney": "Start My Journey",
+    "sampleJourney": "See a Sample Journey",
+    "cvTemplates": "CV Maker",
+    "freeResources": "Academic",
+    "interviewPrep": "Interviews",
+    "findJobs": "Job Search",
+    "planItYourself": "DIY Plan"
   },
   "common": {
     "back": "Back",
@@ -49,7 +52,7 @@
     "feature3Title": "Check before you trust",
     "feature3Body": "We link to the official site so you can confirm everything yourself.",
     "exploreTitle": "Already know what you need?",
-    "exploreBody": "Browse our free guides.",
+    "exploreBody": "Browse our free guides, or make a DIY plan!",
     "disclaimer": "Dates, fees and rules change every year. Check the official site before you act!"
   },
   "intake": {
@@ -111,6 +114,14 @@
       "whichState": "Which state?",
       "typeGoal": "Or type the career you want…"
     },
+    "safety": {
+      "blocked": "Please enter a career or job you're interested in.",
+      "editHint": "Go back and enter the career or job you'd like a plan for.",
+      "distressTitle": "You don't have to face this alone",
+      "distressBody": "It sounds like you might be going through a really hard time. If you're feeling distressed or thinking about harming yourself, please reach out — talking to someone helps. In India you can call these free, confidential helplines any time:",
+      "helplineTeleManas": "Tele-MANAS: 14416",
+      "helplineKiran": "KIRAN: 1800-599-0019"
+    },
     "done": {
       "title": "Your journey is ready",
       "lead": "Here's how we'll shape your plan:",
@@ -149,8 +160,8 @@
   "journey": {
     "forCareer": "Your path to becoming a",
     "generatedAt": "Guidance generated {date}",
-    "candidateBannerTitle": "AI-generated — not checked by a person yet",
-    "candidateBanner": "A computer wrote this plan and no one has reviewed it yet, so some details may be wrong. Always check dates, fees, and exam rules on the official websites before you depend on them.",
+    "candidateBannerTitle": "AI-generated — This page contains AI-generated information.",
+    "candidateBanner": "A computer wrote this plan, so some details may be wrong. Always check dates, fees, and exam rules on the official websites before you depend on them!",
     "confidence": "Confidence",
     "confidenceHigh": "high",
     "confidenceMedium": "medium",
@@ -389,6 +400,15 @@
   },
   "footer": {
     "rights": "A free career guide for Indian students. Check official sites for exam dates and fees.",
-    "diy": "Plan it yourself"
+    "diy": "Plan it yourself",
+    "about": "About this website"
+  },
+  "about": {
+    "title": "The story behind this website!",
+    "p1": "Once upon a time, at a career mentorship session held by my organization for 12th grade students, a girl told me she wanted guidance on becoming a Cabin Crew member at IndiGo, another asked me how she can become a Fashion Designer, while another wanted to become a Chartered Accountant.",
+    "p2": "The only path I was well versed with was the one I took to become an engineer; I didn't have the answers to their questions, so I used search engines and AI tools to get more information about other career options, answer their questions and create planned journeys for them.",
+    "p3": "I spent some time thinking about this and built a free website to help high-school-students plan their career journeys. Besides some pre-configured, common career options, you can create a plan for yourself using an LLM-powered chat. I've also linked some free resources which can help people at different stages of their career journeys, even after they have graduated from school or college. You can switch between English, Hindi, and a couple of regional languages.",
+    "p4": "Feel free to share this with younger children and high school students, and would love to get your feedback if you try it out!",
+    "linkedin": "Connect on LinkedIn"
   }
 }

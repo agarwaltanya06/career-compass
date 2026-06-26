@@ -26,10 +26,17 @@ export const JOURNEY_STORAGE_KEY = "career-compass:journey";
  */
 export class GenerationFailedError extends Error {
   readonly externalPrompt?: string;
-  constructor(message: string, externalPrompt?: string) {
+  /** Set when the input safety gate rejected the career (see run.ts). The intake
+   *  shows the calm SafetyNotice instead of the generic failure screen. */
+  readonly safety?: "blocked" | "distress";
+  constructor(
+    message: string,
+    options?: { externalPrompt?: string; safety?: "blocked" | "distress" },
+  ) {
     super(message);
     this.name = "GenerationFailedError";
-    this.externalPrompt = externalPrompt;
+    this.externalPrompt = options?.externalPrompt;
+    this.safety = options?.safety;
   }
 }
 
@@ -114,7 +121,7 @@ export async function requestJourney(
   });
   const data = (await res.json().catch(() => null)) as
     | (GenerateResponseBody & { error?: string })
-    | { error: string; externalPrompt?: string }
+    | { error: string; externalPrompt?: string; safety?: "blocked" | "distress" }
     | null;
   if (!res.ok || !data || "error" in data) {
     const message =
@@ -123,7 +130,8 @@ export async function requestJourney(
         : "Couldn't generate a plan right now. Please try again.";
     const externalPrompt =
       data && "externalPrompt" in data ? data.externalPrompt : undefined;
-    throw new GenerationFailedError(message, externalPrompt);
+    const safety = data && "safety" in data ? data.safety : undefined;
+    throw new GenerationFailedError(message, { externalPrompt, safety });
   }
   return data as GenerateResponseBody;
 }
@@ -158,11 +166,11 @@ export async function requestJourneyStream(
   // Validation / config errors come back as a normal JSON response, not a stream.
   if (!res.ok || !res.body) {
     const data = (await res.json().catch(() => null)) as
-      | { error?: string; externalPrompt?: string }
+      | { error?: string; externalPrompt?: string; safety?: "blocked" | "distress" }
       | null;
     throw new GenerationFailedError(
       data?.error || "Couldn't generate a plan right now. Please try again.",
-      data?.externalPrompt,
+      { externalPrompt: data?.externalPrompt, safety: data?.safety },
     );
   }
 
@@ -172,6 +180,7 @@ export async function requestJourneyStream(
   let result: GenerateResponseBody | null = null;
   let errorMessage: string | null = null;
   let errorPrompt: string | undefined;
+  let errorSafety: "blocked" | "distress" | undefined;
 
   for (;;) {
     const { done, value } = await reader.read();
@@ -205,12 +214,20 @@ export async function requestJourneyStream(
         if (typeof event.externalPrompt === "string") {
           errorPrompt = event.externalPrompt;
         }
+        if (event.safety === "blocked" || event.safety === "distress") {
+          errorSafety = event.safety;
+        }
       }
     }
     if (done) break;
   }
 
-  if (errorMessage) throw new GenerationFailedError(errorMessage, errorPrompt);
+  if (errorMessage) {
+    throw new GenerationFailedError(errorMessage, {
+      externalPrompt: errorPrompt,
+      safety: errorSafety,
+    });
+  }
   if (!result) {
     throw new GenerationFailedError(
       "Couldn't generate a plan right now. Please try again.",

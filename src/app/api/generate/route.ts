@@ -77,9 +77,18 @@ function refreshRateLimited(request: Request): boolean {
   return recent.length > REFRESH_MAX;
 }
 
-function jsonError(message: string, status: number, externalPrompt?: string) {
+function jsonError(
+  message: string,
+  status: number,
+  externalPrompt?: string,
+  safety?: "blocked" | "distress",
+) {
   return NextResponse.json(
-    externalPrompt ? { error: message, externalPrompt } : { error: message },
+    {
+      error: message,
+      ...(externalPrompt ? { externalPrompt } : {}),
+      ...(safety ? { safety } : {}),
+    },
     { status },
   );
 }
@@ -157,7 +166,7 @@ export async function POST(request: Request) {
       return NextResponse.json(result);
     } catch (err) {
       if (err instanceof GenerateError) {
-        return jsonError(err.message, err.status, err.externalPrompt);
+        return jsonError(err.message, err.status, err.externalPrompt, err.safety);
       }
       return jsonError("Couldn't generate a plan right now. Please try again.", 502);
     }
@@ -181,11 +190,13 @@ export async function POST(request: Request) {
             : "Couldn't generate a plan right now. Please try again.";
         const externalPrompt =
           err instanceof GenerateError ? err.externalPrompt : undefined;
-        send(
-          externalPrompt
-            ? { type: "error", message, externalPrompt }
-            : { type: "error", message },
-        );
+        const safety = err instanceof GenerateError ? err.safety : undefined;
+        send({
+          type: "error",
+          message,
+          ...(externalPrompt ? { externalPrompt } : {}),
+          ...(safety ? { safety } : {}),
+        });
       } finally {
         controller.close();
       }

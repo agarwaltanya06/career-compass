@@ -30,13 +30,23 @@ import {
   storeJourney,
 } from "@/lib/generate/client";
 import { modelDisplayName } from "@/lib/generate/modelLabel";
+import {
+  CAREER_INPUT_MAX,
+  classifyCareerInput,
+  type CareerInputVerdict,
+} from "@/lib/inputSafety";
 import GeneratingChat from "@/components/intake/GeneratingChat";
+import SafetyNotice from "@/components/intake/SafetyNotice";
 
 export default function IntakePage() {
   const { t } = useI18n();
   const [answers, setAnswers] = useState<IntakeAnswers>({});
   const [step, setStep] = useState(0);
   const [finished, setFinished] = useState(false);
+  // Result of the free-text career safety check (null = nothing to show). Set
+  // when the user tries to advance with an unsafe/over-length goal; cleared as
+  // soon as they edit the field or move on.
+  const [safety, setSafety] = useState<Exclude<CareerInputVerdict, "ok"> | null>(null);
 
   // Recomputed every render so branching changes (e.g. skipping stream) are
   // always reflected in the question order and the progress count.
@@ -54,6 +64,7 @@ export default function IntakePage() {
   }
 
   function goBack() {
+    setSafety(null);
     if (finished) {
       setFinished(false);
       return;
@@ -67,6 +78,7 @@ export default function IntakePage() {
     const updated: IntakeAnswers = { ...answers, [q.field]: opt.value };
     // Picking an option clears any free-text the user had typed.
     if (q.customField) updated[q.customField] = "";
+    setSafety(null);
     setAnswers(updated);
     if (!opt.followUp) {
       advance(updated);
@@ -79,11 +91,33 @@ export default function IntakePage() {
 
   function setCustom(q: IntakeQuestion, value: string) {
     if (!q.customField) return;
-    // Typing a custom answer deselects the option chips.
+    // Editing the free-text answer clears any prior safety message and
+    // deselects the option chips.
+    setSafety(null);
     setAnswers((a) => ({ ...a, [q.customField!]: value, [q.field]: "" }));
   }
 
+  /**
+   * Advance from the current question, but gate the free-text career field
+   * through the safety filter first (spec: enforced before Next / any model
+   * call). The goal question is the only path to generation, so checking here
+   * means an unsafe career can never reach the model.
+   */
+  function handleContinue() {
+    if (question.customField === "goalCustom" && customValue.trim().length > 0) {
+      if (customValue.length > CAREER_INPUT_MAX) return; // button is disabled anyway
+      const verdict = classifyCareerInput(customValue);
+      if (verdict !== "ok") {
+        setSafety(verdict);
+        return;
+      }
+    }
+    setSafety(null);
+    advance(answers);
+  }
+
   function restart() {
+    setSafety(null);
     setAnswers({});
     setStep(0);
     setFinished(false);
@@ -103,11 +137,15 @@ export default function IntakePage() {
     ? (answers[question.customField] ?? "")
     : "";
 
+  // The free-text career field is hard-capped; over the cap, Continue is locked.
+  const isCareerField = question.customField === "goalCustom";
+  const overLimit = isCareerField && customValue.length > CAREER_INPUT_MAX;
+
   // When do we need an explicit Continue button (vs. auto-advance on tap)?
   const needsContinue = Boolean(followUp) || customValue.length > 0;
   const canContinue = followUp
     ? followUpValue.trim().length > 0
-    : customValue.trim().length > 0;
+    : customValue.trim().length > 0 && !overLimit;
 
   return (
     <div className="mx-auto max-w-xl px-4 py-8">
@@ -176,8 +214,22 @@ export default function IntakePage() {
             value={customValue}
             onChange={(e) => setCustom(question, e.target.value)}
             placeholder={t("intake.placeholders.typeGoal")}
+            maxLength={isCareerField ? CAREER_INPUT_MAX : undefined}
+            aria-invalid={safety !== null}
             className="min-h-12 w-full rounded-xl border border-stone-300 px-4 text-base focus:border-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-200"
           />
+          {isCareerField && customValue.length >= CAREER_INPUT_MAX - 10 && (
+            <p className="mt-1 text-right text-xs text-stone-400">
+              {customValue.length}/{CAREER_INPUT_MAX}
+            </p>
+          )}
+
+          {/* Heuristic gate result: a neutral nudge, or a calm helpline message. */}
+          {safety && (
+            <div className="mt-3">
+              <SafetyNotice kind={safety} />
+            </div>
+          )}
         </div>
       )}
 
@@ -195,7 +247,7 @@ export default function IntakePage() {
         {needsContinue && (
           <button
             type="button"
-            onClick={() => advance(answers)}
+            onClick={handleContinue}
             disabled={!canContinue}
             className="min-h-11 rounded-xl bg-orange-500 px-6 text-base font-semibold text-white hover:bg-orange-600 disabled:opacity-40"
           >
@@ -229,6 +281,9 @@ function IntakeSummary({
   const [genPrompt, setGenPrompt] = useState<string | null>(null);
   const [modelLabel, setModelLabel] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  // Set when the server input-safety gate rejects the typed career. Shows the
+  // calm SafetyNotice on the summary instead of the generic failure screen.
+  const [safetyBlock, setSafetyBlock] = useState<"blocked" | "distress" | null>(null);
   // Bumped on each attempt so the chat screen remounts fresh (resets its
   // elapsed timer and status sequence) on a retry.
   const [attempt, setAttempt] = useState(0);
@@ -252,6 +307,7 @@ function IntakeSummary({
     setError(null);
     setGenError(null);
     setGenPrompt(null);
+    setSafetyBlock(null);
     setModelLabel(null);
     setGenerating(true);
     setAttempt((n) => n + 1);
@@ -271,6 +327,13 @@ function IntakeSummary({
       // A user-initiated cancel surfaces as an AbortError — already handled by
       // cancelGenerate (which reset the screen), so don't show it as a failure.
       if (controller.signal.aborted) return;
+      // Input-safety rejection: leave the generating screen and show the calm
+      // SafetyNotice on the summary — not the generic "failed, retry" screen.
+      if (err instanceof GenerationFailedError && err.safety) {
+        setGenerating(false);
+        setSafetyBlock(err.safety);
+        return;
+      }
       // Stay on the chat screen so the friendly error + retry live there.
       setGenError(err instanceof Error ? err.message : t("intake.done.generateError"));
       if (err instanceof GenerationFailedError && err.externalPrompt) {
@@ -327,6 +390,38 @@ function IntakeSummary({
         onStartOver={onRestart}
         onCancel={cancelGenerate}
       />
+    );
+  }
+
+  // The input-safety gate rejected the typed career — take over the whole screen
+  // with the calm SafetyNotice, NOT the celebratory "Your journey is ready"
+  // summary (which would be misleading here).
+  if (safetyBlock) {
+    return (
+      <div className="mx-auto max-w-xl px-4 py-10">
+        <div className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+          <SafetyNotice kind={safetyBlock} />
+          {safetyBlock === "blocked" && (
+            <p className="mt-3 text-sm text-stone-500">{t("intake.safety.editHint")}</p>
+          )}
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+            <button
+              type="button"
+              onClick={onBack}
+              className="flex min-h-12 flex-1 items-center justify-center rounded-xl bg-orange-500 px-6 text-base font-semibold text-white hover:bg-orange-600"
+            >
+              ← {t("common.back")}
+            </button>
+            <button
+              type="button"
+              onClick={onRestart}
+              className="min-h-12 rounded-xl border border-stone-300 px-6 text-base font-medium text-stone-700 hover:bg-stone-100"
+            >
+              {t("intake.done.restart")}
+            </button>
+          </div>
+        </div>
+      </div>
     );
   }
 

@@ -36,7 +36,7 @@ const BANNER_KEYS = ["candidateBannerTitle", "candidateBanner"] as const;
  * the whole point of the gate. The failure message prints the value to paste.
  */
 const EXPECTED_EN_HASH =
-  "ac8ab8325e470ca95b4b0c8a04dba8726545169f962b90b6b0bc0f732bc602e3";
+  "bf66c242ff6830c097ade51daa513a68ee7eabe235a3fdb4b8c7fb2b4c1eda83";
 
 type Journey = Record<string, unknown>;
 
