@@ -31,6 +31,13 @@ import path from "path";
 const BANNER_KEYS = ["candidateBannerTitle", "candidateBanner"] as const;
 
 /**
+ * Translated locales whose banner MUST be present (never fall back to English).
+ * Hindi is human-checked; Marathi/Gujarati are machine-translated but the banner
+ * is safety content, so it must still be real text in each language.
+ */
+const TARGET_LOCALES = ["hi", "mr", "gu"] as const;
+
+/**
  * SHA-256 of the canonical English banner JSON (see {@link englishHash}). Bump
  * this ONLY after re-checking the Hindi against the new English wording — that's
  * the whole point of the gate. The failure message prints the value to paste.
@@ -66,24 +73,26 @@ function englishHash(en: Journey): string {
 
 function main(): void {
   const en = loadJourney("en.json");
-  const hi = loadJourney("hi.json");
   const errors: string[] = [];
 
-  // 1. English source must itself be present (it's what Hindi is checked against).
+  // 1. English source must itself be present (it's what the rest is checked against).
   for (const key of BANNER_KEYS) {
     if (!nonEmpty(en, key)) {
       errors.push(`messages/en.json: journey.${key} is missing or empty.`);
     }
   }
 
-  // 2. Hindi must be real (never empty → never falls back to English).
-  for (const key of BANNER_KEYS) {
-    if (!nonEmpty(hi, key)) {
-      errors.push(
-        `messages/hi.json: journey.${key} is missing or empty. This is the ` +
-          `safety disclaimer — it must be translated, not left to fall back to ` +
-          `English. Add an accurate Hindi string.`,
-      );
+  // 2. Each translated locale must be real (never empty → never falls back to EN).
+  for (const loc of TARGET_LOCALES) {
+    const dict = loadJourney(`${loc}.json`);
+    for (const key of BANNER_KEYS) {
+      if (!nonEmpty(dict, key)) {
+        errors.push(
+          `messages/${loc}.json: journey.${key} is missing or empty. This is the ` +
+            `safety disclaimer — it must be translated, not left to fall back to ` +
+            `English. Add an accurate ${loc} string.`,
+        );
+      }
     }
   }
 

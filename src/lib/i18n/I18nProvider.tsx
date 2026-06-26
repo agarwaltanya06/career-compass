@@ -20,6 +20,8 @@ import {
 } from "react";
 import en from "../../../messages/en.json";
 import hi from "../../../messages/hi.json";
+import mr from "../../../messages/mr.json";
+import gu from "../../../messages/gu.json";
 import {
   DEFAULT_LOCALE,
   LOCALE_COOKIE,
@@ -35,6 +37,9 @@ const dictionaries: Record<Locale, Messages> = {
   en,
   // hi is intentionally sparse; missing/empty values fall back to English.
   hi: hi as unknown as Messages,
+  // mr/gu are machine-translated; any missing/empty value falls back to English.
+  mr: mr as unknown as Messages,
+  gu: gu as unknown as Messages,
 };
 
 /** Read a dot-path (e.g. "intake.questions.class") out of a dictionary. */

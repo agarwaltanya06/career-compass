@@ -71,6 +71,8 @@ const CAREER_LABELS: Record<string, string> = {
 const LANGUAGE_NAMES: Record<string, string> = {
   en: "English",
   hi: "Hindi (हिन्दी)",
+  mr: "Marathi (मराठी)",
+  gu: "Gujarati (ગુજરાતી)",
 };
 
 /**

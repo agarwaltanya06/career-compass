@@ -430,7 +430,7 @@ function IntakeSummary({
     { label: t("intake.questions.board"), value: labelFor("board", answers.board) },
     { label: t("intake.questions.stream"), value: labelFor("stream", answers.stream) },
     { label: t("intake.questions.goal"), value: goalDisplay },
-    { label: t("intake.questions.language"), value: labelFor("language", answers.language) },
+    // Language is no longer asked — the plan follows the website's active locale.
   ];
 
   return (

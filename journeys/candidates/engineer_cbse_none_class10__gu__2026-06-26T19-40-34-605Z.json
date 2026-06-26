@@ -1,0 +1,655 @@
+{
+  "meta": {
+    "career": "ઇજનેર",
+    "careerAliases": [
+      "એન્જિનિયર",
+      "B.Tech",
+      "B.E."
+    ],
+    "studentProfile": {
+      "class": "10",
+      "board": "cbse",
+      "language": "gu",
+      "currentDate": "2026-06-26"
+    },
+    "generatedAt": "2026-06-26",
+    "confidence": "high",
+    "cacheKey": "engineer|cbse|none|class10"
+  },
+  "overview": {
+    "summary": "ઇજનેર એ સમસ્યાઓનું નિરાકરણ લાવવા, ડિઝાઇન કરવા અને નવીનતા લાવવા માટે વિજ્ઞાન અને ગણિતના સિદ્ધાંતોનો ઉપયોગ કરે છે. તેઓ વિવિધ ક્ષેત્રો જેમ કે સિવિલ, મિકેનિકલ, ઇલેક્ટ્રિકલ, કમ્પ્યુટર, કેમિકલ અને અન્યમાં કામ કરી શકે છે.",
+    "dayInLife": "એક ઇજનેરનો દિવસ ડિઝાઇનિંગ સોફ્ટવેરનો ઉપયોગ કરીને યોજનાઓ બનાવવા, પ્રોજેક્ટ ટીમો સાથે સહયોગ કરવા, સમસ્યાઓનું વિશ્લેષણ કરવા, પ્રોટોટાઇપનું પરીક્ષણ કરવા અને તકનીકી અહેવાલો લખવાનો સમાવેશ કરી શકે છે. તેઓ ઘણીવાર નવી તકનીકો અને ઉદ્યોગના ધોરણો સાથે અપડેટ રહે છે.",
+    "payRange": {
+      "entry": "₹3,00,000 - ₹6,00,000 પ્રતિ વર્ષ",
+      "experienced": "₹8,00,000 - ₹20,00,000+ પ્રતિ વર્ષ",
+      "note": "આ પગાર શ્રેણી અનુભવ, વિશેષતા, કંપની અને સ્થાનના આધારે બદલાઈ શકે છે."
+    },
+    "demandOutlook": "ભારતમાં ઇજનેરો માટે માંગ સતત ઊંચી રહેવાની અપેક્ષા છે, ખાસ કરીને કમ્પ્યુટર સાયન્સ, આર્ટિફિશિયલ ઇન્ટેલિજન્સ, ડેટા સાયન્સ, ઇલેક્ટ્રોનિક્સ અને મિકેનિકલ જેવી વિશેષતાઓમાં. ટેકનોલોજીકલ પ્રગતિ અને ઇન્ફ્રાસ્ટ્રક્ચર ડેવલપમેન્ટ આ ક્ષેત્રમાં વૃદ્ધિને વેગ આપશે.",
+    "requirements": [
+      "ગણિત અને વિજ્ઞાનમાં મજબૂત પાયો",
+      "સમસ્યા હલ કરવાની કુશળતા",
+      "વિશ્લેષણાત્મક વિચારસરણી",
+      "તકનીકી જ્ઞાન અને સોફ્ટવેર કૌશલ્ય",
+      "સંચાર અને ટીમવર્ક કુશળતા"
+    ]
+  },
+  "routes": [
+    {
+      "id": "engineering-via-jee",
+      "name": "JEE Main અને JEE Advanced દ્વારા ટોચની એન્જિનિયરિંગ કોલેજોમાં પ્રવેશ",
+      "bestFor": "જે વિદ્યાર્થીઓ IITs, NITs, IIITs અને અન્ય પ્રતિષ્ઠિત સરકારી કોલેજોમાં પ્રવેશ મેળવવા માંગે છે, તેમના માટે આ માર્ગ શ્રેષ્ઠ છે. આ માટે ગણિત, ભૌતિકશાસ્ત્ર અને રસાયણશાસ્ત્રમાં મજબૂત શૈક્ષણિક પાયો અને સ્પર્ધાત્મક પરીક્ષાની તૈયારી જરૂરી છે.",
+      "feasibility": "high",
+      "feasibilityReason": "CBSE બોર્ડના વિદ્યાર્થીઓ માટે JEE Main અને Advanced એ સૌથી સામાન્ય અને સુસ્થાપિત માર્ગ છે, જેમાં ઘણા સંસાધનો ઉપલબ્ધ છે.",
+      "costBand": "mid",
+      "duration": "4 વર્ષ (B.Tech/B.E. ડિગ્રી માટે)",
+      "steps": [
+        {
+          "id": "step-1",
+          "order": 1,
+          "type": "education",
+          "title": "ધોરણ 11 અને 12 માં વિજ્ઞાન પ્રવાહ (PCM) પસંદ કરો",
+          "offsetMonths": 10,
+          "description": "તમારા ધોરણ 10 ના પરિણામો પછી, ધોરણ 11 માં વિજ્ઞાન પ્રવાહ (ભૌતિકશાસ્ત્ર, રસાયણશાસ્ત્ર અને ગણિત - PCM) પસંદ કરો. આ એન્જિનિયરિંગ માટેનો પાયો છે."
+        },
+        {
+          "id": "step-2",
+          "order": 2,
+          "type": "skill",
+          "title": "JEE Main અને Advanced માટે તૈયારી શરૂ કરો",
+          "offsetMonths": 10,
+          "description": "ધોરણ 11 થી જ JEE Main અને Advanced માટે સઘન તૈયારી શરૂ કરો. આમાં કોચિંગ ક્લાસમાં જોડાવું, સ્વ-અભ્યાસ કરવો અને મોક ટેસ્ટ આપવાનો સમાવેશ થાય છે."
+        },
+        {
+          "id": "step-3a",
+          "order": 3,
+          "type": "exam",
+          "title": "JEE Main (સત્ર 1) પરીક્ષા આપો",
+          "offsetMonths": 31,
+          "description": "ધોરણ 12 માં અભ્યાસ કરતી વખતે અથવા પાસ કર્યા પછી, JEE Main ના પ્રથમ સત્રમાં ભાગ લો. આ NITs, IIITs અને અન્ય CFTIs માં પ્રવેશ માટે તેમજ JEE Advanced માટે ક્વોલિફાઇંગ પરીક્ષા છે."
+        },
+        {
+          "id": "step-3b",
+          "order": 3,
+          "type": "exam",
+          "title": "JEE Main (સત્ર 2) પરીક્ષા આપો",
+          "offsetMonths": 34,
+          "description": "જો જરૂરી હોય તો, JEE Main ના બીજા સત્રમાં ભાગ લો. બંને સત્રોમાંથી શ્રેષ્ઠ સ્કોર ધ્યાનમાં લેવામાં આવે છે."
+        },
+        {
+          "id": "step-3c",
+          "order": 3,
+          "type": "exam",
+          "title": "અન્ય એન્જિનિયરિંગ પ્રવેશ પરીક્ષાઓ આપો (વૈકલ્પિક)",
+          "offsetMonths": 34,
+          "description": "JEE Main ઉપરાંત, BITSAT, VITEEE, MET અથવા તમારા રાજ્યની CET જેવી અન્ય પ્રવેશ પરીક્ષાઓ આપવાનું વિચારો. આ તમને વધુ કોલેજોમાં પ્રવેશ માટેના વિકલ્પો આપશે."
+        },
+        {
+          "id": "step-4",
+          "order": 4,
+          "type": "application",
+          "title": "JEE Advanced માટે નોંધણી કરો",
+          "offsetMonths": 34,
+          "description": "જો તમે JEE Main માં ટોચના ~2.5 લાખ ઉમેદવારોમાં સ્થાન મેળવો છો, તો IITs માં પ્રવેશ માટે JEE Advanced માટે નોંધણી કરો."
+        },
+        {
+          "id": "step-5",
+          "order": 5,
+          "type": "exam",
+          "title": "JEE Advanced પરીક્ષા આપો",
+          "offsetMonths": 35,
+          "description": "JEE Advanced એ IITs માં B.Tech/B.E. કાર્યક્રમોમાં પ્રવેશ માટેની એકમાત્ર પરીક્ષા છે."
+        },
+        {
+          "id": "step-6",
+          "order": 6,
+          "type": "application",
+          "title": "JoSAA/JAC Delhi/સંસ્થાકીય કાઉન્સેલિંગમાં ભાગ લો",
+          "offsetMonths": 36,
+          "description": "તમારા JEE Main/Advanced રેન્કના આધારે, IITs, NITs, IIITs અને GFTIs માં સીટ ફાળવણી માટે JoSAA (Joint Seat Allocation Authority) કાઉન્સેલિંગમાં ભાગ લો. દિલ્હીની કોલેજો માટે JAC Delhi કાઉન્સેલિંગ અને ખાનગી યુનિવર્સિટીઓ માટે તેમની પોતાની કાઉન્સેલિંગ પ્રક્રિયાઓ હોય છે."
+        },
+        {
+          "id": "step-7",
+          "order": 7,
+          "type": "education",
+          "title": "B.Tech/B.E. ડિગ્રીમાં પ્રવેશ મેળવો અને પૂર્ણ કરો",
+          "offsetMonths": 38,
+          "description": "તમને ફાળવેલ કોલેજમાં B.Tech અથવા B.E. ડિગ્રી પ્રોગ્રામમાં પ્રવેશ લો. આ સામાન્ય રીતે 4 વર્ષનો કોર્સ હોય છે. (ભવિષ્યમાં નિયમો અને ફી બદલાઈ શકે છે, તેથી પ્રવેશ સમયે ફરીથી ચકાસો.)"
+        },
+        {
+          "id": "step-8",
+          "order": 8,
+          "type": "experience",
+          "title": "ઇન્ટર્નશીપ કરો (વૈકલ્પિક)",
+          "offsetMonths": 73,
+          "description": "તમારા B.Tech/B.E. ના ત્રીજા વર્ષ પછી ઉનાળા દરમિયાન ઇન્ટર્નશીપ કરવાનું વિચારો. આ તમને ઉદ્યોગનો અનુભવ અને વ્યવહારુ જ્ઞાન આપશે.",
+          "optional": true
+        },
+        {
+          "id": "step-9a",
+          "order": 9,
+          "type": "application",
+          "title": "પ્લેસમેન્ટ દ્વારા નોકરી મેળવો",
+          "offsetMonths": 86,
+          "description": "તમારા B.Tech/B.E. પૂર્ણ કર્યા પછી, કેમ્પસ પ્લેસમેન્ટ દ્વારા અથવા સીધા અરજી કરીને એન્જિનિયરિંગની નોકરી શોધો.",
+          "alternativeTo": "step-9b"
+        },
+        {
+          "id": "step-9b",
+          "order": 9,
+          "type": "education",
+          "title": "M.Tech/MS માટે ઉચ્ચ અભ્યાસ કરો",
+          "offsetMonths": 86,
+          "description": "જો તમને વધુ વિશેષતા અથવા સંશોધનમાં રસ હોય, તો M.Tech (ભારતમાં) અથવા MS (વિદેશમાં) ડિગ્રી માટે અરજી કરો. આ માટે GATE જેવી પ્રવેશ પરીક્ષાઓની જરૂર પડી શકે છે. (ભવિષ્યમાં નિયમો અને ફી બદલાઈ શકે છે, તેથી પ્રવેશ સમયે ફરીથી ચકાસો.)",
+          "alternativeTo": "step-9a"
+        }
+      ],
+      "skills": {
+        "coreSkills": [
+          "ગણિતીય વિશ્લેષણ",
+          "સમસ્યા હલ કરવી",
+          "ડિઝાઇન વિચારસરણી",
+          "પ્રોગ્રામિંગ (દા.ત., Python, C++, Java)",
+          "ડેટા વિશ્લેષણ",
+          "પ્રોજેક્ટ મેનેજમેન્ટ",
+          "તકનીકી સંચાર",
+          "ટીમવર્ક",
+          "ક્રિટીકલ થિંકિંગ",
+          "અનુકૂલનક્ષમતા અને સતત શીખવું"
+        ],
+        "upskilling": [
+          {
+            "name": "Coursera/edX પર મફત ઑનલાઇન એન્જિનિયરિંગ કોર્સિસ",
+            "why": "આ પ્લેટફોર્મ્સ MIT, Stanford જેવી ટોચની યુનિવર્સિટીઓમાંથી એન્જિનિયરિંગના મૂળભૂત સિદ્ધાંતો અને વિશેષતાઓમાં મફત અથવા ઑડિટ-મોડ કોર્સિસ પ્રદાન કરે છે.",
+            "costBand": "free",
+            "url": "https://www.coursera.org/courses?query=engineering&f=free",
+            "verified": false
+          },
+          {
+            "name": "NPTEL (National Programme on Technology Enhanced Learning)",
+            "why": "IITs અને IISc ના પ્રોફેસરો દ્વારા મફત ઑનલાઇન કોર્સિસ અને વિડિયો લેક્ચર્સ, જે JEE અને એન્જિનિયરિંગના વિષયોને આવરી લે છે.",
+            "costBand": "free",
+            "url": "https://nptel.ac.in/",
+            "verified": false
+          },
+          {
+            "name": "Python/Java માં પ્રોગ્રામિંગ સર્ટિફિકેશન",
+            "why": "આધુનિક એન્જિનિયરિંગ કારકિર્દી માટે પ્રોગ્રામિંગ ભાષાઓમાં નિપુણતા આવશ્યક છે. આ સર્ટિફિકેશન તમારી કુશળતાને પ્રમાણિત કરશે.",
+            "costBand": "low",
+            "url": "https://www.udemy.com/courses/development/programming-languages/",
+            "verified": false
+          },
+          {
+            "name": "CAD/CAM સોફ્ટવેર તાલીમ (દા.ત., AutoCAD, SolidWorks)",
+            "why": "ડિઝાઇન અને ઉત્પાદન એન્જિનિયરિંગ માટે આ સોફ્ટવેર આવશ્યક છે. આમાં નિપુણતા તમને નોકરીના બજારમાં સ્પર્ધાત્મક બનાવશે.",
+            "costBand": "mid",
+            "url": "https://www.autodesk.in/products/autocad/overview",
+            "verified": false
+          },
+          {
+            "name": "પ્રોજેક્ટ મેનેજમેન્ટ સર્ટિફિકેશન (દા.ત., PMP, CAPM)",
+            "why": "એન્જિનિયરિંગ પ્રોજેક્ટ્સનું સંચાલન કરવા માટે પ્રોજેક્ટ મેનેજમેન્ટ કુશળતા મહત્વપૂર્ણ છે.",
+            "costBand": "high",
+            "url": "https://www.pmi.org/certifications",
+            "verified": false
+          }
+        ]
+      },
+      "exams": [
+        {
+          "id": "jee-main",
+          "name": "JEE Main",
+          "purpose": "National entrance exam for B.Tech/B.E. admission to NITs, IIITs and other CFTIs via JoSAA, and the qualifying exam for JEE Advanced (the IIT gateway). Held in two sessions; the better score counts.",
+          "eligibility": "Passed or appearing in 10+2 with Physics, Chemistry and Mathematics. No minimum or maximum age. Candidates may attempt in three consecutive years from the year of passing Class 12.",
+          "typicalWindow": "Two sessions: Session 1 applications ~Oct–Nov (exam ~Jan); Session 2 applications ~Feb (exam ~Apr).",
+          "costBand": "low",
+          "officialUrl": "https://jeemain.nta.nic.in/",
+          "verified": true
+        },
+        {
+          "id": "jee-advanced",
+          "name": "JEE Advanced",
+          "purpose": "Sole entrance exam for admission to the IITs. Taken only after qualifying through JEE Main.",
+          "eligibility": "Must be among the top ~2.5 lakh JEE Main qualifiers. Limited to two attempts in consecutive years. Age and first-attempt-at-Class-12 conditions apply (e.g. born on/after 1 Oct 2001 for General, with a 5-year relaxation for SC/ST/PwD) — confirm the current year's cutoff.",
+          "typicalWindow": "Registration ~late Apr–early May; exam ~mid-to-late May (single day, two papers).",
+          "costBand": "low",
+          "officialUrl": "https://jeeadv.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "bitsat",
+          "name": "BITSAT",
+          "purpose": "Sole entrance exam for admission to B.E./B.Pharm. programmes at the BITS Pilani, Goa and Hyderabad campuses.",
+          "eligibility": "Passed or appearing in 10+2 with Physics, Chemistry and Mathematics (Biology for B.Pharm.) plus English. Minimum 75% aggregate in PCM/PCB and 60% in each subject.",
+          "typicalWindow": "Applications ~Jan–Mar for Session 1 (reopen ~Apr–May for Session-2-only candidates); computer-based exams ~late May (Session 1) and ~late June (Session 2).",
+          "costBand": "low",
+          "officialUrl": "https://www.bitsadmission.com/",
+          "verified": true
+        },
+        {
+          "id": "viteee",
+          "name": "VITEEE",
+          "purpose": "Sole entrance exam for B.Tech admission to VIT's campuses (Vellore, Chennai, Bhopal, Amaravati).",
+          "eligibility": "Passed or appearing in 10+2 with Physics, Mathematics and one of Chemistry/Biology. Minimum 60% aggregate in PCM (50% for SC/ST and specified categories).",
+          "typicalWindow": "Applications ~Nov–Mar; computer-based exam in slots ~April. Dates are set by VIT each year.",
+          "costBand": "low",
+          "officialUrl": "https://viteee.vit.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "met",
+          "name": "MET",
+          "purpose": "Entrance test for B.Tech admission to Manipal Institute of Technology campuses (Manipal, Bengaluru).",
+          "eligibility": "Passed or appearing in 10+2 with Physics and Mathematics plus one of Chemistry/Biology/Biotech/Technical-vocational, and English. Minimum 50% aggregate in PCM.",
+          "typicalWindow": "Applications ~Nov–Mar; online proctored exam in phases ~Apr–May. Dates are set by MAHE each year.",
+          "costBand": "low",
+          "officialUrl": "https://manipal.edu/mu/admission.html",
+          "verified": true
+        },
+        {
+          "id": "mht-cet",
+          "name": "MHT-CET",
+          "purpose": "State-level entrance exam for engineering degree admissions in Maharashtra. Shown as an example of a state CET — most states run their own (e.g. WBJEE in West Bengal, KCET in Karnataka, AP/TS EAPCET); eligibility, fees and windows vary by state.",
+          "eligibility": "Passed or appearing in 10+2 with Physics and Mathematics plus one of Chemistry/Biology/Vocational. Minimum 45% aggregate (40% for reserved categories). No age limit. Other states' CETs set their own criteria.",
+          "typicalWindow": "Applications ~Jan–Feb; PCM-group exam ~Apr–May. Dates are set by the Maharashtra CET Cell each year (other states' CETs run on their own calendars).",
+          "costBand": "low",
+          "officialUrl": "https://cetcell.mahacet.org/",
+          "verified": true
+        }
+      ],
+      "colleges": [
+        {
+          "id": "iit-bombay",
+          "name": "Indian Institute of Technology Bombay (IIT Bombay)",
+          "type": "government",
+          "location": "Mumbai, Maharashtra",
+          "approxAnnualFees": "₹2,00,000 - ₹2,50,000",
+          "feesNote": "Tuition is ~₹1 lakh/semester for General/OBC. Income-based remission applies: families with annual income below ₹1 lakh pay no tuition (full waiver); ₹1–5 lakh income gets a two-thirds tuition waiver; SC/ST/PwD students get full tuition exemption. The waiver is not automatic — claim it at JoSAA counselling and re-submit an income certificate each year.",
+          "entranceRequired": "JEE Advanced (via JEE Main)",
+          "costBand": "mid",
+          "officialUrl": "https://www.iitb.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "iit-delhi",
+          "name": "Indian Institute of Technology Delhi (IIT Delhi)",
+          "type": "government",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "₹2,00,000 - ₹2,50,000",
+          "feesNote": "Tuition is ~₹1 lakh/semester for General/OBC. Income-based remission applies: families with annual income below ₹1 lakh pay no tuition (full waiver); ₹1–5 lakh income gets a two-thirds tuition waiver; SC/ST/PwD students get full tuition exemption. The waiver is not automatic — claim it at JoSAA counselling and re-submit an income certificate each year.",
+          "entranceRequired": "JEE Advanced (via JEE Main)",
+          "costBand": "mid",
+          "officialUrl": "https://home.iitd.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "iit-madras",
+          "name": "Indian Institute of Technology Madras (IIT Madras)",
+          "type": "government",
+          "location": "Chennai, Tamil Nadu",
+          "approxAnnualFees": "₹2,00,000 - ₹2,50,000",
+          "feesNote": "Tuition is ~₹1 lakh/semester for General/OBC. Income-based remission applies: families with annual income below ₹1 lakh pay no tuition (full waiver); ₹1–5 lakh income gets a two-thirds tuition waiver; SC/ST/PwD students get full tuition exemption. The waiver is not automatic — claim it at JoSAA counselling and re-submit an income certificate each year.",
+          "entranceRequired": "JEE Advanced (via JEE Main)",
+          "costBand": "mid",
+          "officialUrl": "https://www.iitm.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "iit-kanpur",
+          "name": "Indian Institute of Technology Kanpur (IIT Kanpur)",
+          "type": "government",
+          "location": "Kanpur, Uttar Pradesh",
+          "approxAnnualFees": "₹2,00,000 - ₹2,50,000",
+          "feesNote": "Tuition is ~₹1 lakh/semester for General/OBC. Income-based remission applies: families with annual income below ₹1 lakh pay no tuition (full waiver); ₹1–5 lakh income gets a two-thirds tuition waiver; SC/ST/PwD students get full tuition exemption. The waiver is not automatic — claim it at JoSAA counselling and re-submit an income certificate each year.",
+          "entranceRequired": "JEE Advanced (via JEE Main)",
+          "costBand": "mid",
+          "officialUrl": "https://www.iitk.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "iit-kharagpur",
+          "name": "Indian Institute of Technology Kharagpur (IIT Kharagpur)",
+          "type": "government",
+          "location": "Kharagpur, West Bengal",
+          "approxAnnualFees": "₹2,00,000 - ₹2,50,000",
+          "feesNote": "Tuition is ~₹1 lakh/semester for General/OBC. Income-based remission applies: families with annual income below ₹1 lakh pay no tuition (full waiver); ₹1–5 lakh income gets a two-thirds tuition waiver; SC/ST/PwD students get full tuition exemption. The waiver is not automatic — claim it at JoSAA counselling and re-submit an income certificate each year.",
+          "entranceRequired": "JEE Advanced (via JEE Main)",
+          "costBand": "mid",
+          "officialUrl": "https://www.iitkgp.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "nit-trichy",
+          "name": "National Institute of Technology Tiruchirappalli (NIT Trichy)",
+          "type": "government",
+          "location": "Tiruchirappalli, Tamil Nadu",
+          "approxAnnualFees": "₹1,25,000 - ₹1,75,000",
+          "feesNote": "Tuition is ~₹62,500/semester (~₹1.25 lakh/year) for General/OBC. Income-based remission for Open/EWS/OBC-NCL students: family income below ₹1 lakh gets full tuition waiver; ₹1–5 lakh gets a two-thirds tuition waiver. SC/ST/PwD students are exempt from tuition. A fresh family income certificate must be submitted each year.",
+          "entranceRequired": "JEE Main (JoSAA counselling)",
+          "costBand": "mid",
+          "officialUrl": "https://www.nitt.edu/",
+          "verified": true
+        },
+        {
+          "id": "nit-surathkal",
+          "name": "National Institute of Technology Karnataka, Surathkal (NITK Surathkal)",
+          "type": "government",
+          "location": "Surathkal (Mangaluru), Karnataka",
+          "approxAnnualFees": "₹1,25,000 - ₹1,75,000",
+          "feesNote": "Tuition is ~₹62,500/semester (~₹1.25 lakh/year) for General/OBC. Income-based remission for Open/EWS/OBC-NCL students: family income below ₹1 lakh gets full tuition waiver; ₹1–5 lakh gets a two-thirds tuition waiver. SC/ST/PwD students are exempt from tuition. A fresh family income certificate must be submitted each year.",
+          "entranceRequired": "JEE Main (JoSAA counselling)",
+          "costBand": "mid",
+          "officialUrl": "https://www.nitk.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "nit-warangal",
+          "name": "National Institute of Technology Warangal (NIT Warangal)",
+          "type": "government",
+          "location": "Warangal, Telangana",
+          "approxAnnualFees": "₹1,25,000 - ₹1,75,000",
+          "feesNote": "Tuition is ~₹62,500/semester (~₹1.25 lakh/year) for General/OBC. Income-based remission for Open/EWS/OBC-NCL students: family income below ₹1 lakh gets full tuition waiver; ₹1–5 lakh gets a two-thirds tuition waiver. SC/ST/PwD students are exempt from tuition. A fresh family income certificate must be submitted each year.",
+          "entranceRequired": "JEE Main (JoSAA counselling)",
+          "costBand": "mid",
+          "officialUrl": "https://www.nitw.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "iiit-hyderabad",
+          "name": "International Institute of Information Technology, Hyderabad (IIIT Hyderabad)",
+          "type": "deemed",
+          "location": "Hyderabad, Telangana",
+          "approxAnnualFees": "₹4,50,000",
+          "feesNote": "Tuition ~₹4.5 lakh/year (rising ~₹5,000 each year; hostel & mess ~₹1 lakh/year extra). No central income-based government tuition waiver, but the alumni-funded IIITH Special Financial Assistance Scheme (ISFAS) gives guaranteed full tuition support to admitted students with family income below ~₹8 lakh/year, backed by a guaranteed SBI Scholar education loan. Confirm current details on the official admissions site.",
+          "entranceRequired": "JEE Main / IIIT-H UGEE (institute's own entrance channels)",
+          "costBand": "high",
+          "officialUrl": "https://www.iiit.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "dtu-delhi",
+          "name": "Delhi Technological University (DTU)",
+          "type": "government",
+          "location": "New Delhi, Delhi",
+          "approxAnnualFees": "₹1,90,000 - ₹2,00,000",
+          "feesNote": "Annual fee ~₹1.9–2 lakh (base tuition ~₹61,300 plus welfare/facilities charges; hostel billed separately). A Delhi state-government university, so well below private rates. Check for EWS/SC/ST fee concessions and Delhi-government scholarships on the official site.",
+          "entranceRequired": "JEE Main (JAC Delhi counselling)",
+          "costBand": "mid",
+          "officialUrl": "https://dtu.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "bits-pilani",
+          "name": "Birla Institute of Technology and Science, Pilani (BITS Pilani)",
+          "type": "deemed",
+          "location": "Pilani, Rajasthan",
+          "approxAnnualFees": "₹5,50,000 - ₹5,85,000",
+          "feesNote": "High-cost private (deemed) university — tuition ~₹2.75–2.92 lakh/semester (~₹5.5–5.85 lakh/year), rising ~5% annually; hostel & mess extra. No income-based government waiver applies, but BITS offers Merit and Merit-cum-Need (MCN) scholarships covering 10–100% of tuition for a sizeable share of admitted students.",
+          "entranceRequired": "BITSAT",
+          "costBand": "high",
+          "officialUrl": "https://www.bits-pilani.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "vit-vellore",
+          "name": "Vellore Institute of Technology (VIT Vellore)",
+          "type": "deemed",
+          "location": "Vellore, Tamil Nadu",
+          "approxAnnualFees": "₹1,98,000 - ₹3,98,000",
+          "feesNote": "B.Tech tuition is tiered by VITEEE rank/fee category, roughly ₹1.98–3.98 lakh/year; hostel & mess extra. VIT's GV School Development Programme (GVSDP) gives merit scholarships to top rankers.",
+          "entranceRequired": "VITEEE",
+          "costBand": "high",
+          "officialUrl": "https://vit.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "manipal-mit",
+          "name": "Manipal Institute of Technology (MIT Manipal)",
+          "type": "deemed",
+          "location": "Manipal, Karnataka",
+          "approxAnnualFees": "₹3,80,000 - ₹4,30,000",
+          "feesNote": "B.Tech tuition ~₹3.8–4.3 lakh/year depending on branch; hostel & mess extra. Admission via MET (Manipal Entrance Test). MAHE offers a limited number of merit scholarships.",
+          "entranceRequired": "MET (Manipal Entrance Test)",
+          "costBand": "high",
+          "officialUrl": "https://manipal.edu/mit.html",
+          "verified": true
+        },
+        {
+          "id": "coep-pune",
+          "name": "COEP Technological University (College of Engineering, Pune)",
+          "type": "government",
+          "location": "Pune, Maharashtra",
+          "approxAnnualFees": "₹1,42,000 - ₹1,63,000",
+          "feesNote": "Open-category fee ~₹1.42–1.63 lakh/year. As a state institution, reserved-category fees are far lower — OBC ~₹45,000–50,000/year and SC/ST ~₹3,500–4,000/year. Maharashtra EBC and TFWS (tuition-fee-waiver) schemes can further reduce fees for low-income families; verify eligibility on the official site.",
+          "entranceRequired": "MHT-CET (also accepts JEE Main)",
+          "costBand": "mid",
+          "officialUrl": "https://www.coeptech.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "jadavpur-university",
+          "name": "Jadavpur University, Kolkata",
+          "type": "government",
+          "location": "Kolkata, West Bengal",
+          "approxAnnualFees": "₹2,400 - ₹30,000",
+          "feesNote": "Among the most affordable engineering programmes in India, as it is a West Bengal state-government university. Non-IT B.E. branches cost only a few thousand rupees a year (~₹2,400–3,000/year; ~₹10,000–12,000 for the full course), while IT/CSE is higher at ~₹29,900/year (~₹1.2 lakh for four years). Merit-cum-means aid (e.g. Swami Vivekananda scholarship) and fee concessions are available for low-income students.",
+          "entranceRequired": "WBJEE (also admits via JEE Main)",
+          "costBand": "low",
+          "officialUrl": "https://jadavpuruniversity.in/",
+          "verified": true
+        },
+        {
+          "id": "vjti-mumbai",
+          "name": "Veermata Jijabai Technological Institute (VJTI), Mumbai",
+          "type": "government",
+          "location": "Mumbai, Maharashtra",
+          "approxAnnualFees": "₹83,000 - ₹1,05,000",
+          "feesNote": "Government-aided autonomous institute — open-category B.Tech fee ~₹83,000–1,05,000/year; reserved-category and Maharashtra EBC/TFWS waivers cut this substantially. Admission mainly via MHT-CET, with a JEE Main quota too. Confirm the current fee on the official site.",
+          "entranceRequired": "MHT-CET (also admits a JEE Main quota)",
+          "costBand": "mid",
+          "officialUrl": "https://vjti.ac.in/",
+          "verified": true
+        },
+        {
+          "id": "uvce-bengaluru",
+          "name": "University Visvesvaraya College of Engineering (UVCE), Bengaluru",
+          "type": "government",
+          "location": "Bengaluru, Karnataka",
+          "approxAnnualFees": "₹45,000 - ₹70,000",
+          "feesNote": "State government college under Bangalore University — open-category fee ~₹45,000–70,000/year; reserved-category and KCET government-quota seats cost far less. Confirm the current fee on the official site.",
+          "entranceRequired": "KCET (Karnataka CET); also admits via COMEDK",
+          "costBand": "low",
+          "officialUrl": "https://uvce.ac.in/",
+          "verified": true
+        }
+      ],
+      "missedDeadlineFallback": {
+        "applies": true,
+        "options": [
+          "JEE Main/Advanced માં સારો રેન્ક ન મળે તો, અન્ય રાજ્ય સ્તરની CETs (જેમ કે MHT-CET, WBJEE, KCET) અથવા ખાનગી યુનિવર્સિટીની પ્રવેશ પરીક્ષાઓ (જેમ કે BITSAT, VITEEE, MET) દ્વારા પ્રવેશ મેળવવાનો પ્રયાસ કરો.",
+          "એક વર્ષનો ગેપ લઈને ફરીથી JEE અથવા અન્ય પરીક્ષાઓની તૈયારી કરો.",
+          "ડિપ્લોમા ઇન એન્જિનિયરિંગ કરીને પછી લેટરલ એન્ટ્રી દ્વારા B.Tech/B.E. ના બીજા વર્ષમાં પ્રવેશ મેળવો."
+        ]
+      }
+    }
+  ],
+  "prepResources": [
+    {
+      "title": "JEE Main અને Advanced માટે NCERT પાઠ્યપુસ્તકો",
+      "type": "official-guide",
+      "costBand": "low",
+      "language": "English",
+      "url": "https://ncert.nic.in/textbook.php",
+      "verified": false
+    },
+    {
+      "title": "JEE Main અને Advanced માટે પાછલા વર્ષના પ્રશ્નપત્રો",
+      "type": "official-guide",
+      "costBand": "free",
+      "language": "English",
+      "url": "https://jeemain.nta.nic.in/previous-year-question-papers/",
+      "verified": false
+    },
+    {
+      "title": "Khan Academy - ગણિત અને વિજ્ઞાન",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "English",
+      "url": "https://www.khanacademy.org/",
+      "verified": false
+    },
+    {
+      "title": "Physics Wallah (PW) - JEE તૈયારી માટે વીડિયો લેક્ચર્સ",
+      "type": "video",
+      "costBand": "free",
+      "language": "Hindi",
+      "url": "https://www.youtube.com/c/PhysicsWallah",
+      "verified": false
+    },
+    {
+      "title": "Vedantu JEE - લાઇવ ઑનલાઇન ક્લાસિસ અને સ્ટડી મટિરિયલ",
+      "type": "free-course",
+      "costBand": "free",
+      "language": "English",
+      "url": "https://www.vedantu.com/jee/jee-online-coaching",
+      "verified": false
+    }
+  ],
+  "groundingSources": [
+    {
+      "claim": "Manipal Institute of Technology (MIT Manipal) B.Tech fees range from ₹1,98,000 - ₹3,98,000.",
+      "url": "https://www.shiksha.com/college/manipal-institute-of-technology-manipal-23945/courses-fees",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "Jadavpur University B.Tech fees range from ₹2,400 - ₹30,000.",
+      "url": "https://www.shiksha.com/university/jadavpur-university-kolkata-25039/courses-fees",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "VIT Vellore B.Tech fees range from ₹1,98,000 - ₹3,98,000.",
+      "url": "https://www.shiksha.com/college/vellore-institute-of-technology-vellore-3665/courses-fees",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "DTU Delhi B.Tech fees range from ₹1,90,000 - ₹2,00,000.",
+      "url": "https://www.shiksha.com/university/delhi-technological-university-dtu-delhi-487/courses-fees",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "BITS Pilani B.Tech fees range from ₹5,50,000 - ₹5,85,000.",
+      "url": "https://www.shiksha.com/college/bits-pilani-birla-institute-of-technology-and-science-pilani-24297/courses-fees",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "IIIT Hyderabad B.Tech fees are ₹4,50,000.",
+      "url": "https://www.shiksha.com/college/iiit-hyderabad-international-institute-of-information-technology-1869/courses-fees",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "UVCE Bengaluru B.Tech fees range from ₹45,000 - ₹70,000.",
+      "url": "https://www.shiksha.com/college/university-visvesvaraya-college-of-engineering-bangalore-23953/courses-fees",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "JEE Main eligibility criteria and exam window.",
+      "url": "https://jeemain.nta.nic.in/",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "JEE Advanced eligibility criteria and exam window.",
+      "url": "https://jeeadv.ac.in/",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "BITSAT eligibility criteria and exam window.",
+      "url": "https://www.bitsadmission.com/",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "VITEEE eligibility criteria and exam window.",
+      "url": "https://viteee.vit.ac.in/",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "MET (Manipal Entrance Test) eligibility criteria and exam window.",
+      "url": "https://manipal.edu/mu/admission/undergraduate-admissions/btech.html",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "MHT-CET eligibility criteria and exam window.",
+      "url": "https://cetcell.mahacet.org/",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "JoSAA counselling process.",
+      "url": "https://josaa.nic.in/",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "Engineering core skills.",
+      "url": "https://engineering.ubc.ca/news-events/news/2022/skills-you-need-succeed-engineer",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "Engineering soft skills.",
+      "url": "https://blogs.sw.siemens.com/education/2025/08/04/engineering-soft-skills-or-durable-skills/",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "Free online engineering courses.",
+      "url": "https://www.alison.com/courses/engineering",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "IIT Bombay B.Tech fees.",
+      "url": "https://www.iitb.ac.in/newacad/admission.jsp",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "NIT Trichy B.Tech fees.",
+      "url": "https://www.nitt.edu/home/admissions/ug/btech/",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "DTU B.Tech fees.",
+      "url": "https://www.collegedekho.com/universities/delhi-technological-university/courses-fees",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "IIIT Hyderabad B.Tech fees.",
+      "url": "https://www.iiit.ac.in/admissions/undergraduate/fee-structure/",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "Jadavpur University B.Tech fees.",
+      "url": "https://www.jadavpuruniversity.in/admissions/fee-structure/",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "Manipal Institute of Technology B.Tech fees.",
+      "url": "https://manipal.edu/mit/program-list/btech.html",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "VIT Vellore B.Tech fees.",
+      "url": "https://vit.ac.in/admissions/ug/fee-structure",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "BITS Pilani B.Tech fees.",
+      "url": "https://www.bits-pilani.ac.in/pilani/admission/fees",
+      "fetchedAt": "2026-06-26"
+    },
+    {
+      "claim": "UVCE Bengaluru B.Tech fees.",
+      "url": "https://uvce.ac.in/admission/fee-structure/",
+      "fetchedAt": "2026-06-26"
+    }
+  ],
+  "disclaimers": [
+    "આ માર્ગદર્શિકા સામાન્ય સલાહ પૂરી પાડે છે અને તે વ્યક્તિગત કારકિર્દી કાઉન્સેલિંગનો વિકલ્પ નથી.",
+    "પરીક્ષાની તારીખો, અરજીની વિન્ડો, પાત્રતાના માપદંડ અને ફી વાર્ષિક ધોરણે બદલાઈ શકે છે. વિદ્યાર્થીઓને હંમેશા સંબંધિત સત્તાવાર વેબસાઇટ્સ પર નવીનતમ માહિતી ચકાસવાની સલાહ આપવામાં આવે છે.",
+    "કોલેજની ફી અને અન્ય ખર્ચાઓ સંસ્થા, અભ્યાસક્રમ અને કેટેગરીના આધારે નોંધપાત્ર રીતે બદલાઈ શકે છે.",
+    "ઉલ્લેખિત પગાર શ્રેણીઓ સૂચક છે અને તે બજારની સ્થિતિ, વ્યક્તિગત કુશળતા અને અનુભવના આધારે બદલાઈ શકે છે."
+  ]
+}

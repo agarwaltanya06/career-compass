@@ -8,11 +8,13 @@
     "start": "next start",
     "lint": "eslint",
     "check:i18n": "tsx scripts/check-i18n-banner.ts",
+    "translate:locale": "tsx scripts/translate-locale.ts",
     "seed": "tsx scripts/seed.ts",
     "promote": "tsx scripts/promote.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.105.0",
+    "@vercel/analytics": "^2.0.1",
     "next": "16.2.9",
     "react": "19.2.4",
     "react-dom": "19.2.4"

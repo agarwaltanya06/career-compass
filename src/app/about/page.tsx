@@ -7,6 +7,7 @@
  */
 
 import { useI18n } from "@/lib/i18n/I18nProvider";
+import MachineTranslatedNote from "@/components/MachineTranslatedNote";
 
 const LINKEDIN_URL = "https://www.linkedin.com/in/06-tanya-agarwal/";
 
@@ -15,6 +16,7 @@ export default function AboutPage() {
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-10">
+      <MachineTranslatedNote />
       <h1 className="text-center text-3xl font-extrabold text-stone-900">{t("about.title")}</h1>
 
       <div className="mt-6 space-y-5 text-lg leading-relaxed text-stone-700">

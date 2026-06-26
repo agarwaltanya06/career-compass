@@ -6,7 +6,9 @@
   "lang": {
     "label": "Language",
     "english": "English",
-    "hindi": "हिंदी (Hindi)"
+    "hindi": "हिंदी (Hindi)",
+    "marathi": "मराठी (Marathi)",
+    "gujarati": "ગુજરાતી (Gujarati)"
   },
   "nav": {
     "home": "Home",
@@ -30,7 +32,8 @@
     "officialSite": "Official site",
     "verifyTag": "Verify on official site",
     "comingSoon": "Content coming soon",
-    "comingSoonNote": "This page is a placeholder for now — real content will be added here."
+    "comingSoonNote": "This page is a placeholder for now — real content will be added here.",
+    "machineTranslatedNote": "This page was machine-translated and may contain errors. For anything important — exam dates, fees, safety advice — check the official English source too."
   },
   "copyPrompt": {
     "copy": "Copy prompt",

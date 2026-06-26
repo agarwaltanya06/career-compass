@@ -14,12 +14,15 @@
 import { useMemo, useState } from "react";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import { buildPlanPrintHtml, printHtmlDocument } from "@/lib/timelineExport";
+import MachineTranslatedNote from "@/components/MachineTranslatedNote";
 
 const PREFIX = "static.planItYourself";
 
 /** Labels for the next `count` months from today, in the given locale. */
 function nextMonthLabels(locale: string, count: number): string[] {
-  const fmt = new Intl.DateTimeFormat(locale === "hi" ? "hi-IN" : "en-IN", {
+  // Indian regional formats for the month names (hi-IN / mr-IN / gu-IN), English
+  // otherwise. Intl falls back gracefully if a locale's data isn't present.
+  const fmt = new Intl.DateTimeFormat(locale === "en" ? "en-IN" : `${locale}-IN`, {
     month: "long",
     year: "numeric",
   });
@@ -77,6 +80,7 @@ export default function PlanItYourselfPage() {
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-10">
+      <MachineTranslatedNote />
       <h1 className="text-3xl font-extrabold text-slate-900">{t(`${PREFIX}.title`)}</h1>
       <p className="mt-3 text-lg text-slate-600">{t(`${PREFIX}.intro`)}</p>
 

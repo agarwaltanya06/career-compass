@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Nunito, Baloo_2, Mukta } from "next/font/google";
+import { Nunito, Baloo_2, Mukta, Noto_Sans_Gujarati } from "next/font/google";
 import { cookies } from "next/headers";
 import "./globals.css";
 import { I18nProvider } from "@/lib/i18n/I18nProvider";
@@ -7,6 +7,7 @@ import { LOCALE_COOKIE, normalizeLocale } from "@/lib/i18n/config";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Analytics from "@/components/Analytics";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 
 // Body face: soft, rounded, highly readable. Self-hosted by next/font.
 const nunito = Nunito({
@@ -31,6 +32,17 @@ const mukta = Mukta({
   subsets: ["latin", "devanagari"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-mukta",
+  display: "swap",
+});
+
+// Gujarati face: neither Nunito nor Mukta (Devanagari) cover the Gujarati
+// script, so Gujarati glyphs would drop to a bare system font. Noto Sans
+// Gujarati is a clean, complete Gujarati face, picked up per-glyph for Gujarati
+// text (see globals.css). Marathi reuses Mukta — it's written in Devanagari.
+const notoGujarati = Noto_Sans_Gujarati({
+  subsets: ["gujarati", "latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-noto-gujarati",
   display: "swap",
 });
 
@@ -59,7 +71,7 @@ export default async function RootLayout({
   return (
     <html
       lang={initialLocale}
-      className={`${nunito.variable} ${baloo.variable} ${mukta.variable} h-full`}
+      className={`${nunito.variable} ${baloo.variable} ${mukta.variable} ${notoGujarati.variable} h-full`}
     >
       <body className="min-h-full bg-orange-50 text-stone-900 antialiased">
         <I18nProvider initialLocale={initialLocale}>
@@ -77,6 +89,7 @@ export default async function RootLayout({
           </div>
         </I18nProvider>
         <Analytics />
+        <VercelAnalytics />
       </body>
     </html>
   );

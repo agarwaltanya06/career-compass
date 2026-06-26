@@ -38,7 +38,7 @@ const NAV_ITEMS: NavItem[] = [
 ];
 
 const NAV_LINK_CLASS =
-  "rounded-lg px-3 py-2 text-sm font-medium text-stone-700 hover:bg-stone-100";
+  "whitespace-nowrap rounded-lg px-3 py-2 text-sm font-medium text-stone-700 hover:bg-stone-100";
 
 export default function Header() {
   const { t } = useI18n();
@@ -49,15 +49,19 @@ export default function Header() {
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-3 px-4 py-3">
         <Link
           href="/"
-          className="flex items-center gap-2 text-lg font-bold text-orange-700"
+          // sm:whitespace-nowrap keeps "My Career Journey" on one line from the
+          // small breakpoint up (so it never wraps on desktop/tablet beside the
+          // nav), while still allowing a wrap on very narrow phones if needed.
+          className="flex items-center gap-2 text-lg font-bold text-orange-700 sm:whitespace-nowrap"
           onClick={() => setOpen(false)}
         >
           <span aria-hidden className="text-2xl">🧭</span>
           {t("brand.name")}
         </Link>
 
-        {/* Inline nav on >= md screens */}
-        <nav className="hidden items-center gap-1 md:flex">
+        {/* Inline nav only on >= lg screens — the seven tabs need the room, so
+            below lg we fall back to the hamburger rather than cramming/wrapping. */}
+        <nav className="hidden items-center gap-1 lg:flex">
           {NAV_ITEMS.map((item) =>
             item.children ? (
               <NavDropdown key={item.labelKey} item={item} />
@@ -77,7 +81,7 @@ export default function Header() {
             aria-expanded={open}
             aria-label="Menu"
             onClick={() => setOpen((v) => !v)}
-            className="flex min-h-11 min-w-11 items-center justify-center rounded-lg border border-stone-300 text-stone-700 md:hidden"
+            className="flex min-h-11 min-w-11 items-center justify-center rounded-lg border border-stone-300 text-stone-700 lg:hidden"
           >
             <span aria-hidden className="text-xl">{open ? "✕" : "☰"}</span>
           </button>
@@ -86,7 +90,7 @@ export default function Header() {
 
       {/* Collapsible nav on < md screens */}
       {open && (
-        <nav className="border-t border-stone-200 bg-orange-50 px-4 py-2 md:hidden">
+        <nav className="border-t border-stone-200 bg-orange-50 px-4 py-2 lg:hidden">
           <ul className="flex flex-col">
             {NAV_ITEMS.map((item) =>
               item.children ? (

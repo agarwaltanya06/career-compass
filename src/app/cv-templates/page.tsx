@@ -28,6 +28,7 @@ import {
   type CvTemplate,
   type CvValues,
 } from "@/lib/cvTemplates";
+import MachineTranslatedNote from "@/components/MachineTranslatedNote";
 import {
   downloadTextFile,
   printHtmlDocument,
@@ -162,6 +163,7 @@ export default function CvTemplatesPage() {
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-10">
+      <MachineTranslatedNote />
       <h1 className="text-3xl font-extrabold text-stone-900">{t(`${PREFIX}.title`)}</h1>
       <p className="mt-3 text-lg text-stone-600">{t(`${PREFIX}.intro`)}</p>
 

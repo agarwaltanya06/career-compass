@@ -8,6 +8,7 @@
  */
 
 import { useI18n } from "@/lib/i18n/I18nProvider";
+import MachineTranslatedNote from "@/components/MachineTranslatedNote";
 
 export default function StaticPage({ prefix }: { prefix: string }) {
   const { t, tList } = useI18n();
@@ -15,6 +16,7 @@ export default function StaticPage({ prefix }: { prefix: string }) {
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-10">
+      <MachineTranslatedNote />
       <h1 className="text-3xl font-extrabold text-stone-900">{t(`${prefix}.title`)}</h1>
       <p className="mt-3 text-lg text-stone-600">{t(`${prefix}.intro`)}</p>
 

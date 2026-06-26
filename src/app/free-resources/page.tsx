@@ -14,6 +14,7 @@ import { useMemo, useState } from "react";
 import { useI18n } from "@/lib/i18n/I18nProvider";
 import { localize } from "@/lib/i18n/localized";
 import ExternalLink from "@/components/ExternalLink";
+import MachineTranslatedNote from "@/components/MachineTranslatedNote";
 import {
   RESOURCES,
   RESOURCE_TAGS,
@@ -36,6 +37,7 @@ export default function FreeResourcesPage() {
 
   return (
     <div className="mx-auto max-w-2xl px-4 py-10">
+      <MachineTranslatedNote />
       <h1 className="text-3xl font-extrabold text-stone-900">{t(`${PREFIX}.title`)}</h1>
       <p className="mt-3 text-lg text-stone-600">{t(`${PREFIX}.intro`)}</p>
 

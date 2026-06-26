@@ -4,7 +4,7 @@
  * map. The LanguageSwitcher reads `locales` to build its dropdown.
  */
 
-export type Locale = "en" | "hi";
+export type Locale = "en" | "hi" | "mr" | "gu";
 
 /** The locale used when no cookie is set and nothing else is known. */
 export const DEFAULT_LOCALE: Locale = "en";
@@ -17,7 +17,23 @@ export const DEFAULT_LOCALE: Locale = "en";
 export const locales: { code: Locale; labelKey: string; enabled: boolean }[] = [
   { code: "en", labelKey: "lang.english", enabled: true },
   { code: "hi", labelKey: "lang.hindi", enabled: true },
+  { code: "mr", labelKey: "lang.marathi", enabled: true },
+  { code: "gu", labelKey: "lang.gujarati", enabled: true },
 ];
+
+/**
+ * Locales whose copy is machine-translated and NOT yet human-verified. Pages
+ * show an honest "machine-translated — may contain errors" note for these so the
+ * safety content (scam rules, disclaimers) carries the same honesty as a
+ * runtime-generated journey's "AI-generated" banner. English and Hindi are
+ * human-reviewed, so they're absent here.
+ */
+export const UNVERIFIED_LOCALES: readonly Locale[] = ["mr", "gu"];
+
+/** True when the locale's static copy is machine-translated and unverified. */
+export function isMachineTranslated(locale: Locale): boolean {
+  return UNVERIFIED_LOCALES.includes(locale);
+}
 
 /** Cookie that persists the user's locale choice across visits. */
 export const LOCALE_COOKIE = "cc_locale";

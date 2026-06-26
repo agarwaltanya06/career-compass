@@ -150,15 +150,12 @@ export const intakeQuestions: IntakeQuestion[] = [
       },
     ],
   },
-  {
-    id: "language",
-    field: "language",
-    promptKey: "intake.questions.language",
-    options: [
-      { value: "en", labelKey: "intake.options.english" },
-      { value: "hi", labelKey: "intake.options.hindi" },
-    ],
-  },
+  // NOTE: there used to be a "which language for your plan?" question here. It
+  // was removed — the plan is now generated in the website's active language
+  // (the locale the user already picked in the header). profileFromAnswers falls
+  // back to the UI locale when answers.language is unset, so adding a new UI
+  // language no longer needs a matching option here. The `language` answer field
+  // is kept for back-compat but is no longer collected in the flow.
 ];
 
 /**

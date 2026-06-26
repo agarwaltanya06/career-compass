@@ -8,6 +8,8 @@
 
 import en from "../../../messages/en.json";
 import hi from "../../../messages/hi.json";
+import mr from "../../../messages/mr.json";
+import gu from "../../../messages/gu.json";
 
 interface SafetyDict {
   blocked: string;
@@ -17,9 +19,17 @@ interface SafetyDict {
   helplineKiran: string;
 }
 
-/** Pick the safety strings for a locale, falling back to English. */
+const DICTS: Record<string, { intake: { safety: unknown } }> = { en, hi, mr, gu };
+
+/**
+ * Pick the safety strings for a locale, falling back to English. The distress
+ * helpline message and the blocked notice are safety content, so every supported
+ * language carries its own (machine-) translation rather than reverting to
+ * English — a distressed reader should see the helplines in their language.
+ */
 export function safetyStrings(locale: string): SafetyDict {
-  const dict = locale.toLowerCase().startsWith("hi") ? hi : en;
+  const code = locale.toLowerCase().slice(0, 2);
+  const dict = DICTS[code] ?? en;
   return dict.intake.safety as SafetyDict;
 }
 
